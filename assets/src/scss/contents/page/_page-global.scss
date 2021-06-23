@@ -1,0 +1,19 @@
+/**
+ *
+ * Global Styles for Single Post or Page
+ *
+ */
+
+.page {
+  // border: 4px dotted blue;
+  padding-bottom: 5rem;
+
+  .type-page {
+    // border: 3px dotted green;
+    padding-top: 8rem;
+
+    @media (max-width: 991px) {
+      padding-top: 1rem;
+    }
+  }
+}

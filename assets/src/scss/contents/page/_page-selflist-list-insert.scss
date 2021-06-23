@@ -1,0 +1,159 @@
+/**
+ * LIST INSERT PAGE STYLES
+ */
+
+.page-template-template-list-insert {
+  // border: 1rem dotted red;
+  // INPUTS IN GENERAL
+  input,
+  textarea {
+    font-size: 0.7rem;
+
+    @media (min-width: 800px) {
+      font-size: 1rem;
+    }
+  }
+
+  // SELECTIZE CAT BOX
+  #category-choice-box,
+  #state-city-choice-box {
+    // border: 1rem dotted red;
+    .btn-block {
+      margin-bottom: 0.5rem;
+      @media (min-width: 768px) and (max-width: 950px) {
+        font-size: 0.8rem;
+        width: 110px;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  // CATEGORY INSERT BOXES
+  #main-cat-insert-box,
+  #primo-cat-insert-box,
+  #secondo-cat-insert-box,
+  #terzo-cat-insert-box,
+  #city-insert-form-box {
+    padding: 1rem !important;
+
+    @media (min-width: 800px) {
+      padding: 3rem !important;
+    }
+  }
+
+  // LIST USER VALIDATION WINDOW
+  #list-insert-user-validation-box {
+    padding: 0rem !important;
+    font-size: 0.7rem !important;
+
+    @media (min-width: 800px) {
+      padding: 3rem !important;
+      font-size: 1rem !important;
+    }
+  }
+
+  // SEARCH INPUT HEADING
+  #insert-search-cat-header {
+    font-weight: 700;
+    @media (max-width: 768px) {
+      margin-top: 2rem;
+    }
+  }
+
+  // SEARCH INPUT BOX
+  .selflist-search-input-box {
+    // border: 4px dotted red;
+    background-color: red;
+    height: 3.5rem !important;
+
+    .selflist-search-input {
+      height: 3.5rem !important;
+      width: 87% !important;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: white;
+      padding-left: 1rem;
+      caret-color: white;
+      background-color: red;
+      border-color: red;
+      &:focus {
+        // outline: 0.5px solid white;
+        outline: none;
+      }
+    }
+    .fas.fa-search {
+      font-size: 2rem;
+      float: right;
+      color: white;
+      padding-right: 1rem;
+      padding-top: 0.75rem;
+
+      @media (max-width: 857px) {
+        display: none;
+      }
+    }
+  }
+
+  // CATEGORY SEARCH RESULT BOX IN CATEGORY INSERT PAGE
+
+  #category-search-result,
+  #category-search-json-result {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-moose {
+      width: 48% !important;
+      border: 1px solid crimson;
+      margin-right: 2px;
+      margin-left: 2px;
+
+      @media (min-width: 768px) and (max-width: 1060px) {
+        width: 100% !important;
+      }
+      @media (max-width: 500px) {
+        width: 100% !important;
+      }
+    }
+
+    ul {
+      // transition: all 0.5s ease;
+      list-style: none;
+      li {
+        // border: 4px dotted dodgerblue;
+        margin-bottom: 0.25rem;
+
+        a {
+          font-size: 0.75rem;
+          text-transform: lowercase !important;
+          .badge.badge-pill {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    .primo {
+      // border: 4px dotted blue;
+      padding-inline-start: 0px !important;
+
+      .primo-item {
+        margin-top: 1rem;
+        background: lighten($cg-primary, 48%);
+        // background: linear-gradient(
+        //   45deg,
+        //   transparent,
+        //   lighten($cg-primary, 45%)
+        // );
+        // background: linear-gradient(45deg, transparent, #e7e7e7);
+      }
+    }
+    .secondo {
+      // border: 4px dotted dodgerblue;
+      padding-inline-start: 10px !important;
+    }
+    .terzo {
+      // border: 4px dotted lime;
+      padding-inline-start: 20px !important;
+    }
+  }
+}

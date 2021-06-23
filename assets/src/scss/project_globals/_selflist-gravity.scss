@@ -1,0 +1,35 @@
+/**
+ *
+ * STYLE: ASM GLOBAL
+ *
+ */
+
+// GRAVITY REGISTRATION / SIGNUP FORM
+// Moved to /contents/page/_page-selflist-signup.scss
+// Re-enabled to for HMU
+
+.selflist-signup-gravity-form,
+.selflist-hmu-gravity-form {
+  // border: 2px dotted red;
+  margin-top: -4rem !important;
+
+  input {
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px gray;
+  }
+  textarea {
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px gray;
+  }
+  #gform_submit_button_4,
+  #gform_submit_button_6 {
+    background-color: darken($color: red, $amount: 10%) !important;
+    margin: auto !important;
+    display: block;
+  }
+  .gform_footer {
+    margin-top: 2rem !important;
+  }
+}

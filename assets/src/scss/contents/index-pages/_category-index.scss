@@ -1,0 +1,219 @@
+/**
+ *
+ * Global Styles for Archive Index Page
+ *
+ */
+// THIS IMPACTS category.php, archive.php and template-list-preview.php
+.category,
+.archive {
+  // padding-top: 8rem;
+  .site-main {
+    // border: 4px dotted blue;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+
+    .selflist-search-input-box {
+      // border: 4px dotted red;
+      background-color: red;
+      height: 3rem !important;
+      margin-bottom: 2rem;
+
+      .selflist-search-input {
+        height: 3rem !important;
+        width: 87% !important;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+        padding-left: 1rem;
+        caret-color: white;
+        background-color: red;
+        border-color: red;
+        &:focus {
+          outline: none;
+          // outline: 1px dashed red;
+        }
+      }
+      .fas.fa-search {
+        font-size: 2rem;
+        float: right;
+        color: white;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
+
+    #state-filter-menu {
+      border: 4px dotted dodgerblue;
+      .list-inline-item {
+        //   border: 4px dotted dodgerblue;
+        button {
+          font-size: 0.6rem;
+          font-weight: bold;
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+
+    .page-header {
+      // border: 4px dotted dodgerblue;
+      margin-bottom: 3rem;
+
+      .page-title {
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        .badge {
+          font-size: 0.8rem;
+          line-height: 1rem;
+        }
+        @media (min-width: 700px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .post-item {
+      // border: 4px dotted blue;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 6px -6px lighten($color: grey, $amount: 20%);
+
+      .list-author-box {
+        display: block;
+        clear: both;
+        // border: 5px dotted green;
+      }
+    }
+
+    .post-item-cat-list {
+      // border: 4px dotted blue;
+      a {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+
+    .entry-meta {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    .posted-on {
+      border: 1px solid #e3e3e3;
+      // border: 5px solid red;
+      border-radius: 20px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      color: $cg-secondary;
+      background-color: #e3e3e3;
+      padding: 0.25rem 1rem;
+    }
+
+    .entry-content {
+      // border: 5px solid red;
+      border-bottom: 1px solid $cg-primary;
+      p {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+    }
+
+    .entry-footer {
+      padding-top: 1rem;
+      // border: 5px dotted green;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      .flex-icon-five {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @media (max-width: 991px) {
+          margin-top: 0.5rem;
+        }
+
+        .flex-icon-item {
+          margin-right: 0.75rem;
+          width: 30px;
+          img {
+            width: 30px;
+          }
+          @media (min-width: 460px) {
+            margin-right: 0.65rem;
+            width: 35px;
+          }
+          @media (min-width: 992px) {
+            margin-right: 0.5rem;
+          }
+          @media (min-width: 1200px) {
+            margin-right: 1rem;
+            width: 40px;
+          }
+        }
+      }
+    }
+
+    .category-sidebar {
+      // border: 4px dotted blue;
+      margin-top: -1rem; //Balancing the .primo margin
+
+      // No Category Found
+      #no-cat-found {
+        margin-top: 0.95rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border: 1px solid darken($color: #e7e7e7, $amount: 10%);
+        background-color: lighten($color: #e3e3e3, $amount: 8%);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: $cg-primary;
+
+        p {
+          font-size: 0.7rem;
+        }
+      }
+
+      ul {
+        // transition: all 0.5s ease;
+        list-style: none;
+        li {
+          // border: 4px dotted dodgerblue;
+          margin-bottom: 0.25rem;
+
+          a {
+            font-size: 0.75rem;
+            text-transform: lowercase !important;
+            .badge.badge-pill {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+      .primo {
+        // border: 4px dotted blue;
+        padding-inline-start: 0px !important;
+
+        .primo-item {
+          margin-top: 1rem;
+          background: linear-gradient(50deg, transparent, #e7e7e7);
+          // background: linear-gradient(45deg, transparent, #e7e7e7);
+        }
+      }
+      .secondo {
+        // border: 4px dotted dodgerblue;
+        padding-inline-start: 20px !important;
+      }
+      .terzo {
+        // border: 4px dotted lime;
+        padding-inline-start: 40px !important;
+      }
+    }
+  }
+
+  .type-post {
+    // border: 3px dotted green;
+    // padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,191 @@
+/*=============================
+=            TOOLS            =
+=============================*/
+
+@import 'bower_components/compass-sass-mixins/lib/compass';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
+// @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+// @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
+@import 'custom.scss'; //Boostrap 4 Variable Override
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
+// @import "slick-slider/slick.scss";
+
+/*=====  End of TOOLS  ======*/
+
+/*=============================
+=            FONTS            =
+=============================*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+// $primary-font: 'Poppins', sans-serif;
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Poppins', sans-serif;
+// $secondary-font: 'Montserrat', sans-serif;
+
+// $primary-font: 'Tangerine', cursive;
+// $secondary-font: 'Philosopher', sans-serif;
+
+/*=====  End of FONTS  ======*/
+
+/*======================================
+=            GLOBAL CONTENT            =
+======================================*/
+
+html {
+  // min-height: 100%;
+  // min-width: 100%;
+  // overflow-x: hidden;
+}
+
+body {
+  font-family: $secondary-font;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: $cg-text;
+    font-family: $secondary-font;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $cg-primary;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-family: $primary-font;
+    font-weight: 400;
+  }
+
+  h1 {
+    color: $cg-primary;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-family: $primary-font;
+    font-weight: 600;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    // background: url(http://dropdown/arrow/url/) no-repeat;
+    background-position: right center;
+    background-color: #cccccc;
+    color: #000000;
+    border: 1px solid #000000;
+  }
+
+  // BOOTSTRAP MASONRY STYLES
+  .card-columns {
+    @include media-breakpoint-only(sm) {
+      column-count: 1;
+    }
+    @include media-breakpoint-only(md) {
+      column-count: 2;
+    }
+    @include media-breakpoint-only(lg) {
+      column-count: 3;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 3;
+    }
+  }
+}
+
+body.logged-in {
+  // padding-top: 18px !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none !important;
+  // color: $cg-button;
+
+  &:hover {
+    // color: lighten($cg-button, 30%);
+  }
+}
+
+/** 
+ * GLOBAL SPINNER LOADER
+*/
+// GIF BASED
+// .loading-spinner {
+//   width: 256px;
+//   height: 256px;
+//   display: block;
+//   background: url(/wp-content/uploads/loading-red-spot-small.gif);
+// }
+// HTML BASED
+.loading-spinner {
+  display: block;
+  margin-top: 2rem;
+  margin-left: 0rem !important;
+  clear: both;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0.25rem solid rgba(0, 0, 0, 0.2);
+  border-top-color: red;
+  -moz-animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+
+/**
+ *
+ * GLOBAL GRAVITY FORM STYLES
+ *
+ */
+
+.gform_wrapper {
+  padding: 3rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+  @media (max-width: 450px) {
+    padding: 1rem;
+  }
+
+  input {
+    border: 1px solid lighten(gray, 25%);
+    text-indent: 1rem;
+  }
+  textarea {
+    border: 1px solid lighten(gray, 25%);
+    text-indent: 1rem;
+  }
+
+  .gform_button {
+    color: white;
+    background-color: $cg-button;
+    padding: 1rem 3rem;
+  }
+}
+
+/**
+ * 360 ROTATE ANIMATION MIXIN
+ */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

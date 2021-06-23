@@ -1,0 +1,111 @@
+// /*--------------------------------------------------------------
+// MAIN NAVIGATION AREA [NON-BOOTSTRAP]
+// --------------------------------------------------------------*/
+
+.main-navigation {
+  // border: 5px dotted red;
+  position: relative;
+  width: 100%;
+  display: block;
+  clear: both;
+  // font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  background: #313131;
+
+  .main-navbar {
+    .navbar-logo {
+      float: left;
+      padding: 0 !important;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center !important;
+      // border: 2px dotted red;
+      // padding-top: 1rem;
+    }
+  }
+
+  ul {
+    // border: 2px dotted yellow;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    ul {
+      position: absolute;
+      left: 0;
+      z-index: 99999;
+      display: none;
+      float: left;
+      padding: 0;
+      background: #4d4d4d;
+
+      ul {
+        left: 100%;
+        top: 0;
+      }
+
+      a {
+        width: 200px;
+        &:hover {
+          background: #313131;
+          border-bottom: 4px solid red;
+        }
+      }
+    }
+  }
+
+  li {
+    float: left;
+    position: relative;
+
+    &:hover > ul {
+      display: block;
+    }
+
+    &:hover > a {
+      color: #fff;
+      border-bottom: 4px solid red;
+      // background: #4d4d4d;
+      // background: red;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    // padding: 1.3em 1em;
+    font-size: 0.8rem;
+    text-decoration: none;
+    line-height: 1.3em;
+    color: white;
+    color: hsl(0, 0%, 100%);
+
+    @media (max-width: 429px) {
+      font-size: 0.7rem;
+      padding: 0.5rem 0.45rem;
+    }
+  }
+
+  // CURRENT PAGE HOVER
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_item > a:hover,
+  .current-menu-item > a:hover {
+    // background: darken($cg-primary, 10%);
+    color: yellow;
+    border-bottom: 4px solid red;
+  }
+  // CURRENT PAGE SELECTED STATUS
+  .sub-menu .current_page_ancestor {
+    border-bottom: 4px solid red;
+  }
+
+  ul ul .current_page_parent,
+  .current_page_parent .current_page_item > a {
+    color: #fff;
+    background: #313131;
+  }
+}

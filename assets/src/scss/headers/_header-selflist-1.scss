@@ -1,0 +1,99 @@
+/**
+ * SLEFLIST HERDERS
+ */
+
+// HEADER HOME
+#header-home {
+  margin-top: 8rem;
+  border: 3px dotted yellow;
+
+  .logo-container {
+    a {
+      img {
+        width: 58%;
+      }
+    }
+  }
+
+  .link-box {
+    width: 85%;
+  }
+
+  a.list-links {
+    // border: 4px dotted red;
+    font-size: 2.7rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    color: red;
+  }
+}
+
+// HEADER BOTH
+#header-both {
+  margin-bottom: -2.5rem;
+
+  .logo-container {
+    a {
+      img {
+        width: 25%;
+      }
+    }
+  }
+
+  .link-box {
+    width: 50%;
+  }
+
+  a.list-links {
+    // border: 4px dotted red;
+    font-size: 2rem;
+    font-weight: 600;
+    color: red;
+  }
+}
+
+// HEADER LIST
+#header-list {
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+
+  .logo-container {
+    a {
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  a.list-links {
+    // border: 4px dotted red;
+    position: absolute;
+    left: 20%;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: red;
+  }
+}
+
+// HEADER LIST
+#header-listings {
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+
+  .logo-container {
+    a {
+      img {
+        width: 50%;
+      }
+    }
+  }
+
+  a.list-links {
+    // border: 4px dotted red;
+    position: absolute;
+    right: 13%;
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: red;
+  }
+}

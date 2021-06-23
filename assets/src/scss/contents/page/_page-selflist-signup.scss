@@ -1,0 +1,63 @@
+/**
+ *
+ * STYLE: Selflist Signup Page
+ *
+ */
+
+.page-template-template-list-signup {
+  // border: 1rem dotted dodgerblue;
+  .login-heading {
+    // border: 5px dotted green;
+    font-size: 1.5rem;
+
+    @media (min-width: 700px) {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  .signup-heading {
+    // border: 5px dotted green;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 700px) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+  // GRAVITY REGISTRATION / SIGNUP FORM
+
+  .selflist-signup-gravity-form,
+  .selflist-hmu-gravity-form {
+    // border: 2px dotted red;
+    margin-top: -4rem !important;
+
+    input {
+      border: 1px solid red;
+      border-radius: 10px;
+      box-shadow: 1px 1px 6px gray;
+    }
+    textarea {
+      border: 1px solid red;
+      border-radius: 10px;
+      box-shadow: 1px 1px 6px gray;
+    }
+    #gform_submit_button_4,
+    #gform_submit_button_6 {
+      background-color: darken($color: red, $amount: 10%) !important;
+      margin: auto !important;
+      display: block;
+    }
+    .gform_footer {
+      margin-top: 2rem !important;
+    }
+  }
+}

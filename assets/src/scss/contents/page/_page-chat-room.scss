@@ -1,0 +1,86 @@
+/**
+ *
+ * Styles for Chat Room Page
+ *
+ */
+
+#yobro-inbox {
+  border: 1px solid $cg-primary;
+
+  .yoBro-chatHistory {
+    border-right: 1px solid $cg-primary;
+  }
+  .yoBro-chatHeader {
+    border-bottom: 1px solid $cg-primary;
+    border-right: 1px solid $cg-primary;
+
+    // SEARCH BOX
+    .yoBroUserSearch {
+    }
+  }
+
+  .yoBro-chatHistory {
+    .yoBro-singleChatMsg.active {
+      background: $cg-secondary;
+
+      .userName {
+        color: lighten($color: red, $amount: 30%);
+      }
+      .chatTime,
+      .msgExcerpt {
+        color: white;
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .yoBro-chatbox {
+    .yoBro-chatBody {
+      .yoBro-chatBody-header {
+        border-bottom: 1px solid $cg-primary;
+        //NEW BUTTON - top right
+        .new-msg {
+          border: 1px solid crimson;
+          background: $cg-primary;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // ARROW BUTTON - bottom right
+  .yoBro-chatTypebox {
+    .yoBro-sendBtn {
+      background: crimson;
+    }
+  }
+
+  // YO BRO MODAL
+  .modal-header.yoBro-Modal-header {
+    .close.mgs-m-close {
+      //   border: 2px solid red;
+      span {
+        font-size: 2rem;
+        color: black;
+        // padding: 10px;
+      }
+    }
+  }
+  .modal-body.yobro-modal-body {
+    .userSearchBox {
+      input {
+        border: 1px solid red;
+      }
+    }
+    .yoBroMessageBox {
+      border: 1px solid red;
+    }
+    .reuseImageLabelSelectBtn___33Nxv.reuseImageLabelSelectBtn___.reuseSelectedBox___3pnGv {
+      //   border: 1px solid red;
+      background: lighten($color: gray, $amount: 40%);
+    }
+    //reuseSelectedBox___
+  }
+}

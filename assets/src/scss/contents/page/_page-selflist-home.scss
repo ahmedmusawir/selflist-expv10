@@ -1,0 +1,32 @@
+/**
+ *
+ * STYLE: Selflist Home Page
+ *
+ */
+
+.page-template-template-home {
+  //   border: 1rem dotted blue;
+
+  #header-home {
+    // border: 1rem dotted dodgerblue;
+    @media (max-width: 500px) {
+      .list-links {
+        font-size: 1.9rem;
+        text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
+      }
+      .logo-container {
+        a {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      .list-links {
+        font-size: 1.5rem;
+        text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
+      }
+    }
+  }
+}
