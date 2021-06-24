@@ -25,7 +25,6 @@ var mainStylesSRC = './assets/src/scss/main.scss';
 var scssFILES = [adminStyleSRC, mainStylesSRC];
 
 var styleWatch = './assets/src/scss/**/*.scss';
-var adminStyleWatch = './assets/admin-styles/style-login.scss';
 var styleDIST = './assets/dist/css/';
 
 /**
@@ -119,8 +118,6 @@ gulp.task('default', gulp.parallel(styles, js));
  */
 function watch_files(done) {
   gulp.watch(styleWatch, styles);
-  gulp.watch(adminStyleWatch, styles);
-
   gulp.watch(jsWatch, js);
 
   done();

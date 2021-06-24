@@ -3,6 +3,13 @@
  * WooCom Global General Styles
  *
  */
+// (MY ACCOUNT) LOST PASSWORD PAGE
+// After WooCom installation WP Lost Password page is taken over
+// by WooCom Lost Pasword page
+.woocommerce-ResetPassword {
+  // display: none;
+  border: 1rem dotted red;
+}
 
 // CHECKOUT PAGE
 

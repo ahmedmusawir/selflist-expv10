@@ -165,6 +165,9 @@ a {
   input {
     border: 1px solid lighten(gray, 25%);
     text-indent: 1rem;
+    &::placeholder {
+      padding: 1rem;
+    }
   }
   textarea {
     border: 1px solid lighten(gray, 25%);
@@ -175,6 +178,7 @@ a {
     color: white;
     background-color: $cg-button;
     padding: 1rem 3rem;
+    text-indent: 0px !important;
   }
 }
 
