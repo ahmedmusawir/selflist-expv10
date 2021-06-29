@@ -159,6 +159,9 @@ require get_theme_file_path('/_functions/selflist/ajax/profile_pass_update_ajax.
 require get_theme_file_path('/_functions/selflist/cpt/flag-post-type.php');
 require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 
+// WP ADMIN LEFT MENU RELATED 
+require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
+
 
 // OOP PHP TEST
 // require get_theme_file_path('/_oop-functions/inc/class-person-object.php');

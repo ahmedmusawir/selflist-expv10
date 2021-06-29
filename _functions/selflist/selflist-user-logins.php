@@ -27,6 +27,9 @@ function remove_admin_bar()
     if (!current_user_can('administrator') && !is_admin()) {
         show_admin_bar(false);
     }
+    if (current_user_can('editor')) {
+        show_admin_bar(true);
+    }
 }
 add_action('after_setup_theme', 'remove_admin_bar');
 
@@ -39,9 +42,9 @@ function selflist_login_redirect($redirect_to, $request, $user)
     //validating user login and roles
     if (isset($user->roles) && is_array($user->roles)) {
         //is this a gold plan subscriber?
-        if (in_array('listing_manager', $user->roles)) {
-            // redirect them to their special plan page
-            $redirect_to = "/test-chat";
+        if (in_array('editor', $user->roles)) {
+            // redirect editors to their admin page
+            $redirect_to = "/wp-admin";
         } elseif (in_array('subscriber', $user->roles)) {
             //all other members
             $redirect_to = "/list-customer-home";

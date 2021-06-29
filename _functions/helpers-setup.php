@@ -250,23 +250,23 @@ add_filter('rest_prepare_post', 'prepare_rest', 10, 3 );
 =            ACF OPTIONS PAGE CODE            =
 =============================================*/
 
-if( function_exists('acf_add_options_page') ) {
+// if( function_exists('acf_add_options_page') ) {
 
-  $option_page = acf_add_options_page(array(
-    'page_title' => __('Analytics'),
-    'icon_url'  => 'dashicons-chart-line',
-    'menu_title'  => 'Analytics',
-    'menu_slug'   => 'analytics-default-settings',
-    // 'capability'   => 'edit_posts',
-    // 'redirect'   => false
-  ));
-  $option_page = acf_add_options_page(array(
-    'page_title' => __('Theme Settings'),
-    'icon_url'  => 'dashicons-index-card',
-    'menu_title'  => 'Theme Settings',
-    'menu_slug'   => 'theme-settings',
-    // 'capability'   => 'edit_posts',
-    // 'redirect'   => false
-  ));
+//   $option_page = acf_add_options_page(array(
+//     'page_title' => __('Analytics'),
+//     'icon_url'  => 'dashicons-chart-line',
+//     'menu_title'  => 'Analytics',
+//     'menu_slug'   => 'analytics-default-settings',
+//     // 'capability'   => 'edit_posts',
+//     // 'redirect'   => false
+//   ));
+//   $option_page = acf_add_options_page(array(
+//     'page_title' => __('Theme Settings'),
+//     'icon_url'  => 'dashicons-index-card',
+//     'menu_title'  => 'Theme Settings',
+//     'menu_slug'   => 'theme-settings',
+//     // 'capability'   => 'edit_posts',
+//     // 'redirect'   => false
+//   ));
 
-}
+// }
