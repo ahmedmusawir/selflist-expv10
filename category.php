@@ -55,7 +55,17 @@ textarea::placeholder {
 <main id="primary" class="site-main container">
 
     <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2">Filter by State & Market</button>
+
+    <?php if (is_user_logged_in()) : ?>
+
     <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Back to Category Search</a>
+
+    <?php else : ?>
+
+    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Back to Category Search</a>
+
+    <?php endif; ?>
+
     <button class="btn btn-outline-dark mb-2" onclick='window.location.reload(true);'>Reset</button>
     <!-- STATE & CITY CATEGORY PROTOTYPING STARTS -->
     <?php 

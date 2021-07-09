@@ -101,6 +101,11 @@ body {
       column-count: 3;
     }
   }
+
+  // ALL BUTTON TEXT TO UPPERCASE
+  .btn {
+    text-transform: uppercase !important;
+  }
 }
 
 body.logged-in {

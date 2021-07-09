@@ -18,9 +18,13 @@ body.login div#login h1 a {
 }
 body.login div#login form#loginform {
   border-color: $cg-primary !important;
-  label,
-  #rememberme {
+  label {
     display: none;
+  }
+  label[for='rememberme'] {
+    display: block;
+    float: right;
+    color: red;
   }
 }
 body.login div#login form#loginform p {
@@ -40,6 +44,7 @@ body.login div#login form#loginform input#user_pass {
 body.login div#login form#loginform p.forgetmenot {
 }
 body.login div#login form#loginform p.forgetmenot input#rememberme {
+  margin-top: 0.05rem !important;
 }
 body.login div#login form#loginform p.submit {
   background: $cg-primary;
@@ -57,7 +62,6 @@ body.login div#login p#nav {
 }
 body.login div#login p#nav a {
   color: $cg-primary;
-  // color: lighten($color: $cg-primary, $amount: 35%);
   font-size: 1rem;
   font-weight: 600;
 }

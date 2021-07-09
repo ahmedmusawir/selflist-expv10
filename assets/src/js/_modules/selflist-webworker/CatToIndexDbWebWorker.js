@@ -9,31 +9,11 @@ class CatToIndexDbWebWorker {
     // BRINGING CATEGORY DATA ONCE FIRST TIME
     this.startWebWorkerOnce();
     // UPDATING CATEGORY DATA EVERY HOUR
-    this.startWebWorkerAtInterval();
+    // this.startWebWorkerAtInterval();
   }
-
-  startWebWorkerOnce = async () => {
-    // CHECKING FOR THE KEY IN INDEXED DB
-    await keys()
-      .then((keys) => {
-        keys.forEach((key) => {
-          if (key == 'catInfo') {
-            this.keyExists = true;
-          }
-        });
-      })
-      .catch((err) =>
-        console.log('Key Check Failed [CatToIndexDbWebWorker.js]', err)
-      );
-
-    // WHEN THE KEY NOT PRESENT
-    if (this.keyExists != true) {
-      // SENDING WORK MESSAGES
-      // this.worker.postMessage('Get Started');
-      this.worker.postMessage('Fetch Cats');
-    } else {
-      console.log('DB not updated... [CatToIndexDbWebWorker.js]');
-    }
+  // UPDATE DATA AT EVERY REFRESH
+  startWebWorkerOnce = () => {
+    this.worker.postMessage('Fetch Cats');
   };
 
   startWebWorkerAtInterval = () => {

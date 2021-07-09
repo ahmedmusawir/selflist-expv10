@@ -27,7 +27,8 @@ $user_total_list_count = count_user_posts($current_user->id, 'post'); // false f
 $user_published_list_count = count_user_posts($current_user->id, 'post', true); // true for public only
 ?>
 <!-- DO NOT DELETE - THESE ARE HIDDEN ITEMS ONLY TO BE USED WITH JAVASCRIPT -->
-<span class="d-none" id="current-member-name"><?php echo $user_name; ?></span>
+<span class="d-none"
+    id="current-member-name"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?></span>
 <span class="d-none" id="current-member-email"><?php echo $user_email; ?></span>
 <!-- DO NOT DELETE - END THESE ARE HIDDEN ITEMS ONLY TO BE USED WITH JAVASCRIPT -->
 <style>
@@ -167,7 +168,7 @@ textarea::placeholder {
                 <!-- PASSWORD -->
                 <div class="form-group">
                     <input type="password" class="form-control" id="lister-password" name="lister-password"
-                        aria-describedby="textHelp" placeholder="Your Name"
+                        aria-describedby="textHelp" placeholder="Password"
                         value="<?php echo $current_user->user_pass ?>" readonly>
                     <small id="textHelp" class="form-text text-muted">Ex: 8 Characters Minimum</small>
                 </div>
@@ -175,7 +176,7 @@ textarea::placeholder {
                 <!-- PASSWORD CONFIRMATION -->
                 <div class="form-group">
                     <input type="password" class="form-control" id="lister-password-confirm"
-                        name="lister-password-confirm" aria-describedby="textHelp" placeholder="Your Name"
+                        name="lister-password-confirm" aria-describedby="textHelp" placeholder="Confirm Password"
                         value="<?php echo $current_user->user_pass ?>" readonly>
                     <small id="textHelp" class="form-text text-muted">Confirm</small>
                 </div>
@@ -229,7 +230,7 @@ textarea::placeholder {
                             <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
                                 aria-describedby="textHelp" placeholder="My Phone Number"
                                 value="<?php echo $user_phone; ?>" readonly>
-                            <small id="textHelp" class="form-text text-muted">Phone Ex: 6781231234</small>
+                            <!-- <small id="textHelp" class="form-text text-muted">Phone Ex: 6781231234</small> -->
                         </div>
                         <!-- WEBSITE -->
                         <div class="form-group">
@@ -237,8 +238,8 @@ textarea::placeholder {
                             <input type="text" class="form-control" id="lister-website" name="lister-website"
                                 aria-describedby="textHelp" placeholder="My Website"
                                 value="<?php echo $user_website; ?>" readonly>
-                            <small id="textHelp" class="form-text text-muted">Website Ex:
-                                https://your-website.com</small>
+                            <!-- <small id="textHelp" class="form-text text-muted">Website Ex:
+                                https://your-website.com</small> -->
                         </div>
 
 

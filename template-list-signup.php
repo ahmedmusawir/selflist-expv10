@@ -20,8 +20,8 @@ get_header('loggedout');
     <header id="header-test" class="site-header container py-5 text-center">
 
 
-        <h3 class="text-center h3 login-heading">If you are already a member, please log in</h3>
-        <a class="text-center btn btn-danger btn-sm btn-lg mb-4 px-5" href="<?php echo wp_login_url(); ?>">Enter</a>
+        <!-- <h3 class="text-center h3 login-heading">If you are already a member, please log in</h3> -->
+        <a class="text-center btn btn-danger btn-lg mb-4 px-5" href="<?php echo wp_login_url(); ?>">ENTER</a>
 
         <hr>
         <h4 class="text-center">OR</h4>

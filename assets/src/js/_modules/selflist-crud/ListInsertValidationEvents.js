@@ -154,6 +154,7 @@ class ListInsertValidationEvents extends ListInsertUiDataParent {
           required: true,
           validate_email: true,
           maxlength: 50,
+          minlength: 1,
         },
         'lister-website': {
           url: true,
