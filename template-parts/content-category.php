@@ -45,6 +45,7 @@ input[type="checkbox"]:checked:before {
 
         <?php
           // SHOW STATE & CITY IN A PARENT CHILD ORDER
+          // Location: _functions/helpers-setup.php
           print_taxonomy_ranks( get_the_terms( get_the_ID(), 'states' ) );
 /**
  *

@@ -137,8 +137,9 @@ require get_theme_file_path('/_functions/selflist/gravity/hmu-multi-email-send.p
 // THIS UPDATES THE CATEGORY JSON FILE MANUALLY
 // require get_theme_file_path('/_functions/selflist/taxonomy/selflist-auto-update-cat-json.php');
 
-// DISPLAY STATES & CITIES IN CATEGORY.PHP PAGE TOP MENU
+// DISPLAY STATES & CITIES & COUNTRY IN CATEGORY.PHP PAGE TOP MENU
 require get_theme_file_path('/_functions/selflist/city_state/get_city_state.php');
+require get_theme_file_path('/_functions/selflist/city_state/make_state_country_dropdown.php');
 require get_theme_file_path('/_functions/selflist/rest/city-state-to-rest.php');
 require get_theme_file_path('/_functions/selflist/ajax/city-state-filter-ajax.php');
 require get_theme_file_path('/_functions/selflist/ajax/city-insert-ajax.php');

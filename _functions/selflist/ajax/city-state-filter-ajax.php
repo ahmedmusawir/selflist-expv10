@@ -47,9 +47,9 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
       $query->the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item animate__animated'); ?>>
-  <header class="entry-header">
+    <header class="entry-header">
 
-    <?php
+        <?php
       // CITY & STATE TAXONMY DISPLAY BY LIST START
       $tax = get_the_terms( get_the_ID(), 'states');
 
@@ -63,8 +63,8 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
       echo '
       <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-        <small class="font-weight-bold">City: 
-          <span class="text-info">' . $current_city .',</span> State: <span class="text-info">' . $current_state .'</span>
+        <small class="font-weight-bold">State or Country: 
+          <span class="text-info">' . $current_state .',</span> Market <span class="text-info">' .  $current_city .'</span>
         </small>
       </p>';
 
@@ -121,96 +121,96 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
       if ( 'post' === get_post_type() ) :
                   ?>
-    <div class="entry-meta">
-      <?php
+        <div class="entry-meta">
+            <?php
         cyberize_app_dev_posted_on();
         // cyberize_app_dev_posted_by();
       ?>
-    </div><!-- .entry-meta -->
-    <?php endif; ?>
-  </header><!-- .entry-header -->
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+    </header><!-- .entry-header -->
 
-  <?php cyberize_app_dev_post_thumbnail(); ?>
+    <?php cyberize_app_dev_post_thumbnail(); ?>
 
-  <div id="post-content" class="entry-content">
-    <?php
+    <div id="post-content" class="entry-content">
+        <?php
       the_excerpt();
     ?>
-  </div><!-- .entry-content -->
+    </div><!-- .entry-content -->
 
-  <footer class="entry-footer">
-    <section class="flex-icon-five">
+    <footer class="entry-footer">
+        <section class="flex-icon-five">
 
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png" alt="Twitter Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png" alt="Instagram Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png" alt="Linkedin Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Google Plus Page" src="/wp-content/uploads/Google-icon.png" alt="Google Plus Link">
-        </a>
-      </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png" alt="Twitter Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png" alt="Instagram Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png" alt="Linkedin Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Google Plus Page" src="/wp-content/uploads/Google-icon.png" alt="Google Plus Link">
+                </a>
+            </div>
 
-    </section>
+        </section>
 
-    <section class="flex-icon-five">
+        <section class="flex-icon-five">
 
-      <div class="flex-icon-item">
-        <a href="tel:404-321-1234">
-          <img title="Phone: 404-321-1234" src="/wp-content/uploads/Cell-icon.png" alt="Phone Number">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="mailto:webmaster@example.com">
-          <img title="your@email.com" src="/wp-content/uploads/Email-icon.png" alt="Email Address">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="http://website.com" src="/wp-content/uploads/Website-icon.png" alt="Website Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Hit Me Up" src="/wp-content/uploads/HMU-icon.png" alt="HMU Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Your Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
-        </a>
-      </div>
-      <div class="flex-icon-item">
-        <a href="#">
-          <img title="Flag This List" src="/wp-content/uploads/Screen-Shot-2021-01-26-at-1.50.39-PM.png"
-            alt="Flag Link">
-        </a>
-      </div>
+            <div class="flex-icon-item">
+                <a href="tel:404-321-1234">
+                    <img title="Phone: 404-321-1234" src="/wp-content/uploads/Cell-icon.png" alt="Phone Number">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="mailto:webmaster@example.com">
+                    <img title="your@email.com" src="/wp-content/uploads/Email-icon.png" alt="Email Address">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="http://website.com" src="/wp-content/uploads/Website-icon.png" alt="Website Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Hit Me Up" src="/wp-content/uploads/HMU-icon.png" alt="HMU Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
+                </a>
+            </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Flag This List" src="/wp-content/uploads/Screen-Shot-2021-01-26-at-1.50.39-PM.png"
+                        alt="Flag Link">
+                </a>
+            </div>
 
-    </section>
+        </section>
 
-  </footer><!-- .entry-footer -->
+    </footer><!-- .entry-footer -->
 </article><!-- Main Article List Item ends -->
 <?php     
      endwhile;        
