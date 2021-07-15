@@ -1,7 +1,7 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="state-city-choice-box" class="mt-5 animate__animated animate__zoomIn">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick a State & Pick or Create a New
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick a State/Country & Pick or Create a New
          Market:</label>
 
      <div class="row">
@@ -9,8 +9,8 @@
 
          <div class="col-sm-12">
              <article class="main-cat-box">
-                 <select id="select-all-states" class="select-all-states" placeholder="Pick A State...">
-                     <option value="">Select a State...</option>
+                 <select id="select-all-states" class="select-all-states" placeholder="Pick A State/Country...">
+                     <option value="">Select a State/Country...</option>
                      <?php make_state_country_dropdown(); ?>
                  </select>
              </article>

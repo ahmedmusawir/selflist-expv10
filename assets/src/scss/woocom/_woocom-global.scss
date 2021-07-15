@@ -13,6 +13,24 @@
 
 // CHECKOUT PAGE
 
+// Checkout Button
+.checkout-button.button {
+  background: $cg-secondary !important;
+}
+// Proceed to PayPal Button
+#place_order {
+  background: $cg-secondary !important;
+}
+
+// Removing PayPal Description & Privacy policy text from checkout page
+.woocommerce-terms-and-conditions-wrapper,
+.payment_box.payment_method_paypal {
+  display: none !important;
+}
+.payment_method_paypal {
+  margin-top: 1rem !important;
+}
+
 // General Form Inputs
 
 .woocommerce-input-wrapper {

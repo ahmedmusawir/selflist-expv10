@@ -12,13 +12,17 @@
  * @package cyberize-app-dev
  */
 
-get_header('loggedout');
+if (is_user_logged_in()) {
+  get_header();
+} else {
+  get_header('loggedout');
+}
 
 ?>
 
 <main id="primary" class="site-main container">
 
-  <?php
+    <?php
 		while ( have_posts() ) :
 			the_post();
 
