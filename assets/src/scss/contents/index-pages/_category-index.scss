@@ -119,7 +119,8 @@
     }
 
     .entry-footer {
-      padding-top: 1rem;
+      width: 100%;
+      // padding-top: 1rem;
       // border: 5px dotted green;
       display: flex;
       flex-wrap: wrap;
@@ -197,7 +198,8 @@
 
         .primo-item {
           margin-top: 1rem;
-          background: linear-gradient(50deg, transparent, #e7e7e7);
+          background: #e7e7e7;
+          // background: linear-gradient(50deg, transparent, #e7e7e7);
           // background: linear-gradient(45deg, transparent, #e7e7e7);
         }
       }

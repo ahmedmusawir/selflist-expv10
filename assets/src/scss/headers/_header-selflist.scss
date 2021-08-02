@@ -10,6 +10,9 @@
 #header-home {
   margin-top: 8rem;
   // border: 3px dotted yellow;
+  @media (max-width: 450px) {
+    margin-top: 3rem;
+  }
 
   .logo-container {
     a {

@@ -34,8 +34,11 @@ input[type="checkbox"]:checked:before {
     border-radius: 2px;
     width: 12px;
     height: 12px;
-    left: 50%;
-    top: 19.24%;
+    left: 45%;
+    /* left: 50%; */
+    top: 19.28%;
+    /* top: 19.26%; */
+    /* top: 19.24%; */
     transform: translate(-50%, -50%);
 }
 </style>
@@ -123,7 +126,8 @@ if ('post' === get_post_type()):
             <p class="list-author float-right">
                 Chat ID:
                 <span class="text-danger">
-                    <?php echo $udata->display_name; ?>
+                    <?php //echo $udata->display_name; ?>
+                    <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
         </div>

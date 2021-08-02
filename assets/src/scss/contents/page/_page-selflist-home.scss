@@ -12,7 +12,7 @@
     @media (max-width: 500px) {
       .list-links {
         font-size: 1.9rem;
-        text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
+        // text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
       }
       .logo-container {
         a {
@@ -25,7 +25,7 @@
     @media (max-width: 400px) {
       .list-links {
         font-size: 1.5rem;
-        text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
+        // text-shadow: 3px 3px 10px lighten($color: grey, $amount: 10%);
       }
     }
   }

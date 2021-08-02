@@ -76,7 +76,7 @@ textarea::placeholder {
     <!-- STATE & CITY CATEGORY PROTOTYPING ENDS -->
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9">
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
@@ -134,7 +134,7 @@ textarea::placeholder {
 	endif;
 	?>
         </div>
-        <div class="col-md-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
 
             <article class="category-sidebar">
                 <ul class="primo">

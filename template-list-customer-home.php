@@ -65,8 +65,8 @@ textarea::placeholder {
 #lister-linkedin-error,
 #lister-google-plus-error {
     position: absolute;
-    top: 125%;
-    left: 60%;
+    top: 110%;
+    left: 0%;
 }
 </style>
 
@@ -247,7 +247,7 @@ textarea::placeholder {
                         <!-- Facebook -->
                         <div class="form-group">
                             <label class="font-weight-bold" for="exampleFormControlTextarea1">Social Media:</label>
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>
                                 </div>
@@ -260,7 +260,7 @@ textarea::placeholder {
                         </div>
                         <!-- Yelp -->
                         <div class="form-group">
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-yelp"></i></div>
                                 </div>
@@ -271,7 +271,7 @@ textarea::placeholder {
                         </div>
                         <!-- Instagram -->
                         <div class="form-group">
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-instagram"></i></div>
                                 </div>
@@ -284,7 +284,7 @@ textarea::placeholder {
                         </div>
                         <!-- LinkedIn -->
                         <div class="form-group">
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-linkedin-in"></i></div>
                                 </div>
@@ -298,7 +298,7 @@ textarea::placeholder {
 
                         <!-- Twitter -->
                         <div class="form-group">
-                            <div class="input-group mb-2">
+                            <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-twitter"></i></div>
                                 </div>

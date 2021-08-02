@@ -46,7 +46,7 @@ $user_registered = $current_user->user_registered
     <!-- Facebook -->
     <div class="form-group">
         <label class="font-weight-bold" for="exampleFormControlTextarea1">Social Media:</label>
-        <div class="input-group mb-2">
+        <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>
             </div>
@@ -57,7 +57,7 @@ $user_registered = $current_user->user_registered
     </div>
     <!-- Yelp -->
     <div class="form-group">
-        <div class="input-group mb-2">
+        <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-yelp"></i></div>
             </div>
@@ -68,7 +68,7 @@ $user_registered = $current_user->user_registered
     </div>
     <!-- Instagram -->
     <div class="form-group">
-        <div class="input-group mb-2">
+        <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-instagram"></i></div>
             </div>
@@ -79,7 +79,7 @@ $user_registered = $current_user->user_registered
     </div>
     <!-- LinkedIn -->
     <div class="form-group">
-        <div class="input-group mb-2">
+        <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-linkedin-in"></i></div>
             </div>
@@ -91,7 +91,7 @@ $user_registered = $current_user->user_registered
 
     <!-- Twitter -->
     <div class="form-group">
-        <div class="input-group mb-2">
+        <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-twitter"></i></div>
             </div>

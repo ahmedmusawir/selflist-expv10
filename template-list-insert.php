@@ -50,8 +50,8 @@ textarea::placeholder {
 #lister-linkedin-error,
 #lister-google-plus-error {
     position: absolute;
-    top: 125%;
-    left: 60%;
+    top: 110%;
+    left: 0%;
 }
 </style>
 
@@ -67,7 +67,7 @@ textarea::placeholder {
 
         <div class="row">
             <!-- LIST INSERT BLOCK -->
-            <section class="col-12 col-sm-12 col-md-6">
+            <section class="col-12 col-sm-12 col-md-12 col-lg-6">
 
                 <article id="create-new-list-box" class="card p-3  animate__animated animate__zoomIn">
 
@@ -134,7 +134,7 @@ textarea::placeholder {
 
 
             <!-- CATEGORY SEARCH COLUMN [RIGHT COLUMN STARTS]-->
-            <section class="col-12 col-sm-12 col-md-6">
+            <section class="col-12 col-sm-12 col-md-12 col-lg-6">
                 <div id="primary" class="site-main container pt-">
 
                     <!-- <hr> -->

@@ -17,6 +17,12 @@
     border: 1px solid red;
     border-radius: 10px;
     box-shadow: 1px 1px 6px gray;
+    position: relative;
+
+    &::placeholder {
+      // border: 3px dotted red;
+      line-height: 0rem;
+    }
   }
   textarea {
     border: 1px solid red;
