@@ -20,14 +20,16 @@ if (is_user_logged_in()) {
 ?>
 
 <main id="primary" class="site-main container">
-  <h2 class="text-center font-weight-bold mt-5">SelfList HMU <small>(Hit Me Up)</small></h2>
-  <!-- THE HMU THANX MESSAGE -->
-  <h3 class="text-center font-weight-bold mt-5">Your HMU Message has been sent successfully!</h3>
-  <div class="text-center mt-5">
+    <h2 class="text-center font-weight-bold mt-5">Reverse Auction Is Now Initiated...</h2>
+    <!-- THE HMU THANX MESSAGE -->
+    <div class="text-center mt-5">
 
-    <a class="text-center btn btn-lg btn-dark" href="/category-search-index/" class="back-to-search">BACK TO SEARCH</a>
+        <a class="text-center btn btn-lg btn-dark float-left" href="/category-search-index/"
+            class="back-to-search">Listing</a>
 
-  </div>
+        <a class="text-center btn btn-lg btn-dark float-right" href="/list-insert/" class="back-to-search">List</a>
+
+    </div>
 
 </main><!-- #main -->
 

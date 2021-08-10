@@ -58,7 +58,7 @@ textarea::placeholder {
 
     <?php if (is_user_logged_in()) : ?>
 
-    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Back to Category Search</a>
+    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Category Search Reset</a>
 
     <?php else : ?>
 
@@ -80,7 +80,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Search by keyword">
                 <i class="fas fa-search"></i>
 
             </section>
@@ -96,7 +96,7 @@ textarea::placeholder {
                 ?>
 
                 <!-- HMU BUTTON -->
-                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">START HMU </a>
+                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">REVERSE AUCTION </a>
                 <!-- END HMU BUTTON -->
 
             </header><!-- .page-header -->

@@ -223,7 +223,7 @@ if ('post' === get_post_type()):
                 <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox ml-5" autocomplete="off"
                     data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
                 <span class="checkmark"></span>
-                <small class="" style="margin-left: 2.5rem;">HMU</small>
+                <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small>
             </div>
 
         </section>

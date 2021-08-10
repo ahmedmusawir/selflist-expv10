@@ -13,7 +13,7 @@
     padding-bottom: 4rem;
 
     .selflist-search-input-box {
-      // border: 4px dotted red;
+      // border: 1rem dotted yellow;
       background-color: red;
       height: 3rem !important;
       margin-bottom: 2rem;
@@ -21,16 +21,21 @@
       .selflist-search-input {
         height: 3rem !important;
         width: 87% !important;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         font-weight: 600;
         color: white;
         padding-left: 1rem;
         caret-color: white;
         background-color: red;
         border-color: red;
+        // padding-bottom: 1rem;
+        line-height: 2rem;
         &:focus {
           outline: none;
           // outline: 1px dashed red;
+        }
+        &::placeholder {
+          color: white;
         }
       }
       .fas.fa-search {

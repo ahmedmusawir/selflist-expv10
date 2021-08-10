@@ -11,20 +11,9 @@ function list_preview_ajax()
 
     $post_id = $_POST['post_id'];
 
-    // DEBUGGING START
-    // echo "<h4>New Preview List ID: $post_id</h4><br>";
-
-    // $the_post = get_post($post_id);
-
-    // echo '<pre>';
-    // echo print_r($the_post);
-    // echo '</pre>';
-
-    // DEBUGGING END
-
     // PAGE TITLE
-    echo '<h3 class="text-center">Preview Only<h3>';
-    echo '<h6 class="text-center">(Links & Buttons are not functional at this point)</h6>';
+    echo '<h3 class="text-center">Preview<h3>';
+    echo '<h6 class="text-center">(Links are functional on active listing)</h6>';
     // echo '<h6 class="text-center">(List Status: Pending)</h6>';
 
     $args = [
@@ -100,7 +89,7 @@ function list_preview_ajax()
         ?>
             </div><!-- .entry-content -->
 
-            <footer class="entry-footer">
+            <footer class="entry-footer mt-3">
                 <section class="flex-icon-five">
                     <?php if (get_field('your_facebook')): ?>
                     <div class="flex-icon-item">

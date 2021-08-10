@@ -27,7 +27,7 @@ get_header('loggedout');
         <h4 class="text-center">OR</h4>
         <hr>
 
-        <h1 class="text-center text-danger signup-heading">Join</h1>
+        <!-- <h1 class="text-center text-danger signup-heading">Join</h1> -->
 
         <?php echo do_shortcode('[gravityform id="4" title="false" description="false"]'); ?>
 

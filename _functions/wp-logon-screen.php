@@ -26,7 +26,8 @@ add_filter('gettext', 'lostPass_text');
 function lostPass_text($text)
 {
     if ($text == 'Lost your password?') {
-        $text = 'My Password?';
+        
+        $text = 'Password Reset?';
 
     }
     return $text;

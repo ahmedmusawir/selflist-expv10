@@ -45,7 +45,7 @@ $user_registered = $current_user->user_registered
     <!-- SOCIAL MEDIA  -->
     <!-- Facebook -->
     <div class="form-group">
-        <label class="font-weight-bold" for="exampleFormControlTextarea1">Social Media:</label>
+        <label class="font-weight-bold" for="exampleFormControlTextarea1">My Social Media:</label>
         <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>
