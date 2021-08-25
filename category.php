@@ -96,7 +96,7 @@ textarea::placeholder {
                 ?>
 
                 <!-- HMU BUTTON -->
-                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">REVERSE AUCTION </a>
+                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">INVITE TO</a>
                 <!-- END HMU BUTTON -->
 
             </header><!-- .page-header -->

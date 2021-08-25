@@ -27,13 +27,14 @@ function lostPass_text($text)
 {
     if ($text == 'Lost your password?') {
         
-        $text = 'Password Reset?';
+        $text = 'Password Reset';
 
     }
     return $text;
 }
+
 /**
- * CUSTOM LOST YOUR PASSWORD TEXT CHANGE
+ * CUSTOM LOST YOUR PASSWORD & REMEMBER ME TEXT CHANGE
  */
 function custom_login_btn(){
     add_filter('gettext', 'custom_login_btn_text', 10, 2);
@@ -42,6 +43,9 @@ function custom_login_btn(){
 function custom_login_btn_text($translation, $text){
     if ('Log In' == $text) {
         return 'ENTER';
+    }
+    if ('Remember Me' == $text) {
+        return 'Me';
     }
     return $translation;
 }

@@ -149,10 +149,10 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
             </div>
             <div class="modal-footer justify-content-center">
                 <button id="payment-by-point-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">
-                    Pick A New Date
+                    Go Back
                 </button>
                 <button id="payment-by-point-submit-btn" type="button" class="btn btn-primary">
-                    Confirm Payment & Publish List
+                    Publish
                 </button>
             </div>
         </div>
