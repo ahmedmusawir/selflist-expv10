@@ -6,6 +6,7 @@
 
 .page-template-template-list-search-index {
   border: 1rem dotted red;
+  // border: 1rem dotted green;
   .selflist-search-input-box {
     // border: 4px dotted red;
     background-color: red;
@@ -23,6 +24,9 @@
       border-color: red;
       &:focus {
         outline: 1px dashed red;
+      }
+      &::placeholder {
+        color: lighten($color: gray, $amount: 15%);
       }
     }
     .fas.fa-search {
