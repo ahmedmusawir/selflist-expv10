@@ -6,7 +6,7 @@
 function get_cities( $state, $current_cat_id ) {
   // Getting State
   $state_cat_georgia = get_term_by('slug', $state, 'states');
-  $state_cat_georgia_link = get_category_link($state_cat_georgia);
+  // $state_cat_georgia_link = get_category_link($state_cat_georgia);
   // Getting the children Category IDs Array with no List/Post attached
   $cities_of_ga = get_term_children($state_cat_georgia->term_id, 'states');
   
@@ -25,10 +25,10 @@ function get_cities( $state, $current_cat_id ) {
       // MAKING CITY BTN IDs
       $city_btn_id = "$state-$city_obj->slug-btn";
 
-      echo '<button id="'. $city_btn_id .'" class="btn btn-outline-primary btn-sm list-inline-item city-button">';
+      echo '<button id="'. $city_btn_id .'" class="btn btn-outline-primary btn-sm list-inline-item city-button mb-1">';
       echo 
       '<small data-state="'. $state .'" data-city="'. $city_obj->slug .'" data-catid="'. $current_cat_id .'">' 
-      . $city_obj->name . '<span class="badge badge-dark ml-2">' . $city_obj->count .'</span>' .
+      . $city_obj->name .
       '</small>';
       echo '</button>';
     }
@@ -42,10 +42,10 @@ function get_state_and_cities( $all_states, $current_cat_id ) {
   echo '<div id="state-filter-menu" class="mb-3 p-1 border border-primary animate__animated animate__bounceInLeft d-none">';
   foreach ($all_states as $state) {
     echo '<li class="list-inline-item">';
-    echo '<button id="'. $state->slug .'-btn" data-state="'. $state->slug .'" class="btn btn-danger btn-sm state-btn">' 
-    . $state->name .'<span class="badge badge-dark ml-2">'
-    . $state->count .'</span>'
-    . '</button>';
+    echo 
+    '<button id="'. $state->slug .'-btn" data-state="'. $state->slug .'" class="btn btn-danger btn-sm state-btn">' 
+    . $state->name .
+    '</button>';
     echo '</li>';
   }
   
