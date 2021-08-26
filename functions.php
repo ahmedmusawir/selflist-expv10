@@ -162,18 +162,8 @@ require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 
 // WP ADMIN LEFT MENU RELATED 
 require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
-
-
-// OOP PHP TEST
-// require get_theme_file_path('/_oop-functions/inc/class-person-object.php');
-
-// FILTERS FOR ACF TO REST PLUGIN ... DON'T NEED THAT PLUGIN
-// Enable the option show in rest
-// add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
-
-// Enable the option edit in rest
-// add_filter( 'acf/rest_api/field_settings/edit_in_rest', '__return_true' );
-
+// WP ADMIN NOTIFICATION AFTER POST PUBLISH
+require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');
 
 // SETTING UP CRON TEST
 // require get_theme_file_path('/_functions/selflist/wp-cron/wp-cron-test.php');

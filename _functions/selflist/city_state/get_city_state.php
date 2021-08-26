@@ -51,6 +51,7 @@ function get_cities($state, $current_cat_id)
     // echo '<a href="'. $state_cat_georgia_link .'">' . $state_cat_georgia->name . ' (' . $state_cat_georgia->count . ')</a>';
     echo '</div>';
 
+    // CREATING AN ALPHABATIC LIST OF CITY BUTTONS DYNAMICALLY
     foreach ($city_list_alphabetic as $city_id) {
         $city_obj = get_term($city_id);
 
@@ -74,6 +75,7 @@ function get_state_and_cities($all_states, $current_cat_id)
 {
     // STATE FILTER MENU
     echo '<div id="state-filter-menu" class="mb-3 p-1 border border-primary animate__animated animate__bounceInLeft d-none">';
+    // DYNAMICALLY GENERATING STATE/COUNTRY/CONTINENT BUTTONS
     foreach ($all_states as $state) {
         echo '<li class="list-inline-item">';
         echo
@@ -84,6 +86,7 @@ function get_state_and_cities($all_states, $current_cat_id)
     }
 
     echo '<div class="border">';
+    // DYNAMICALLY GENERATING A LIST OF STATE BUTTONS BY USING get_cities() FUNCTION
     foreach ($all_states as $state) {
         get_cities($state->slug, $current_cat_id);
     }
