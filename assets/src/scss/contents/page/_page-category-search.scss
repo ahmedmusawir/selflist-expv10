@@ -28,7 +28,8 @@
         outline: none;
       }
       &::placeholder {
-        color: lighten($color: gray, $amount: 15%);
+        font-size: 0.9rem !important;
+        color: lighten($color: gray, $amount: 50%);
       }
 
       @media (max-width: 1200px) {

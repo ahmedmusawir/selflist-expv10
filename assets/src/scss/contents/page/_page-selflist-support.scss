@@ -1,0 +1,32 @@
+/**
+ *
+ * STYLE: Selflist Support
+ *
+ */
+
+.page-template-template-list-support {
+  //   border: 4px dotted dodgerblue;
+
+  #gform_wrapper_7 {
+    // border: 1rem dotted dodgerblue;
+    input {
+      border: 1px solid red;
+      border-radius: 10px;
+      box-shadow: 1px 1px 6px gray;
+    }
+    textarea {
+      border: 1px solid red;
+      border-radius: 10px;
+      box-shadow: 1px 1px 6px gray;
+    }
+    #gform_submit_button_7 {
+      background-color: #ff4136 !important;
+      margin: auto !important;
+      display: block;
+      box-shadow: 2px 2px 6px gray;
+      padding: 0.5rem 3.5rem;
+      border-radius: 5px !important;
+      font-size: 1.25rem;
+    }
+  }
+}

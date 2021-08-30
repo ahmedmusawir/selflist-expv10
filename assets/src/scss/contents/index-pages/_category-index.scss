@@ -28,15 +28,15 @@
         caret-color: white;
         background-color: red;
         border-color: red;
-        // padding-bottom: 1rem;
-        line-height: 2rem;
         &:focus {
           outline: none;
           // outline: 1px dashed red;
         }
         &::placeholder {
-          font-size: 1.5rem !important;
-          color: lighten($color: gray, $amount: 15%);
+          font-size: 0.9rem !important;
+          color: lighten($color: gray, $amount: 50%);
+          line-height: 5rem !important;
+          // color: lighten($color: gray, $amount: 15%);
         }
       }
       .fas.fa-search {

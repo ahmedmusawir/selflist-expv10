@@ -8,6 +8,11 @@
  *
  * @package cyberize-app-dev
  */
+$current_user = wp_get_current_user();
+$user_firstname = $current_user->user_firstname;
+$user_lastname = $current_user->user_lastname;
+$user_id = $current_user->ID;
+$user_email = $current_user->user_email;
 
 ?>
 <!doctype html>
@@ -49,6 +54,11 @@
                         <a id="logout-btn" class="float-left badge badge-primary"
                             href="<?php echo wp_logout_url(get_permalink()); ?>" style="margin-top: -31px;">
                             Exit
+                        </a>
+                        <a id="support-btn" class="float-left badge badge-success"
+                            href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
+                            style="margin-top: -31px;">
+                            Support
                         </a>
                         <?php // endif;?>
                     </section>

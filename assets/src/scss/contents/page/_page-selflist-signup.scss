@@ -53,7 +53,6 @@
     #gform_submit_button_4,
     #gform_submit_button_6 {
       background-color: #ff4136 !important;
-      // background-color: darken($color: red, $amount: 10%) !important;
       margin: auto !important;
       display: block;
       box-shadow: none;
@@ -67,6 +66,19 @@
 
     #input_4_3_container {
       padding-top: 0.5rem;
+    }
+
+    .ginput_container_password button {
+      -webkit-appearance: none;
+      appearance: none;
+      background: 0 0;
+      border: none;
+      padding: 5px 0;
+      position: absolute;
+      right: 1px;
+      text-align: center;
+      top: -15px;
+      width: 40px;
     }
   }
 }

@@ -160,11 +160,14 @@ require get_theme_file_path('/_functions/selflist/ajax/profile_pass_update_ajax.
 require get_theme_file_path('/_functions/selflist/cpt/flag-post-type.php');
 require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 
-// WP ADMIN LEFT MENU RELATED 
-require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
-// WP ADMIN NOTIFICATION AFTER POST PUBLISH
-require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');
-
 // SETTING UP CRON TEST
 // require get_theme_file_path('/_functions/selflist/wp-cron/wp-cron-test.php');
 require get_theme_file_path('/_functions/selflist/wp-cron/selflist-auto-point-add-monthly.php');
+// WP ADMIN LEFT MENU RELATED 
+require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
+
+
+
+
+// WP ADMIN NOTIFICATION AFTER POST PUBLISH
+require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');

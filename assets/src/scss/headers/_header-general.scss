@@ -51,7 +51,8 @@
         width: 200px;
         &:hover {
           background: #313131;
-          border-bottom: 4px solid red;
+          color: yellow;
+          // border-bottom: 4px solid red;
         }
       }
     }
@@ -66,8 +67,8 @@
     }
 
     &:hover > a {
-      color: #fff;
-      border-bottom: 4px solid red;
+      color: yellow;
+      // border-bottom: 4px solid red;
       // background: #4d4d4d;
       // background: red;
     }
@@ -96,11 +97,11 @@
   .current-menu-item > a:hover {
     // background: darken($cg-primary, 10%);
     color: yellow;
-    border-bottom: 4px solid red;
+    // border-bottom: 4px solid red;
   }
   // CURRENT PAGE SELECTED STATUS
   .sub-menu .current_page_ancestor {
-    border-bottom: 4px solid red;
+    // border-bottom: 4px solid red;
   }
 
   ul ul .current_page_parent,

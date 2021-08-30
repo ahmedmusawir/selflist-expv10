@@ -19,12 +19,12 @@ get_header();
  * CUSOMER/USER PROFILE
  */
 $current_user = wp_get_current_user();
-$user_points = get_field('selflist_points', 'user_' . $current_user->id);
+$user_points = get_field('selflist_points', 'user_' . $current_user->ID);
 $user_registered = $current_user->user_registered;
 $user_email = $current_user->user_email;
 $user_name = $current_user->display_name;
-$user_total_list_count = count_user_posts($current_user->id, 'post'); // false for all posts
-$user_published_list_count = count_user_posts($current_user->id, 'post', true); // true for public only
+$user_total_list_count = count_user_posts($current_user->ID, 'post'); // false for all posts
+$user_published_list_count = count_user_posts($current_user->ID, 'post', true); // true for public only
 ?>
 <!-- DO NOT DELETE - THESE ARE HIDDEN ITEMS ONLY TO BE USED WITH JAVASCRIPT -->
 <span class="d-none"
@@ -99,7 +99,7 @@ textarea::placeholder {
                 ID:
                 <strong class="text-danger">
                     <span class="current-user-id">
-                        <?php echo $current_user->id; ?>
+                        <?php echo $current_user->ID; ?>
                     </span>
                 </strong>
             </h6>
@@ -209,7 +209,7 @@ textarea::placeholder {
           // echo '</pre>';
 
           // COLLECTION ADDITIONAL INFO FROM ACF
-          $user_id_ACF = 'user_' . $current_user->id;
+          $user_id_ACF = 'user_' . $current_user->ID;
           $user_phone = get_field('your_profile_phone', $user_id_ACF);
           $user_website = get_field('your_profile_site', $user_id_ACF);
           $user_facebook = get_field('your_profile_facebook', $user_id_ACF);

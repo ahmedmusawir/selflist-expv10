@@ -8,6 +8,7 @@ class HmuLinkMaker {
     // COLLECTING ELEMENTS
     this.hmuStartBtn = $('#start-hmu-btn');
     this.hmuCheckbox = $('.list-hmu-checkbox');
+
     this.setEvents();
   }
 

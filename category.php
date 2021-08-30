@@ -62,7 +62,7 @@ textarea::placeholder {
 
     <?php else : ?>
 
-    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Back to Category Search</a>
+    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Category Search Reset</a>
 
     <?php endif; ?>
 
