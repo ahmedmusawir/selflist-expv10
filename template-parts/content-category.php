@@ -133,6 +133,7 @@ if ('post' === get_post_type()):
         </div>
     </div><!-- .entry-content -->
     <footer class="entry-footer">
+
         <section class="flex-icon-five">
 
             <?php if (get_field('your_facebook')): ?>
@@ -227,7 +228,6 @@ if ('post' === get_post_type()):
             </div>
 
         </section>
-
 
     </footer><!-- .entry-footer -->
 </article><!-- #post--->

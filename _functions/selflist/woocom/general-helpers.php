@@ -1,5 +1,16 @@
 <?php
 /**
+ * CHANGE THE WORD PRODUCT TO POINTS
+ */
+// Alter WooCommerce Checkout Text
+add_filter( 'gettext', function( $translated_text ) {
+    if ( 'Product' === $translated_text ) {
+        $translated_text = 'Points';
+    }
+    return $translated_text;
+} );
+
+/**
  * HERE GOES ALL THE SMALL HELPER FUNCTIONS FOR WOOCOM
  */
 

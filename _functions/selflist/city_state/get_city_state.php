@@ -17,7 +17,9 @@ function order_cities_alphabetically($cities_of_ga)
     }
 
     // SORTING THE THE CITY ARRAY ALPHABETICALLY
-    sort($cities_to_sort);
+    // sort($cities_to_sort);
+    // THIS IS A SPECIAL SORTING FUNCTION THAT CAN HANDLE LARGE AMOUND OF DATA WITH NUMBERS AND CASE INSENCITIVE VALUES
+    natcasesort($cities_to_sort);
     
     // NOW COLLCTING THE SORTED IDS AND CREATEING A NEW ID ARRAY (SORTED)
     foreach ($cities_to_sort as $city) {

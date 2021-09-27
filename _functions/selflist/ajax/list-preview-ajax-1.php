@@ -28,40 +28,6 @@ function list_preview_ajax()
 
         while ($the_list->have_posts()): $the_list->the_post();?>
 
-<style>
-input[type=checkbox] {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(2.2);
-    /* IE */
-    -moz-transform: scale(2.2);
-    /* FF */
-    -webkit-transform: scale(2.2);
-    /* Safari and Chrome */
-    -o-transform: scale(2.2);
-    /* Opera */
-    transform: scale(2.2);
-    /* padding: 10px; */
-    margin-top: .5rem;
-}
-
-input[type="checkbox"]:checked:before {
-    font-family: "FontAwesome";
-    font-size: .9rem;
-    color: black;
-    content: "\f14a";
-    background: transparent;
-    position: absolute;
-    border-radius: 2px;
-    width: 12px;
-    height: 12px;
-    left: 45%;
-    top: 5px;
-    /* top: 19.35%; */
-    transform: translate(-50%, -50%);
-}
-</style>
-
-
 <section class="category">
     <main id="list-preview" class="site-main container category">
         <article id="" class="category animate__animated  animate__zoomIn">
@@ -123,49 +89,47 @@ input[type="checkbox"]:checked:before {
         ?>
             </div><!-- .entry-content -->
 
-            <footer class="entry-footer">
-
+            <footer class="entry-footer mt-3">
                 <section class="flex-icon-five">
-
                     <?php if (get_field('your_facebook')): ?>
                     <div class="flex-icon-item">
-                        <a href="<?php the_field('your_facebook') ?>" target="_blank">
-                            <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
                         </a>
                     </div>
                     <?php endif;?>
-
                     <?php if (get_field('your_twitter')): ?>
                     <div class="flex-icon-item">
-                        <a href="<?php the_field('your_twitter') ?>" target="_blank">
-                            <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png"
-                                alt="Twitter Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Twitter-Icon.png" alt="Twitter Link">
                         </a>
                     </div>
                     <?php endif;?>
-
                     <?php if (get_field('your_yelp')): ?>
                     <div class="flex-icon-item">
-                        <a href="<?php the_field('your_yelp') ?>" target="_blank">
-                            <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
                         </a>
                     </div>
                     <?php endif;?>
-
                     <?php if (get_field('your_instagram')): ?>
                     <div class="flex-icon-item">
-                        <a href="<?php the_field('your_instagram') ?>" target="_blank">
-                            <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png"
-                                alt="Instagram Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Instagram-icon.png" alt="Instagram Link">
                         </a>
                     </div>
                     <?php endif;?>
-
                     <?php if (get_field('your_linkedin')): ?>
                     <div class="flex-icon-item">
-                        <a href="<?php the_field('your_linkedin') ?>" target="_blank">
-                            <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png"
-                                alt="Linkedin Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Linkedin-Icon.png" alt="Linkedin Link">
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <?php if (get_field('your_google_plus')): ?>
+                    <div class="flex-icon-item">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Google-icon.png" alt="Google Plus Link">
                         </a>
                     </div>
                     <?php endif;?>
@@ -175,73 +139,44 @@ input[type="checkbox"]:checked:before {
                 <section class="flex-icon-five">
 
                     <div class="flex-icon-item">
-                        <a href="tel:<?php the_field('your_phone') ?>">
-                            <img title="Phone: <?php the_field('your_phone') ?>" src="/wp-content/uploads/Cell-icon.png"
-                                alt="Phone Number">
+                        <a href="tel:404-321-1234">
+                            <img src="/wp-content/uploads/Cell-icon.png" alt="Phone Number">
                         </a>
                     </div>
                     <div class="flex-icon-item">
-                        <!-- <a href="mailto:webmaster@example.com"> -->
-                        <a href="mailto:<?php echo get_field('your_email'); ?>" target="_blank">
-                            <img title="<?php echo get_field('your_email'); ?>" src="/wp-content/uploads/Email-icon.png"
-                                alt="Email Address">
+                        <a href="mailto:webmaster@example.com">
+                            <img src="/wp-content/uploads/Email-icon.png" alt="Email Address">
+                        </a>
+                    </div>
+                    <?php if (get_field('your_site')): ?>
+                    <div class="flex-icon-item">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Website-icon.png" alt="Website Link">
+                        </a>
+                    </div>
+                    <?php endif;?>
+                    <div class="flex-icon-item">
+                        <a href="#">
+                            <img src="/wp-content/uploads/HMU-icon.png" alt="HMU Link">
                         </a>
                     </div>
                     <div class="flex-icon-item">
-                        <a href="<?php echo get_field('your_site'); ?>" target="_blank">
-                            <img title="<?php echo get_field('your_site'); ?>"
-                                src="/wp-content/uploads/Website-icon.png" alt="Website Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
                         </a>
                     </div>
-
                     <div class="flex-icon-item">
-                        <a href="/list-chat/" target="_blank">
-                            <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
+                        <a href="#">
+                            <img src="/wp-content/uploads/Screen-Shot-2021-01-26-at-1.50.39-PM.png" alt="Flag Link">
                         </a>
-                    </div>
-                    <div class="flex-icon-item mr-3">
-                        <div class="form-group" id="flag-btn">
-                            <div class="input-group mb-2 mt-1">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fab fa-font-awesome-flag text-danger"></i>
-                                    </div>
-                                    <button class="btn btn-primary btn-sm flag-form-btn"
-                                        data-key="flag-<?php echo get_the_ID(); ?>"
-                                        data-list-id="<?php echo $post->ID; ?>"
-                                        data-flag-email="<?php echo get_field('your_email'); ?>">
-                                        Flag
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-icon-item ml-3">
-                        <input type="checkbox" name="list-hmu-checkbox" id="list-hmu-checkbox"
-                            class="list-hmu-checkbox ml-5" autocomplete="off"
-                            data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
-                        <span class="checkmark"></span>
-                        <!-- <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small> -->
                     </div>
 
                 </section>
 
             </footer><!-- .entry-footer -->
-
-
         </article><!-- #post-ENDS -->
     </main>
 </section>
-<script>
-jQuery(function($) {
-    $('#list-hmu-checkbox').on('click', function() {
-        alert('Invite checkbox will be enabled when the List is Published!');
-        $(this).prop("checked", false);
-    });
-    $('#flag-btn').on('click', function() {
-        alert('Flagging will be enabled when the List is Published!');
-    });
-});
-</script>
 <?php
 
     endwhile;

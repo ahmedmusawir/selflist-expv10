@@ -182,7 +182,7 @@ endif;
                     Cancel
                 </button>
                 <button id="DELIST-action-btn" type="button" class="btn btn-primary">
-                    Confirm Deactivation
+                    Delist
                 </button>
             </div>
         </div>
@@ -214,7 +214,7 @@ endif;
                     Cancel
                 </button>
                 <button id="RELIST-action-btn" type="button" class="btn btn-primary">
-                    Confirm Activation
+                    Relist
                 </button>
             </div>
         </div>

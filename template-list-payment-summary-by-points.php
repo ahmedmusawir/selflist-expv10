@@ -115,7 +115,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 
 
     <section class="btn-holder mt-5">
-        <a href="#" class="btn btn-outline-danger float-left">Go Back</a>
+        <a href="/list-preview/" class="btn btn-outline-danger float-left">Go Back</a>
         <a href="#" id="pay-by-points-btn" class="btn btn-outline-danger float-right">Pay by Points</a>
     </section>
 

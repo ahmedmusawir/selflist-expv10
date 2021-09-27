@@ -38,9 +38,9 @@ function post_published_notification( $post_id, $post ) {
     $headers[] = '';
     wp_mail( $to, $subject, $message, $headers );
 
-    write_log($title);
-    write_log('Post ID:' . $post_id);
-    write_log($content);
+    // write_log($title);
+    // write_log('Post ID:' . $post_id);
+    // write_log($content);
 }
 
 add_action( 'publish_post', 'post_published_notification', 10, 2 );

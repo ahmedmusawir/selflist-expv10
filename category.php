@@ -58,11 +58,11 @@ textarea::placeholder {
 
     <?php if (is_user_logged_in()) : ?>
 
-    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Category Search Reset</a>
+    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Search By Category</a>
 
     <?php else : ?>
 
-    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Category Search Reset</a>
+    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Search By Category</a>
 
     <?php endif; ?>
 

@@ -13,7 +13,6 @@ add_filter('register_url', 'custom_register_url');
  * CUSTOM REGISTER TEXT CHANGE
  */
 add_filter('gettext', 'register_text');
-// add_filter(  'ngettext',  'register_text'  );
 function register_text($translated)
 {
     $translated = str_ireplace('Register', 'JOIN', $translated);
@@ -45,7 +44,7 @@ function custom_login_btn_text($translation, $text){
         return 'ENTER';
     }
     if ('Remember Me' == $text) {
-        return 'Me';
+        return '';
     }
     return $translation;
 }
