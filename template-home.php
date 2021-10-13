@@ -32,6 +32,20 @@ get_header('empty');
             <a href="/category-search-index" class="list-links display-4 d-block">LISTINGS</a>
         </section>
 
+        <style>
+        #sale-image-square:hover {
+            box-shadow: 2px 2px 6px gray;
+        }
+        </style>
+        <section class="mt-5">
+            <figure>
+                <a href="/list-signup/">
+                    <img id="sale-image-square" src="/wp-content/uploads/Sale-5000-rectangle.jpg" alt="">
+                </a>
+            </figure>
+        </section>
+
+
     </header><!-- #masthead -->
 
 </main><!-- #main -->

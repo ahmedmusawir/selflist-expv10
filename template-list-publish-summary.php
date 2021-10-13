@@ -21,7 +21,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 ?>
 
 <section id="list-publish-success" class="text-center">
-    <h3 class="text-uppercase mt-5"><small class="font-weight-bold">List Publish Summary</small></h3>
+    <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Summary</small></h3>
     <h6 class="text-uppercase">
         <small>
             Lister ID:
@@ -40,7 +40,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     </h6>
     <h6 class="text-uppercase font-weight-bold">Listing #<span class="published-post-id"></span></h6>
     <p class="text-uppercase font-weight-bold">
-        <small>List Publish Status:
+        <small>Listing Publish Status:
             <strong id="list-publish-status">_____________</strong>
         </small><br>
         <small>Lister Points Update Status:
@@ -48,7 +48,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         </small>
     </p>
     <h6 class="text-uppercase font-weight-bold">
-        My List Has Been Published for <span id="published-for-days" class="text-danger">___________</span> Days.
+        My Listing Has Been Published for <span id="published-for-days" class="text-danger">___________</span> Days.
     </h6>
 </section>
 <div class="navigation-box container">

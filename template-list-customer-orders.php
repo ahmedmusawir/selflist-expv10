@@ -44,15 +44,30 @@ $current_user = wp_get_current_user();
 				)
 			);
 			?>
+
+            <style>
+            #sale-image-square:hover {
+                box-shadow: 2px 2px 6px gray;
+            }
+            </style>
+            <section>
+                <figure>
+                    <a href="/list-customer-add-points/">
+                        <img class="mx-auto d-block" id="sale-image-square"
+                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                    </a>
+                </figure>
+            </section>
+
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
 
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Order Archive</small></h3>
-            <h2 class="h2">
+            <h3 class="text-uppercase"><small class="font-weight-bold">My Orders</small></h3>
+            <!-- <h2 class="h2">
                 <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>'s Orders
-            </h2>
+            </h2> -->
             <hr>
 
             <?php 

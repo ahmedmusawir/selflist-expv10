@@ -84,6 +84,21 @@ textarea::placeholder {
             )
         );
       ?>
+
+            <style>
+            #sale-image-square:hover {
+                box-shadow: 2px 2px 6px gray;
+            }
+            </style>
+            <section>
+                <figure>
+                    <a href="/list-customer-add-points/">
+                        <img class="mx-auto d-block" id="sale-image-square"
+                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                    </a>
+                </figure>
+            </section>
+
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
@@ -138,7 +153,7 @@ textarea::placeholder {
         </strong>
       </h6> -->
             <h6 class="h6 text-uppercase font-weight-bold">
-                Active List Count:
+                Active Listings Count:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_published_list_count; ?>

@@ -40,19 +40,34 @@ wp_nav_menu(
     )
 );
 ?>
+
+            <style>
+            #sale-image-square:hover {
+                box-shadow: 2px 2px 6px gray;
+            }
+            </style>
+            <section>
+                <figure>
+                    <a href="/list-customer-add-points/">
+                        <img class="mx-auto d-block" id="sale-image-square"
+                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                    </a>
+                </figure>
+            </section>
+
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
             <a href="/list-insert/" class="btn btn-danger float-right">List</a>
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Lists</small></h3>
+            <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3>
             <!-- <h2 class="h2"><?php echo $current_user->display_name; ?>'s Lists</h2> -->
             <h2 class="h2">
                 <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>'s Lists
             </h2>
 
             <hr>
-            <h5 class="font-weight-bold">ACTIVE LISTS:</h5>
+            <h5 class="font-weight-bold">ACTIVE LISTINGS:</h5>
             <?php
 // PUBLISHED LIST COUNT
 $arg_published = array(
@@ -73,10 +88,10 @@ count($current_user_published_posts) .
 echo '<hr>';
 // DISPLAY LIST
 foreach ($current_user_published_posts as $list) {
-    echo '<h6><span class="font-weight-bold">List ID: </span>' . $list->ID . '</h6>';
-    echo '<h6><span class="font-weight-bold">List Publish Date: </span>' .
+    echo '<h6><span class="font-weight-bold">Listing ID: </span>' . $list->ID . '</h6>';
+    echo '<h6><span class="font-weight-bold">Listing Publish Date: </span>' .
     date('M d, Y', strtotime($list->post_date)) . '</h6>';
-    echo '<h6><span class="font-weight-bold">List Content: </span>' . $list->post_content . '</h6>';
+    echo '<h6><span class="font-weight-bold">Listing Content: </span>' . $list->post_content . '</h6>';
     // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';
 
     // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
@@ -168,14 +183,14 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Delist Confirmation</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">Delist</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>List ID: <span id="DELIST-list-id"></span></h4>
-                <h4>Your List Will Be Deactivated!</h4>
+                <h4>Listing ID: <span id="DELIST-list-id"></span></h4>
+                <!-- <h4>Your List Will Be Deactivated!</h4> -->
             </div>
             <div class="modal-footer justify-content-center">
                 <button id="DELIST-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -199,15 +214,15 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Relist Confirmation</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">Relist</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>List ID: <span id="RELIST-list-id"></span></h4>
-                <h4>Your List Will Be Activated!</h4>
-                <h5>You have to pay by Points ...</h5>
+                <h4>Listing ID: <span id="RELIST-list-id"></span></h4>
+                <!-- <h4>Your List Will Be Activated!</h4> -->
+                <!-- <h5>You have to pay by Points ...</h5> -->
             </div>
             <div class="modal-footer justify-content-center">
                 <button id="RELIST-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -231,14 +246,14 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Delete Confirmation</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">Delete</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>List ID: <span id="DELETE-list-id"></span></h4>
-                <h5>Your List Will Be Deleted Permanently!</h5>
+                <h4>Listing ID: <span id="DELETE-list-id"></span></h4>
+                <!-- <h5>Your List Will Be Deleted Permanently!</h5> -->
             </div>
             <div class="modal-footer justify-content-center">
                 <button id="DELETE-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">

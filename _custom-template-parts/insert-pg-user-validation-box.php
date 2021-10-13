@@ -3,8 +3,8 @@
 
     <ul class="list-group">
         <!-- THE HEADER ANNOUNCEMENT -->
-        <li class="list-group-item active bg-light text-primary">Please Verify Categories Before Creating:<br>
-            <small>(You cannot edit categories once they are created)</small>
+        <li class="list-group-item active bg-light text-primary">Listing Content:<br>
+            <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
         <!-- THE CATEGORY LIST -->
         <li class="list-group-item">Main Category: <span class="pl-3 font-weight-bold"
@@ -49,9 +49,8 @@
         </li>
     </ul>
 
-    <button id="list-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create
-        Your List</button>
-    <button id="list-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Go Back</button>
+    <button id="list-insert-submit-btn" type="button" class="btn btn-primary btn-block">CREATE LIST</button>
+    <button id="list-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">GO BACK</button>
 
     <!-- LEFT OVER FROM CAT USER VALIDATION PAGE - DEL LATER
 <div class="my-3">

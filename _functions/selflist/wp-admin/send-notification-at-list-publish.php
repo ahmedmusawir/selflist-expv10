@@ -32,7 +32,7 @@ function post_published_notification( $post_id, $post ) {
     ";
 
     // EMAIL INFO
-    $to = 'moose@cyberizegroup.com';
+    $to = 'wojciech@selflist.com';
     $subject = sprintf( 'Published: %s', $title );
     $message = $content;
     $headers[] = '';

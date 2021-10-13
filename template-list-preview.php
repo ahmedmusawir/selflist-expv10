@@ -17,21 +17,21 @@ get_header();
 
 <section id="list-preview-ajax-data" class=""></section>
 <div class="navigation-box container">
-  <a href="/list-insert/" class="btn btn-outline-danger float-left">Cancel</a>
-  <a href="/list-payment-summary-by-points/" class="btn btn-outline-danger float-right">Publish Settings</a>
+    <a href="/list-insert/" class="btn btn-outline-danger float-left">BACK</a>
+    <a href="/list-payment-summary-by-points/" class="btn btn-outline-danger float-right">LIST</a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/arrive/2.4.1/arrive.min.js"
-  integrity="sha512-wkU3qYWjenbM+t2cmvw2ADRRh4opbOYBjkhrPGHV7M6dcE/TR0oKpoDkWXfUs3HrulI2JFuTQyqPLRih1V54EQ=="
-  crossorigin="anonymous"></script>
+    integrity="sha512-wkU3qYWjenbM+t2cmvw2ADRRh4opbOYBjkhrPGHV7M6dcE/TR0oKpoDkWXfUs3HrulI2JFuTQyqPLRih1V54EQ=="
+    crossorigin="anonymous"></script>
 
 <script>
-jQuery(function($) {
-  $(document).arrive('#for-list-preview-window', function() {
-    var catList = $(this);
-    catList.find('a').removeAttr('href').css('color', 'black');
-  });
-});
+// jQuery(function($) {
+//   $(document).arrive('#for-list-preview-window', function() {
+//     var catList = $(this);
+//     catList.find('a').removeAttr('href').css('color', 'black');
+//   });
+// });
 </script>
 
 <?php
