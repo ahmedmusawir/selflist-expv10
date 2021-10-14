@@ -4,59 +4,67 @@
  * WRITE TO DEBUG LOG
  */
 // if (!function_exists('write_log')) {
-// 	function write_log ( $log )  {
-// 		if ( true === WP_DEBUG ) {
-// 			if ( is_array( $log ) || is_object( $log ) ) {
-// 				error_log( print_r( $log, true ) );
-// 			} else {
-// 				error_log( $log );
-// 			}
-// 		}
-// 	}
+//     function write_log ( $log )  {
+//         if ( true === WP_DEBUG ) {
+//             if ( is_array( $log ) || is_object( $log ) ) {
+//                 error_log( print_r( $log, true ) );
+//             } else {
+//                 error_log( $log );
+//             }
+//         }
+//     }
 // }
 /**
  * DISPLAY CUSTOM TAXONOMY BY PARENT/CHILD ORDER
  * USAGE: print_taxonomy_ranks( get_the_terms( $post->ID, 'taxonomy_slug' ) );
  */
-function print_taxonomy_ranks( $terms = '' ) {
+function print_taxonomy_ranks($terms = '')
+{
 
-  // check input
-  if ( empty( $terms ) || is_wp_error( $terms ) || ! is_array( $terms ) )
-      return;
+    // check input
+    if (empty($terms) || is_wp_error($terms) || !is_array($terms)) {
+        return;
+    }
 
-  // set id variables to 0 for easy check 
-  $order_id = $family_id = $subfamily_id = 0;
+    // set id variables to 0 for easy check
+    $order_id = $family_id = $subfamily_id = 0;
 
-  // get order
-  foreach ( $terms as $term ) {
-      if ( $order_id || $term->parent )
-          continue;
-      $order_id  = $term->term_id;
-      $order     = $term->name;
-  }
+    // get order
+    foreach ($terms as $term) {
+        if ($order_id || $term->parent) {
+            continue;
+        }
 
-  // get family
-  foreach ( $terms as $term ) { 
-      if ( $family_id || $order_id != $term->parent )
-          continue;
-      $family_id = $term->term_id;
-      $family    = $term->name;
-  }
+        $order_id = $term->term_id;
+        $order = $term->name;
+    }
 
-  // get subfamily
-  foreach ( $terms as $term ) { 
-      if ( $subfamily_id || $family_id != $term->parent ) 
-          continue;
-      $subfamily_id = $term->term_id;
-      $subfamily    = $term->name;
-  }
+    // get family
+    foreach ($terms as $term) {
+        if ($family_id || $order_id != $term->parent) {
+            continue;
+        }
 
-  // output
-  // echo "State: $order, City: $family";
-  echo '
+        $family_id = $term->term_id;
+        $family = $term->name;
+    }
+
+    // get subfamily
+    foreach ($terms as $term) {
+        if ($subfamily_id || $family_id != $term->parent) {
+            continue;
+        }
+
+        $subfamily_id = $term->term_id;
+        $subfamily = $term->name;
+    }
+
+    // output
+    // echo "State: $order, City: $family";
+    echo '
     <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-      <small class="font-weight-bold">State of Country: 
-        <span class="text-info">' . $order .',</span> Market: <span class="text-info">' . $family .'</span>
+      <small class="font-weight-bold">State of Country:
+        <span class="text-info">' . $order . ',</span> Market: <span class="text-info">' . $family . '</span>
       </small>
     </p>';
 }
@@ -87,16 +95,12 @@ function print_taxonomy_ranks( $terms = '' ) {
 // add_action( 'wp_enqueue_scripts', 'custom_dequeue', 9999 );
 // add_action( 'wp_head', 'custom_dequeue', 9999 );
 
-
-
-
 // Replaces the excerpt "more" text by a link
 // function new_excerpt_more($more) {
 //        global $post;
-// 	return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> Read More ></a>';
+//     return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> Read More ></a>';
 // }
 // add_filter('excerpt_more', 'new_excerpt_more');
-
 
 // Remove Comments from Jetpack Carousel
 // function tweakjp_rm_comments_att( $open, $post_id ) {
@@ -109,20 +113,21 @@ function print_taxonomy_ranks( $terms = '' ) {
 // add_filter( 'comments_open', 'tweakjp_rm_comments_att', 10 , 2 );
 
 // Enable shortcodes in text widgets
-add_filter('widget_text','do_shortcode');
+add_filter('widget_text', 'do_shortcode');
 
 // Update CSS within in Admin
-function admin_style() {
-  wp_enqueue_style('admin-styles', get_template_directory_uri().'/admin.css');
+function admin_style()
+{
+    wp_enqueue_style('admin-styles', get_template_directory_uri() . '/admin.css');
 }
 add_action('admin_enqueue_scripts', 'admin_style');
 
 // LIMIT THE EXCERPT LENGTH
-function custom_excerpt_length( $length ) {
-  return 25;
+function custom_excerpt_length($length)
+{
+    return 25;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
 
 /**
  *
@@ -136,50 +141,48 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 add_filter( 'nav_menu_link_attributes', 'my_menu_atts', 10, 3 );
 function my_menu_atts( $atts, $item, $args )
 {
-  // Provide the id of the targeted menu item
-  $menu_target = 2974;
+// Provide the id of the targeted menu item
+$menu_target = 2974;
 
-  // inspect $item
+// inspect $item
 
-  if ($item->ID == $menu_target) {
-    $atts['data-toggle'] = 'modal';
-    $atts['data-target'] = '#myModal';
-  }
-  return $atts;
+if ($item->ID == $menu_target) {
+$atts['data-toggle'] = 'modal';
+$atts['data-target'] = '#myModal';
+}
+return $atts;
 }
 
-
-*/
+ */
 
 /**
-*
-* THIS IS TO GET THE CURRENT TEMPLATE NAME FOR DEBUGGING REASON
-*
-*/
+ *
+ * THIS IS TO GET THE CURRENT TEMPLATE NAME FOR DEBUGGING REASON
+ *
+ */
 // SETTING THE GLOBAL VARIABLE
-add_filter( 'template_include', 'var_template_include', 1000 );
+add_filter('template_include', 'var_template_include', 1000);
 
-function var_template_include( $t ) {
+function var_template_include($t)
+{
     $GLOBALS['current_theme_template'] = basename($t);
 
     return $t;
 }
 
-
-
 // DISPLAY TEMPLATE NAME ON DEMAND
-function get_current_template( $echo = false ) {
-    if ( !isset( $GLOBALS['current_theme_template'] ) ) {
+function get_current_template($echo = false)
+{
+    if (!isset($GLOBALS['current_theme_template'])) {
         return false;
     }
 
-    if ( $echo ) {
-        echo $GLOBALS['current_theme_template']; 
+    if ($echo) {
+        echo $GLOBALS['current_theme_template'];
     } else {
         return $GLOBALS['current_theme_template'];
     }
 }
-
 
 /**
  *
@@ -198,68 +201,73 @@ function get_current_template( $echo = false ) {
  * Remove Archive Name from Archive Title
  * Moose is Loose
  */
-	// add_filter( 'get_the_archive_title', function ($title) {    
-	// 	if ( is_tax('taxonomy-name', 'courses') ) {    
-	// 			$title = single_cat_title( '', false );    
-	// 	} elseif ( is_tag() ) {    
-	// 			$title = single_tag_title( '', false );    
-	// 	} elseif ( is_author() ) {    
-	// 			$title = '<span class="vcard">' . get_the_author() . '</span>' ;    
-	// 	} elseif ( is_tax() ) { //for custom post types
-	// 			$title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
-	// 	}    
-	// 	return $title;    
-	// });
+// add_filter( 'get_the_archive_title', function ($title) {
+//     if ( is_tax('taxonomy-name', 'blog') ) {
+//             $title = single_cat_title( '', false );
+//     } elseif ( is_tag() ) {
+//             $title = single_tag_title( '', false );
+//     } elseif ( is_author() ) {
+//             $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+//     } elseif ( is_tax() ) { //for custom post types
+//             $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+//     }
+//     return $title;
+// });
+
+/**
+ * REMOVE THE WORD ARCHIVE FROM PAGE TITLE
+ */
+// add_filter('get_the_archive_title', function ($title) {
+//     return preg_replace('/^\w+: /', '', $title);
+// });
 
 /*======================================
 =            ACF Google Map            =
 ======================================*/
 
-function my_acf_init() {
-
-	acf_update_setting('google_api_key', 'AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U');
+function my_acf_init()
+{
+    acf_update_setting('google_api_key', 'AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U');
 }
 
 add_action('acf/init', 'my_acf_init');
 
 /*=====  End of ACF Google Map  ======*/
 
-
 /*=====================================
 =  Remove Gravity Form Labels        =
 =====================================*/
 
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+add_filter('gform_enable_field_label_visibility_settings', '__return_true');
 
 /*=====  End of Remove Gravity Form Labels  ======*/
-
 
 /*========================================
 =            PREPARE REST API            =
 ========================================*/
 
-function prepare_rest( $data, $post, $request ) {
+function prepare_rest($data, $post, $request)
+{
 
-	$_data = $data->data;
+    $_data = $data->data;
 
-	$thumbnail_id = get_post_thumbnail_id( $post->ID );
-	$thumbnail_img = wp_get_attachment_image_src( $thumbnail_id, 'thumbnail' );
-	$medium_img = wp_get_attachment_image_src( $thumbnail_id, 'medium' );
-	$full_img = wp_get_attachment_image_src( $thumbnail_id, 'full' );
+    $thumbnail_id = get_post_thumbnail_id($post->ID);
+    $thumbnail_img = wp_get_attachment_image_src($thumbnail_id, 'thumbnail');
+    $medium_img = wp_get_attachment_image_src($thumbnail_id, 'medium');
+    $full_img = wp_get_attachment_image_src($thumbnail_id, 'full');
 
-	$_data['featured_thumb'] = $thumbnail_img[0];
-	$_data['featured_medium'] = $medium_img[0];
-	$_data['featured_full'] = $full_img[0];
+    $_data['featured_thumb'] = $thumbnail_img[0];
+    $_data['featured_medium'] = $medium_img[0];
+    $_data['featured_full'] = $full_img[0];
 
-	$data->data = $_data;
+    $data->data = $_data;
 
-	return $data;
+    return $data;
 }
 
-add_filter('rest_prepare_post', 'prepare_rest', 10, 3 );
+add_filter('rest_prepare_post', 'prepare_rest', 10, 3);
 
 /*=====  End of PREPARE REST API  ======*/
-
 
 /*=============================================
 =            ACF OPTIONS PAGE CODE            =

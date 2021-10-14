@@ -8,44 +8,10 @@
  */
 
 ?>
-<style>
-input[type=checkbox] {
-    /* Double-sized Checkboxes */
-    -ms-transform: scale(2.2);
-    /* IE */
-    -moz-transform: scale(2.2);
-    /* FF */
-    -webkit-transform: scale(2.2);
-    /* Safari and Chrome */
-    -o-transform: scale(2.2);
-    /* Opera */
-    transform: scale(2.2);
-    /* padding: 10px; */
-    margin-top: .5rem;
-}
-
-input[type="checkbox"]:checked:before {
-    font-family: "FontAwesome";
-    font-size: .9rem;
-    color: black;
-    content: "\f14a";
-    background: transparent;
-    position: absolute;
-    border-radius: 2px;
-    width: 12px;
-    height: 12px;
-    left: 45%;
-    /* left: 50%; */
-    top: 19.28%;
-    /* top: 19.26%; */
-    /* top: 19.24%; */
-    transform: translate(-50%, -50%);
-}
-</style>
 
 <article id="post-<?php the_ID();?>" <?php post_class('post-item animate__animated');?>>
-    <header class="entry-header">
 
+    <header class="entry-header">
         <?php
           // SHOW STATE & CITY IN A PARENT CHILD ORDER
           // Location: _functions/helpers-setup.php
@@ -103,6 +69,11 @@ if (!empty($post_terms) && !is_wp_error($post_terms)) {
 echo '</section>'; //END .post-item-cat-list
 
 // ========================================= END CATEGORY LIST W/ LINKS ========================================
+// if ( is_singular() ) :
+//     the_title( '<h4 class="entry-title font-weight-bold">', '</h4>' );
+// else :
+//     the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+// endif;
 
 if ('post' === get_post_type()):
 ?>
@@ -130,10 +101,12 @@ if ('post' === get_post_type()):
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
-            <a class="btn btn-outline-danger btn-sm float-right mt-1" href="<?php echo get_permalink(); ?>">SHARE</a>
+            <div class="back-holder d-block">
+                <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Back</a>
+            </div>
         </div>
     </div><!-- .entry-content -->
-    <footer class="entry-footer">
+    <footer class="entry-footer pb-3">
 
         <section class="flex-icon-five">
 
@@ -206,7 +179,7 @@ if ('post' === get_post_type()):
                     <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
                 </a>
             </div>
-            <div class="flex-icon-item mr-3">
+            <!-- <div class="flex-icon-item mr-3">
                 <div class="form-group">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -220,15 +193,20 @@ if ('post' === get_post_type()):
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex-icon-item ml-3">
+            </div> -->
+            <!-- <div class="flex-icon-item ml-3">
                 <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox ml-5" autocomplete="off"
                     data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
                 <span class="checkmark"></span>
-                <!-- <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small> -->
-            </div>
+            </div> -->
 
         </section>
 
     </footer><!-- .entry-footer -->
 </article><!-- #post--->
+<section class="social-share">
+    <h4 class="h4">Spread the word...</h4>
+    <div class="share-icons">
+        <?php echo do_shortcode('[Sassy_Social_Share]'); ?>
+    </div>
+</section>

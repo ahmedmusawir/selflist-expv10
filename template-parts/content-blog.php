@@ -10,7 +10,6 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
     <?php cyberize_app_dev_post_thumbnail(); ?>
 
     <header class="entry-header">
@@ -21,7 +20,7 @@
 			the_title( '<h5 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( 'blog' === get_post_type() ) :
 			?>
         <div class="entry-meta">
             <?php

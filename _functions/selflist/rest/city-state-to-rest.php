@@ -8,6 +8,7 @@
    register_rest_route('selflist/v1', 'cities', [
     'methods' => WP_REST_SERVER::READABLE,
     'callback' => 'get_city_state_to_rest',
+    'permission_callback' => '__return_true'
    ] );
  }
  add_action( 'rest_api_init', 'set_cities' );

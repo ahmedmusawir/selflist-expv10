@@ -8,6 +8,7 @@
    register_rest_route('selflist/v1', 'catInfo', [
     'methods' => WP_REST_SERVER::READABLE,
     'callback' => 'get_categories_to_rest',
+    'permission_callback' => '__return_true'
    ] );
  }
  add_action( 'rest_api_init', 'set_categories' );

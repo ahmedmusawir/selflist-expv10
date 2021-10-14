@@ -5,7 +5,8 @@
  */
 // THIS IMPACTS category.php, archive.php and template-list-preview.php
 .category,
-.archive {
+.archive,
+.single.single-post {
   // padding-top: 8rem;
   .site-main {
     // border: 4px dotted blue;
@@ -88,6 +89,11 @@
         display: block;
         clear: both;
         // border: 5px dotted green;
+        .list-author {
+          @media (max-width: 375px) {
+            font-size: 0.8rem;
+          }
+        }
       }
     }
 

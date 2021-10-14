@@ -158,6 +158,7 @@ require get_theme_file_path('/_functions/selflist/ajax/profile_pass_update_ajax.
 
 // FLAG RELATED 
 require get_theme_file_path('/_functions/selflist/cpt/flag-post-type.php');
+require get_theme_file_path('/_functions/selflist/cpt/blog-post-type.php');
 require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 
 // SETTING UP CRON TEST
