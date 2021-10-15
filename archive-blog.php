@@ -7,7 +7,11 @@
  * @package cyberize-app-dev
  */
 
-get_header();
+if (is_user_logged_in()) {
+  get_header();
+} else {
+  get_header('loggedout');
+}
 ?>
 <main id="primary" class="site-main container">
 
@@ -33,11 +37,19 @@ get_header();
 			 * If you want to override this in a child theme, then include a file
 			 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 			 */
-			get_template_part( 'template-parts/content', 'blog' );
+			get_template_part( 'template-parts/content', 'blog-index' );
 
 		endwhile;
 
-		the_posts_navigation();
+		// the_posts_navigation();
+        ?>
+
+            <div class="navigation">
+                <p><?php posts_nav_link('&nbsp;','<span class="float-left">Next</span>','<span class="float-right">Previous</span>'); ?>
+                </p>
+            </div>
+
+            <?php 
 
 	else :
 

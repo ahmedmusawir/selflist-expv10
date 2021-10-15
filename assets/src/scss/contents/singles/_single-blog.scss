@@ -1,0 +1,37 @@
+/**
+ *
+ * Global Styles for Post Single Page
+ *
+ */
+
+.single.single-blog {
+  //   border: 1rem dotted red;
+  .site-main {
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+
+    @media (min-width: 1300px) {
+      .left-col-blog {
+        // border: 1rem dotted red;
+        padding-right: 4rem;
+      }
+    }
+
+    .post-thumbnail {
+      img {
+        width: 100%;
+      }
+    }
+
+    .entry-meta {
+      margin: 1rem 0rem;
+      .posted-on {
+        padding: 0.5rem 2rem;
+        background-color: #e3e3e3;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -43,7 +43,7 @@ if ( ! function_exists( 'cyberize_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 		add_image_size( 'blog-size', 400, 400, true );
 		add_image_size( 'featured-size', 500, 300, true );
-		add_image_size( 'featured-post-size', 600, 250, true );
+		add_image_size( 'featured-post-size', 600, 350, true );
 		add_image_size( 'map-image', 300, 250, true );
 		add_image_size( 'univ-mobile-size', 800, 560, true );
 

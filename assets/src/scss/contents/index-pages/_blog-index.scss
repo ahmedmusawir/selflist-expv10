@@ -4,16 +4,25 @@
  *
  */
 
-.blog {
+.post-type-archive-blog {
   // padding-top: 8rem;
   .site-main {
     // border: 4px dotted blue;
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
 
-  .type-post {
-    // border: 3px dotted green;
-    // padding-bottom: 3rem;
+    .page-title {
+      // border: 4px dotted blue;
+      font-size: 2rem !important;
+    }
+
+    .entry-content {
+      padding-bottom: 1rem;
+    }
+
+    .blog.type-blog {
+      // border: 4px dotted blue;
+      margin-bottom: 2.5rem;
+    }
   }
 }

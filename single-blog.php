@@ -7,13 +7,17 @@
  * @package cyberize-app-dev
  */
 
-get_header();
+if (is_user_logged_in()) {
+  get_header();
+} else {
+  get_header('loggedout');
+}
 ?>
 
 <main id="primary" class="site-main container mt-5">
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-sm-12 col-md-12 col-lg-8 left-col-blog">
             <?php
 		while ( have_posts() ) :
 			the_post();
@@ -35,7 +39,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-12 col-md-12 col-lg-4">
             <?php get_sidebar(); ?>
         </div>
     </div>

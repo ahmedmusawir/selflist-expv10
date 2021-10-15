@@ -58,6 +58,7 @@
 ========================================*/
 
 @import 'contents/singles/single-post';
+@import 'contents/singles/single-blog';
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -65,7 +66,7 @@
 =            COMMENTS			          =
 ========================================*/
 
-// @import "contents/comments/comments-asm";
+@import 'contents/comments/comments-selflist';
 
 /*=====  End of SINGLE BLOG POST  ======*/
 
@@ -89,7 +90,7 @@
 =            SIDEBAR STYLES 	            =
 ==========================================*/
 
-// @import "contents/sidebar/sidebar-asm";
+@import 'contents/sidebar/sidebar-selflist';
 
 /*=====  End of SIDEBAR PAGE  ======*/
 

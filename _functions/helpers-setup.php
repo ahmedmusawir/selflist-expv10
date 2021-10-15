@@ -96,11 +96,11 @@ function print_taxonomy_ranks($terms = '')
 // add_action( 'wp_head', 'custom_dequeue', 9999 );
 
 // Replaces the excerpt "more" text by a link
-// function new_excerpt_more($more) {
-//        global $post;
-//     return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> Read More ></a>';
-// }
-// add_filter('excerpt_more', 'new_excerpt_more');
+function new_excerpt_more($more) {
+       global $post;
+    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> READ MORE ></a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 // Remove Comments from Jetpack Carousel
 // function tweakjp_rm_comments_att( $open, $post_id ) {
@@ -191,11 +191,11 @@ function get_current_template($echo = false)
  */
 
 //change text to leave a reply on comment form
-// function freeman_comment_reform ($arg) {
-//   $arg['title_reply'] = __('Leave a Reply');
-//   return $arg;
-//   }
-//   add_filter('comment_form_defaults','freeman_comment_reform');
+function freeman_comment_reform ($arg) {
+  $arg['title_reply'] = __('Leave a Comment');
+  return $arg;
+  }
+  add_filter('comment_form_defaults','freeman_comment_reform');
 
 /**
  * Remove Archive Name from Archive Title

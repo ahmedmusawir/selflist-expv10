@@ -10,7 +10,6 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-
     <?php cyberize_app_dev_post_thumbnail(); ?>
 
     <header class="entry-header">

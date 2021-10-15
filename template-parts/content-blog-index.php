@@ -12,24 +12,26 @@
 
     <?php
 // Must be inside a loop.
- 
+echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">'  ;
+
 if ( has_post_thumbnail() ) {
-    cyberize_app_dev_post_thumbnail();
+    // cyberize_app_dev_post_thumbnail('full');
+    the_post_thumbnail('featured-post-size');
 }
 else {
-    echo '<img class="w-100" src="' . get_bloginfo( 'stylesheet_directory' ) 
+    echo '<img class="" src="' . get_bloginfo( 'stylesheet_directory' ) 
         . '/assets/img/thumbnail-default.jpg" />';
 }
-?>
 
-    <?php  ?>
+echo '</a>';
+?>
 
     <header class="entry-header">
         <?php
 		if ( is_singular() ) :
 			the_title( '<h5 class="entry-title font-weight-bold mt-4">', '</h5>' );
 		else :
-			the_title( '<h5 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
+			the_title( '<h5 class="entry-title font-weight-bold mt-4"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
 		endif;
 
 		if ( 'blog' === get_post_type() ) :
@@ -45,7 +47,7 @@ else {
 
     <div class="entry-content">
         <?php
-		the_content();
+		the_excerpt();
 		?>
     </div><!-- .entry-content -->
 

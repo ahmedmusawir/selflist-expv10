@@ -1,13 +1,13 @@
 /**
  *
- * Comments styles for ASM
+ * Comments styles for Selflist
  *
  */
 
-.content-area {
+.single.single-blog {
   #comments {
     margin-bottom: 3rem;
-    max-width: 80%;
+    max-width: 100%;
     @media (max-width: 1300px) {
       max-width: 100%;
     }
@@ -184,30 +184,30 @@
       input {
         width: 100%;
         // background-color: lighten($cg-secondary, 0%);
-        border: 1px solid #707070;
-        outline-color: #707070;
+        border: 1px solid $cg-primary;
+        outline-color: $cg-primary;
         min-height: 40px;
         padding-left: 15px;
         padding-right: 15px;
-        border-radius: 0px;
+        border-radius: 10px;
         // @include border-bottom-right-radius(60px);
       }
       textarea {
         width: 100%;
         // background-color: lighten($cg-primary, 45%);
-        border: 1px solid #707070;
-        outline-color: #707070;
+        border: 1px solid $cg-primary;
+        outline-color: $cg-primary;
         // @include border-top-left-radius(60px);
         // @include border-bottom-right-radius(60px);
         box-sizing: border-box;
         max-height: 150px;
-        border-radius: 0px;
+        border-radius: 10px;
       }
       #submit {
-        background-color: $cg-button;
+        background-color: $cg-primary;
         color: lighten($cg-primary, 100%);
-        border-radius: 0px;
-        border-color: $cg-button;
+        border-radius: 10px;
+        border-color: $cg-primary;
         color: #fff;
         width: 232px;
         min-height: 28px;
