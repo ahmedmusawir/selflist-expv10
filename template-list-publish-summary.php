@@ -39,21 +39,21 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         </small>
     </h6>
     <h6 class="text-uppercase font-weight-bold">Listing #<span class="published-post-id"></span></h6>
-    <p class="text-uppercase font-weight-bold">
+    <!-- <p class="text-uppercase font-weight-bold">
         <small>Listing Publish Status:
             <strong id="list-publish-status">_____________</strong>
         </small><br>
         <small>Lister Points Update Status:
             <strong id="list-point-status">_____________</strong>
         </small>
-    </p>
+    </p> -->
     <h6 class="text-uppercase font-weight-bold">
         My Listing Has Been Published for <span id="published-for-days" class="text-danger">___________</span> Days.
     </h6>
 </section>
 <div class="navigation-box container">
-    <a href="/list-insert/" class="btn btn-outline-danger float-left">List</a>
-    <a href="/list-customer-archive/" class="btn btn-outline-danger float-right">Listings</a>
+    <a href="/list-insert/" class="btn btn-outline-danger float-right">List</a>
+    <!-- <a href="/list-customer-archive/" class="btn btn-outline-danger float-right">Listings</a> -->
 </div>
 
 <?php

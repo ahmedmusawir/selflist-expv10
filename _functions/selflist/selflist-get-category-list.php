@@ -13,24 +13,22 @@
       if (! $sub2_cats ) {
         if (is_user_logged_in()) {
           echo '
-          <section id="no-cat-found" class="card text-center">
+          <section id="no-cat-found" class="card text-center pb-3">
 
-            No More Categories ...
-            <p>Back to Category Search<p>
+            <p>No More Categories ...</p>
+            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index-members/">Search By Categories</a>
 
-            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index-members/">Back</a>
           </section>
           ';
 
         } else {
           echo '
-          <section id="no-cat-found" class="card text-center">
+          <section id="no-cat-found" class="card text-center pb-3">
   
-            No More Categories ...
-            <p>Back to Category Search<p>
-  
-            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index/">Back</a>
-          </section>
+            <p>No More Categories ...</p>
+            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index/">Search By Categories</a>
+
+            </section>
           ';
         }
         

@@ -94,11 +94,13 @@ input[type="checkbox"]:checked:before {
              *
              */
             $taxonomy = 'category';
-            // function coming from _functions/selflist/taxonomy/selflist-cat-list-w-links
-            show_all_categories_w_links_and_arrows($post_id, $taxonomy);
-
+            // function coming from _functions/selflist/taxonomy/selflist-cat-list-wo-links
+            // show_all_categories_without_links_and_arrows($post_id, $taxonomy);
+            // show_all_categories_w_links_and_arrows($post_id, $taxonomy)
 
             ?>
+
+
 
                 <?php
         // ====================================== END CATEGORY LIST WITH PARENT CHILD ===================================

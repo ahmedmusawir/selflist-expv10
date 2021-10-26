@@ -137,13 +137,25 @@ textarea::placeholder {
         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
 
             <article class="category-sidebar">
-                <ul class="primo">
+                <ul class="primo d-none d-lg-block">
                     <?php 
         
         
         $cat_list = get_selflist_sub_cats($current_cat_id);
         
       ?>
+                </ul>
+                <ul class="primo d-md-block d-lg-none d-xl-done">
+                    <?php if (is_user_logged_in()) : ?>
+
+                    <a href="/category-search-index-members/" class="btn btn-danger btn-block mb-2">Search By
+                        Category</a>
+
+                    <?php else : ?>
+
+                    <a href="/category-search-index/" class="btn btn-danger btn-block mb-2">Search By Category</a>
+
+                    <?php endif; ?>
                 </ul>
 
             </article>
@@ -163,7 +175,7 @@ textarea::placeholder {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-danger">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This List</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This Listing</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->

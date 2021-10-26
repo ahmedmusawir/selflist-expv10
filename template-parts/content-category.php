@@ -115,11 +115,11 @@ if ('post' === get_post_type()):
         <?php endif;?>
     </header><!-- .entry-header -->
 
-    <?php cyberize_app_dev_post_thumbnail();?>
+    <?php //cyberize_app_dev_post_thumbnail();?>
 
     <div id="post-content" class="entry-content">
         <?php
-        the_excerpt();
+        the_content();
         ?>
         <!-- AUTHOR NAME BOX -->
         <div class="list-author-box">

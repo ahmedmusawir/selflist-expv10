@@ -90,7 +90,7 @@ if ('post' === get_post_type()):
 
     <div id="post-content" class="entry-content">
         <?php
-        the_excerpt();
+        the_content();
         ?>
         <!-- AUTHOR NAME BOX -->
         <div class="list-author-box">
@@ -205,7 +205,7 @@ if ('post' === get_post_type()):
     </footer><!-- .entry-footer -->
 </article><!-- #post--->
 <section class="social-share">
-    <h4 class="h4">Spread the word...</h4>
+    <h4 class="h4">SHARE...</h4>
     <div class="share-icons">
         <?php echo do_shortcode('[Sassy_Social_Share]'); ?>
     </div>

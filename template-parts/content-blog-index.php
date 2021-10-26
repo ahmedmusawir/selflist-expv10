@@ -19,8 +19,10 @@ if ( has_post_thumbnail() ) {
     the_post_thumbnail('featured-post-size');
 }
 else {
-    echo '<img class="" src="' . get_bloginfo( 'stylesheet_directory' ) 
-        . '/assets/img/thumbnail-default.jpg" />';
+    // echo '<img class="" src="' . get_bloginfo( 'stylesheet_directory' ) 
+    //     . '/assets/img/thumbnail-default.jpg" />';
+    echo '<img class="" src="/wp-content/uploads/thumbnail-default.jpg" />'; 
+
 }
 
 echo '</a>';

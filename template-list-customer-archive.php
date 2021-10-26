@@ -49,8 +49,7 @@ wp_nav_menu(
             <section>
                 <figure>
                     <a href="/list-customer-add-points/">
-                        <img class="mx-auto d-block" id="sale-image-square"
-                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                        <img class="mx-auto d-block" id="sale-image-square" src="/wp-content/uploads/Square.jpg" alt="">
                     </a>
                 </figure>
             </section>
@@ -62,13 +61,11 @@ wp_nav_menu(
             <a href="/list-insert/" class="btn btn-danger float-right">List</a>
             <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3>
             <!-- <h2 class="h2"><?php echo $current_user->display_name; ?>'s Lists</h2> -->
-            <h2 class="h2">
+            <!-- <h2 class="h2">
                 <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>'s Lists
-            </h2>
+            </h2> -->
 
-            <hr>
-            <h5 class="font-weight-bold">ACTIVE LISTINGS:</h5>
-            <?php
+            <?php 
 // PUBLISHED LIST COUNT
 $arg_published = array(
     'author' => $current_user->ID,
@@ -79,12 +76,26 @@ $arg_published = array(
 );
 
 $current_user_published_posts = get_posts($arg_published);
+?>
+            <style>
+            .the-count {
+                line-height: 2rem;
+            }
+            </style>
+
+            <hr>
+            <h5 class="font-weight-bold h5">ACTIVE LISTINGS
+                <span
+                    class="badge badge-danger badge-pill the-count"><?php echo count($current_user_published_posts); ?></span>
+            </h5>
+
+            <?php
 
 // LIST COUNT
-echo '<h6>[ <span><small class="font-weight-bold">TOTAL PUBLISHED LISTS:  ' .
-count($current_user_published_posts) .
-    '</small></span> ]
-</h6>';
+// echo '<h6>[ <span><small class="font-weight-bold">TOTAL PUBLISHED LISTINGS:  ' .
+// count($current_user_published_posts) .
+//     '</small></span> ]
+// </h6>';
 echo '<hr>';
 // DISPLAY LIST
 foreach ($current_user_published_posts as $list) {
@@ -112,11 +123,6 @@ foreach ($current_user_published_posts as $list) {
 // wp_reset_query();
 wp_reset_postdata();
 // rewind_posts();
-
-      ?>
-
-            <h5 class="font-weight-bold">NON-ACTIVE LISTS:</h5>
-            <?php
 // UNPUBLISHED LIST COUNT
 $args_pending = array(
     'author' => $current_user->ID,
@@ -128,7 +134,16 @@ $args_pending = array(
 
 $list = new WP_Query($args_pending);
 
-echo '<h6>[ <span><small class="font-weight-bold">TOTAL UNPUBLISHED LISTS:  ' . $list->found_posts . '</small></span> ]</h6>';
+      ?>
+
+
+            <h5 class="font-weight-bold h5">NON-ACTIVE LISTINGS <span
+                    class="badge badge-danger badge-pill the-count"><?php echo $list->found_posts; ?></span>
+            </h5>
+            <?php
+
+
+// echo '<h6>[ <span><small class="font-weight-bold">TOTAL UNPUBLISHED LISTINGS:  ' . $list->found_posts . '</small></span> ]</h6>';
 echo '<hr class="bg-danger">';
 
 if ($list->have_posts()):
@@ -137,12 +152,12 @@ if ($list->have_posts()):
 
         $list_status = get_query_var('post_status');
 
-        echo '<h6><span class="font-weight-bold text-danger">List Status: </span>' . $list->query_vars['post_status'] . '</h6>';
+        echo '<h6><span class="font-weight-bold text-danger">Listing Status: </span>' . $list->query_vars['post_status'] . '</h6>';
 
-        echo '<h6><span class="font-weight-bold">List ID: </span>' . get_the_id() . '</h6>';
-        echo '<h6><span class="font-weight-bold">List Publish Date: </span>' .
+        echo '<h6><span class="font-weight-bold">Listing ID: </span>' . get_the_id() . '</h6>';
+        echo '<h6><span class="font-weight-bold">Listing Publish Date: </span>' .
         date('M d, Y', strtotime(get_the_date())) . '</h6>';
-        echo '<h6><span class="font-weight-bold">List Content: </span>' . get_the_content() . '</h6>';
+        echo '<h6><span class="font-weight-bold">Listing Content: </span>' . get_the_content() . '</h6>';
         // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';
 
         // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
@@ -260,7 +275,7 @@ endif;
                     Cancel
                 </button>
                 <button id="DELETE-action-btn" type="button" class="btn btn-primary">
-                    Confirm Delete
+                    Confirm
                 </button>
             </div>
         </div>

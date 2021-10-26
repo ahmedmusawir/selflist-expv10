@@ -93,8 +93,7 @@ textarea::placeholder {
             <section>
                 <figure>
                     <a href="/list-customer-add-points/">
-                        <img class="mx-auto d-block" id="sale-image-square"
-                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                        <img class="mx-auto d-block" id="sale-image-square" src="/wp-content/uploads/Square.jpg" alt="">
                     </a>
                 </figure>
             </section>
@@ -210,7 +209,7 @@ textarea::placeholder {
                     disabled>Cancel</button>
                 <button id="additional-info-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
             </div>
-            <h3 class="text-uppercase"><small class="font-weight-bold">Addtional Information</small></h3>
+            <h3 class="text-uppercase"><small class="font-weight-bold">Information</small></h3>
             <p>The following information will be included in my listings automatically</p>
             <!-- LIST INSERT BLOCK -->
             <section class="additional-data-container">

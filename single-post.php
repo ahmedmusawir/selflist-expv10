@@ -7,7 +7,12 @@
  * @package cyberize-app-dev
  */
 
-get_header();
+if (is_user_logged_in()) {
+  get_header();
+} else {
+  get_header('loggedout');
+}
+
 ?>
 
 <main id="primary" class="site-main container">

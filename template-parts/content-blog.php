@@ -17,8 +17,10 @@ if ( has_post_thumbnail() ) {
     cyberize_app_dev_post_thumbnail();
 }
 else {
-    echo '<img class="w-100" src="' . get_bloginfo( 'stylesheet_directory' ) 
-        . '/assets/img/thumbnail-default.jpg" />';
+    // echo '<img class="w-100" src="' . get_bloginfo( 'stylesheet_directory' ) 
+    //     . '/assets/img/thumbnail-default.jpg" />';
+    echo '<img class="" src="/wp-content/uploads/thumbnail-default.jpg" />'; 
+
 }
 ?>
 

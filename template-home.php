@@ -38,9 +38,11 @@ get_header('empty');
         }
         </style>
         <section class="mt-5">
-            <figure>
+            <figure id="sale-image-square" class="text-center pt-3">
                 <a href="/list-signup/">
-                    <img id="sale-image-square" src="/wp-content/uploads/Sale-5000-rectangle.jpg" alt="">
+                    <h5 class="font-weight-bold">LIST FOR 1 POINT PER DAY PER LISTING</h5>
+                    <h6 class="text-success font-weight-bold">5000 POINTS FOR 1 DOLLAR</h6>
+                    <p><small>(Availble Until December 31, 2021)</small></p>
                 </a>
             </figure>
         </section>

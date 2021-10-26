@@ -47,16 +47,22 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Points</small></h3>
-            <h6 class="h6 text-uppercase font-weight-bold mb-5">
+            <h3 class="text-uppercase"><small class="font-weight-bold">My Points <span
+                        class="badge badge-pill badge-danger"><?php echo $user_points; ?></span></small></h3>
+            <!-- <h6 class="h6 text-uppercase font-weight-bold mb-5">
                 Available Points:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_points; ?>
                     </span>
                 </strong>
-            </h6>
-            <h4 class="h4">Add Points by Purchasing following Products:</h4>
+            </h6> -->
+            <h4 class="h4">Add Points:</h4>
+            <style>
+            .woocommerce-loop-product__title {
+                display: none;
+            }
+            </style>
             <hr>
             <?php echo do_shortcode('[products]'); ?>
 

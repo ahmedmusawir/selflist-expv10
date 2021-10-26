@@ -53,8 +53,7 @@ $current_user = wp_get_current_user();
             <section>
                 <figure>
                     <a href="/list-customer-add-points/">
-                        <img class="mx-auto d-block" id="sale-image-square"
-                            src="/wp-content/uploads/Sale-5000-square.jpg" alt="">
+                        <img class="mx-auto d-block" id="sale-image-square" src="/wp-content/uploads/Square.jpg" alt="">
                     </a>
                 </figure>
             </section>

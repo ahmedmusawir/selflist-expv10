@@ -49,7 +49,7 @@
         </li>
     </ul>
 
-    <button id="list-insert-submit-btn" type="button" class="btn btn-primary btn-block">CREATE LIST</button>
+    <button id="list-insert-submit-btn" type="button" class="btn btn-primary btn-block">LIST</button>
     <button id="list-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">GO BACK</button>
 
     <!-- LEFT OVER FROM CAT USER VALIDATION PAGE - DEL LATER

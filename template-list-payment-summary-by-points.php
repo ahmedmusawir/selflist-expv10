@@ -64,7 +64,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 <main id="primary" class="site-main container">
 
     <section class="datepicker-range-box text-center">
-        <h3 class="text-uppercase mt-5"><small class="font-weight-bold">List & Pay</small></h3>
+        <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Dates</small></h3>
         <h6 class="text-uppercase">
             <small>
                 Lister ID:
@@ -91,11 +91,11 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                 <div class="outputToDateTime"></div>
                 <input type="text" id="list-to-date-time-input">
                 <section class="message-display-box p-2">
-                    <h6><small class="font-weight-bold text-uppercase">List Ends on: </small> <span
+                    <h6><small class="font-weight-bold text-uppercase">Listing Ends on: </small> <span
                             class="list-end-date text-danger">_______</span></h6>
                 </section>
                 <section class="payment-display-box text-center p-4">
-                    <h6 class="text-uppercase"><small class="font-weight-bold">My List will be published for:
+                    <h6 class="text-uppercase"><small class="font-weight-bold">My Listing will be published for:
                         </small>&nbsp;<span class="list-publish-days text-danger font-weight-bold">_______</span>
                         &nbsp;<small class="font-weight-bold">Days</small>
                     </h6>
