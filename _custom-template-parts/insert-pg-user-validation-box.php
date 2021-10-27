@@ -43,10 +43,14 @@
         <li class="list-group-item">Linkedin: <span class="pl-3 font-weight-bold"
                 id="list-user-validation-linkedin"></span>
         </li>
-
         <li class="list-group-item">Twitter: <span class="pl-3 font-weight-bold"
                 id="list-user-validation-twitter"></span>
         </li>
+        <li class="list-group-item">Youtube: <span class="pl-3 font-weight-bold"
+                id="list-user-validation-youtube"></span>
+        </li>
+
+
     </ul>
 
     <button id="list-insert-submit-btn" type="button" class="btn btn-primary btn-block">LIST</button>

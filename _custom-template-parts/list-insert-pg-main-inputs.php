@@ -101,6 +101,18 @@ $user_registered = $current_user->user_registered
         <!-- <small id="textHelp" class="form-text text-muted">Example: https://twitter.com/mypage</small> -->
     </div>
 
+    <!-- Youtube -->
+    <div class="form-group">
+        <div class="input-group mb-4">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="text-danger fab fa-youtube"></i></div>
+            </div>
+            <input type="url" class="form-control" id="lister-youtube" name="lister-youtube"
+                placeholder="https://youtube.com/mypage">
+        </div>
+        <!-- <small id="textHelp" class="form-text text-muted">Example: https://twitter.com/mypage</small> -->
+    </div>
+
     <!-- LISTING SINCE -->
     <div class="form-group">
         <label class="font-weight-bold" for="lister-name">Listing Since:</label>

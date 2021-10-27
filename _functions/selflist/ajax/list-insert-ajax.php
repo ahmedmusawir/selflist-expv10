@@ -43,6 +43,7 @@ function list_insert_ajax()
             'your_instagram' => sanitize_text_field($post_args['instagram']),
             'your_linkedin' => sanitize_text_field($post_args['linkedin']),
             'your_twitter' => sanitize_text_field($post_args['twitter']),
+            'your_youtube' => sanitize_text_field($post_args['youtube']),
         ],
     ];
 

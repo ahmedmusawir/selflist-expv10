@@ -33,7 +33,7 @@ add_action('wp_ajax_profile_data_insert_ajax', 'profile_data_insert_ajax');
   $your_yelp = sanitize_text_field($profile_data['yelp']);
   $your_instagram = sanitize_text_field($profile_data['instagram']);
   $your_linkedin = sanitize_text_field($profile_data['linkedin']);
-  $your_google_plus = sanitize_text_field($profile_data['googlePlus']);
+  $your_youtube = sanitize_text_field($profile_data['youtube']);
   $your_twitter = sanitize_text_field($profile_data['twitter']);
 
   // UPDATE THE USER'S INFO FIELDS
@@ -43,7 +43,7 @@ add_action('wp_ajax_profile_data_insert_ajax', 'profile_data_insert_ajax');
   update_user_meta($user_id, 'your_profile_yelp', $your_yelp);
   update_user_meta($user_id, 'your_profile_instagram', $your_instagram);
   update_user_meta($user_id, 'your_profile_linkedin', $your_linkedin);
-  update_user_meta($user_id, 'your_profile_google_plus', $your_google_plus);
+  update_user_meta($user_id, 'your_profile_youtube', $your_youtube);
   update_user_meta($user_id, 'your_profile_twitter', $your_twitter);
 
   // SENDING TOTAL PROFILE DATA AS JSON

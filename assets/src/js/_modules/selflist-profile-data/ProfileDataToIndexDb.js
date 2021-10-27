@@ -28,7 +28,7 @@ class ProfileDataToIndexDb extends ProfileDataToDbAjax {
     const yelp = this.socialYelp.val();
     const instagram = this.socialInstagram.val();
     const linkedin = this.socialLinkedin.val();
-    const googlePlus = this.socialGooglePlus.val();
+    const youtube = this.socialYoutube.val();
     const twitter = this.socialTwitter.val();
 
     const profileObj = {
@@ -37,7 +37,7 @@ class ProfileDataToIndexDb extends ProfileDataToDbAjax {
       phone,
       site,
       facebook,
-      googlePlus,
+      youtube,
       instagram,
       linkedin,
       twitter,

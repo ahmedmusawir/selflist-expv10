@@ -54,6 +54,7 @@ input::placeholder {
     font-size: .8rem !important;
 }
 
+
 textarea::placeholder {
     font-size: .8rem !important;
 }
@@ -63,7 +64,8 @@ textarea::placeholder {
 #lister-instagram-error,
 #lister-yelp-error,
 #lister-linkedin-error,
-#lister-google-plus-error {
+#lister-google-plus-error,
+#lister-youtube-error {
     position: absolute;
     top: 110%;
     left: 0%;
@@ -230,8 +232,9 @@ textarea::placeholder {
           $user_yelp = get_field('your_profile_yelp', $user_id_ACF);
           $user_instagram = get_field('your_profile_instagram', $user_id_ACF);
           $user_linkedin = get_field('your_profile_linkedin', $user_id_ACF);
-          $user_google_plus = get_field('your_profile_google_plus', $user_id_ACF);
           $user_twitter = get_field('your_profile_twitter', $user_id_ACF);
+          $user_youtube = get_field('your_profile_youtube', $user_id_ACF);
+          
 
           ?>
                     <!-- MEMBER PROFILE ADDITIONAL INFO FORM -->
@@ -323,6 +326,21 @@ textarea::placeholder {
                             <!-- <small id="textHelp" class="form-text text-muted">Example:
                                 https://twitter.com/mypage</small> -->
                         </div>
+
+                        <!-- YourTube -->
+                        <div class="form-group">
+                            <div class="input-group mb-4">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="text-danger fab fa-youtube"></i></div>
+                                </div>
+                                <input type="url" class="form-control" id="lister-youtube" name="lister-youtube"
+                                    placeholder="https://www.youtube.com/channel/UCYawRfyYRTbS3Q-AGSrr52w"
+                                    value="<?php echo $user_youtube; ?>" readonly>
+                            </div>
+                            <!-- <small id="textHelp" class="form-text text-muted">Example:
+                                https://twitter.com/mypage</small> -->
+                        </div>
+
 
                         <!-- THE SUBMIT BUTTON -->
                         <button id="profile-info-update-button" type="submit" class="btn btn-secondary btn-block"

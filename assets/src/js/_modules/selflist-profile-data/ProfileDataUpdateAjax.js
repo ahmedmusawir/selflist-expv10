@@ -17,7 +17,7 @@ class ProfileDataUpdateAjax {
     this.socialInstagram = $('#lister-instagram');
     this.socialLinkedin = $('#lister-linkedin');
     this.socialTwitter = $('#lister-twitter');
-    this.socialGooglePlus = $('#lister-google-plus');
+    this.socialYoutube = $('#lister-youtube');
   }
 
   profileDataAjaxHandler = () => {
@@ -32,7 +32,7 @@ class ProfileDataUpdateAjax {
     const yelp = this.socialYelp.val();
     const instagram = this.socialInstagram.val();
     const linkedin = this.socialLinkedin.val();
-    const googlePlus = this.socialGooglePlus.val();
+    const youtube = this.socialYoutube.val();
     const twitter = this.socialTwitter.val();
 
     // UNIT TESTNG Debugging Output
@@ -42,7 +42,7 @@ class ProfileDataUpdateAjax {
     console.log(`YELP: ${yelp}`);
     console.log(`INSTAGRAM: ${instagram}`);
     console.log(`LINKEDIN: ${linkedin}`);
-    console.log(`GOOGLEPLUS: ${googlePlus}`);
+    console.log(`YOUTUBE: ${youtube}`);
     console.log(`TWITTER: ${twitter}`);
 
     // PREPARING FORM DATA FOR REST API
@@ -53,7 +53,7 @@ class ProfileDataUpdateAjax {
       yelp, // ACF Item
       instagram, // ACF Item
       linkedin, // ACF Item
-      googlePlus, // ACF Item
+      youtube, // ACF Item
       twitter, // ACF Item
     };
 

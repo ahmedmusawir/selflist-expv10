@@ -48,7 +48,7 @@ textarea::placeholder {
 #lister-instagram-error,
 #lister-yelp-error,
 #lister-linkedin-error,
-#lister-google-plus-error {
+#lister-youtube-error {
     position: absolute;
     top: 110%;
     left: 0%;

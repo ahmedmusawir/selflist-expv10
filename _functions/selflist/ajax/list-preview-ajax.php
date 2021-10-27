@@ -169,6 +169,15 @@ input[type="checkbox"]:checked:before {
                     </div>
                     <?php endif;?>
 
+                    <?php if (get_field('your_youtube')): ?>
+                    <div class="flex-icon-item">
+                        <a href="<?php the_field('your_youtube') ?>" target="_blank">
+                            <img title="Your Youtube Page" src="/wp-content/uploads/Youtube-Icon.png"
+                                alt="youtube Link">
+                        </a>
+                    </div>
+                    <?php endif;?>
+
                 </section>
 
                 <section class="flex-icon-five">

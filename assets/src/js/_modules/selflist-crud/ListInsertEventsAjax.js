@@ -62,6 +62,7 @@ class ListInsertEventsAjax extends ListInsertUiDataParent {
     const instagram = this.socialInstagram;
     const linkedin = this.socialLinkedin;
     const twitter = this.socialTwitter;
+    const youtube = this.socialYoutube;
 
     // UNIT TESTNG Debugging Output
     console.log(`DESCRIPTION: ${description}`);
@@ -74,6 +75,7 @@ class ListInsertEventsAjax extends ListInsertUiDataParent {
     console.log(`INSTAGRAM: ${instagram}`);
     console.log(`LINKEDIN: ${linkedin}`);
     console.log(`TWITTER: ${twitter}`);
+    console.log(`YOUTUBE: ${youtube}`);
 
     // PREPARING FORM DATA FOR REST API
     let newPostData = {
@@ -95,6 +97,7 @@ class ListInsertEventsAjax extends ListInsertUiDataParent {
       instagram, // ACF Item
       linkedin, // ACF Item
       twitter, // ACF Item
+      youtube, // ACF Item
     };
 
     // UNIT TESTING debugging info

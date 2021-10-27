@@ -14,7 +14,7 @@ class ListFormAutoFiller {
     this.socialYelp = $('#lister-yelp');
     this.socialInstagram = $('#lister-instagram');
     this.socialLinkedin = $('#lister-linkedin');
-    this.socialGooglePlus = $('#lister-google-plus');
+    this.socialYoutube = $('#lister-youtube');
     this.socialTwitter = $('#lister-twitter');
     // GETTING PROFILE DATA FROM INDEXED DB
     this.memberProfileInfo;
@@ -57,7 +57,7 @@ class ListFormAutoFiller {
     this.socialYelp.val(this.memberProfileInfo.yelp);
     this.socialInstagram.val(this.memberProfileInfo.instagram);
     this.socialLinkedin.val(this.memberProfileInfo.linkedin);
-    this.socialGooglePlus.val(this.memberProfileInfo.googlePlus);
+    this.socialYoutube.val(this.memberProfileInfo.youtube);
     this.socialTwitter.val(this.memberProfileInfo.twitter);
   };
 }
