@@ -115,16 +115,6 @@ $user_registered = $current_user->user_registered
 
     <!-- LISTING SINCE -->
     <div class="form-group">
-        <label class="font-weight-bold" for="lister-terms">Terms & Conditions</label>
-        <div class="card bg-light pl-3 pt-3">
-            <p class="text-danger font-weight-bold">
-                <input type="checkbox" name="lister-terms" id="lister-terms"><span class="terms-text ml-2">Accept</span>
-            </p>
-        </div>
-    </div>
-
-    <!-- LISTING SINCE -->
-    <div class="form-group">
         <label class="font-weight-bold" for="lister-name">Listing Since:</label>
         <div class="card bg-light pl-3 pt-3">
             <p class="text-danger font-weight-bold">

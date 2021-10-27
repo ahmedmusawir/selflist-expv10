@@ -23,6 +23,8 @@ class ListInsertValidationEvents extends ListInsertUiDataParent {
     this.cityInsertFormBox = $('#city-insert-form-box');
     // The following is to focus on the City Insert Input
     this.cityInsertInput = $('#city-input-element');
+    // Lister Terms & Conditions Input - Accept
+    this.listerTerms = $('#lister-terms');
     // Setting up events
     this.setEvents();
     // ADDING LETTERS & SPACES ONLY METHOD TO JQ VALIDATION
@@ -211,6 +213,10 @@ class ListInsertValidationEvents extends ListInsertUiDataParent {
           window.scrollTo(0, 0);
           this.cityInsertInput.trigger('focus');
           // this.cityInsertInput.focus();
+        } else if (this.listerTerms.prop('checked') !== true) {
+          alert('Please Accept Our Terms & Conditions!');
+          // SCROLL TO TOP
+          this.listerTerms.trigger('focus');
         } else {
           // OPEN THE USER VALIDATION SCREEN
           this.displayValidationBox();
