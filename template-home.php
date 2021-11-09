@@ -37,12 +37,12 @@ get_header('empty');
             box-shadow: 2px 2px 6px gray;
         }
         </style>
-        <section class="mt-5">
+        <section class="mt-5 d-none">
             <figure id="sale-image-square" class="text-center pt-3">
                 <a href="/list-signup/">
                     <h5 class="font-weight-bold">LIST FOR 1 POINT PER DAY PER LISTING</h5>
                     <h6 class="text-success font-weight-bold">5000 POINTS FOR 1 DOLLAR</h6>
-                    <p><small>(Availble Until December 31, 2021)</small></p>
+                    <p><small>(Available Until December 31, 2021)</small></p>
                 </a>
             </figure>
         </section>

@@ -68,6 +68,7 @@
 
     .selflist-search-input {
       height: 3.5rem !important;
+      line-height: 3rem !important;
       width: 87% !important;
       font-size: 2.5rem;
       font-weight: 600;
@@ -79,6 +80,10 @@
       &:focus {
         // outline: 0.5px solid white;
         outline: none;
+      }
+      @media (max-width: 1200px) {
+        // border: 1rem solid green;
+        font-size: 2rem;
       }
     }
     .fas.fa-search {

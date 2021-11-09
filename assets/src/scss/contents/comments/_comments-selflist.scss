@@ -214,8 +214,8 @@
         padding: 20px 35px;
         text-transform: uppercase;
         &:hover {
-          background-color: transparent;
-          color: lighten($cg-button, 20%);
+          background-color: darkred;
+          // color: lighten($cg-button, 20%);
         }
       }
     }

@@ -99,7 +99,11 @@ input[type="checkbox"]:checked:before {
 
             $cats = get_the_category($post_id);
 
-            // print_taxonomy_ranks_for_listing_preview($cats);
+           foreach ($cats as $cat) {
+                # code...
+                echo $cat->name;
+                echo '<br>';
+            } 
 
 
             ?>

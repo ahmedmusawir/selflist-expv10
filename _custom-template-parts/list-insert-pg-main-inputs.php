@@ -9,10 +9,10 @@ $user_registered = $current_user->user_registered
 
     <div class="form-group mt-5">
         <!-- <label class="font-weight-bold" for="lister-description">Description:</label> -->
-        <label class="font-weight-bold" for="exampleFormControlTextarea1">Description:</label>
+        <label class="font-weight-bold" for="exampleFormControlTextarea1">Key Words:</label>
 
         <textarea class="form-control" id="lister-description" name="lister-description" rows="3"
-            placeholder="...(Up to 140 Characters)"></textarea>
+            placeholder="... Up to 140 Characters"></textarea>
     </div>
     <!-- NAME -->
     <div class="form-group">

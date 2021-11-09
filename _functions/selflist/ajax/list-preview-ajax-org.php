@@ -97,11 +97,6 @@ input[type="checkbox"]:checked:before {
             // function coming from _functions/selflist/taxonomy/selflist-cat-list-w-links
             show_all_categories_w_links_and_arrows($post_id, $taxonomy);
 
-            $cats = get_the_category($post_id);
-
-            // print_taxonomy_ranks_for_listing_preview($cats);
-
-
             ?>
 
                 <?php

@@ -57,8 +57,8 @@
 <section id="main-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">Please Verify Categories Before Creating:<br>
-            <small>(You cannot edit categories once they are created)</small>
+        <li class="list-group-item active bg-light text-primary">Please Verify Categories:<br>
+            <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
         <li class="list-group-item">Main Category: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
         <li class="list-group-item">Primo Category: <span class="pl-3 font-weight-bold" id="primo-input"></span></li>
@@ -67,7 +67,7 @@
         <li class="list-group-item">Terzo Category: <span class="pl-3 font-weight-bold" id="terzo-input"></span></li>
     </ul>
 
-    <button id="main-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create Categories</button>
+    <button id="main-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create</button>
     <button id="main-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button>
 
     <div class="my-3">

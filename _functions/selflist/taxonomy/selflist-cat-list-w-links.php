@@ -30,7 +30,11 @@ function show_all_categories_w_links_and_arrows($post_id, $taxonomy)
 
         // Display post categories.
         echo '<small class="font-weight-bold">';
-        echo $terms;
+        if ($terms == 'No categories') {
+            echo '<small style="font-size: .9rem">New Categories</small>';
+        } else {
+            echo $terms;
+        }
         echo '</small>';
     }
 

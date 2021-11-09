@@ -98,7 +98,7 @@ function print_taxonomy_ranks($terms = '')
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
-    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> READ MORE ></a>';
+    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> MORE ></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -192,10 +192,12 @@ function get_current_template($echo = false)
 
 //change text to leave a reply on comment form
 function freeman_comment_reform ($arg) {
-  $arg['title_reply'] = __('Leave a Comment');
+  $arg['title_reply'] = __('Comment');
   return $arg;
   }
   add_filter('comment_form_defaults','freeman_comment_reform');
+
+
 
 /**
  * Remove Archive Name from Archive Title
