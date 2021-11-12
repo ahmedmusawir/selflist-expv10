@@ -37,8 +37,7 @@ add_action('wp_ajax_list_payment_and_publish_ajax', 'list_payment_and_publish_aj
 
 function list_payment_and_publish_ajax()
 {
-    
-    // SETTING AJAX VARS FROM JS
+
     $post_id = $_POST['currentPostId'];
     $payment_points = $_POST['newPaymentPoints'];
     $publish_days = $_POST['newPaymentPoints'];
@@ -46,27 +45,10 @@ function list_payment_and_publish_ajax()
     $current_available_user_points = get_field('selflist_points', 'user_' . $current_user_id);
     // USER POINTS AFTER PAYMENT
     $post_payment_user_points = $current_available_user_points - $payment_points;
-    
-
-//      SETTING PAYMENT POINTS AS MINUTES
-        $number_of_days = $publish_days;
-
-//      SETTING LISTING EXPIRITION TIME WITH WP CRON [Based on number of days or points]	  
-		delete_transient( 'doing_cron' );
-		$wp_cron_result = wp_schedule_single_event(time() + $number_of_days * 60 * 60 * 24, 'UNLIST_event', [$post_id], true);
-		spawn_cron();
-
-		write_log("Result From WP Cron: ");
-		write_log($wp_cron_result);
-		write_log("WP Cron Set on List: ");
-		write_log($post_id);
-
-    write_log("Added Publish Action for cron for days: " . $number_of_days);
 
     // UPDATE USER POINTS
     // Will return false if the previous value is the same as $new_value.
     $points_updated = update_user_meta($current_user_id, 'selflist_points', $post_payment_user_points);
-    write_log("Updated new points with: " . $post_payment_user_points);
 
     // UPDATE LIST STATUS FROM PENDING TO PUBLISH
     if ($points_updated === true) {
@@ -77,8 +59,22 @@ function list_payment_and_publish_ajax()
         );
 
         $post_update_status = wp_update_post($args);
-        
-        write_log("Updated List Status: " . $post_update_status);
+
+        // SETTING PAYMENT POINTS AS MINUTES
+        $number_of_days = $publish_days;
+
+        // SETTING LISTING EXPIRITION TIME WITH WP CRON [Based on number of days or points]
+//        $wp_cron_result = wp_schedule_single_event(time() + $number_of_days * 60 * 2, 'UNLIST_event', [$post_id]);
+	   
+		delete_transient( 'doing_cron' );
+		$wp_cron_result = wp_schedule_single_event(time() + $number_of_days * 60 * 60 * 24, 'UNLIST_event', [$post_id], true);
+		spawn_cron();
+//         sleep( 1 );
+		write_log("Result From WP Cron: ");
+		write_log($wp_cron_result);
+		write_log("WP Cron Set on List: ");
+		write_log($post_id);
+        // wp_schedule_single_event( $timestamp:integer, $hook:string, $args:array )
     }
 
     // NEW CAT SET ARRAY

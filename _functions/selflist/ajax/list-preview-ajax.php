@@ -219,7 +219,7 @@ input[type="checkbox"]:checked:before {
                                     </div>
                                     <button class="btn btn-primary btn-sm flag-form-btn"
                                         data-key="flag-<?php echo get_the_ID(); ?>"
-                                        data-list-id="<?php echo $post->ID; ?>"
+                                        data-list-id="<?php echo $post_id; ?>"
                                         data-flag-email="<?php echo get_field('your_email'); ?>">
                                         Flag
                                     </button>
