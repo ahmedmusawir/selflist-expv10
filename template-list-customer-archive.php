@@ -164,7 +164,15 @@ if ($list->have_posts()):
 
         $post_id = get_the_id();
 
-        // show_all_categories_without_links_and_arrows($post_id);
+        /**
+             *
+             * CATEGORY LIST WITH PARENT CHILD RELATIONSHIP
+             *
+             */
+            $cats = get_the_category($post_id);
+            // following funciton is coming from /_functions/selflist/taxonomy/selflist-cat-list-wo-links.php   
+            print_taxonomy_ranks_for_listing_preview($cats);
+
         echo '<hr>';
         // DELIST BUTTON -->
         echo '<button class="relist-button-in-user-archive btn btn-outline-danger btn-sm" data-list-id="'. $post_id .'">

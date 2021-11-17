@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * DISPLAY CUSTOM TAXONOMY BY PARENT/CHILD ORDER
  * USAGE: print_taxonomy_ranks( get_the_terms( $post->ID, 'taxonomy_slug' ) );
@@ -12,57 +12,102 @@ function print_taxonomy_ranks_for_listing_preview($terms = '')
     }
 
     // set id variables to 0 for easy check
-    $order_id = $family_id = $subfamily_id = $supersubfamily_id = 0;
+    $main_id = $primo_id = $secondo_id = $terzo_id = 0;
 
     // get order
     foreach ($terms as $term) {
-        if ($order_id || $term->parent) {
+        if ($main_id || $term->parent) {
             continue;
         }
 
-        $order_id = $term->term_id;
-        $order = $term->name;
+        $main_id = $term->term_id;
+        $main = $term->name;
     }
 
     // get family
     foreach ($terms as $term) {
-        if ($family_id || $order_id != $term->parent) {
+        if ($primo_id || $main_id != $term->parent) {
             continue;
         }
 
-        $family_id = $term->term_id;
-        $family = $term->name;
+        $primo_id = $term->term_id;
+        $primo = $term->name;
     }
 
     // get subfamily
     foreach ($terms as $term) {
-        if ($subfamily_id || $family_id != $term->parent) {
+        if ($secondo_id || $primo_id != $term->parent) {
             continue;
         }
 
-        $subfamily_id = $term->term_id;
-        $subfamily = $term->name;
+        $secondo_id = $term->term_id;
+        $secondo = $term->name;
     }
 
     // get subfamily
     foreach ($terms as $term) {
-        if ($supersubfamily_id || $subfamily_id != $term->parent) {
+        if ($terzo_id || $secondo_id != $term->parent) {
             continue;
         }
 
-        $supersubfamily_id = $term->term_id;
-        $supersubfamily = $term->name;
+        $terzo_id = $term->term_id;
+        $terzo = $term->name;
     }
-
 
     // output
-    // echo "State: $order, City: $family";
-    echo '
-    <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-      <small class="font-weight-bold">Main Cat:
-        <span class="text-info">' . $order . ',</span> Primo Cat: <span class="text-info">' . $family . '</span>
-        </span> Secondo Cat: <span class="text-info">' . $subfamily . '</span>
-        </span> Terzo Cat: <span class="text-info">' . $supersubfamily . '</span>
+    // echo "State: $main, City: $primo";
+    // echo '
+    // <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
+    //   <small class="font-weight-bold">Main Cat:
+    //     <span class="text-info">' . $main . ',</span> Primo Cat: <span class="text-info">' . $primo . '</span>
+    //     </span> Secondo Cat: <span class="text-info">' . $secondo . '</span>
+    //     </span> Terzo Cat: <span class="text-info">' . $terzo . '</span>
+    //   </small>
+    // </p>';
+
+    $separator = '&nbsp;&nbsp;<i class="fas fa-arrow-right text-dark"></i>&nbsp;';
+
+    if (!$primo) {
+
+        echo '
+    <p class="text-dark text-uppercase" style="font-size: 1rem; margin-bottom: 0;">
+      <small class="font-weight-bold text-danger">
+        <span class="text-danger">' . $main . '</span>
       </small>
     </p>';
+
+    } elseif (!$secondo) {
+
+        echo '
+    <p class="text-dark text-uppercase" style="font-size: 1rem; margin-bottom: 0;">
+      <small class="font-weight-bold text-danger">
+        <span class="text-danger">'  . $main . '</span>' . $separator . '<span class="text-danger">' . $primo . '</span>
+        </span>
+      </small>
+    </p>';
+
+    } elseif (!$terzo) {
+
+        echo '
+    <p class="text-dark text-uppercase" style="font-size: 1rem; margin-bottom: 0;">
+      <small class="font-weight-bold text-danger">
+        <span class="text-danger">' . $main . '</span>' . $separator . '<span class="text-danger">' . $primo . '</span>
+        </span>' . $separator . '<span class="text-danger">'  . $secondo . '</span>
+        </span>
+      </small>
+    </p>';
+
+    } else {
+
+        echo '
+    <p class="text-dark text-uppercase" style="font-size: 1rem; margin-bottom: 0;">
+      <small class="font-weight-bold text-danger">
+        <span class="text-danger">' . $main . '</span>' . $separator . '<span class="text-danger">' . $primo . '</span>
+        </span>' . $separator . '<span class="text-danger">' . $secondo . '</span>
+        </span>' . $separator . '<span class="text-danger">' . $terzo . '</span>
+      </small>
+    </p>';
+
+    }
+
 }
