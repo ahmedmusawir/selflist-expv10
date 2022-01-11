@@ -283,7 +283,7 @@ endif;
                     Cancel
                 </button>
                 <button id="DELETE-action-btn" type="button" class="btn btn-primary">
-                    Confirm
+                    Delete
                 </button>
             </div>
         </div>

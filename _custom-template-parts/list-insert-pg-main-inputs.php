@@ -15,37 +15,39 @@ $user_registered = $current_user->user_registered
             placeholder="... Up to 140 Characters"></textarea>
     </div>
     <!-- NAME -->
+    <label class="font-weight-bold" for="exampleFormControlTextarea1">Auto Links:</label>
+
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-name">Contact:</label> -->
         <input type="text" class="form-control" id="lister-name" name="lister-name" aria-describedby="textHelp"
-            placeholder="My Name">
+            placeholder="Name">
         <!-- <small id="textHelp" class="form-text text-muted">Ex: John Doe</small> -->
     </div>
     <!-- PHONE -->
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-phone">Phone:</label> -->
         <input type="tel" class="form-control" id="lister-phone" name="lister-phone" aria-describedby="textHelp"
-            placeholder="My Phone Number">
+            placeholder="Phone">
         <!-- <small id="textHelp" class="form-text text-muted">Ex: 6781231234</small> -->
     </div>
     <!-- EMAIL -->
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-email">Email:</label> -->
         <input type="email" class="form-control" id="lister-email" name="lister-email" aria-describedby="textHelp"
-            placeholder="My Email Address">
+            placeholder="Email Address">
         <!-- <small id="textHelp" class="form-text text-muted">Ex: john@doe.com</small> -->
     </div>
     <!-- WEBSITE -->
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-website">Website:</label> -->
         <input type="text" class="form-control" id="lister-website" name="lister-website" aria-describedby="textHelp"
-            placeholder="My Website">
+            placeholder="Website">
         <!-- <small id="textHelp" class="form-text text-muted">Ex: https://you-website.com</small> -->
     </div>
     <!-- SOCIAL MEDIA  -->
     <!-- Facebook -->
     <div class="form-group">
-        <label class="font-weight-bold" for="exampleFormControlTextarea1">My Social Media:</label>
+        <!-- <label class="font-weight-bold" for="exampleFormControlTextarea1">My Social Media:</label> -->
         <div class="input-group mb-4">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>
@@ -115,7 +117,7 @@ $user_registered = $current_user->user_registered
 
     <!-- LISTING SINCE -->
     <div class="form-group">
-        <label class="font-weight-bold" for="lister-terms">Terms & Conditions</label>
+        <label class="font-weight-bold" for="lister-terms">Terms & Conditions:</label>
         <div class="card bg-light pl-3 pt-3">
             <p class="text-danger font-weight-bold">
                 <input type="checkbox" name="lister-terms" id="lister-terms"><span class="terms-text ml-2">Accept</span>

@@ -111,17 +111,17 @@ textarea::placeholder {
             <h2 class="h2">Welcome, <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
             </h2>
 
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 ID:
                 <strong class="text-danger">
                     <span class="current-user-id">
-                        <?php echo $current_user->ID; ?>
+                        <?php //echo $current_user->ID; ?>
                     </span>
                 </strong>
-            </h6>
+            </h6> -->
 
             <h6 class="h6 text-uppercase font-weight-bold">
-                Login ID:
+                USER NAME:
                 <strong class="text-danger">
                     <span class="current-user-id text-lowercase">
                         <?php echo $current_user->user_login; ?>
@@ -137,14 +137,14 @@ textarea::placeholder {
                     </span>
                 </strong>
             </h6>
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Email:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points" class="text-lowercase">
-                        <?php echo $user_email; ?>
+                        <?php //echo $user_email; ?>
                     </span>
                 </strong>
-            </h6>
+            </h6> -->
             <!-- <h6 class="h6 text-uppercase font-weight-bold">
         Your Total List Count:
         <strong class="text-danger">
@@ -154,7 +154,7 @@ textarea::placeholder {
         </strong>
       </h6> -->
             <h6 class="h6 text-uppercase font-weight-bold">
-                Active Listings Count:
+                Active Listings:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_published_list_count; ?>
@@ -162,10 +162,10 @@ textarea::placeholder {
                 </strong>
             </h6>
             <h6 class="h6 text-uppercase font-weight-bold">
-                Membership:
+                Listing Since:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
-                        <?php printf('Since %s<br>', date("M d, Y", strtotime($user_registered)));?>
+                        <?php printf('%s<br>', date("M d, Y", strtotime($user_registered)));?>
                     </span>
                 </strong>
             </h6>
@@ -176,7 +176,7 @@ textarea::placeholder {
                     disabled>Cancel</button>
                 <button id="password-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
             </div>
-            <h3 class="text-uppercase"><small class="font-weight-bold">Password Reset</small></h3>
+            <h3 class="text-uppercase"><small class="font-weight-bold">My Password</small></h3>
             <!-- <p class="text-danger">Reset Your Login Password Here... </p> -->
 
             <!-- MEMBER PASSWORK RESET FORM -->
@@ -211,8 +211,8 @@ textarea::placeholder {
                     disabled>Cancel</button>
                 <button id="additional-info-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
             </div>
-            <h3 class="text-uppercase"><small class="font-weight-bold">Information</small></h3>
-            <p>The following information will be included in my listings automatically</p>
+            <h3 class="text-uppercase"><small class="font-weight-bold">My Listing Auto Links</small></h3>
+            <!-- <p>The following information will be included in my listings automatically</p> -->
             <!-- LIST INSERT BLOCK -->
             <section class="additional-data-container">
 
@@ -245,25 +245,32 @@ textarea::placeholder {
                         <div class="form-group">
                             <!-- <label class="font-weight-bold" for="lister-phone">Phone:</label> -->
                             <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
-                                aria-describedby="textHelp" placeholder="My Phone Number"
-                                value="<?php echo $user_phone; ?>" readonly>
+                                aria-describedby="textHelp" placeholder="Phone" value="<?php echo $user_phone; ?>"
+                                readonly>
                             <!-- <small id="textHelp" class="form-text text-muted">Phone Ex: 6781231234</small> -->
                         </div>
                         <!-- WEBSITE -->
                         <div class="form-group">
                             <!-- <label class="font-weight-bold" for="lister-website">Website:</label> -->
                             <input type="text" class="form-control" id="lister-website" name="lister-website"
-                                aria-describedby="textHelp" placeholder="My Website"
-                                value="<?php echo $user_website; ?>" readonly>
+                                aria-describedby="textHelp" placeholder="Website" value="<?php echo $user_website; ?>"
+                                readonly>
+                            <!-- <small id="textHelp" class="form-text text-muted">Website Ex:
+                                https://your-website.com</small> -->
+                        </div>
+                        <div class="form-group">
+                            <!-- <label class="font-weight-bold" for="lister-website">Website:</label> -->
+                            <input type="text" class="form-control" id="lister-email" name="lister-website"
+                                aria-describedby="textHelp" placeholder="Email" value="<?php echo $user_email; ?>"
+                                readonly disabled>
                             <!-- <small id="textHelp" class="form-text text-muted">Website Ex:
                                 https://your-website.com</small> -->
                         </div>
 
-
                         <!-- SOCIAL MEDIA  -->
                         <!-- Facebook -->
                         <div class="form-group">
-                            <label class="font-weight-bold" for="exampleFormControlTextarea1">My Social Media:</label>
+                            <!-- <label class="font-weight-bold" for="exampleFormControlTextarea1">My Social Media:</label> -->
                             <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>

@@ -172,3 +172,5 @@ require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-l
 
 // WP ADMIN NOTIFICATION AFTER POST PUBLISH
 require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');
+// WP COMMENT NON LOGGED IN NOTICE
+require get_theme_file_path('/_functions/selflist/wp-admin/comments-message-update.php');

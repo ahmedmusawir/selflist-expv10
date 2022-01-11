@@ -186,11 +186,17 @@ textarea::placeholder {
         </form>
       </div> -->
             <div class="modal-footer justify-content-center">
+                <!-- REMOVING FLAG REQUIRED ERROR MESSAGE AT CLIENT'S REQUEST -->
+                <style>
+                #flag-textarea-error {
+                    display: none !important;
+                }
+                </style>
 
                 <form id="flag-insert-form" class="form">
                     <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
-                        required autocomplete="off" placeholder="This notification will be published.">
+                        required autocomplete="off" placeholder="This Flag will be published.">
                     </textarea>
                     <small class="float-right mb-3">140 Character Limit</small>
                     <button id="flag-ajax-submit-btn" type="submit"

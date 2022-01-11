@@ -5,7 +5,10 @@
  */
 function print_taxonomy_ranks_for_listing_preview($terms = '')
 {
-
+    $main = '';
+    $primo = '';
+    $secondo = '';
+    $terzo = '';
     // check input
     if (empty($terms) || is_wp_error($terms) || !is_array($terms)) {
         return;

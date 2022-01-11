@@ -140,7 +140,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                         &nbsp;</small><span id="confirm-payment-points"
                         class="text-danger font-weight-bold">_______</span> <small class="font-weight-bold"></small>
                 </p>
-                <p class="text-uppercase"><small class="font-weight-bold">My Current Points:
+                <p class="text-uppercase"><small class="font-weight-bold">My Available Points:
                         &nbsp;</small><span id="confirm-current-points"
                         class="text-danger font-weight-bold">_______</span> <small class="font-weight-bold"></small>
                 </p>

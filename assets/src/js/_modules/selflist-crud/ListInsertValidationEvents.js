@@ -214,7 +214,7 @@ class ListInsertValidationEvents extends ListInsertUiDataParent {
           this.cityInsertInput.trigger('focus');
           // this.cityInsertInput.focus();
         } else if (this.listerTerms.prop('checked') !== true) {
-          alert('Please Accept Our Terms & Conditions!');
+          alert('Please Accept Terms & Conditions!');
           // SCROLL TO TOP
           this.listerTerms.trigger('focus');
         } else {

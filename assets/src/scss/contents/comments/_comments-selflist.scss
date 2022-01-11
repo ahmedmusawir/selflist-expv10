@@ -4,6 +4,14 @@
  *
  */
 
+#commentform .logged-in-as {
+  display: none;
+}
+
+#commentform .comment-form-comment label {
+  display: none;
+}
+
 .single.single-blog {
   #comments {
     margin-bottom: 3rem;

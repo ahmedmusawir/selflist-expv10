@@ -51,3 +51,14 @@
     margin-top: 0.8rem;
   }
 }
+
+// REVERSE AUCTION FORM
+#gform_wrapper_6 {
+  // border: 1rem dotted red;
+  .gform_validation_errors.validation_error {
+    display: none !important;
+  }
+  .gfield_description.validation_message.gfield_validation_message {
+    display: none !important;
+  }
+}

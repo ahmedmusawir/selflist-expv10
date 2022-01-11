@@ -11,6 +11,18 @@
   // border: 1rem dotted red;
 }
 
+// THIS IS THE "PASSWORD RESET EMAIL HAS BEEN SENT" PAGE
+.page-template-default.page.page-id-670 {
+  // border: 1rem dotted red;
+  p {
+    display: none;
+  }
+  p.woocommerce-form-row.woocommerce-form-row--first.form-row.form-row-first,
+  p.woocommerce-form-row.form-row {
+    display: block !important;
+  }
+}
+
 // CHECKOUT PAGE
 
 // Checkout Button

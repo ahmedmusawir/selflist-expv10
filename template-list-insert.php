@@ -68,7 +68,7 @@ textarea::placeholder {
         <div class="row">
             <!-- LIST INSERT BLOCK -->
             <section class="col-12 col-sm-12 col-md-12 col-lg-6">
-
+                <h4 class="text-center font-weight-bold">MY NEW LISTING</h4>
                 <article id="create-new-list-box" class="card p-3  animate__animated animate__zoomIn">
 
                     <!-- MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->

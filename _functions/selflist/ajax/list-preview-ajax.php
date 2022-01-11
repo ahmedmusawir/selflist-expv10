@@ -246,11 +246,11 @@ input[type="checkbox"]:checked:before {
 <script>
 jQuery(function($) {
     $('#list-hmu-checkbox').on('click', function() {
-        alert('Invite checkbox will be enabled when the Listing is Published!');
+        alert('Use Invite on active listings');
         $(this).prop("checked", false);
     });
     $('#flag-btn').on('click', function() {
-        alert('Flagging will be enabled when the Listing is Published!');
+        alert('Use Flagging on active listings');
     });
 });
 </script>
