@@ -12,38 +12,38 @@
 
         <form action="" name="main-cat-insert-form" id="main-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Insert New Category and
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Category and
                 Subcategories</label>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
                     aria-describedby="textHelp" placeholder="New Main Category" required>
                 <small id="textHelp" class="form-text text-muted">
-                    Main Category (25 Char Limit. Letters & Space only)
+                    Main Category (25 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-primo-cat" name="main-input-primo-cat"
                     aria-describedby="textHelp" placeholder="New Primo Category">
                 <small id="textHelp" class="form-text text-muted">
-                    Primo Category (20 Char Limit. Letters & Space only)
+                    Primo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-secondo-cat" name="main-input-secondo-cat"
                     aria-describedby="textHelp" placeholder="New Secondo Category">
                 <small id="textHelp" class="form-text text-muted">
-                    Secondo Category (20 Char Limit. Letters & Space only)
+                    Secondo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-terzo-cat" name="main-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo Category">
                 <small id="textHelp" class="form-text text-muted">
-                    Terzo Category (20 Char Limit. Letters & Space only)
+                    Terzo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
 
-            <button id="main-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button id="main-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
             <button id="main-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 

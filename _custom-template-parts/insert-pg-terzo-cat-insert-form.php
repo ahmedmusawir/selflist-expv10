@@ -13,7 +13,7 @@
 
         <form action="" name="terzo-cat-insert-form" id="terzo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Insert New Terzo
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Terzo
                 Subcategory</label>
 
             <div class="form-group card p-3 bg-light">
@@ -33,11 +33,11 @@
                 <input type="text" class="form-control" id="terzo-input-terzo-cat" name="terzo-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo Category" required>
                 <small id="textHelp" class="form-text text-muted">
-                    Terzo Category (20 Char Limit. Letters & Space only)
+                    Terzo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
 
-            <button id="terzo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button id="terzo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
             <button id="terzo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 

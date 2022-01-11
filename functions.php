@@ -76,7 +76,7 @@ require get_template_directory() . '/_functions/helpers-setup.php';
  *
  */
 
-require get_template_directory() . '/_functions/wp-logon-screen.php';
+require get_template_directory() . '/_functions/selflist/wp-admin/wp-logon-screen.php';
 
 /**
  * SELFLIST CUSTOM FUNCTIONS

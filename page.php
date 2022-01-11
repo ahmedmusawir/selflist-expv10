@@ -12,12 +12,12 @@
  * @package cyberize-app-dev
  */
 
-// if (is_user_logged_in()) {
-//   get_header();
-// } else {
-//   get_header('loggedout');
-// }
+if (is_user_logged_in()) {
   get_header();
+} else {
+  get_header('loggedout');
+}
+//   get_header();
 
 ?>
 

@@ -1,4 +1,25 @@
 <?php
+
+/**
+ * MAKE LOGIN IN (EMPTY USER & PASS) ERROR MESSAGE DISAPPEAR
+ * Tried to following it works but you have figure out each message and their 
+ * associated number ($pos) ... too much work. I'll choose SCSS. And SCSS didn't work
+ * So I did it with CSS via the FUNCTION FOR LOGO CHANGE ... below...
+ */
+// add_filter('login_errors','login_error_message');
+
+// function login_error_message($error){
+//     echo $error;
+//     //check if that's the error you are looking for
+//     $pos = strpos($error, 'The username field is empty');
+//     echo $pos;
+//     if (is_int($pos) == 25) {
+//         //its the right error so you can overwrite it
+//         $error = "Wrong information";
+//     }
+//     return $error;
+// }
+
 /**
  * CUSTOM REGISTER URL SETUP
  */
@@ -83,6 +104,10 @@ function cy_login_logo()
     background-size: 323px 60px;
     background-repeat: no-repeat;
     padding-bottom: 30px;
+}
+
+#login_error {
+    display: none;
 }
 </style>
 <?php }

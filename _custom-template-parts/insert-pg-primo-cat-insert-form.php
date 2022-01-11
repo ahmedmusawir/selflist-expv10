@@ -25,7 +25,7 @@
 
         <form action="" name="primo-cat-insert-form" id="primo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Insert New Primo and
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Primo and
                 Subcategories</label>
 
             <div class="form-group card bg-light p-3">
@@ -36,25 +36,25 @@
                 <input type="text" class="form-control" id="primo-input-primo-cat" name="primo-input-primo-cat"
                     aria-describedby="textHelp" placeholder="New Primo Category" required>
                 <small id="textHelp" class="form-text text-muted">
-                    Primo Category (20 Char Limit. Letters & Space only)
+                    Primo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-secondo-cat" name="primo-input-secondo-cat"
                     aria-describedby="textHelp" placeholder="New Secondo Category">
                 <small id="textHelp" class="form-text text-muted">
-                    Secondo Category (20 Char Limit. Letters & Space only)
+                    Secondo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-terzo-cat" name="primo-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo Category">
                 <small id="textHelp" class="form-text text-muted">
-                    Terzo Category (20 Char Limit. Letters & Space only)
+                    Terzo Category (20 Char Limit. Letters, numbers & Space only)
                 </small>
             </div>
 
-            <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Submit</button>
+            <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
             <button id="primo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 
