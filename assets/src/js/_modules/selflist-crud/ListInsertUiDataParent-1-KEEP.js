@@ -59,24 +59,24 @@ class ListInsertUiDataParent extends CatSelectDataParent {
     // GET REST OF THE LIST FORM DATA
     this.getListFormData();
     // ADD CAT DATA TO THE VALIDATION SCREEN
-    // $('#list-user-validation-main-cat').text(this.currentMainCatName);
-    // $('#list-user-validation-primo-cat').text(this.currentPrimoCatName);
-    // $('#list-user-validation-secondo-cat').text(this.currentSecondoCatName);
-    // $('#list-user-validation-terzo-cat').text(this.currentTerzoCatName);
+    $('#list-user-validation-main-cat').text(this.currentMainCatName);
+    $('#list-user-validation-primo-cat').text(this.currentPrimoCatName);
+    $('#list-user-validation-secondo-cat').text(this.currentSecondoCatName);
+    $('#list-user-validation-terzo-cat').text(this.currentTerzoCatName);
     // ADD CONTACT DATA TO THE VALIDATION SCREEN
-    // $('#list-user-validation-description').text(this.listDescription);
-    // $('#list-user-validation-name').text(this.contactName);
-    // $('#list-user-validation-phone').text(this.contactPhone);
-    // $('#list-user-validation-website').text(this.contactWebsite);
-    // $('#list-user-validation-city').text(this.contactCity);
-    // $('#list-user-validation-state').text(this.contactState);
+    $('#list-user-validation-description').text(this.listDescription);
+    $('#list-user-validation-name').text(this.contactName);
+    $('#list-user-validation-phone').text(this.contactPhone);
+    $('#list-user-validation-website').text(this.contactWebsite);
+    $('#list-user-validation-city').text(this.contactCity);
+    $('#list-user-validation-state').text(this.contactState);
     // ADD SOCIAL DATA TO THE VALIDATION SCREEN
-    // $('#list-user-validation-facebook').text(this.socialFacebook);
-    // $('#list-user-validation-yelp').text(this.socialYelp);
-    // $('#list-user-validation-instagram').text(this.socialInstagram);
-    // $('#list-user-validation-linkedin').text(this.socialLinkedin);
-    // $('#list-user-validation-twitter').text(this.socialTwitter);
-    // $('#list-user-validation-youtube').text(this.socialYoutube);
+    $('#list-user-validation-facebook').text(this.socialFacebook);
+    $('#list-user-validation-yelp').text(this.socialYelp);
+    $('#list-user-validation-instagram').text(this.socialInstagram);
+    $('#list-user-validation-linkedin').text(this.socialLinkedin);
+    $('#list-user-validation-twitter').text(this.socialTwitter);
+    $('#list-user-validation-youtube').text(this.socialYoutube);
 
     // CHECKING FOR MISSING MAIN CATEGORY
     if (this.currentMainId) {
@@ -84,8 +84,12 @@ class ListInsertUiDataParent extends CatSelectDataParent {
       if (this.stateId) {
         // CHECKING FOR MISSING CITY
         if (this.cityId) {
-          // INSERTING DATA TO WP DB
-          this.insertListHandler();
+          // SCROLL TO TOP
+          window.scrollTo(0, 0);
+          // REMOVING LIST FORM BOX
+          this.listInsertFormBox.addClass('d-none');
+          // DISPLAYING USER VALIDATION BOX
+          this.userValidationBox.removeClass('d-none');
         } else {
           alert('Please choose a City ...');
           // SCROLL TO TOP
@@ -96,8 +100,7 @@ class ListInsertUiDataParent extends CatSelectDataParent {
         alert('Please choose a State ...');
         // SCROLL TO TOP
         window.scrollTo(0, 0);
-        this.selectAllStateCtrl.focus();
-        // this.selectAllStateCtrl.trigger('focus');
+        this.selectAllStateCtrl.trigger('focus');
       }
     } else {
       alert('Please choose a Main Category ...');

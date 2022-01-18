@@ -1,13 +1,13 @@
 import $ from 'jquery';
-// import { selectize } from 'selectize';
-import ListInsertValidationEvents from './ListInsertValidationEvents';
+import { selectize } from 'selectize';
+import ListInsertUiDataParent from './ListInsertUiDataParent';
 
 /**
  This is a child class of ListInsertUiEvents and uses the selectize library. This one
  Inserts the the List Insert Form data into the WP DB via the REST API. This inserts selectize data, normal form data and ACF data into the WP DB
  */
 
-class ListInsertEventsAjax extends ListInsertValidationEvents {
+class ListInsertEventsAjax extends ListInsertUiDataParent {
   constructor() {
     super();
     // this.init();
@@ -18,8 +18,8 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
     this.listInsertButton = $('#list-insert-submit-btn');
     this.catDisplayUiBox = $('#cat-display-ui-box');
     this.catSelectBox = $('#category-choice-box');
-    // SETTING SPINNER
     this.loadingSpinner = $('#LOADING-SPINNER');
+    // SETTING SPINNER
     // SETTING EVENTS
     this.setEvents();
   }
@@ -32,7 +32,7 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
     this.listInsertButton.on('click', this.clickInsertListHandler);
   };
 
-  insertListHandler = () => {
+  clickInsertListHandler = () => {
     // console.log('List Submit Clicked');
 
     // COLLECTING FORM DATA
@@ -115,8 +115,6 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
       },
     })
       .done((res) => {
-        // SCROLL TO TOP
-        // window.scrollTo(0, 0);
         console.info(res);
         console.log('Awesome! ... Ajax Success');
         // REMOVING CAT DATA FROM THE LOCAL STORAGE FOR CLEANUP

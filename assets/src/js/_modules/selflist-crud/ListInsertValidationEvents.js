@@ -225,14 +225,14 @@ class ListInsertValidationEvents extends ListInsertUiDataParent {
     });
   };
 
-  goBackToFormBox = () => {
-    // SCROLL TO TOP
-    window.scrollTo(0, 0);
-    // REMOVING LIST FORM BOX
-    this.listInsertFormBox.removeClass('d-none');
-    // DISPLAYING USER VALIDATION BOX
-    this.userValidationBox.addClass('d-none');
-  };
+  // goBackToFormBox = () => {
+  //   // SCROLL TO TOP
+  //   window.scrollTo(0, 0);
+  //   // DISPLAYING LIST FORM BOX
+  //   this.listInsertFormBox.removeClass('d-none');
+  //   //  REMOVING USER VALIDATION BOX
+  //   this.userValidationBox.addClass('d-none');
+  // };
 }
 
 export default ListInsertValidationEvents;

@@ -63,62 +63,95 @@ textarea::placeholder {
             integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     </header>
 
-    <article class="main-content">
+    <style>
+    .ispinner {
+        margin: auto;
+        width: 100px !important;
+        height: 150px !important
+    }
 
-        <div class="row">
-            <!-- LIST INSERT BLOCK -->
-            <section class="col-12 col-sm-12 col-md-12 col-lg-6">
-                <h4 class="text-center font-weight-bold">MY NEW LISTING</h4>
-                <article id="create-new-list-box" class="card p-3  animate__animated animate__zoomIn">
+    .ispinner-blade {
+        width: 20px !important;
+        height: 100px !important;
+        border-radius: 15px !important;
+    }
+    </style>
 
-                    <!-- MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->
+    <div class="row">
+        <!-- LIST INSERT BLOCK -->
+        <section class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <h4 class="text-center font-weight-bold">MY NEW LISTING</h4>
+            <article id="create-new-list-box" class="card p-3  animate__animated animate__zoomIn">
 
-                    <?php get_template_part('_custom-template-parts/insert-pg-main-cat-set-display-after-creation');?>
+                <!-- MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->
 
-                    <!-- END MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->
+                <?php get_template_part('_custom-template-parts/insert-pg-main-cat-set-display-after-creation');?>
 
-                    <!-- CATEGORY SELECTIZE CHOICE BOX - MAIN, PRIMO, SECONDO & TERZO -->
+                <!-- END MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->
 
-                    <?php get_template_part('_custom-template-parts/list-insert-pg-cat-select-box');?>
+                <!-- CATEGORY SELECTIZE CHOICE BOX - MAIN, PRIMO, SECONDO & TERZO -->
 
-                    <!-- END CATEGORY SELECTIZE CHOICE BOX - MAIN, PRIMO, SECONDO & TERZO -->
+                <?php get_template_part('_custom-template-parts/list-insert-pg-cat-select-box');?>
 
-                    <!-- STATE & CITY SELECTIZE CHOICE BOX -->
+                <!-- END CATEGORY SELECTIZE CHOICE BOX - MAIN, PRIMO, SECONDO & TERZO -->
 
-                    <?php get_template_part('_custom-template-parts/list-insert-city-state-select-box');?>
-                    <?php get_template_part('_custom-template-parts/city-insert-form');?>
 
-                    <!-- END STATE & CITY SELECTIZE CHOICE BOX -->
+                <!-- STATE & CITY SELECTIZE CHOICE BOX -->
 
-                    <!-- THE MAIN FORM INPUTS START -->
+                <?php get_template_part('_custom-template-parts/list-insert-city-state-select-box');?>
+                <?php get_template_part('_custom-template-parts/city-insert-form');?>
 
-                    <?php get_template_part('_custom-template-parts/list-insert-pg-main-inputs');?>
+                <!-- END STATE & CITY SELECTIZE CHOICE BOX -->
 
-                    <!-- END THE MAIN FORM INPUTS  -->
+                <!-- <section id="LOADING-SPINNER" class="d-none">
+                    <div class="text-center ispinner gray large animating">
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                        <div class="ispinner-blade"></div>
+                    </div>
+                </section> -->
 
-                </article> <!-- END OF id="create-new-list-box" -->
 
-                <!-- START OF MAIN CAT INSERT FORM -->
+                <!-- THE MAIN FORM INPUTS START -->
 
-                <?php get_template_part('_custom-template-parts/insert-pg-main-cat-insert-form');?>
+                <?php get_template_part('_custom-template-parts/list-insert-pg-main-inputs');?>
 
-                <!-- END OF MAIN CAT INSERT FORM -->
 
-                <!-- START OF PRIMO CAT INSERT FORM -->
+                <!-- END THE MAIN FORM INPUTS  -->
 
-                <?php get_template_part('_custom-template-parts/insert-pg-primo-cat-insert-form');?>
+            </article> <!-- END OF id="create-new-list-box" -->
 
-                <!-- END OF PRIMO CAT INSERT FORM -->
+            <!-- START OF MAIN CAT INSERT FORM -->
 
-                <!-- START OF SECONDO CAT INSERT FORM -->
+            <?php get_template_part('_custom-template-parts/insert-pg-main-cat-insert-form');?>
 
-                <?php get_template_part('_custom-template-parts/insert-pg-secondo-cat-insert-form');?>
+            <!-- END OF MAIN CAT INSERT FORM -->
 
-                <!-- END OF SECONDO CAT INSERT FORM -->
+            <!-- START OF PRIMO CAT INSERT FORM -->
 
-                <!-- START OF TERZO CAT INSERT FORM -->
+            <?php get_template_part('_custom-template-parts/insert-pg-primo-cat-insert-form');?>
 
-                <?php get_template_part('_custom-template-parts/insert-pg-terzo-cat-insert-form');?>
+            <!-- END OF PRIMO CAT INSERT FORM -->
+
+            <!-- START OF SECONDO CAT INSERT FORM -->
+
+            <?php get_template_part('_custom-template-parts/insert-pg-secondo-cat-insert-form');?>
+
+            <!-- END OF SECONDO CAT INSERT FORM -->
+
+            <!-- START OF TERZO CAT INSERT FORM -->
+
+            <?php get_template_part('_custom-template-parts/insert-pg-terzo-cat-insert-form');?>
+            <article class="main-content">
 
                 <!-- END OF TERZO CAT INSERT FORM -->
 
@@ -129,32 +162,32 @@ textarea::placeholder {
                 <!-- END OF LIST INSERT USER VALIDATION BOX -->
 
 
-            </section>
-            <!-- LEFT COLUMN ENDS HERE -->
+        </section>
+        <!-- LEFT COLUMN ENDS HERE -->
 
 
-            <!-- CATEGORY SEARCH COLUMN [RIGHT COLUMN STARTS]-->
-            <section class="col-12 col-sm-12 col-md-12 col-lg-6">
-                <div id="primary" class="site-main container pt-">
+        <!-- CATEGORY SEARCH COLUMN [RIGHT COLUMN STARTS]-->
+        <section class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div id="primary" class="site-main container pt-">
 
-                    <!-- <hr> -->
-                    <h5 id="insert-search-cat-header">Comparative Listings ...</h5>
+                <!-- <hr> -->
+                <h5 id="insert-search-cat-header">Comparative Listings ...</h5>
 
-                    <section id="selflist-search-input-box" class="selflist-search-input-box">
+                <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                        <input type="text" id="cat-search-input-json" class="selflist-search-input">
-                        <i class="fas fa-search"></i>
+                    <input type="text" id="cat-search-input-json" class="selflist-search-input">
+                    <i class="fas fa-search"></i>
 
-                    </section>
-
-
-                    <div id="category-search-json-result" class="moose-cols">
+                </section>
 
 
-                    </div> <!-- #main -->
+                <div id="category-search-json-result" class="moose-cols">
 
-            </section>
-        </div>
+
+                </div> <!-- #main -->
+
+        </section>
+    </div>
 
     </article>
 

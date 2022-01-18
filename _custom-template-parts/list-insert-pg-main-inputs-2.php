@@ -115,23 +115,6 @@ $user_registered = $current_user->user_registered
         <!-- <small id="textHelp" class="form-text text-muted">Example: https://twitter.com/mypage</small> -->
     </div>
 
-    <section id="LOADING-SPINNER" class="d-none">
-        <div class="text-center ispinner gray large animating">
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-            <div class="ispinner-blade"></div>
-        </div>
-    </section>
-
     <!-- LISTING SINCE -->
     <div class="form-group">
         <label class="font-weight-bold" for="lister-terms">Terms & Conditions:</label>
@@ -151,7 +134,6 @@ $user_registered = $current_user->user_registered
             </p>
         </div>
     </div>
-
 
     <!-- THE SUBMIT BUTTON -->
     <button id="list-user-validation-button" type="submit" class="btn btn-primary btn-block">

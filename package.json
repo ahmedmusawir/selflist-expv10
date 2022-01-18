@@ -92,6 +92,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "selectize": "^0.12.6",
-    "selectize.js": "^0.12.12"
+    "selectize.js": "^0.12.12",
+    "spin": "^0.0.1"
   }
 }
