@@ -25,7 +25,8 @@ defined('ABSPATH') || exit;
 
     <?php else: ?>
 
-    <h3><?php esc_html_e('Checkout', 'woocommerce');?></h3>
+    <!-- MOOSE EDIT -->
+    <h3><?php esc_html_e('CHECKOUT', 'woocommerce');?></h3>
     <!-- <h3><?php esc_html_e('Billing details', 'woocommerce');?></h3> -->
 
     <?php endif;?>

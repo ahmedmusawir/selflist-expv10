@@ -133,6 +133,27 @@ $user_registered = $current_user->user_registered
     </section>
 
     <!-- LISTING SINCE -->
+
+    <div class="form-group">
+        <label class="font-weight-bold" for="lister-name">Listing Since:</label>
+        <div class="row pl-0 pt-1">
+            <div class="col-4">
+                <?php echo '<span id="date-box" class="bg-danger text-light font-weight-bold float-left py-2 px-4"
+                    style="font-size: .8rem;">';
+                    printf('%s<br>', date("m", strtotime($user_registered)));
+                    printf('%s<br>', date("d", strtotime($user_registered)));
+                    printf('%s<br>', date("y", strtotime($user_registered)));
+                    echo '</span>'; 
+            ?>
+
+            </div>
+            <div class="col-8"></div>
+            <!-- <p class="text-danger font-weight-bold">
+                <?php printf('%s<br>', date("M d, Y", strtotime($user_registered)));?>
+            </p> -->
+        </div>
+    </div>
+    <!-- TERMS AND CONDS -->
     <div class="form-group">
         <label class="font-weight-bold" for="lister-terms">Terms & Conditions:</label>
         <div class="card bg-light pl-3 pt-3">
@@ -142,15 +163,6 @@ $user_registered = $current_user->user_registered
         </div>
     </div>
 
-    <!-- LISTING SINCE -->
-    <div class="form-group">
-        <label class="font-weight-bold" for="lister-name">Listing Since:</label>
-        <div class="card bg-light pl-3 pt-3">
-            <p class="text-danger font-weight-bold">
-                <?php printf('%s<br>', date("M d, Y", strtotime($user_registered)));?>
-            </p>
-        </div>
-    </div>
 
 
     <!-- THE SUBMIT BUTTON -->

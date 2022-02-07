@@ -59,7 +59,8 @@ wp_nav_menu(
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
             <a href="/list-insert/" class="btn btn-danger float-right">List</a>
-            <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3>
+            <h3 class="text-uppercase"><small class="font-weight-bold">MANAGE MY LISTINGS</small></h3>
+            <!-- <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3> -->
             <!-- <h2 class="h2"><?php echo $current_user->display_name; ?>'s Lists</h2> -->
             <!-- <h2 class="h2">
                 <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>'s Lists

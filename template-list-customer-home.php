@@ -107,7 +107,8 @@ textarea::placeholder {
             <a href="/list-insert/" class="btn btn-danger float-right btn-lg d-none d-lg-block">List</a>
             <a href="/list-insert/" class="btn btn-danger float-right d-none d-sm-block d-lg-none">List</a>
             <a href="/list-insert/" class="btn btn-danger float-right btn-sm d-block d-sm-none">List</a>
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Profile</small></h3>
+            <h3 class="text-uppercase"><small class="font-weight-bold">Manage My Listing Auto Links</small></h3>
+            <!-- <h3 class="text-uppercase"><small class="font-weight-bold">My Profile</small></h3> -->
             <h2 class="h2">Welcome, <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
             </h2>
 
@@ -120,23 +121,23 @@ textarea::placeholder {
                 </strong>
             </h6> -->
 
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 USER NAME:
                 <strong class="text-danger">
                     <span class="current-user-id text-lowercase">
                         <?php echo $current_user->user_login; ?>
                     </span>
                 </strong>
-            </h6>
+            </h6> -->
 
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Available Points:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_points; ?>
                     </span>
                 </strong>
-            </h6>
+            </h6> -->
             <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Email:
                 <strong class="text-danger">
@@ -153,23 +154,49 @@ textarea::placeholder {
           </span>
         </strong>
       </h6> -->
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Active Listings:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_published_list_count; ?>
                     </span>
                 </strong>
-            </h6>
-            <h6 class="h6 text-uppercase font-weight-bold">
-                Listing Since:
-                <strong class="text-danger">
+            </h6> -->
+            <div class="row">
+                <div class="col-6 col-sm-3">
+                    <h6 class="h6 text-uppercase font-weight-bold">
+                        Listing Since:
+                    </h6>
+                </div>
+                <style>
+                #date-box {
+                    margin-left: -2rem;
+                    margin-top: -.15rem;
+                }
+
+                @media (max-width: 575px) {
+                    #date-box {
+                        margin-left: 0rem;
+                        margin-top: -.15rem;
+                    }
+                }
+                </style>
+                <div class="col-6 col-sm-9">
+                    <?php echo '<span id="date-box" class="bg-danger text-light font-weight-bold float-left py-2 px-4"
+                    style="font-size: .8rem;">';
+                    printf('%s<br>', date("m", strtotime($user_registered)));
+                    printf('%s<br>', date("d", strtotime($user_registered)));
+                    printf('%s<br>', date("y", strtotime($user_registered)));
+                    echo '</span>'; 
+            ?>
+                </div>
+            </div>
+            <!-- <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php printf('%s<br>', date("M d, Y", strtotime($user_registered)));?>
                     </span>
-                </strong>
-            </h6>
-            <hr class="bg-danger">
+                </strong> -->
+            <!-- <hr class="bg-danger"> -->
 
             <div class="mt-5">
                 <button id="password-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"

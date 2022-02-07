@@ -67,13 +67,13 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Dates</small></h3>
         <h6 class="text-uppercase">
             <small>
-                Lister ID:
+                <!-- Lister ID:
                 <strong class="text-danger">
                     <span class="current-user-id">
                         <?php echo $current_user_id; ?>
                     </span>
-                </strong>
-                &nbsp; Available Points:
+                </strong> -->
+                AVAILABLE LISTING DAYS:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_points; ?>
@@ -87,7 +87,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         <div class="row">
 
             <div class="col-sm-12">
-                <h6 class="text-uppercase"><small class="font-weight-bold">Pick an end date:</small></h6>
+                <h6 class="text-uppercase"><small class="font-weight-bold">DELIST DATE:</small></h6>
                 <div class="outputToDateTime"></div>
                 <input type="text" id="list-to-date-time-input">
                 <section class="message-display-box p-2">
@@ -95,14 +95,15 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                             class="list-end-date text-danger">_______</span></h6>
                 </section>
                 <section class="payment-display-box text-center p-4">
-                    <h6 class="text-uppercase"><small class="font-weight-bold">My Listing will be published for:
+                    <h6 class="text-uppercase"><small class="font-weight-bold">MY LISTING WILL BE ACTIVE FOR:
                         </small>&nbsp;<span class="list-publish-days text-danger font-weight-bold">_______</span>
                         &nbsp;<small class="font-weight-bold">Days</small>
                     </h6>
                     <!-- <p class="text-uppercase"><small class="font-weight-bold">My Payment Amount (1 day x .25C):
               &nbsp;$</small><span class="list-payment-amount text-danger font-weight-bold">_______</span>
           </p> -->
-                    <p class="text-uppercase"><small class="font-weight-bold">My Payment Points (1 day x 1 point):
+                    <p class="d-none text-uppercase"><small class="font-weight-bold">My Payment Points (1 day x 1
+                            point):
                             &nbsp;</small><span class="list-payment-points text-danger font-weight-bold">_______</span>
                         <small class="font-weight-bold">Points</small>
                     </p>
@@ -130,7 +131,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-success" id="exampleModalLabel">Publish</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">LIST</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -144,7 +145,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                         &nbsp;</small><span id="confirm-current-points"
                         class="text-danger font-weight-bold">_______</span> <small class="font-weight-bold"></small>
                 </p>
-                <p>My Listing Will Be Published for <strong><span id="confirm-publish-days">_________</span></strong>
+                <p>MY LISTING WILL BE ACTIVE FOR: <strong><span id="confirm-publish-days">_________</span></strong>
                     Days</p>
             </div>
             <div class="modal-footer justify-content-center">
@@ -168,18 +169,18 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title" id="exampleModalLabel">More Points Needed</h5>
+                <h5 class="modal-title" id="exampleModalLabel">MORE LISTING DAYS NEEDED</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
             </div>
             <div class="modal-body">
-                <p class="text-uppercase mt-4"><small class="font-weight-bold">My Payment Points:
+                <p class="text-uppercase mt-4"><small class="font-weight-bold">LISTING DAYS NEEDED:
                         &nbsp;</small><span id="failed-payment-points"
                         class="text-danger font-weight-bold">_______</span>
                     <small class="font-weight-bold"></small>
                 </p>
-                <p class="text-uppercase"><small class="font-weight-bold">My Current Points:
+                <p class="text-uppercase"><small class="font-weight-bold">AVAILABLE LISTING DAYS:
                         &nbsp;</small><span id="failed-current-points"
                         class="text-danger font-weight-bold">_______</span>
                     <small class="font-weight-bold"></small>
@@ -194,7 +195,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                     Pick A New Date
                 </button>
 
-                <a href="/list-customer-add-points/" class="btn btn-primary">Add More Points</a>
+                <a href="/list-customer-add-points/" class="btn btn-primary">ADD LISTING DAYS</a>
             </div>
         </div>
     </div>

@@ -53,31 +53,6 @@
         <a class="skip-link screen-reader-text"
             href="#primary"><?php esc_html_e( 'Skip to content', 'cyberize-app-dev' ); ?></a>
 
-        <header id="" class="site-header">
-            <!-- Moose_Framework_2 NAVIGATION GOES HERE -->
-
-            <div class="main-navigation">
-                <div class="main-navbar container-fluid">
-
-                    <?php
-          wp_nav_menu(array(
-              'theme_location' => 'menu-2', // Defined when registering the menu
-              'menu_id' => 'primary-menu',
-              'container' => 'div',
-              'container_class' => 'main-nav',
-              // 'menu_class'     => 'mx-auto', //CENTER ALIGN
-              'menu_class' => 'ml-auto', //RIGHT ALIGN
-              // 'menu_class'     => 'mr-auto', //LEFT ALIGN
-          ));
-          ?>
-                </div>
-            </div>
-
-
-            <!-- Moose_Framework_2 NAVIGATION ENDS HERE -->
-
-        </header><!-- #masthead -->
-
         <header id="masthead" class="site-header container py-5">
-
+            this is it
         </header><!-- #masthead -->

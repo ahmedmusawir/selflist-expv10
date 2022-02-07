@@ -98,7 +98,7 @@ function print_taxonomy_ranks($terms = '')
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
        global $post;
-    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> MORE ></a>';
+    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> <i class="fas fa-arrow-circle-right"></i></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

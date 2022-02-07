@@ -24,13 +24,13 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Summary</small></h3>
     <h6 class="text-uppercase">
         <small>
-            Lister ID:
+            <!-- Lister ID:
             <strong class="text-danger">
                 <span class="current-user-id">
                     <?php echo $current_user_id; ?>
                 </span>
-            </strong>
-            &nbsp; Available Points:
+            </strong> -->
+            AVAILABLE LISTING DAYS:
             <strong class="text-danger">
                 <span id="payment-summary-avail-points">
                     <?php echo $user_points; ?>
@@ -48,7 +48,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         </small>
     </p> -->
     <h6 class="text-uppercase font-weight-bold">
-        My Listing Has Been Published for <span id="published-for-days" class="text-danger">___________</span> Days.
+        MY LISTING IS ACTIVE FOR: <span id="published-for-days" class="text-danger">___________</span> Days.
     </h6>
 </section>
 <div class="navigation-box container">

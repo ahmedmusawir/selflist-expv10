@@ -1,11 +1,38 @@
 <?php
+
+/**
+ * CHECKOUT PAGE LABEL CHANGE
+ */
+add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
+function custom_override_checkout_fields($fields)
+ {
+    $fields['billing']['billing_country']['label'] = 'Country';
+    // THE FOLLOWING DIDN'T WORK FOR LABEL BUT PLACEHOLDER WORKED
+    // $fields['billing']['billing_city']['label'] = 'City';
+    unset($fields['billing']['billing_city']['label']);
+    $fields['billing']['billing_city']['placeholder'] = 'City';
+    unset($fields['billing']['billing_postcode']['label']);
+    $fields['billing']['billing_postcode']['placeholder'] = 'Zip';
+    $fields['billing']['billing_email']['label'] = 'Email';
+    
+ return $fields;
+ }
+
+// THE FOLLOWING WORKS PERFECTLY, BUT DIDN'T NEED THIS TIME
+// I'll just use the place holder one above and remove the City label altogether
+ 
+// add_filter( 'woocommerce_default_address_fields' , 'wpse_120741_wc_def_state_label' );
+// function wpse_120741_wc_def_state_label( $address_fields ) {
+//      $address_fields['city']['label'] = 'City';
+//      return $address_fields;
+// }
 /**
  * CHANGE THE WORD PRODUCT TO POINTS
  */
 // Alter WooCommerce Checkout Text
 add_filter( 'gettext', function( $translated_text ) {
     if ( 'Product' === $translated_text ) {
-        $translated_text = 'Points';
+        $translated_text = 'Listing Days';
     }
     return $translated_text;
 } );

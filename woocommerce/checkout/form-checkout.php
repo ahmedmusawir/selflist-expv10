@@ -29,6 +29,18 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
 ?>
 
+<!-- MOOSE EDIT -->
+<style>
+.page-id-669 .optional {
+    /* border: 1rem dotted red; */
+    display: none;
+}
+
+.page-id-669 .woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
+    display: none;
+}
+</style>
+
 <form name="checkout" method="post" class="checkout woocommerce-checkout"
     action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
@@ -54,7 +66,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 
             <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 
-            <h3 id="order_review_heading"><?php esc_html_e( 'Summary', 'woocommerce' ); ?></h3>
+            <!-- MOOSE EDIT -->
+            <h3 id="order_review_heading"><?php esc_html_e( 'SUMMARY', 'woocommerce' ); ?></h3>
 
             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
