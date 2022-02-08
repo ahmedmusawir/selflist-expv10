@@ -96,8 +96,6 @@ require get_template_directory() . '/_functions/selflist/wp-admin/wp-logon-scree
 // SELFLIST CUSTOM USER ROLES & PERMISSIONS
 // require get_theme_file_path('/_functions/selflist/selflist-user-roles.php');
 
-// SELFLIST CUSTOM USER LOGIN LOGOUT RELATED FUNCTIONS (ADMIN BAR, LOGIN/LOGOUT BTN, REDIRECTION ETC.)
-require get_theme_file_path('/_functions/selflist/selflist-user-logins.php');
 
 // SELFLIST SUB CATEGORIES LISTING FUNCTION
 require get_theme_file_path('/_functions/selflist/selflist-get-category-list.php');
@@ -166,11 +164,9 @@ require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 require get_theme_file_path('/_functions/selflist/wp-cron/selflist-auto-point-add-monthly.php');
 // WP ADMIN LEFT MENU RELATED 
 require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
-
-
-
-
 // WP ADMIN NOTIFICATION AFTER POST PUBLISH
 require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');
 // WP COMMENT NON LOGGED IN NOTICE
 require get_theme_file_path('/_functions/selflist/wp-admin/comments-message-update.php');
+// WP ADMIN USER LOGIN REDIRECTS (ADMIN BAR, LOGIN/LOGOUT BTN, REDIRECTION ETC.)
+require get_theme_file_path('/_functions/selflist/wp-admin/user-logins.php');

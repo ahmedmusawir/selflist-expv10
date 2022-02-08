@@ -20,7 +20,7 @@ get_header();
  * CUSOMER/USER PROFILE
  */
 $current_user = wp_get_current_user();
-// $user_points = get_field('selflist_points', 'user_' . $current_user->id);
+$user_points = get_field('selflist_points', 'user_' . $current_user->id);
 // $user_registered = $current_user->user_registered;
 // $user_email = $current_user->user_email;
 // $user_total_list_count = count_user_posts($current_user->id, 'post', false); // false for all posts
@@ -46,13 +46,13 @@ wp_nav_menu(
                 box-shadow: 2px 2px 6px gray;
             }
             </style>
-            <section>
+            <!-- <section>
                 <figure>
                     <a href="/list-customer-add-points/">
                         <img class="mx-auto d-block" id="sale-image-square" src="/wp-content/uploads/Square.jpg" alt="">
                     </a>
                 </figure>
-            </section>
+            </section> -->
 
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
@@ -60,6 +60,14 @@ wp_nav_menu(
         <div class="col-sm-12 col-md-8">
             <a href="/list-insert/" class="btn btn-danger float-right">List</a>
             <h3 class="text-uppercase"><small class="font-weight-bold">MANAGE MY LISTINGS</small></h3>
+            <h6 class="h6 text-uppercase font-weight-bold">
+                Available Listing Days:
+                <strong class="text-danger">
+                    <span id="payment-summary-avail-points">
+                        <?php echo $user_points; ?>
+                    </span>
+                </strong>
+            </h6>
             <!-- <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3> -->
             <!-- <h2 class="h2"><?php echo $current_user->display_name; ?>'s Lists</h2> -->
             <!-- <h2 class="h2">

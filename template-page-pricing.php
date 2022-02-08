@@ -21,7 +21,7 @@ if (is_user_logged_in()) {
 
 <main id="primary" class="site-main container">
 
-    <h2 class="text-center font-weight-bold mt-5">PRICING</h2>
+    <h2 class="text-center font-weight-bold mt-5">Pricing For the Listing Days</h2>
 
 </main><!-- #main -->
 

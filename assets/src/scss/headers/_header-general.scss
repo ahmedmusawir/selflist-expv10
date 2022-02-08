@@ -19,6 +19,10 @@
       padding: 0 !important;
     }
 
+    @media (max-width: 501px) {
+      height: 70px;
+    }
+
     .main-nav {
       display: flex;
       align-items: center !important;

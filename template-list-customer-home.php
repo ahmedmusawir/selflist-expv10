@@ -92,13 +92,13 @@ textarea::placeholder {
                 box-shadow: 2px 2px 6px gray;
             }
             </style>
-            <section>
+            <!-- <section>
                 <figure>
                     <a href="/list-customer-add-points/">
                         <img class="mx-auto d-block" id="sale-image-square" src="/wp-content/uploads/Square.jpg" alt="">
                     </a>
                 </figure>
-            </section>
+            </section> -->
 
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
@@ -198,40 +198,46 @@ textarea::placeholder {
                 </strong> -->
             <!-- <hr class="bg-danger"> -->
 
-            <div class="mt-5">
-                <button id="password-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"
-                    disabled>Cancel</button>
-                <button id="password-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
-            </div>
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Password</small></h3>
-            <!-- <p class="text-danger">Reset Your Login Password Here... </p> -->
-
-            <!-- MEMBER PASSWORK RESET FORM -->
-            <form action="" name="password-reset-form" id="password-reset-form" class="form">
-                <!-- PASSWORD -->
-                <div class="form-group">
-                    <input type="password" class="form-control" id="lister-password" name="lister-password"
-                        aria-describedby="textHelp" placeholder="Password"
-                        value="<?php echo $current_user->user_pass ?>" readonly>
-                    <small id="textHelp" class="form-text text-muted">Ex: 8 Characters Minimum</small>
+            <!-- PASSWORD SECTION HAS BEEN MOVED TO PASSWORD PAGE     -->
+            <section class="d-none">
+                <div class="mt-5">
+                    <button id="password-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"
+                        disabled>Cancel</button>
+                    <button id="password-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
                 </div>
+                <h3 class="text-uppercase"><small class="font-weight-bold">My Password</small></h3>
+                <!-- <p class="text-danger">Reset Your Login Password Here... </p> -->
 
-                <!-- PASSWORD CONFIRMATION -->
-                <div class="form-group">
-                    <input type="password" class="form-control" id="lister-password-confirm"
-                        name="lister-password-confirm" aria-describedby="textHelp" placeholder="Confirm Password"
-                        value="<?php echo $current_user->user_pass ?>" readonly>
-                    <small id="textHelp" class="form-text text-muted">Confirm</small>
-                </div>
+                <!-- MEMBER PASSWORK RESET FORM -->
+                <form action="" name="password-reset-form" id="password-reset-form" class="form">
+                    <!-- PASSWORD -->
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="lister-password" name="lister-password"
+                            aria-describedby="textHelp" placeholder="Password"
+                            value="<?php echo $current_user->user_pass ?>" readonly>
+                        <small id="textHelp" class="form-text text-muted">Ex: 8 Characters Minimum</small>
+                    </div>
 
-                <!-- PASSWORD SUBMIT BUTTON -->
-                <button id="profile-password-update-button" type="submit" class="btn btn-secondary btn-block" disabled>
-                    Update
-                </button>
+                    <!-- PASSWORD CONFIRMATION -->
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="lister-password-confirm"
+                            name="lister-password-confirm" aria-describedby="textHelp" placeholder="Confirm Password"
+                            value="<?php echo $current_user->user_pass ?>" readonly>
+                        <small id="textHelp" class="form-text text-muted">Confirm</small>
+                    </div>
 
-            </form> <!-- END MEMBER PASSWORK RESET FORM -->
+                    <!-- PASSWORD SUBMIT BUTTON -->
+                    <button id="profile-password-update-button" type="submit" class="btn btn-secondary btn-block"
+                        disabled>
+                        Update
+                    </button>
 
-            <hr class="bg-danger">
+                </form> <!-- END MEMBER PASSWORK RESET FORM -->
+
+                <hr class="bg-danger">
+            </section>
+            <!-- PASSWORD SECTION HAS BEEN MOVED TO PASSWORD PAGE     -->
+
 
             <div class="mt-5">
                 <button id="additional-info-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"

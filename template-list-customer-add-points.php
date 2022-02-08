@@ -47,7 +47,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Points <span
+            <h3 class="text-uppercase"><small class="font-weight-bold">Available Listing Days <span
                         class="badge badge-pill badge-danger"><?php echo $user_points; ?></span></small></h3>
             <!-- <h6 class="h6 text-uppercase font-weight-bold mb-5">
                 Available Points:
@@ -57,7 +57,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
                     </span>
                 </strong>
             </h6> -->
-            <h4 class="h4">Add Points:</h4>
+            <h4 class="h4">Add Listing Days:</h4>
             <style>
             .woocommerce-loop-product__title {
                 display: none;

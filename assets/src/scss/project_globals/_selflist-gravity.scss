@@ -48,17 +48,22 @@
   }
   .dashicons.dashicons-visibility,
   .dashicons.dashicons-hidden {
+    // border: 4px dotted blue;
     margin-top: 0.8rem;
+
+    @media (max-width: 641px) {
+      margin-top: 2.25rem;
+    }
   }
 }
 
 // REVERSE AUCTION FORM
-#gform_wrapper_6 {
-  // border: 1rem dotted red;
-  .gform_validation_errors.validation_error {
-    display: none !important;
-  }
-  .gfield_description.validation_message.gfield_validation_message {
-    display: none !important;
-  }
+// #gform_wrapper_6 {
+// border: 1rem dotted red;
+.gform_validation_errors.validation_error {
+  display: none !important;
 }
+.gfield_description.validation_message.gfield_validation_message {
+  display: none !important;
+}
+// }

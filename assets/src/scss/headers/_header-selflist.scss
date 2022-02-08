@@ -10,6 +10,18 @@
   margin-left: 3rem;
 }
 
+@media (max-width: 501px) {
+  #logout-btn,
+  #support-btn {
+    margin-top: 0.01rem !important;
+    float: right !important;
+  }
+  #support-btn {
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+  }
+}
+
 // HEADER HOME
 #header-home {
   margin-top: 8rem;
