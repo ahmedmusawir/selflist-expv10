@@ -20,7 +20,7 @@ get_header();
  * CUSOMER/USER PROFILE
  */
 $current_user = wp_get_current_user();
-$user_points = get_field('selflist_points', 'user_' . $current_user->id);
+$user_points = get_field('selflist_points', 'user_' . $current_user->ID);
 // $user_registered = $current_user->user_registered;
 // $user_email = $current_user->user_email;
 // $user_total_list_count = count_user_posts($current_user->id, 'post', false); // false for all posts

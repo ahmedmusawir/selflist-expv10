@@ -6,7 +6,7 @@
 function add_signup_customer_points($user_id, $feed, $entry, $user_pass) {
 
   $new_customer_points = $entry['5'];
-  $new_customer_point = 10000;
+  $new_customer_point = 1000;
 
   // SETTING INITIAL MEMBER POINTS
   // Will return false if the previous value is the same as $new_value.

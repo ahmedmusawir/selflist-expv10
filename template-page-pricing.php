@@ -19,65 +19,109 @@ if (is_user_logged_in()) {
 }
 ?>
 <style>
-.page-id-1402 h2,
-h4 {
-    font-weight: bold;
+.page-template-template-page-pricing h5 {
+    /* font-weight: bold !important; */
+    color: black !important;
 }
 
-.page-id-1402 .price-box {
-    box-shadow: 2px 2px 8px grey
+/* DESKTOP VERSION */
+@media (min-width: 821px) {
+    .page-template-template-page-pricing .price-box-desktop {
+        display: block;
+    }
+
+    .page-template-template-page-pricing .price-box-mobile {
+        display: none;
+    }
+
+    .page-template-template-page-pricing .price-box-tablet {
+        display: none;
+    }
+
 }
 
-
-@media (max-width: 1199px) {
-    .page-id-1402 .price-box {
-        min-height: 300px;
+/* TABLET VERSION */
+/* @media (max-width: 820px) {
+    .page-template-template-page-pricing .price-box-desktop {
+        display: none;
     }
 
-    .page-id-1402 h2 {
-        min-height: 100px;
-
-    }
-}
-
-@media (max-width: 991px) {
-    .page-id-1402 h1 {
-        font-size: 1.8rem;
+    .page-template-template-page-pricing .price-box-mobile {
+        display: none;
     }
 
-    .page-id-1402 h2 {
-        font-size: 1.5rem;
+    .page-template-template-page-pricing .price-box-tablet h5 {
+        font-size: 1.1rem !important;
     }
 
-    .page-id-1402 h4 {
-        font-size: 1rem;
+} */
+
+@media (max-width: 1400px) {
+    .page-template-template-page-pricing .price-box-desktop {
+        display: none;
     }
+
+    .page-template-template-page-pricing .price-box-tablet {
+        display: none;
+    }
+
+    .page-template-template-page-pricing .price-box-mobile {
+        display: block;
+        /* border: 5px dotted red; */
+    }
+
+    .page-template-template-page-pricing .price-box-mobile h5 {
+        font-size: 1.1rem !important;
+    }
+
 }
 </style>
 
-<main id="primary" class="site-main container">
+<main id="primary" class="site-main container-fluid">
 
-    <h1 class="text-center font-weight-bold my-5">Pricing For Listing Days</h1>
+    <h1 class="text-center font-weight-bold my-5">PRICING</h1>
 
     <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <article class="price-box m-4 border border-danger rounded text-center p-5">
-
-                <h2>10,000 to 1,000,000,000</h2>
-
-                <h4 class="alert alert-danger p-4">$0.25 per day</h4>
-
-            </article>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <article class="price-box m-4 border border-danger rounded text-center p-5">
-
-                <h2>1,000,000,000+</h2>
-
-                <h4 class="alert alert-success p-4">Negotiable</h4>
+        <!-- DESKTOP VERSION -->
+        <div class="price-box-desktop col-sm-12 col-md-12 col-lg-6 mx-auto">
+            <article class="m-4">
+                <h5>Your first 1000 one-day listings ... ... ... ... ... ... ... ... <span
+                        class="font-weight-bold">Free</span></h5>
+                <h5>Your next million one-day listings ... ... ... ... ... ... &nbsp;<span
+                        class="font-weight-bold">$0.25 per one-day
+                        listing</span></h5>
+                <h5>Your next million one-day listings ... ... ... ... ... ... &nbsp;<span
+                        class="font-weight-bold">Negotiable</span></h5>
 
             </article>
         </div>
+
+        <!-- TABLET VERSION -->
+        <!-- <div class="price-box-tablet col-sm-12 col-md-11 col-lg-10 mx-auto">
+            <article class="m-4">
+                <h5>Your first 1000 one-day listings ... ... ... ... ... <span class="font-weight-bold">Free</span></h5>
+                <h5>Your next million one-day listings ... ... ... &nbsp;<span class="font-weight-bold">$0.25 per
+                        one-day
+                        listing</span></h5>
+                <h5>Your next million one-day listings ... ... ... &nbsp;<span
+                        class="font-weight-bold">Negotiable</span></h5>
+
+            </article>
+        </div> -->
+
+        <!-- MOBILE VERSION -->
+        <div class="price-box-mobile col-12 col-sm-12 col-md-12  mx-auto">
+            <article class="m-4 text-center">
+                <h5>Your first 1000 one-day listings </h5>
+                <h5 class="font-weight-bold">Free</h5>
+                <h5>Your next million one-day listings </h5>
+                <h5 class="font-weight-bold">$0.25 per one-day listing</h5>
+                <h5>Your next million one-day listings </h5>
+                <h5 class="font-weight-bold">Negotiable</h5>
+            </article>
+        </div>
+
+
     </div>
 
 </main><!-- #main -->
