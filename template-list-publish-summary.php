@@ -52,8 +52,8 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     </h6>
 </section>
 <div class="navigation-box container">
-    <a href="/list-insert/" class="btn btn-outline-danger float-right">List</a>
-    <!-- <a href="/list-customer-archive/" class="btn btn-outline-danger float-right">Listings</a> -->
+    <!-- <a href="/list-insert/" class="btn btn-outline-danger float-right">List</a> -->
+    <!-- <a href="/list-customer-archive/" class="btn btn-outline-danger float-left">Listings</a> -->
 </div>
 
 <?php

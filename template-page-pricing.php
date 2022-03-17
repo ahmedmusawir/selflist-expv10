@@ -79,7 +79,7 @@ if (is_user_logged_in()) {
 
 <main id="primary" class="site-main container-fluid">
 
-    <h1 class="text-center font-weight-bold my-5">PRICING</h1>
+    <h1 class="text-center font-weight-bold mt-5 mb-3">PRICING</h1>
 
     <div class="row">
         <!-- DESKTOP VERSION -->
@@ -92,6 +92,8 @@ if (is_user_logged_in()) {
                         listing</span></h5>
                 <h5>Your next million one-day listings ... ... ... ... ... ... &nbsp;<span
                         class="font-weight-bold">Negotiable</span></h5>
+
+                <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD</a>
 
             </article>
         </div>
@@ -118,6 +120,10 @@ if (is_user_logged_in()) {
                 <h5 class="font-weight-bold">$0.25 per one-day listing</h5>
                 <h5>Your next million one-day listings </h5>
                 <h5 class="font-weight-bold">Negotiable</h5>
+                <div class="w-50 mx-auto">
+                    <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD</a>
+                </div>
+
             </article>
         </div>
 

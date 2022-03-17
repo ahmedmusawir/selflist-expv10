@@ -104,12 +104,14 @@ textarea::placeholder {
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
-            <a href="/list-insert/" class="btn btn-danger float-right btn-lg d-none d-lg-block">List</a>
+            <!-- <a href="/list-insert/" class="btn btn-danger float-right btn-lg d-none d-lg-block">List</a>
             <a href="/list-insert/" class="btn btn-danger float-right d-none d-sm-block d-lg-none">List</a>
-            <a href="/list-insert/" class="btn btn-danger float-right btn-sm d-block d-sm-none">List</a>
+            <a href="/list-insert/" class="btn btn-danger float-right btn-sm d-block d-sm-none">List</a> -->
             <h3 class="text-uppercase"><small class="font-weight-bold">Manage Auto Links</small></h3>
             <!-- <h3 class="text-uppercase"><small class="font-weight-bold">My Profile</small></h3> -->
-            <h2 class="h2">Welcome, <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
+            <!-- <h2 class="h2">Welcome, <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?> -->
+            <h2 class="h2"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
+                <!-- <small>Listing Auto Links</small> -->
             </h2>
 
             <!-- <h6 class="h6 text-uppercase font-weight-bold">
@@ -162,7 +164,9 @@ textarea::placeholder {
                     </span>
                 </strong>
             </h6> -->
-            <div class="row">
+
+            <!-- REGISTERED DATE -->
+            <!-- <div class="row">
                 <div class="col-6 col-sm-3">
                     <h6 class="h6 text-uppercase font-weight-bold">
                         Listing Since:
@@ -190,7 +194,7 @@ textarea::placeholder {
                     echo '</span>'; 
             ?>
                 </div>
-            </div>
+            </div> -->
             <!-- <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php printf('%s<br>', date("M d, Y", strtotime($user_registered)));?>
@@ -199,18 +203,18 @@ textarea::placeholder {
             <!-- <hr class="bg-danger"> -->
 
             <!-- PASSWORD SECTION HAS BEEN MOVED TO PASSWORD PAGE     -->
-            <section class="d-none">
+            <!-- <section class="">
                 <div class="mt-5">
                     <button id="password-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"
                         disabled>Cancel</button>
                     <button id="password-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
                 </div>
                 <h3 class="text-uppercase"><small class="font-weight-bold">My Password</small></h3>
-                <!-- <p class="text-danger">Reset Your Login Password Here... </p> -->
+                <p class="text-danger">Reset Your Login Password Here... </p>
 
-                <!-- MEMBER PASSWORK RESET FORM -->
+                MEMBER PASSWORK RESET FORM
                 <form action="" name="password-reset-form" id="password-reset-form" class="form">
-                    <!-- PASSWORD -->
+                    PASSWORD
                     <div class="form-group">
                         <input type="password" class="form-control" id="lister-password" name="lister-password"
                             aria-describedby="textHelp" placeholder="Password"
@@ -218,7 +222,7 @@ textarea::placeholder {
                         <small id="textHelp" class="form-text text-muted">Ex: 8 Characters Minimum</small>
                     </div>
 
-                    <!-- PASSWORD CONFIRMATION -->
+                    PASSWORD CONFIRMATION
                     <div class="form-group">
                         <input type="password" class="form-control" id="lister-password-confirm"
                             name="lister-password-confirm" aria-describedby="textHelp" placeholder="Confirm Password"
@@ -226,25 +230,25 @@ textarea::placeholder {
                         <small id="textHelp" class="form-text text-muted">Confirm</small>
                     </div>
 
-                    <!-- PASSWORD SUBMIT BUTTON -->
+                    PASSWORD SUBMIT BUTTON
                     <button id="profile-password-update-button" type="submit" class="btn btn-secondary btn-block"
                         disabled>
                         Update
                     </button>
 
-                </form> <!-- END MEMBER PASSWORK RESET FORM -->
+                </form> END MEMBER PASSWORK RESET FORM
+            </section> -->
 
-                <hr class="bg-danger">
-            </section>
+            <hr class="">
             <!-- PASSWORD SECTION HAS BEEN MOVED TO PASSWORD PAGE     -->
 
 
-            <div class="mt-5">
+            <div class="">
                 <button id="additional-info-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"
                     disabled>Cancel</button>
-                <button id="additional-info-edit-btn" class="btn btn-dark btn-sm float-right">Edit</button>
+                <button id="additional-info-edit-btn" class="btn btn-dark btn-sm float-right mb-2">Edit</button>
             </div>
-            <h3 class="text-uppercase"><small class="font-weight-bold">My Listing Auto Links</small></h3>
+            <!-- <h4 class="text-uppercase"><small class="font-weight-bold">My Listing Auto Links</small></h4> -->
             <!-- <p>The following information will be included in my listings automatically</p> -->
             <!-- LIST INSERT BLOCK -->
             <section class="additional-data-container">
@@ -381,6 +385,36 @@ textarea::placeholder {
                                 https://twitter.com/mypage</small> -->
                         </div>
 
+                        <!-- REGISTERED DATE -->
+                        <div class="row mb-3">
+                            <div class="col-6 col-sm-3">
+                                <h6 class="h6 text-uppercase font-weight-bold">
+                                    Listing Since:
+                                </h6>
+                            </div>
+                            <style>
+                            #date-box {
+                                margin-left: -2rem;
+                                margin-top: -.15rem;
+                            }
+
+                            @media (max-width: 575px) {
+                                #date-box {
+                                    margin-left: 0rem;
+                                    margin-top: -.15rem;
+                                }
+                            }
+                            </style>
+                            <div class="col-6 col-sm-9">
+                                <?php echo '<span id="date-box" class="bg-danger text-light font-weight-bold float-left py-2 px-4"
+                    style="font-size: .8rem;">';
+                    printf('%s<br>', date("m", strtotime($user_registered)));
+                    printf('%s<br>', date("d", strtotime($user_registered)));
+                    printf('%s<br>', date("y", strtotime($user_registered)));
+                    echo '</span>'; 
+            ?>
+                            </div>
+                        </div>
 
                         <!-- THE SUBMIT BUTTON -->
                         <button id="profile-info-update-button" type="submit" class="btn btn-secondary btn-block"

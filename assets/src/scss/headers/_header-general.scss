@@ -19,7 +19,7 @@
       padding: 0 !important;
     }
 
-    @media (max-width: 501px) {
+    @media (max-width: 578px) {
       height: 70px;
     }
 
@@ -88,10 +88,10 @@
     color: white;
     color: hsl(0, 0%, 100%);
 
-    @media (max-width: 429px) {
-      font-size: 0.7rem;
-      padding: 0.5rem 0.45rem;
-    }
+    // @media (max-width: 429px) {
+    //   font-size: 0.7rem;
+    //   padding: 0.5rem 0.45rem;
+    // }
   }
 
   // CURRENT PAGE HOVER

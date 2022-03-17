@@ -4,13 +4,17 @@
 // LOGOUT BUTTON
 #logout-btn {
   font-size: 0.7rem !important;
+  position: relative;
+  z-index: 1000;
 }
 #support-btn {
   font-size: 0.7rem !important;
   margin-left: 3rem;
+  position: relative;
+  z-index: 1000;
 }
 
-@media (max-width: 501px) {
+@media (max-width: 578px) {
   #logout-btn,
   #support-btn {
     margin-top: 0.01rem !important;
@@ -18,7 +22,25 @@
   }
   #support-btn {
     margin-left: 0rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+  }
+  #logout-btn {
+    margin-right: 8px !important;
+  }
+}
+
+@media (max-width: 460px) {
+  #logout-btn,
+  #support-btn {
+    margin-top: -32px !important;
+    float: right !important;
+  }
+  #support-btn {
+    margin-left: 0rem;
+    margin-right: 4rem;
+  }
+  #logout-btn {
+    margin-right: 1rem !important;
   }
 }
 

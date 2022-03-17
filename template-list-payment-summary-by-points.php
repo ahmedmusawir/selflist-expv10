@@ -64,7 +64,8 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 <main id="primary" class="site-main container">
 
     <section class="datepicker-range-box text-center">
-        <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Dates</small></h3>
+        <h3 class="text-uppercase mt-5"><small class="font-weight-bold">List Today</small></h3>
+        <!-- <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Dates</small></h3> -->
         <h6 class="text-uppercase">
             <small>
                 <!-- Lister ID:
@@ -73,16 +74,17 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                         <?php echo $current_user_id; ?>
                     </span>
                 </strong> -->
-                AVAILABLE LISTING DAYS:
-                <strong class="text-danger">
+                <!-- AVAILABLE LISTING DAYS: -->
+                <strong class="text-danger d-none">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_points; ?>
                     </span>
                 </strong>
             </small>
         </h6>
-        <h6 class="text-uppercase font-weight-bold">Listing #<span class="current-post-id"></span></h6>
-        <p class="text-uppercase font-weight-bold"><small>List today for <strong>1 Point</strong> per day</small></p>
+        <h6 class="text-uppercase font-weight-bold d-none">Listing #<span class="current-post-id"></span></h6>
+        <!-- <p class="text-uppercase font-weight-bold"><small>List Today</p> -->
+        <!-- <p class="text-uppercase font-weight-bold"><small>List today for <strong>1 Point</strong> per day</small></p> -->
 
         <div class="row">
 
@@ -137,11 +139,11 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         </button> -->
             </div>
             <div class="modal-body">
-                <p class="text-uppercase mt-4"><small class="font-weight-bold">My Payment Points:
+                <p class="text-uppercase mt-4 d-none"><small class="font-weight-bold">My Payment Points:
                         &nbsp;</small><span id="confirm-payment-points"
                         class="text-danger font-weight-bold">_______</span> <small class="font-weight-bold"></small>
                 </p>
-                <p class="text-uppercase"><small class="font-weight-bold">My Available Points:
+                <p class="text-uppercase d-none"><small class="font-weight-bold">My Available Points:
                         &nbsp;</small><span id="confirm-current-points"
                         class="text-danger font-weight-bold">_______</span> <small class="font-weight-bold"></small>
                 </p>

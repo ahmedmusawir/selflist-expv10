@@ -171,7 +171,7 @@ textarea::placeholder {
             <div id="primary" class="site-main container pt-">
 
                 <!-- <hr> -->
-                <h5 id="insert-search-cat-header" class="text-center">COMPARATIVE LISTINGS</h5>
+                <h4 id="insert-search-cat-header" class="text-center">COMPARATIVE LISTINGS</h4>
 
                 <section id="selflist-search-input-box" class="selflist-search-input-box">
 

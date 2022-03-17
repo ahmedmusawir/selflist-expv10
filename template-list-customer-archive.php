@@ -58,16 +58,16 @@ wp_nav_menu(
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
-            <a href="/list-insert/" class="btn btn-danger float-right">List</a>
+            <!-- <a href="/list-insert/" class="btn btn-danger float-right">List</a> -->
             <h3 class="text-uppercase"><small class="font-weight-bold">MANAGE MY LISTINGS</small></h3>
-            <h6 class="h6 text-uppercase font-weight-bold">
+            <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Available Listing Days:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
                         <?php echo $user_points; ?>
                     </span>
                 </strong>
-            </h6>
+            </h6> -->
             <!-- <h3 class="text-uppercase"><small class="font-weight-bold">MY LISTINGS</small></h3> -->
             <!-- <h2 class="h2"><?php echo $current_user->display_name; ?>'s Lists</h2> -->
             <!-- <h2 class="h2">
