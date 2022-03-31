@@ -17,7 +17,7 @@
      </div>
      <!-- END THE STATE DROPDOWN ROW -->
 
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Create a New Market:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Create New Market:</label>
 
      <!-- THE CITY DROPDOWN -->
      <div class="row">

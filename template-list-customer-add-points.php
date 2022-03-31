@@ -57,7 +57,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
                     </span>
                 </strong>
             </h6> -->
-            <h4 class="h4">Add Listing Days:</h4>
+            <h4 class="h4">Buy Listing Days:</h4>
             <style>
             .woocommerce-loop-product__title {
                 display: none;

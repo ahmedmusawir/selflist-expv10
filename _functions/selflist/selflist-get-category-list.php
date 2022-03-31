@@ -13,20 +13,20 @@
       if (! $sub2_cats ) {
         if (is_user_logged_in()) {
           echo '
-          <section id="no-cat-found" class="card text-center pb-3">
+          <section id="no-cat-found" class="card text-center pb-3 d-none">
 
-            <p>No More Categories ...</p>
-            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index-members/">Search By Categories</a>
+            <p class="d-none">No More Categories ...</p>
+            <a class="btn btn-danger btn-sm btn-block d-none" href="/category-search-index-members/">Search By Categories</a>
 
           </section>
           ';
 
         } else {
           echo '
-          <section id="no-cat-found" class="card text-center pb-3">
+          <section id="no-cat-found" class="card text-center pb-3 d-none">
   
-            <p>No More Categories ...</p>
-            <a class="btn btn-danger btn-sm btn-block" href="/category-search-index/">Search By Categories</a>
+            <p class="d-none">No More Categories ...</p>
+            <a class="btn btn-danger btn-sm btn-block d-none" href="/category-search-index/">Search By Categories</a>
 
             </section>
           ';

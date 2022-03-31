@@ -66,7 +66,7 @@ textarea::placeholder {
 
     <?php endif; ?>
 
-    <button class="btn btn-outline-dark mb-2" onclick='window.location.reload(true);'>Reset</button>
+    <!-- <button class="btn btn-outline-dark mb-2" onclick='window.location.reload(true);'>Reset</button> -->
     <!-- STATE & CITY CATEGORY PROTOTYPING STARTS -->
     <?php 
     // Getting all States (Parent Taxonomies)
@@ -80,7 +80,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Search by keyword">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Keyword">
                 <i class="fas fa-search"></i>
 
             </section>
@@ -140,7 +140,7 @@ textarea::placeholder {
                 <ul class="primo d-none d-lg-block">
                     <?php 
         
-        
+        // Location: /_functions/selflist/selflist-get-category-list.php
         $cat_list = get_selflist_sub_cats($current_cat_id);
         
       ?>

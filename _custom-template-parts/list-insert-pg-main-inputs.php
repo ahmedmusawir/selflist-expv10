@@ -12,7 +12,7 @@ $user_registered = $current_user->user_registered
         <label class="font-weight-bold" for="exampleFormControlTextarea1">Key Words:</label>
 
         <textarea class="form-control" id="lister-description" name="lister-description" rows="3"
-            placeholder="... Up to 140 Characters" maxlength="140"></textarea>
+            placeholder="Up to 140 Characters" maxlength="140"></textarea>
     </div>
     <!-- NAME -->
     <label class="font-weight-bold" for="exampleFormControlTextarea1">Auto Links:</label>

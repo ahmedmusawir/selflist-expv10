@@ -8,8 +8,8 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or create new category...">
-                     <option value="">Select a Main Caterory...</option>
+                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or create new category">
+                     <option value="">Select a Main Caterory</option>
                      <!-- <option value="AL">Tutoring</option>
         <option value="AK">Alaska</option>
         <option value="IN">Indiana</option> -->
