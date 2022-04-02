@@ -96,7 +96,7 @@ textarea::placeholder {
                 ?>
 
                 <!-- HMU BUTTON -->
-                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">INVITE TO</a>
+                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">INVITE</a>
                 <!-- END HMU BUTTON -->
 
             </header><!-- .page-header -->

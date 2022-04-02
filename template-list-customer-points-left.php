@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages
- * Template Name: List Customer Add Points
+ * Template Name: List Customer Days Left
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
@@ -47,25 +47,15 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
-            <!-- <h3 class="text-uppercase"><small class="font-weight-bold">Available Listing Days <span
-                        class="badge badge-pill badge-danger"><?php echo $user_points; ?></span></small></h3> -->
-            <!-- <h6 class="h6 text-uppercase font-weight-bold mb-5">
-                Available Points:
-                <strong class="text-danger">
-                    <span id="payment-summary-avail-points">
+            <div class="font-weight-bold">
+                <span class="badge badge-danger py-3 px-4 pt-4">
+                    <h1 class="display-5 text-light">
                         <?php echo $user_points; ?>
-                    </span>
-                </strong>
-            </h6> -->
-            <!-- <h4 class="h4">Buy Listing Days:</h4> -->
-            <h3 class="text-uppercase"><small class="font-weight-bold">Buy Listing Days:</small></h3>
-            <style>
-            .woocommerce-loop-product__title {
-                display: none;
-            }
-            </style>
-            <hr>
-            <?php echo do_shortcode('[products]'); ?>
+                    </h1>
+                </span>
+            </div>
+
+            <!-- <hr> -->
 
         </div>
         <!-- RIGHT PROFILE CONTENT COLUMN ENDS -->

@@ -68,7 +68,8 @@ class ProfilePassReset {
 
         // PAGE RELOAD TO REFLECT DATA UPDATE
         alert('Password Update Successful! You have to log back in...');
-        location.reload();
+        // location.reload();
+        location.href = '/wp-login.php';
       })
       .fail((res) => {
         alert('Sorry update not successful ... Ajax failed');

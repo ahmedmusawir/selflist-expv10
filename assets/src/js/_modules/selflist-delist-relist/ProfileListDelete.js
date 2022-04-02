@@ -60,7 +60,7 @@ class ProfileListDelete {
 
         // CHECKING FOR LIST ID FROM AJAX BACKEND
         if (res.ID == this.deleteId) {
-          alert(`The List (ID: ${res.ID}) has been Deleted Successfully!`);
+          // alert(`The List (ID: ${res.ID}) has been Deleted Successfully!`);
         } else {
           alert(`${res}`);
         }

@@ -60,8 +60,8 @@ class ProfileDelist {
 
         // CHECKING FOR LIST ID FROM AJAX BACKEND
         if (res == this.delistId) {
-          alert(`The List (ID: ${res}) has been Delisted Successfully!
-                Please look under NON-ACTIVE LISTS to find your List`);
+          // alert(`The List (ID: ${res}) has been Delisted Successfully!
+          //       Please look under NON-ACTIVE LISTS to find your List`);
         } else {
           alert(`${res}`);
         }

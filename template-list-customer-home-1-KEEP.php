@@ -107,18 +107,18 @@ textarea::placeholder {
             <!-- <a href="/list-insert/" class="btn btn-danger float-right btn-lg d-none d-lg-block">List</a>
             <a href="/list-insert/" class="btn btn-danger float-right d-none d-sm-block d-lg-none">List</a>
             <a href="/list-insert/" class="btn btn-danger float-right btn-sm d-block d-sm-none">List</a> -->
-            <h3 class="text-uppercase"><small class="font-weight-bold">Manage My Auto Links</small></h3>
-            <hr class="">
-
-            <!-- <h2 class="h2">Welcome, <?php // echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?> -->
+            <h3 class="text-uppercase"><small class="font-weight-bold">Manage Auto Links</small></h3>
+            <!-- <h3 class="text-uppercase"><small class="font-weight-bold">My Profile</small></h3> -->
+            <!-- <h2 class="h2">Welcome, <?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?> -->
             <h2 class="h2"><?php echo $current_user->user_firstname . ' ' . $current_user->user_lastname; ?>
+                <!-- <small>Listing Auto Links</small> -->
             </h2>
 
             <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 ID:
                 <strong class="text-danger">
                     <span class="current-user-id">
-                        <?php // echo $current_user->ID; ?>
+                        <?php //echo $current_user->ID; ?>
                     </span>
                 </strong>
             </h6> -->
@@ -127,7 +127,7 @@ textarea::placeholder {
                 USER NAME:
                 <strong class="text-danger">
                     <span class="current-user-id text-lowercase">
-                        <?php // echo $current_user->user_login; ?>
+                        <?php echo $current_user->user_login; ?>
                     </span>
                 </strong>
             </h6> -->
@@ -136,7 +136,7 @@ textarea::placeholder {
                 Available Points:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
-                        <?php // echo $user_points; ?>
+                        <?php echo $user_points; ?>
                     </span>
                 </strong>
             </h6> -->
@@ -152,7 +152,7 @@ textarea::placeholder {
         Your Total List Count:
         <strong class="text-danger">
           <span id="payment-summary-avail-points">
-            <?php // echo $user_total_list_count; ?>
+            <?php echo $user_total_list_count; ?>
           </span>
         </strong>
       </h6> -->
@@ -160,7 +160,7 @@ textarea::placeholder {
                 Active Listings:
                 <strong class="text-danger">
                     <span id="payment-summary-avail-points">
-                        <?php // echo $user_published_list_count; ?>
+                        <?php echo $user_published_list_count; ?>
                     </span>
                 </strong>
             </h6> -->
@@ -239,15 +239,15 @@ textarea::placeholder {
                 </form> END MEMBER PASSWORK RESET FORM
             </section> -->
 
+            <hr class="">
             <!-- PASSWORD SECTION HAS BEEN MOVED TO PASSWORD PAGE     -->
 
 
-            <!-- <div class="">
+            <div class="">
                 <button id="additional-info-cancel-btn" class="btn btn-primary btn-sm float-right ml-2"
                     disabled>Cancel</button>
                 <button id="additional-info-edit-btn" class="btn btn-dark btn-sm float-right mb-2">Edit</button>
             </div>
-             -->
             <!-- <h4 class="text-uppercase"><small class="font-weight-bold">My Listing Auto Links</small></h4> -->
             <!-- <p>The following information will be included in my listings automatically</p> -->
             <!-- LIST INSERT BLOCK -->
@@ -281,21 +281,22 @@ textarea::placeholder {
                         <!-- PHONE -->
                         <div class="form-group">
                             <!-- <label class="font-weight-bold" for="lister-phone">Phone:</label> -->
-                            <!-- <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
+                            <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
                                 aria-describedby="textHelp" placeholder="Phone" value="<?php echo $user_phone; ?>"
-                                readonly> -->
+                                readonly>
                             <!-- <small id="textHelp" class="form-text text-muted">Phone Ex: 6781231234</small> -->
 
                             <!-- AFTER EDIT AND CANCELL BUTTON REMOVAL     -->
-                            <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
-                                aria-describedby="textHelp" placeholder="Phone" value="<?php echo $user_phone; ?>">
+                            <!-- <input type="tel" class="form-control" id="lister-phone" name="lister-phone"
+                                aria-describedby="textHelp" placeholder="Phone" value="<?php echo $user_phone; ?>"> -->
 
                         </div>
                         <!-- WEBSITE -->
                         <div class="form-group">
                             <!-- <label class="font-weight-bold" for="lister-website">Website:</label> -->
                             <input type="text" class="form-control" id="lister-website" name="lister-website"
-                                aria-describedby="textHelp" placeholder="Website" value="<?php echo $user_website; ?>">
+                                aria-describedby="textHelp" placeholder="Website" value="<?php echo $user_website; ?>"
+                                readonly>
                             <!-- <small id="textHelp" class="form-text text-muted">Website Ex:
                                 https://your-website.com</small> -->
                         </div>
@@ -303,7 +304,7 @@ textarea::placeholder {
                             <!-- <label class="font-weight-bold" for="lister-website">Website:</label> -->
                             <input type="text" class="form-control" id="lister-email" name="lister-website"
                                 aria-describedby="textHelp" placeholder="Email" value="<?php echo $user_email; ?>"
-                                disabled>
+                                readonly disabled>
                             <!-- <small id="textHelp" class="form-text text-muted">Website Ex:
                                 https://your-website.com</small> -->
                         </div>
@@ -317,7 +318,8 @@ textarea::placeholder {
                                     <div class="input-group-text"><i class="text-danger fab fa-facebook-f"></i></div>
                                 </div>
                                 <input type="url" class="form-control" id="lister-facebook" name="lister-facebook"
-                                    placeholder="https://facebook.com/mypage" value="<?php echo $user_facebook; ?>">
+                                    placeholder="https://facebook.com/mypage" value="<?php echo $user_facebook; ?>"
+                                    readonly>
                                 <!-- AFTER EDIT AND CANCELL BUTTON REMOVAL     -->
                                 <!-- <input type="url" class="form-control" id="lister-facebook" name="lister-facebook"
                                     placeholder="https://facebook.com/mypage" value="<?php echo $user_facebook; ?>"> -->
@@ -332,7 +334,7 @@ textarea::placeholder {
                                     <div class="input-group-text"><i class="text-danger fab fa-yelp"></i></div>
                                 </div>
                                 <input type="url" class="form-control" id="lister-yelp" name="lister-yelp"
-                                    placeholder="https://yelp.com/mypage" value="<?php echo $user_yelp; ?>">
+                                    placeholder="https://yelp.com/mypage" value="<?php echo $user_yelp; ?>" readonly>
                             </div>
                             <!-- <small id="textHelp" class="form-text text-muted">Example: https://yelp.com/mypage</small> -->
                         </div>
@@ -343,7 +345,8 @@ textarea::placeholder {
                                     <div class="input-group-text"><i class="text-danger fab fa-instagram"></i></div>
                                 </div>
                                 <input type="url" class="form-control" id="lister-instagram" name="lister-instagram"
-                                    placeholder="https://instagram.com/mypage" value="<?php echo $user_instagram; ?>">
+                                    placeholder="https://instagram.com/mypage" value="<?php echo $user_instagram; ?>"
+                                    readonly>
                             </div>
                             <!-- <small id="textHelp" class="form-text text-muted">Example:
                                 https://instagram.com/mypage</small> -->
@@ -355,7 +358,8 @@ textarea::placeholder {
                                     <div class="input-group-text"><i class="text-danger fab fa-linkedin-in"></i></div>
                                 </div>
                                 <input type="url" class="form-control" id="lister-linkedin" name="lister-linkedin"
-                                    placeholder="https://linkedin.com/mypage" value="<?php echo $user_linkedin; ?>">
+                                    placeholder="https://linkedin.com/mypage" value="<?php echo $user_linkedin; ?>"
+                                    readonly>
                             </div>
                             <!-- <small id="textHelp" class="form-text text-muted">Example:
                                 https://linkedin.com/mypage</small> -->
@@ -368,7 +372,8 @@ textarea::placeholder {
                                     <div class="input-group-text"><i class="text-danger fab fa-twitter"></i></div>
                                 </div>
                                 <input type="url" class="form-control" id="lister-twitter" name="lister-twitter"
-                                    placeholder="https://twitter.com/mypage" value="<?php echo $user_twitter; ?>">
+                                    placeholder="https://twitter.com/mypage" value="<?php echo $user_twitter; ?>"
+                                    readonly>
                             </div>
                             <!-- <small id="textHelp" class="form-text text-muted">Example:
                                 https://twitter.com/mypage</small> -->
@@ -382,7 +387,7 @@ textarea::placeholder {
                                 </div>
                                 <input type="url" class="form-control" id="lister-youtube" name="lister-youtube"
                                     placeholder="https://www.youtube.com/channel/UCYawRfyYRTbS3Q-AGSrr52w"
-                                    value="<?php echo $user_youtube; ?>">
+                                    value="<?php echo $user_youtube; ?>" readonly>
                             </div>
                             <!-- <small id="textHelp" class="form-text text-muted">Example:
                                 https://twitter.com/mypage</small> -->
@@ -420,7 +425,8 @@ textarea::placeholder {
                         </div>
 
                         <!-- THE SUBMIT BUTTON -->
-                        <button id="profile-info-update-button" type="submit" class="btn btn-secondary btn-block">
+                        <button id="profile-info-update-button" type="submit" class="btn btn-secondary btn-block"
+                            disabled>
                             Update
                         </button>
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages
- * Template Name: List Customer Add Points
+ * Template Name: Empty Cutomer Profile Page Holder
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
@@ -57,15 +57,9 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
                     </span>
                 </strong>
             </h6> -->
-            <!-- <h4 class="h4">Buy Listing Days:</h4> -->
-            <h3 class="text-uppercase"><small class="font-weight-bold">Buy Listing Days:</small></h3>
-            <style>
-            .woocommerce-loop-product__title {
-                display: none;
-            }
-            </style>
+            <!-- <h4 class="h4">Empty Cutomer Profile Page Holder:</h4> -->
+            <h3 class="text-uppercase"><small class="font-weight-bold">Empty Cutomer Profile Page Holder</small></h3>
             <hr>
-            <?php echo do_shortcode('[products]'); ?>
 
         </div>
         <!-- RIGHT PROFILE CONTENT COLUMN ENDS -->

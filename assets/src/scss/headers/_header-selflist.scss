@@ -32,15 +32,30 @@
 @media (max-width: 460px) {
   #logout-btn,
   #support-btn {
+    margin-top: 0px !important;
+    float: right !important;
+  }
+  #support-btn {
+    margin-left: 0rem;
+    margin-right: 0.5rem;
+  }
+  #logout-btn {
+    margin-right: 0.2rem !important;
+  }
+}
+
+@media (max-width: 373px) {
+  #logout-btn,
+  #support-btn {
     margin-top: -32px !important;
     float: right !important;
   }
   #support-btn {
     margin-left: 0rem;
-    margin-right: 4rem;
+    margin-right: 3rem;
   }
   #logout-btn {
-    margin-right: 1rem !important;
+    margin-right: 0.2rem !important;
   }
 }
 

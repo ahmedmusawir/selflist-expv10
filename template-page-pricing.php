@@ -93,7 +93,7 @@ if (is_user_logged_in()) {
                 <h5>Your next million one-day listings ... ... ... ... ... ... &nbsp;<span
                         class="font-weight-bold">Negotiable</span></h5>
 
-                <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD</a>
+                <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD LISTING DAYS</a>
 
             </article>
         </div>

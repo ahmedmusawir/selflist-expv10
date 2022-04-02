@@ -138,168 +138,85 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
     ?>
     </div><!-- .entry-content -->
 
-    <!-- AUTHOR NAME BOX -->
-    <div class="list-author-box">
-        <p class="list-author float-left">
-            Chat ID:
-            <span class="text-danger">
-                <?php //echo $udata->display_name; ?>
-                <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
-            </span>
-        </p>
-        <a class="btn btn-outline-danger btn-sm float-right mt-1" href="<?php echo get_permalink(); ?>">SHARE</a>
-    </div>
-
-    <!-- FOOTER GOES HERE -->
     <footer class="entry-footer">
-
-        <style>
-        input[type=checkbox] {
-            /* Double-sized Checkboxes */
-            -ms-transform: scale(2.2);
-            /* IE */
-            -moz-transform: scale(2.2);
-            /* FF */
-            -webkit-transform: scale(2.2);
-            /* Safari and Chrome */
-            -o-transform: scale(2.2);
-            /* Opera */
-            transform: scale(2.2);
-            /* padding: 10px; */
-            margin-top: .5rem;
-        }
-
-        input[type="checkbox"]:checked:before {
-            font-family: "FontAwesome";
-            font-size: .9rem;
-            color: black;
-            content: "\f14a";
-            background: transparent;
-            position: absolute;
-            border-radius: 2px;
-            width: 12px;
-            height: 12px;
-            left: 45%;
-            /* left: 50%; */
-            top: 19.28%;
-            /* top: 19.26%; */
-            /* top: 19.24%; */
-            transform: translate(-50%, -50%);
-        }
-        </style>
-
         <section class="flex-icon-five">
 
-            <?php if (get_field('your_facebook')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_facebook') ?>" target="_blank">
+                <a href="#">
                     <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
                 </a>
             </div>
-            <?php endif;?>
-
-            <?php if (get_field('your_twitter')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_twitter') ?>" target="_blank">
+                <a href="#">
                     <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png" alt="Twitter Link">
                 </a>
             </div>
-            <?php endif;?>
-
-            <?php if (get_field('your_yelp')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_yelp') ?>" target="_blank">
+                <a href="#">
                     <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
                 </a>
             </div>
-            <?php endif;?>
-
-            <?php if (get_field('your_instagram')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_instagram') ?>" target="_blank">
+                <a href="#">
                     <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png" alt="Instagram Link">
                 </a>
             </div>
-            <?php endif;?>
-
-            <?php if (get_field('your_linkedin')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_linkedin') ?>" target="_blank">
+                <a href="#">
                     <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png" alt="Linkedin Link">
                 </a>
             </div>
-            <?php endif;?>
-
-            <?php if (get_field('your_youtube')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_youtube') ?>" target="_blank">
-                    <img title="Your Youtube Page" src="/wp-content/uploads/Youtube-Icon.png" alt="youtube Link">
+                <a href="#">
+                    <img title="Your Google Plus Page" src="/wp-content/uploads/Google-icon.png" alt="Google Plus Link">
                 </a>
             </div>
-            <?php endif;?>
 
         </section>
 
         <section class="flex-icon-five">
 
             <div class="flex-icon-item">
-                <a href="tel:<?php the_field('your_phone') ?>">
-                    <img title="Phone: <?php the_field('your_phone') ?>" src="/wp-content/uploads/Cell-icon.png"
-                        alt="Phone Number">
+                <a href="tel:404-321-1234">
+                    <img title="Phone: 404-321-1234" src="/wp-content/uploads/Cell-icon.png" alt="Phone Number">
                 </a>
             </div>
             <div class="flex-icon-item">
-                <!-- <a href="mailto:webmaster@example.com"> -->
-                <a href="mailto:<?php echo get_field('your_email'); ?>" target="_blank">
-                    <img title="<?php echo get_field('your_email'); ?>" src="/wp-content/uploads/Email-icon.png"
-                        alt="Email Address">
+                <a href="mailto:webmaster@example.com">
+                    <img title="your@email.com" src="/wp-content/uploads/Email-icon.png" alt="Email Address">
                 </a>
             </div>
             <div class="flex-icon-item">
-                <a href="<?php echo get_field('your_site'); ?>" target="_blank">
-                    <img title="<?php echo get_field('your_site'); ?>" src="/wp-content/uploads/Website-icon.png"
-                        alt="Website Link">
+                <a href="#">
+                    <img title="http://website.com" src="/wp-content/uploads/Website-icon.png" alt="Website Link">
                 </a>
             </div>
-
             <div class="flex-icon-item">
-                <a href="/list-chat/" target="_blank">
-                    <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
+                <a href="#">
+                    <img title="Hit Me Up" src="/wp-content/uploads/HMU-icon.png" alt="HMU Link">
                 </a>
             </div>
-            <div class="flex-icon-item mr-3">
-                <div class="form-group">
-                    <div class="input-group mb-2">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text"><i class="fab fa-font-awesome-flag text-danger"></i>
-                            </div>
-                            <button class="btn btn-primary btn-sm flag-form-btn"
-                                data-key="flag-<?php echo get_the_ID(); ?>" data-list-id="<?php echo $post->ID; ?>"
-                                data-flag-email="<?php echo get_field('your_email'); ?>">
-                                Flag
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Your Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
+                </a>
             </div>
-            <div class="flex-icon-item ml-3">
-                <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox ml-5" autocomplete="off"
-                    data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
-                <span class="checkmark"></span>
-                <!-- <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small> -->
+            <div class="flex-icon-item">
+                <a href="#">
+                    <img title="Flag This List" src="/wp-content/uploads/Screen-Shot-2021-01-26-at-1.50.39-PM.png"
+                        alt="Flag Link">
+                </a>
             </div>
 
         </section>
 
     </footer><!-- .entry-footer -->
-
-    <!-- END FOOTER GOES HERE -->
 </article><!-- Main Article List Item ends -->
 <?php     
      endwhile;        
      else :
 
-    echo "<div class='mb-5'>No Listing Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span></div>" ;
+    echo "No List Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span> " ;
     
   endif;
 

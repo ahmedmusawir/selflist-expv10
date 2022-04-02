@@ -143,7 +143,8 @@ class ProfileAdditionalDataValidation extends ProfileDataUpdateAjax {
         },
         'lister-phone': {
           required: true,
-          phoneUS: true,
+          maxlength: 15,
+          // phoneUS: true,
         },
         'lister-email': {
           required: true,
