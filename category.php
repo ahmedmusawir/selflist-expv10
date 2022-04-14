@@ -215,5 +215,55 @@ textarea::placeholder {
 
 <!-- END FLAG FORM MODAL -->
 
+<!-- FLAG FORM MODAL FOR AJAX (CITY STATE FILTER)-->
+
+<!-- Modal -->
+<div class="modal fade text-center" id="the-flag-modal-ajax" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal-dialog" role="document"> -->
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center bg-danger">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This Listing</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+            </div>
+            <!-- <div class="modal-body">
+        <form action="" class="form">
+
+        </form>
+      </div> -->
+            <div class="modal-footer justify-content-center">
+                <!-- REMOVING FLAG REQUIRED ERROR MESSAGE AT CLIENT'S REQUEST -->
+                <style>
+                #flag-textarea-error {
+                    display: none !important;
+                }
+                </style>
+
+                <form id="flag-insert-form" class="form">
+                    <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
+                    <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea-ajax" cols="30"
+                        rows="10" required autocomplete="off" placeholder="This Flag will be published.">
+                    </textarea>
+                    <small class="float-right mb-3">140 Character Limit</small>
+                    <button id="flag-ajax-submit-btn-ajax" type="button"
+                        class="btn btn-primary btn-block flag-ajax-submit-btn">
+                        Flag It Now!
+                    </button>
+                    <button id="flag-close-btn" type="button" class="btn btn-secondary btn-block" data-dismiss="modal">
+                        I Changed My Mind
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END FLAG FORM MODAL FOR AJAX (CITY STATE FILTER)-->
+
+
 <?php
 get_footer();

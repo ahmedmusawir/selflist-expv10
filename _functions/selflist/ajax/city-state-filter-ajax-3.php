@@ -55,8 +55,6 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
     <header class="entry-header">
 
         <?php
-        // AJAX ADMIN URL
-        echo '<div id="ajax-admin-url" class="d-none">' . admin_url('admin-ajax.php') . '</div>';
       // CITY & STATE TAXONMY DISPLAY BY LIST START
       $tax = get_the_terms( get_the_ID(), 'states');
 
@@ -95,7 +93,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
         echo '</span>';
         // DISPLAY LIST ID
         echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LIST #' . get_the_ID() . "</p>";
-        
+
         $taxonomy = 'category';
 
         // Get the term IDs assigned to post.
@@ -282,8 +280,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
                             </div>
                             <button class="btn btn-primary btn-sm flag-form-btn"
                                 data-key="flag-<?php echo get_the_ID(); ?>" data-list-id="<?php echo get_the_ID(); ?>"
-                                data-flag-email="<?php echo get_field('your_email'); ?>"
-                                data-ajaxUrl="<?php echo admin_url('admin-ajax.php');?>">
+                                data-flag-email="<?php echo get_field('your_email'); ?>">
                                 Flag
                             </button>
                         </div>
@@ -304,23 +301,24 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
     <!-- END FOOTER GOES HERE -->
 </article><!-- Main Article List Item ends -->
+<!-- FLAG FORM MODAL -->
 
 
 
+<!-- END FLAG FORM MODAL -->
 
 
 <?php     
      endwhile;        
      else :
-        
-        echo "<div class='mb-5'>No Listing Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span></div>" ;
-        
-    endif;
-    
-    // WP LOOP ENDS
-    
-    ?>
 
+    echo "<div class='mb-5'>No Listing Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span></div>" ;
+    
+  endif;
+
+  // WP LOOP ENDS
+
+?>
 
 <!-- HMU SCRIPT FOR AJAX - START -->
 <script>
@@ -387,18 +385,21 @@ jQuery(function($) {
 
 <!-- FLAG SCRIPT FOR AJAX - START -->
 
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+</script> -->
+
+<!-- <script src="./bootstrap4.min.js"></script> -->
+
 <script>
 jQuery(function($) {
-    // GLOBALS
-    let flagListId;
-    let flagEmail;
-    let flagTitle;
-    let flagContent;
-    let ajaxUrl;
-    let ajaxFunction;
+    // alert('starting Flag')
     // COLLECTING ELEMENTS
     const flagListBtn = $('.flag-form-btn');
-    const theFlagModal = $('#the-flag-modal-ajax');
+    const theFlagModal = $('#the-flag-modal');
 
 
     //SETTING EVENTS
@@ -406,16 +407,13 @@ jQuery(function($) {
 
     function clickInsertHandler(e) {
         // alert('Flag btn clicked')
-        flagKey = $(e.target).data('key');
-        flagListId = $(e.target).data('list-id');
-        flagEmail = $(e.target).data('flag-email');
-        ajaxUrl = $('#ajax-admin-url').text();
-        ajaxFunction = 'list_flag_ajax';
+        let flagKey = $(e.target).data('key');
+        let flagListId = $(e.target).data('list-id');
+        let flagEmail = $(e.target).data('flag-email');
 
-        // console.log('FLAG KEY:', flagKey)
-        // console.log('FLAG LIST ID:', flagListId)
-        // console.log('FLAG EMAIL:', flagEmail)
-        console.log('FLAG AJAX URL:', ajaxUrl)
+        console.log('FLAG KEY:', flagKey)
+        console.log('FLAG LIST ID:', flagListId)
+        console.log('FLAG EMAIL:', flagEmail)
 
         // OPENING THE MODAL
         theFlagModal.modal({
@@ -425,54 +423,10 @@ jQuery(function($) {
     }
 
     // COLLECTING FORM ELEMENTS
-    const flagAjaxSubmitBtn = $('#flag-ajax-submit-btn-ajax');
-    const flagTextArea = $('#flag-textarea-ajax');
+    flagAjaxSubmitBtn = $('.flag-ajax-submit-btn');
+    flagTextArea = $('#flag-textarea');
     // COLLECTING FLAG FORM ELEMENT
-    // flagInsertForm = $('#flag-insert-form');
-
-    // SETTING MODAL SUBMIT BUTTON'S EVENT
-    flagAjaxSubmitBtn.on('click', ajaxFlagInsertHandler);
-
-    function ajaxFlagInsertHandler(e) {
-        // e.preventDefault();
-        console.log('MODAL BTN CLICKED');
-
-        // PREPING LIST DATA
-        const flagTitle = `Flagged List ID: ${flagListId}`;
-        const flagContent = flagTextArea.val().trim();
-
-        // GETTING DATA READY FOR AJAX
-        let newListData = {
-            title: flagTitle,
-            content: flagContent,
-            email: flagEmail,
-            listId: flagListId,
-        };
-        console.log('FLAG AJAX DATA:', newListData);
-
-        // AJAX CALL TO WP DB BEGINS
-        $.ajax({
-                url: ajaxUrl,
-                type: 'POST',
-                data: {
-                    action: ajaxFunction,
-                    newListData,
-                },
-            })
-            .done((response) => {
-                console.info(response);
-                console.log('Awesome! ... Ajax Success');
-                location.reload();
-            })
-            .fail((response) => {
-                console.error('Sorry ... Ajax failed');
-                console.error('[FlagListFormAjax.js]', response);
-            })
-            .always(() => {
-                // console.info('Ajax finished as always...');
-            });
-    }
-
+    flagInsertForm = $('#flag-insert-form');
 
 }) //END of Flag Script for Ajax
 </script>

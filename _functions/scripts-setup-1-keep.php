@@ -25,11 +25,5 @@ function cyberize_scripts()
         wp_enqueue_script('comment-reply');
     }
 
-    // ================= MOOSE TESTING =============
-    //CYBERIZE FRAMEWORK 1.0 HMU UNIFIED AND MINIFIED
-    // wp_enqueue_script('selflist-HMU-js', get_template_directory_uri() . '/assets/dist/js/HmuLinkMaker.min.js', array('jquery'), time(), true);
-
-    // ================= END MOOSE TESTING =============
-
 }
 add_action('wp_enqueue_scripts', 'cyberize_scripts');

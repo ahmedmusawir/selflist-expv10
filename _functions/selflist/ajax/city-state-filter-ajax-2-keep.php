@@ -2,11 +2,6 @@
 /**
  * INSERT MULTI LEVEL CATEGORIES WITH AJAX
  */
-// ================= MOOSE TESTING =============
-    //CYBERIZE FRAMEWORK 1.0 HMU UNIFIED AND MINIFIED
-wp_enqueue_script('Bootstrap-js', get_template_directory_uri() . '/_functions/selflist/ajax/bootstrap4.min.js', array('jquery'), time(), false);
-
-// ================= END MOOSE TESTING =============
 
 add_action('wp_ajax_nopriv_city_state_filter_ajax', 'city_state_filter_ajax');
 add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
@@ -55,8 +50,6 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
     <header class="entry-header">
 
         <?php
-        // AJAX ADMIN URL
-        echo '<div id="ajax-admin-url" class="d-none">' . admin_url('admin-ajax.php') . '</div>';
       // CITY & STATE TAXONMY DISPLAY BY LIST START
       $tax = get_the_terms( get_the_ID(), 'states');
 
@@ -95,7 +88,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
         echo '</span>';
         // DISPLAY LIST ID
         echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LIST #' . get_the_ID() . "</p>";
-        
+
         $taxonomy = 'category';
 
         // Get the term IDs assigned to post.
@@ -281,9 +274,8 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
                             <div class="input-group-text"><i class="fab fa-font-awesome-flag text-danger"></i>
                             </div>
                             <button class="btn btn-primary btn-sm flag-form-btn"
-                                data-key="flag-<?php echo get_the_ID(); ?>" data-list-id="<?php echo get_the_ID(); ?>"
-                                data-flag-email="<?php echo get_field('your_email'); ?>"
-                                data-ajaxUrl="<?php echo admin_url('admin-ajax.php');?>">
+                                data-key="flag-<?php echo get_the_ID(); ?>" data-list-id="<?php echo $post->ID; ?>"
+                                data-flag-email="<?php echo get_field('your_email'); ?>">
                                 Flag
                             </button>
                         </div>
@@ -299,188 +291,67 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
         </section>
 
-
     </footer><!-- .entry-footer -->
 
     <!-- END FOOTER GOES HERE -->
 </article><!-- Main Article List Item ends -->
+<!-- FLAG FORM MODAL -->
 
+<!-- Modal -->
+<div class="modal fade text-center" id="the-flag-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <!-- <div class="modal-dialog" role="document"> -->
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center bg-danger">
+                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This Listing</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+            </div>
+            <!-- <div class="modal-body">
+        <form action="" class="form">
 
+        </form>
+      </div> -->
+            <div class="modal-footer justify-content-center">
+                <!-- REMOVING FLAG REQUIRED ERROR MESSAGE AT CLIENT'S REQUEST -->
+                <style>
+                #flag-textarea-error {
+                    display: none !important;
+                }
+                </style>
 
+                <form id="flag-insert-form" class="form">
+                    <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
+                    <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
+                        required autocomplete="off" placeholder="This Flag will be published.">
+                    </textarea>
+                    <small class="float-right mb-3">140 Character Limit</small>
+                    <button id="flag-ajax-submit-btn" type="submit"
+                        class="btn btn-primary btn-block flag-ajax-submit-btn">
+                        Flag It Now!
+                    </button>
+                    <button id="flag-close-btn" type="button" class="btn btn-secondary btn-block" data-dismiss="modal">
+                        I Changed My Mind
+                    </button>
+                </form>
 
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- END FLAG FORM MODAL -->
 <?php     
      endwhile;        
      else :
-        
-        echo "<div class='mb-5'>No Listing Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span></div>" ;
-        
-    endif;
+
+    echo "<div class='mb-5'>No Listing Found in ...<span class='text-capitalize font-weight-bold text-primary'>$city_slug</span></div>" ;
     
-    // WP LOOP ENDS
-    
-    ?>
+  endif;
 
+  // WP LOOP ENDS
 
-<!-- HMU SCRIPT FOR AJAX - START -->
-<script>
-jQuery(function($) {
-    // alert('started jQuery in ajax');
-    let hmuEmailArray = [];
-    // COLLECTING ELEMENTS
-    const hmuStartBtn = $('#start-hmu-btn');
-    const hmuCheckbox = $('.list-hmu-checkbox');
-
-    // SETTING EVENTS
-    hmuCheckbox.on('change', clickCheckboxHandler);
-
-    function clickCheckboxHandler(e) {
-        // alert('Checkbox clicked from Ajax')
-        if (e.target.checked) {
-            let hmuEmail = $(e.target).data('hmu');
-
-            // Adding collected email to Array
-            hmuEmailArray.push(hmuEmail);
-            // console.log('LIST HMU CHECKBOX -- ', hmuEmailArray);
-        } else {
-            let hmuEmail = $(e.target).data('hmu');
-
-            // Removing collected email to Array
-            hmuEmailArray = hmuEmailArray.filter((email) => {
-                return email != hmuEmail;
-            });
-            // console.log('LIST HMU CHECKBOX -- ', hmuEmailArray);
-
-            // Disabling the Start HMU when no email in the list
-            if (hmuEmailArray.length === 0) {
-                hmuStartBtn.addClass('disabled');
-            }
-        } // End e.target.checked IF/ELSE Logic
-
-        makeGravityBtnUrl();
-
-
-    } // END clickCheckboxHandler(e)
-
-    function makeGravityBtnUrl() {
-        const uniqueHmuEmails = hmuEmailArray.filter((email, i) => {
-            return i == hmuEmailArray.indexOf(email);
-        });
-        // console.log('Unique:', uniqueHmuEmails);
-
-        // Creating comma separated string
-        const readyHmuEmails = uniqueHmuEmails.join();
-
-        // console.log('String: ', readyHmuEmails);
-
-        const gravityHmuLink = `/list-hmu/?HMU_EMAIL_LIST=${readyHmuEmails}`;
-
-        // Updating the HMU Start button
-        if (readyHmuEmails.length) {
-            hmuStartBtn.attr('href', gravityHmuLink).removeClass('disabled');
-        }
-    } // END makeGravityBtnUrl()
-
-}); // END hmu script
-</script>
-<!-- HMU SCRIPT FOR AJAX - END -->
-
-<!-- FLAG SCRIPT FOR AJAX - START -->
-
-<script>
-jQuery(function($) {
-    // GLOBALS
-    let flagListId;
-    let flagEmail;
-    let flagTitle;
-    let flagContent;
-    let ajaxUrl;
-    let ajaxFunction;
-    // COLLECTING ELEMENTS
-    const flagListBtn = $('.flag-form-btn');
-    const theFlagModal = $('#the-flag-modal-ajax');
-
-
-    //SETTING EVENTS
-    flagListBtn.on('click', clickInsertHandler);
-
-    function clickInsertHandler(e) {
-        // alert('Flag btn clicked')
-        flagKey = $(e.target).data('key');
-        flagListId = $(e.target).data('list-id');
-        flagEmail = $(e.target).data('flag-email');
-        ajaxUrl = $('#ajax-admin-url').text();
-        ajaxFunction = 'list_flag_ajax';
-
-        // console.log('FLAG KEY:', flagKey)
-        // console.log('FLAG LIST ID:', flagListId)
-        // console.log('FLAG EMAIL:', flagEmail)
-        console.log('FLAG AJAX URL:', ajaxUrl)
-
-        // OPENING THE MODAL
-        theFlagModal.modal({
-            // backdrop: 'static',
-            keyboard: false,
-        });
-    }
-
-    // COLLECTING FORM ELEMENTS
-    const flagAjaxSubmitBtn = $('#flag-ajax-submit-btn-ajax');
-    const flagTextArea = $('#flag-textarea-ajax');
-    // COLLECTING FLAG FORM ELEMENT
-    // flagInsertForm = $('#flag-insert-form');
-
-    // SETTING MODAL SUBMIT BUTTON'S EVENT
-    flagAjaxSubmitBtn.on('click', ajaxFlagInsertHandler);
-
-    function ajaxFlagInsertHandler(e) {
-        // e.preventDefault();
-        console.log('MODAL BTN CLICKED');
-
-        // PREPING LIST DATA
-        const flagTitle = `Flagged List ID: ${flagListId}`;
-        const flagContent = flagTextArea.val().trim();
-
-        // GETTING DATA READY FOR AJAX
-        let newListData = {
-            title: flagTitle,
-            content: flagContent,
-            email: flagEmail,
-            listId: flagListId,
-        };
-        console.log('FLAG AJAX DATA:', newListData);
-
-        // AJAX CALL TO WP DB BEGINS
-        $.ajax({
-                url: ajaxUrl,
-                type: 'POST',
-                data: {
-                    action: ajaxFunction,
-                    newListData,
-                },
-            })
-            .done((response) => {
-                console.info(response);
-                console.log('Awesome! ... Ajax Success');
-                location.reload();
-            })
-            .fail((response) => {
-                console.error('Sorry ... Ajax failed');
-                console.error('[FlagListFormAjax.js]', response);
-            })
-            .always(() => {
-                // console.info('Ajax finished as always...');
-            });
-    }
-
-
-}) //END of Flag Script for Ajax
-</script>
-
-<!-- FLAG SCRIPT FOR AJAX - END -->
-
-<?php
-
-
-wp_die();
-}
+  wp_die();
+ }

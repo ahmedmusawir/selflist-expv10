@@ -23,6 +23,7 @@ class HmuLinkMaker {
   clickCheckboxHandler = (e) => {
     if (e.target.checked) {
       let hmuEmail = $(e.target).data('hmu');
+      console.log('LIST HMU CHECKBOX -- ', hmuEmail);
 
       // Adding collected email to Array
       this.hmuEmailArray.push(hmuEmail);
