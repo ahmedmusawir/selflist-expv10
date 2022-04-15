@@ -2,15 +2,15 @@
 /**
  * INSERT MULTI LEVEL CATEGORIES WITH AJAX
  */
-// ================= MOOSE TESTING =============
-    //CYBERIZE FRAMEWORK 1.0 HMU UNIFIED AND MINIFIED
-wp_enqueue_script('Bootstrap-js', get_template_directory_uri() . '/_functions/selflist/ajax/bootstrap4.min.js', array('jquery'), time(), false);
-
-// ================= END MOOSE TESTING =============
 
 add_action('wp_ajax_nopriv_city_state_filter_ajax', 'city_state_filter_ajax');
 add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
+// ================= MOOSE TESTING =============
+    //CYBERIZE FRAMEWORK 1.0 HMU UNIFIED AND MINIFIED
+// wp_enqueue_script('Bootstrap-js', get_template_directory_uri() . '/_functions/selflist/ajax/bootstrap4.min.js', array('jquery'), time(), false);
+
+// ================= END MOOSE TESTING =============
  function city_state_filter_ajax() {
 
   $current_cat_id = $_POST['currentCatId'];
@@ -53,6 +53,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item animate__animated'); ?>>
     <header class="entry-header">
+        <script src="<?php echo get_template_directory_uri() ?>/_functions/selflist/ajax/bootstrap4.min.js"></script>
 
         <?php
         // AJAX ADMIN URL
@@ -415,7 +416,7 @@ jQuery(function($) {
         // console.log('FLAG KEY:', flagKey)
         // console.log('FLAG LIST ID:', flagListId)
         // console.log('FLAG EMAIL:', flagEmail)
-        console.log('FLAG AJAX URL:', ajaxUrl)
+        // console.log('FLAG AJAX URL:', ajaxUrl)
 
         // OPENING THE MODAL
         theFlagModal.modal({

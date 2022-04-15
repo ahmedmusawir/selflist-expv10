@@ -70,8 +70,8 @@ class FlagListFormAjax {
         'flag-textarea': {
           // required: true,
           maxlength: 140,
-          minlength: 10,
-          lettersnumbersdotsonly: true,
+          minlength: 1,
+          // lettersnumbersdotsonly: true,
         },
       },
       submitHandler: (form, event) => {

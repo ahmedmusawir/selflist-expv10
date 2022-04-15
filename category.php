@@ -54,7 +54,7 @@ textarea::placeholder {
 </style>
 <main id="primary" class="site-main container">
 
-    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2">Filter by State & Market</button>
+    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2">Filter by Situs & Market</button>
 
     <?php if (is_user_logged_in()) : ?>
 
