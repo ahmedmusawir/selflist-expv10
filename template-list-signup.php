@@ -21,7 +21,8 @@ get_header('loggedout');
 
 
         <!-- <h3 class="text-center h3 login-heading">If you are already a member, please log in</h3> -->
-        <a class="text-center btn btn-danger btn-lg mb-4 px-5" href="<?php echo wp_login_url(); ?>">ENTER</a>
+        <a id="moose-enter-btn" class="text-center btn btn-danger btn-lg mb-4 px-5"
+            href="<?php echo wp_login_url(); ?>">ENTER</a>
 
         <hr>
         <h4 class="text-center">OR</h4>

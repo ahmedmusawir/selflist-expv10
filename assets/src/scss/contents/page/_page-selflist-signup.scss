@@ -6,8 +6,19 @@
 
 .page-template-template-list-signup {
   // border: 1rem dotted dodgerblue;
+  #moose-enter-btn {
+    // border: 1rem dotted yellow;
+    background-color: #ff4136 !important;
+    margin: auto !important;
+    display: block;
+    box-shadow: none;
+    padding: 0.4rem 3.5rem !important;
+    border-radius: 5px !important;
+    font-size: 1.25rem !important;
+    width: 180px !important;
+  }
   .login-heading {
-    // border: 5px dotted green;
+    border: 5px dotted green;
     font-size: 1.5rem;
 
     @media (min-width: 700px) {
@@ -20,7 +31,7 @@
     }
   }
   .signup-heading {
-    // border: 5px dotted green;
+    border: 5px dotted green;
     font-size: 2rem;
     margin-bottom: 3rem;
 
@@ -52,13 +63,20 @@
     }
     #gform_submit_button_4,
     #gform_submit_button_6 {
+      // border: 1rem dotted yellow;
       background-color: #ff4136 !important;
       margin: auto !important;
       display: block;
       box-shadow: none;
-      padding: 0.5rem 3.5rem;
+      padding: 0rem 3.5rem !important;
       border-radius: 5px !important;
-      font-size: 1.25rem;
+      font-size: 1.25rem !important;
+      width: 180px !important;
+    }
+    @media (min-width: 642px) {
+      #gform_submit_button_4 {
+        padding: 0.4rem 3.5rem !important;
+      }
     }
     .gform_footer {
       margin-top: 2rem !important;

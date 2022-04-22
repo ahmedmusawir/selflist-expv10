@@ -47,7 +47,7 @@ function lostPass_text($text)
 {
     if ($text == 'Lost your password?') {
         
-        $text = 'Password Reset';
+        $text = 'RESET';
 
     }
     return $text;

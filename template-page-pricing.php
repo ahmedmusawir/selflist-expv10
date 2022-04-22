@@ -93,7 +93,7 @@ if (is_user_logged_in()) {
                 <h5>Your next million one-day listings ... ... ... ... ... ... &nbsp;<span
                         class="font-weight-bold">Negotiable</span></h5>
 
-                <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD LISTING DAYS</a>
+                <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">BUY LISTING DAYS</a>
 
             </article>
         </div>
@@ -121,7 +121,7 @@ if (is_user_logged_in()) {
                 <h5>Your next million one-day listings </h5>
                 <h5 class="font-weight-bold">Negotiable</h5>
                 <div class="w-50 mx-auto">
-                    <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">ADD LISTING DAYS</a>
+                    <a href="/list-customer-add-points/" class="btn btn-danger btn-block mt-5">BUY LISTING DAYS</a>
                 </div>
 
             </article>

@@ -205,7 +205,7 @@ if ('post' === get_post_type()):
     </footer><!-- .entry-footer -->
 </article><!-- #post--->
 <section class="social-share">
-    <h4 class="h4">SHARE...</h4>
+    <h4 class="h4">SHARE</h4>
     <div class="share-icons">
         <?php echo do_shortcode('[Sassy_Social_Share]'); ?>
     </div>

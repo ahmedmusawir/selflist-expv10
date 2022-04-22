@@ -1,15 +1,15 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="state-city-choice-box" class="mt-5 animate__animated animate__zoomIn">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">State/Country/Continent/Planet:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick Situs:</label>
 
      <div class="row">
          <!-- THE STATE DROPDOWN -->
 
          <div class="col-sm-12">
              <article class="main-cat-box">
-                 <select id="select-all-states" class="select-all-states" placeholder="State/Country/Continent/Planet">
-                     <option value="">Select a State/Country...</option>
+                 <select id="select-all-states" class="select-all-states" placeholder="Pick Situs">
+                     <option value="">Select a Situs</option>
                      <?php make_state_country_dropdown(); ?>
                  </select>
              </article>

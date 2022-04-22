@@ -215,7 +215,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Delist</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">DELIST</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -246,7 +246,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Relist</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">RELIST</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -278,7 +278,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Delete</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">DELETE</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->

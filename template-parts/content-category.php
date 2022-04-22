@@ -22,7 +22,9 @@ input[type=checkbox] {
     transform: scale(2.2);
     /* padding: 10px; */
     margin-top: .5rem;
+    /* accent-color: black; */
 }
+
 
 input[type="checkbox"]:checked:before {
     font-family: "FontAwesome";
@@ -35,12 +37,13 @@ input[type="checkbox"]:checked:before {
     width: 12px;
     height: 12px;
     left: 45%;
-    /* left: 50%; */
     top: 19.28%;
-    /* top: 19.26%; */
-    /* top: 19.24%; */
     transform: translate(-50%, -50%);
 }
+
+/* left: 50%; */
+/* top: 19.26%; */
+/* top: 19.24%; */
 </style>
 
 <article id="post-<?php the_ID();?>" <?php post_class('post-item animate__animated');?>>
@@ -69,7 +72,7 @@ printf('%s<br>', date("d", strtotime($registered)));
 printf('%s<br>', date("y", strtotime($registered)));
 echo '</span>';
 // DISPLAY LIST ID
-echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LIST #' . get_the_ID() . "</p>";
+echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
 
 // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
 
@@ -124,7 +127,7 @@ if ('post' === get_post_type()):
         <!-- AUTHOR NAME BOX -->
         <div class="list-author-box">
             <p class="list-author float-left">
-                Chat ID:
+                Chat:
                 <span class="text-danger">
                     <?php //echo $udata->display_name; ?>
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>

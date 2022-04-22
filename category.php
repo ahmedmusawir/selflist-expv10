@@ -54,15 +54,15 @@ textarea::placeholder {
 </style>
 <main id="primary" class="site-main container">
 
-    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2">Filter by Situs & Market</button>
+    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2">Situs & Market</button>
 
     <?php if (is_user_logged_in()) : ?>
 
-    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Search By Category</a>
+    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Category</a>
 
     <?php else : ?>
 
-    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Search By Category</a>
+    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Category</a>
 
     <?php endif; ?>
 
@@ -145,7 +145,7 @@ textarea::placeholder {
         
       ?>
                 </ul>
-                <ul class="primo d-md-block d-lg-none d-xl-done">
+                <!-- <ul class="primo d-md-block d-lg-none d-xl-done">
                     <?php if (is_user_logged_in()) : ?>
 
                     <a href="/category-search-index-members/" class="btn btn-danger btn-block mb-2">Search By
@@ -156,7 +156,7 @@ textarea::placeholder {
                     <a href="/category-search-index/" class="btn btn-danger btn-block mb-2">Search By Category</a>
 
                     <?php endif; ?>
-                </ul>
+                </ul> -->
 
             </article>
 
@@ -175,7 +175,7 @@ textarea::placeholder {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-danger">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This Listing</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">FLAG it now</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -196,9 +196,9 @@ textarea::placeholder {
                 <form id="flag-insert-form" class="form">
                     <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
-                        required autocomplete="off" placeholder="This Flag will be published.">
+                        required autocomplete="off" placeholder="This FLAG will also be shared with the lister.">
                     </textarea>
-                    <small class="float-right mb-3">140 Character Limit</small>
+                    <small class="float-right mb-3">Up to 140 Characters</small>
                     <button id="flag-ajax-submit-btn" type="submit"
                         class="btn btn-primary btn-block flag-ajax-submit-btn">
                         Flag It Now!
@@ -224,7 +224,7 @@ textarea::placeholder {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-danger">
-                <h5 class="modal-title text-light" id="exampleModalLabel">Flag This Listing</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">FLAG it now</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -245,9 +245,10 @@ textarea::placeholder {
                 <form id="flag-insert-form" class="form">
                     <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea-ajax" cols="30"
-                        rows="10" required autocomplete="off" placeholder="This Flag will be published.">
+                        rows="10" required autocomplete="off"
+                        placeholder="This FLAG will also be shared with the lister.">
                     </textarea>
-                    <small class="float-right mb-3">140 Character Limit</small>
+                    <small class="float-right mb-3">Up to 140 Characters</small>
                     <button id="flag-ajax-submit-btn-ajax" type="button"
                         class="btn btn-primary btn-block flag-ajax-submit-btn">
                         Flag It Now!

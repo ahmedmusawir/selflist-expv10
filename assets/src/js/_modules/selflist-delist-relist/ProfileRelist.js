@@ -62,9 +62,9 @@ class ProfileRelist {
           // STORING CAT DATA IN LOCAL STORAGE
           sessionStorage.setItem('relistData', JSON.stringify(res));
           // MESSAGE BEFORE REDIRECTION
-          alert(
-            `The List (ID: ${res.ID}) is ready to Relist! Click Ok to be redirected to the Add List Page`
-          );
+          // alert(
+          //   `The List (ID: ${res.ID}) is ready to Relist! Click Ok to be redirected to the Add List Page`
+          // );
           // REDIRECTING TO LIST INSERT PAGE
           window.location.href = '/list-insert/';
         } else {
