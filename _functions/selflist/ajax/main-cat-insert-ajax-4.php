@@ -28,31 +28,15 @@ function main_cat_insert_ajax()
      * CHECKING IF CATEGORY EXISTS
      */
     if (term_exists($category_name, 'category')) {
+        echo "
 
-        // echo 'Checking For Main Cats...';
-       
-        $cat_objs = get_categories([
-            'taxonomy' => 'category',
-            'parent' => 0,
-            'hide_empty' => false
-        ]);
+    <div class='alert alert-danger rounded-0' role='alert'>
+      The Main Category <strong>$category_name</strong> already exists ...
+      The Main Category must be unique ...
+    </div>
 
-            foreach ($cat_objs as $cat) {
-
-            $compare = strcasecmp($cat->name, $category_name);
-
-            if ($compare === 0) {
-            
-                    echo "
-                <div class='alert alert-danger rounded-0' role='alert'>
-                The Main Category <strong>$category_name</strong> already exists ...
-                The Main Category must be unique ...
-                </div>";
-                
-                wp_die();
-            } 
-        }
-
+    ";
+        wp_die();
     }
 
     /**

@@ -35,7 +35,7 @@ printf('%s<br>', date("d", strtotime($registered)));
 printf('%s<br>', date("y", strtotime($registered)));
 echo '</span>';
 // DISPLAY LIST ID
-echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LIST #' . get_the_ID() . "</p>";
+echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
 
 // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
 
@@ -95,7 +95,7 @@ if ('post' === get_post_type()):
         <!-- AUTHOR NAME BOX -->
         <div class="list-author-box">
             <p class="list-author float-left">
-                Chat ID:
+                Chat:
                 <span class="text-danger">
                     <?php //echo $udata->display_name; ?>
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>

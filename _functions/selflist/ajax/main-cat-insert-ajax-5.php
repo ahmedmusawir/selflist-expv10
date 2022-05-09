@@ -29,7 +29,7 @@ function main_cat_insert_ajax()
      */
     if (term_exists($category_name, 'category')) {
 
-        // echo 'Checking For Main Cats...';
+        echo 'Checking For Main Cats...';
        
         $cat_objs = get_categories([
             'taxonomy' => 'category',
@@ -38,6 +38,11 @@ function main_cat_insert_ajax()
         ]);
 
             foreach ($cat_objs as $cat) {
+            # code...
+            // echo $cat->name;
+            // echo '<br>';
+            // echo $category_name;
+            // echo '<br>';
 
             $compare = strcasecmp($cat->name, $category_name);
 

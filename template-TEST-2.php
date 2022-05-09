@@ -26,46 +26,35 @@ if (is_user_logged_in()) {
     <?php
 
 $category_name = 'Tutoring';
-// $category_name = 'biology';
+// $category_name = 'Biology';
 // $category_name = 'english';
 
 if (term_exists($category_name, 'category')) {
 
-    $cat_id = get_cat_ID($category_name);
-    $cat = get_category($cat_id);
-
-    echo '<pre>';
-    print_r($cat);
-    echo '</pre>';
-
-    if ($cat->parent !== 0) {
-        echo 'SUB CAT';
-    } else {
-
-        $cat_objs = get_categories([
-
-            'taxonomy' => 'category',
-            'parent' => 0,
-            'hide_empty' => false,
-        ]);
+   $cat_objs = get_categories([
+        'taxonomy' => 'category',
+        'parent' => 0,
+        'hide_empty' => false
+    ]);
 
         foreach ($cat_objs as $cat) {
+        # code...
+        // echo $cat->name;
+        // echo '<br>';
+        // echo $category_name;
+        // echo '<br>';
 
-            $compare = strcasecmp($cat->name, $category_name);
-
-            if ($compare === 0) {
-
-                echo "
-                <div class='alert alert-danger rounded-0' role='alert'>
-                The Main Category <strong>$category_name</strong> already exists ...
-                The Main Category must be unique ...
-                </div>";
-
-            }
+        if ($cat->name === $category_name) {
+          
+            echo "
+          <div class='alert alert-danger rounded-0' role='alert'>
+          The Main Category <strong>$category_name</strong> already exists ...
+          The Main Category must be unique ...
+          </div>";
+          
         }
-
     }
-
+  
 }
 ?>
 

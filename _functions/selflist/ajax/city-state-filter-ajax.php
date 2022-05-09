@@ -71,7 +71,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
       echo '
       <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-        <small class="font-weight-bold">State or Country: 
+        <small class="font-weight-bold">Situs: 
           <span class="text-info">' . $current_state .',</span> Market <span class="text-info">' .  $current_city .'</span>
         </small>
       </p>';
@@ -95,7 +95,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
         printf( '%s<br>', date( "y", strtotime( $registered ) ) );
         echo '</span>';
         // DISPLAY LIST ID
-        echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LIST #' . get_the_ID() . "</p>";
+        echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
         
         $taxonomy = 'category';
 
@@ -149,7 +149,7 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
     <!-- AUTHOR NAME BOX -->
     <div class="list-author-box">
         <p class="list-author float-left">
-            Chat ID:
+            Chat:
             <span class="text-danger">
                 <?php //echo $udata->display_name; ?>
                 <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
