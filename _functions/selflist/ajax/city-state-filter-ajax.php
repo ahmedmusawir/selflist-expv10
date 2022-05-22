@@ -175,9 +175,11 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
             transform: scale(2.2);
             /* padding: 10px; */
             margin-top: .5rem;
+            accent-color: black;
+
         }
 
-        input[type="checkbox"]:checked:before {
+        /* input[type="checkbox"]:checked:before {
             font-family: "FontAwesome";
             font-size: .9rem;
             color: black;
@@ -188,12 +190,9 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
             width: 12px;
             height: 12px;
             left: 45%;
-            /* left: 50%; */
             top: 19.28%;
-            /* top: 19.26%; */
-            /* top: 19.24%; */
             transform: translate(-50%, -50%);
-        }
+        } */
         </style>
 
         <section class="flex-icon-five">
@@ -355,6 +354,8 @@ jQuery(function($) {
             // Disabling the Start HMU when no email in the list
             if (hmuEmailArray.length === 0) {
                 hmuStartBtn.addClass('disabled');
+                hmuStartBtn.removeClass('btn-dark');
+                hmuStartBtn.addClass('btn-outline-dark');
             }
         } // End e.target.checked IF/ELSE Logic
 
@@ -379,6 +380,10 @@ jQuery(function($) {
         // Updating the HMU Start button
         if (readyHmuEmails.length) {
             hmuStartBtn.attr('href', gravityHmuLink).removeClass('disabled');
+            hmuStartBtn
+                .attr('href', gravityHmuLink)
+                .removeClass('btn-outline-dark');
+            hmuStartBtn.attr('href', gravityHmuLink).addClass('btn-dark');
         }
     } // END makeGravityBtnUrl()
 

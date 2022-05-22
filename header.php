@@ -75,6 +75,12 @@ $user_email = $current_user->user_email;
               // 'menu_class'     => 'mr-auto', //LEFT ALIGN
           ));
           ?>
+                    <style>
+                    a#logout-btn,
+                    a#support-btn {
+                        width: 70px;
+                    }
+                    </style>
                     <section>
                         <?php // if (is_user_logged_in()) : ?>
                         <a id="logout-btn" class="float-left badge badge-primary"
@@ -83,7 +89,7 @@ $user_email = $current_user->user_email;
                         </a>
                         <a id="support-btn" class="float-left badge badge-success"
                             href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
-                            style="margin-top: -31px;">
+                            style="margin-top: -31px; margin-left: 75px">
                             Support
                         </a>
                         <?php // endif;?>

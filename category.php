@@ -80,7 +80,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Keyword">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Words">
                 <i class="fas fa-search"></i>
 
             </section>
@@ -96,7 +96,7 @@ textarea::placeholder {
                 ?>
 
                 <!-- HMU BUTTON -->
-                <a id="start-hmu-btn" href="#" class="btn btn-dark btn-sm float-right disabled">INVITE</a>
+                <a id="start-hmu-btn" href="#" class="btn btn-outline-dark btn-sm float-right disabled">INVITE</a>
                 <!-- END HMU BUTTON -->
 
             </header><!-- .page-header -->
@@ -175,7 +175,7 @@ textarea::placeholder {
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-danger">
-                <h5 class="modal-title text-light" id="exampleModalLabel">FLAG it now</h5>
+                <h5 class="modal-title text-light" id="exampleModalLabel">FLAG</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->

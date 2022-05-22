@@ -28,7 +28,7 @@ input[type=checkbox] {
 }
 
 
-/* input[type="checkbox"]:before {
+input[type="checkbox"]:checked:before {
     font-family: "FontAwesome";
     font-size: .9rem;
     color: black;
@@ -39,9 +39,9 @@ input[type=checkbox] {
     width: 12px;
     height: 12px;
     left: 45%;
-    top: 19.90%;
+    top: 19.28%;
     transform: translate(-50%, -50%);
-} */
+}
 
 /* left: 50%; */
 /* top: 19.26%; */
@@ -237,7 +237,7 @@ if ('post' === get_post_type()):
             <div class="flex-icon-item ml-3">
                 <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox ml-5" autocomplete="off"
                     data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
-                <!-- <span class="checkmark"></span> -->
+                <span class="checkmark"></span>
                 <!-- <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small> -->
             </div>
 

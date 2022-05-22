@@ -17,7 +17,7 @@ get_header('loggedout');
 
 <main id="primary" class="site-main container">
 
-    <header id="header-test" class="site-header container py-5 text-center">
+    <header id="header-test" class="site-header container py-3 text-center">
 
 
         <!-- <h3 class="text-center h3 login-heading">If you are already a member, please log in</h3> -->

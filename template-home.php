@@ -19,14 +19,37 @@ get_header('empty');
 
     <header id="header-home" class="site-header container py-5 text-center">
 
+        <style>
+        #selflist-logo {
+            width: 56% !important;
+        }
+
+        @media (max-width: 991px) {
+            #selflist-logo {
+                width: 65% !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #selflist-logo {
+                width: 70% !important;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #selflist-logo {
+                width: 67% !important;
+            }
+        }
+        </style>
+
         <figure class="logo-container">
             <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 
-                <img class="mx-auto d-block" src="/wp-content/uploads/Logo-New-875-x-166.png" alt="">
+                <img id="selflist-logo" class="mx-auto d-block" src="/wp-content/uploads/Logo-New-875-x-166.png" alt="">
 
             </a>
         </figure>
-
         <section class="link-box d-flex justify-content-around mx-auto">
             <a href="/list-insert" class="list-links display-4 d-block">LIST</a>
             <a href="/category-search-index" class="list-links display-4 d-block">LISTINGS</a>

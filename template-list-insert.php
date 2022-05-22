@@ -103,24 +103,6 @@ textarea::placeholder {
 
                 <!-- END STATE & CITY SELECTIZE CHOICE BOX -->
 
-                <!-- <section id="LOADING-SPINNER" class="d-none">
-                    <div class="text-center ispinner gray large animating">
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                        <div class="ispinner-blade"></div>
-                    </div>
-                </section> -->
-
-
                 <!-- THE MAIN FORM INPUTS START -->
 
                 <?php get_template_part('_custom-template-parts/list-insert-pg-main-inputs');?>
@@ -173,9 +155,24 @@ textarea::placeholder {
                 <!-- <hr> -->
                 <h4 id="insert-search-cat-header" class="text-center">COMPARATIVE LISTINGS</h4>
 
-                <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                    <input type="text" id="cat-search-input-json" class="selflist-search-input">
+                <section id="selflist-search-input-box" class="selflist-search-input-box">
+                    <style>
+                    .selflist-search-input::placeholder {
+
+                        color: white !important;
+                        /* line-height: 5rem !important; */
+                        margin-top: -1rem !important;
+                    }
+
+                    .selflist-search-input::-webkit-input-placeholder {
+                        font-size: 16px !important;
+                        color: #AAA;
+                        transform: translate3d(0, -9px, 0)
+                    }
+                    </style>
+
+                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="Words">
                     <i class="fas fa-search"></i>
 
                 </section>

@@ -38,6 +38,8 @@ class HmuLinkMaker {
       // Disabling the Start HMU when no email in the list
       if (this.hmuEmailArray.length === 0) {
         this.hmuStartBtn.addClass('disabled');
+        this.hmuStartBtn.removeClass('btn-dark');
+        this.hmuStartBtn.addClass('btn-outline-dark');
       }
     }
 
@@ -60,6 +62,10 @@ class HmuLinkMaker {
     // Updating the HMU Start button
     if (readyHmuEmails.length) {
       this.hmuStartBtn.attr('href', gravityHmuLink).removeClass('disabled');
+      this.hmuStartBtn
+        .attr('href', gravityHmuLink)
+        .removeClass('btn-outline-dark');
+      this.hmuStartBtn.attr('href', gravityHmuLink).addClass('btn-dark');
     }
   };
 }

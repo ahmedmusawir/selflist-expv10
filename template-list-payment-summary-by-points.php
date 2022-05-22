@@ -64,7 +64,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 <main id="primary" class="site-main container">
 
     <section class="datepicker-range-box text-center">
-        <h3 class="text-uppercase mt-5"><small class="font-weight-bold">List Today</small></h3>
+        <h3 class="text-uppercase mt-3"><small class="font-weight-bold">List Today</small></h3>
         <!-- <h3 class="text-uppercase mt-5"><small class="font-weight-bold">Listing Dates</small></h3> -->
         <h6 class="text-uppercase">
             <small>
@@ -97,10 +97,10 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                             class="list-end-date text-danger">_______</span></h6>
                 </section>
                 <section class="payment-display-box text-center p-4">
-                    <h6 class="text-uppercase"><small class="font-weight-bold">MY LISTING WILL BE ACTIVE FOR:
+                    <!-- <h6 class="text-uppercase"><small class="font-weight-bold">MY LISTING WILL BE ACTIVE FOR:
                         </small>&nbsp;<span class="list-publish-days text-danger font-weight-bold">_______</span>
                         &nbsp;<small class="font-weight-bold">Days</small>
-                    </h6>
+                    </h6> -->
                     <!-- <p class="text-uppercase"><small class="font-weight-bold">My Payment Amount (1 day x .25C):
               &nbsp;$</small><span class="list-payment-amount text-danger font-weight-bold">_______</span>
           </p> -->
@@ -116,7 +116,11 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
 
     </section>
 
-
+    <style>
+    a.btn {
+        width: 150px !important;
+    }
+    </style>
     <section class="btn-holder mt-5">
         <a href="/list-preview/" class="btn btn-outline-danger float-left">BACK</a>
         <a href="#" id="pay-by-points-btn" class="btn btn-outline-danger float-right">LIST</a>
@@ -151,6 +155,11 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                     Days</p>
             </div>
             <div class="modal-footer justify-content-center">
+                <style>
+                button.btn {
+                    width: 150px !important;
+                }
+                </style>
                 <button id="payment-by-point-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">
                     Back
                 </button>

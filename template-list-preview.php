@@ -15,6 +15,13 @@
 get_header();
 ?>
 
+<style>
+a.btn {
+    width: 150px !important;
+}
+</style>
+<!-- <h3 class="text-center">PREVIEW<h3> -->
+
 <section id="list-preview-ajax-data" class=""></section>
 <div class="navigation-box container">
     <a href="/list-insert/" class="btn btn-outline-danger float-left">BACK</a>

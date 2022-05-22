@@ -12,7 +12,7 @@ function list_preview_ajax()
     $post_id = $_POST['post_id'];
 
     // PAGE TITLE
-    echo '<h3 class="text-center">Preview<h3>';
+    echo '<h3 class="text-center">PREVIEW<h3>';
     // echo '<h6 class="text-center">(Links are functional on active listing)</h6>';
     // echo '<h6 class="text-center">(List Status: Pending)</h6>';
 
