@@ -18,7 +18,11 @@ get_header('loggedout');
 <main id="primary" class="site-main container">
 
     <header id="header-test" class="site-header container py-3 text-center">
-
+        <style>
+        #moose-enter-btn {
+            font-weight: 300 !important;
+        }
+        </style>
 
         <!-- <h3 class="text-center h3 login-heading">If you are already a member, please log in</h3> -->
         <a id="moose-enter-btn" class="text-center btn btn-danger btn-lg mb-4 px-5"

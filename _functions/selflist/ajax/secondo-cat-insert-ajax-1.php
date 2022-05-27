@@ -10,74 +10,47 @@ add_action('wp_ajax_secondo_cat_insert_ajax', 'secondo_cat_insert_ajax');
 
 function secondo_cat_insert_ajax()
 {
-    // INITIALIZING VARS
-    $main_cat_name = '';
-    $main_cat_id = '';
-    $sub_cat_1 = '';
-    $sub_cat_1_id = '';
-    $sub_cat_2 = '';
-    $sub_cat_2_id = '';
-    $sub_cat_3 = '';
-    $sub_cat_3_id = '';
-    
+
     $main_cat = $_POST['mainCat'];
     $primo_cat = $_POST['primoCat'];
     $secondo_cat = $_POST['secondoCat'];
     $terzo_cat = $_POST['terzoCat'];
+
+// FOLLOWING FUNCTIONS WILL INSERT MAIN CAT TO TERZO CAT WITH PARENT
+    // CHILD RELATIONSHIP
 
     $main_cat_name = sanitize_text_field($main_cat);
     $sub_cat_1 = sanitize_text_field($primo_cat);
     $sub_cat_2 = sanitize_text_field($secondo_cat);
     $sub_cat_3 = sanitize_text_field($terzo_cat);
 
-    // COLLECTING ALL CATS THAT ARE PARENTS ONLY
-    $cat_objs = get_categories([
-        'taxonomy' => 'category',
-        'parent' => 0,
-        'hide_empty' => false,
-    ]);
+/**
+ * COLLECT MAIN CATEGORY ID
+ */
+    $main_cat_id = get_cat_ID($main_cat_name);
 
+/**
+ * CHECKING IF CATEGORY EXISTS & IF THE MAIN CAT IS THE PARENT
+ */
+    if (term_exists($sub_cat_1, 'category', $main_cat_id)) {
 
-    // FINDING A MATCH FOR THE MAIN PARENT CATEGORY
-    foreach ($cat_objs as $cat) {
+        // COLLECTING PRIMO ID AS THE PARENT OF NEW SECONDO
+        $sub_cat_1_array = term_exists($sub_cat_1, 'category', $main_cat_id);
+        $sub_cat_1_id = $sub_cat_1_array['term_id'];
 
-        $compare = strcasecmp($cat->name, $main_cat_name);
+        if (term_exists($sub_cat_2, 'category', $sub_cat_1_id)) {
 
-        // MAKING SURE IF THE MAIN CATEGORY HAS NO PARENT
-        if ($compare === 0) {
+            echo "
 
-            /**
-             * COLLECT MAIN CATEGORY ID
-             */
-            $main_cat_id = $cat->term_id;
+            <div class='alert alert-danger rounded-0' role='alert'>
+              The Secondo Category <strong>$sub_cat_2</strong> already exists ...
+              The Secondo Category must be unique ...
+            </div>
 
-            /**
-             * CHECKING IF CATEGORY EXISTS & IF THE MAIN CAT IS THE PARENT
-             */
-            if (term_exists($sub_cat_1, 'category', $main_cat_id)) {
-
-                // COLLECTING PRIMO ID AS THE PARENT OF NEW SECONDO
-                $sub_cat_1_array = term_exists($sub_cat_1, 'category', $main_cat_id);
-                $sub_cat_1_id = $sub_cat_1_array['term_id'];
-
-                if (term_exists($sub_cat_2, 'category', $sub_cat_1_id)) {
-
-                    echo "
-
-                        <div class='alert alert-danger rounded-0' role='alert'>
-                        The Secondo Category <strong>$sub_cat_2</strong> already exists ...
-                        The Secondo Category must be unique ...
-                        </div>
-
-                        ";
-                    wp_die();
-                }
-
-            }
-
+            ";
+            wp_die();
         }
 
-        // die();
     }
 
 /**

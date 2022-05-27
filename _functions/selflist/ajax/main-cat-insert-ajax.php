@@ -31,6 +31,7 @@ function main_cat_insert_ajax()
 
         // echo 'Checking For Main Cats...';
        
+        // COLLECTING ALL CATS THAT ARE PARENTS ONLY 
         $cat_objs = get_categories([
             'taxonomy' => 'category',
             'parent' => 0,
@@ -40,7 +41,8 @@ function main_cat_insert_ajax()
             foreach ($cat_objs as $cat) {
 
             $compare = strcasecmp($cat->name, $category_name);
-
+            
+            // MAKING SURE IF THE MAIN CATEGORY HAS NO PARENT
             if ($compare === 0) {
             
                     echo "
