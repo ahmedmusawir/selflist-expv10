@@ -5,6 +5,10 @@
  */
 
 .customer-profile-page {
+  .menu-customer-profile-menu-container {
+    // border: 4px dotted dodgerblue;
+    margin-top: 0.7rem;
+  }
   // border: 4px dotted dodgerblue;
   @media (max-width: 400px) {
     input {

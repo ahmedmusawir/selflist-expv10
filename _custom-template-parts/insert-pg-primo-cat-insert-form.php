@@ -25,32 +25,31 @@
 
         <form action="" name="primo-cat-insert-form" id="primo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Primo and
-                Subcategories</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Primo</label>
 
             <div class="form-group card bg-light p-3">
                 <h4 id="primo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">This is the Main Category</small>
+                <small id="textHelp" class="form-text text-muted">This is the Main</small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-primo-cat" name="primo-input-primo-cat"
-                    aria-describedby="textHelp" placeholder="New Primo Category" required>
+                    aria-describedby="textHelp" placeholder="New Primo" required>
                 <small id="textHelp" class="form-text text-muted">
-                    Primo Category (20 Char Limit. Letters, numbers & Space only)
+                    (up to 20 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-secondo-cat" name="primo-input-secondo-cat"
-                    aria-describedby="textHelp" placeholder="New Secondo Category">
+                    aria-describedby="textHelp" placeholder="New Secondo">
                 <small id="textHelp" class="form-text text-muted">
-                    Secondo Category (20 Char Limit. Letters, numbers & Space only)
+                    (up to 20 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-terzo-cat" name="primo-input-terzo-cat"
-                    aria-describedby="textHelp" placeholder="New Terzo Category">
+                    aria-describedby="textHelp" placeholder="New Terzo">
                 <small id="textHelp" class="form-text text-muted">
-                    Terzo Category (20 Char Limit. Letters, numbers & Space only)
+                    (up to 20 Characters)
                 </small>
             </div>
 
@@ -68,17 +67,16 @@
 <section id="primo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">Please Verify Categories:<br>
+        <li class="list-group-item active bg-light text-primary">Please Verify List:<br>
             <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
-        <li class="list-group-item">Main Category: <span class="pl-3 font-weight-bold" id="main-display-primo"></span>
+        <li class="list-group-item">Main: <span class="pl-3 font-weight-bold" id="main-display-primo"></span>
         </li>
-        <li class="list-group-item">Primo Category: <span class="pl-3 font-weight-bold" id="primo-display-primo"></span>
+        <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-display-primo"></span>
         </li>
-        <li class="list-group-item">Secondo Category: <span class="pl-3 font-weight-bold"
-                id="secondo-display-primo"></span>
+        <li class="list-group-item">Secondo: <span class="pl-3 font-weight-bold" id="secondo-display-primo"></span>
         </li>
-        <li class="list-group-item">Terzo Category: <span class="pl-3 font-weight-bold" id="terzo-display-primo"></span>
+        <li class="list-group-item">Terzo: <span class="pl-3 font-weight-bold" id="terzo-display-primo"></span>
         </li>
     </ul>
 

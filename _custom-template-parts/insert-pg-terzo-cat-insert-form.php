@@ -1,6 +1,6 @@
 <?php 
 /**
- * LIST INSERT PAGE: MAIN CATEGORY INSERT FORM
+ * LIST INSERT PAGE: MAIN  INSERT FORM
  */
 ?>
 
@@ -13,27 +13,26 @@
 
         <form action="" name="terzo-cat-insert-form" id="terzo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Terzo
-                Subcategory</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Terzo</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="terzo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">This is the Main Category</small>
+                <small id="textHelp" class="form-text text-muted">This is the Main </small>
                 <div class="form-group mt-3">
                     <h4 id="terzo-primo-cat" class="text-danger"> -- Math</h4>
-                    <small id="textHelp" class="form-text text-muted">This is the Primo Category</small>
+                    <small id="textHelp" class="form-text text-muted">This is the Primo </small>
                 </div>
                 <div class="form-group mt-3">
                     <h4 id="terzo-secondo-cat" class="text-danger"> -- -- Grade 10</h4>
-                    <small id="textHelp" class="form-text text-muted">This is the Secondo Category</small>
+                    <small id="textHelp" class="form-text text-muted">This is the Secondo </small>
                 </div>
             </div>
 
             <div class="form-group">
                 <input type="text" class="form-control" id="terzo-input-terzo-cat" name="terzo-input-terzo-cat"
-                    aria-describedby="textHelp" placeholder="New Terzo Category" required>
+                    aria-describedby="textHelp" placeholder="New Terzo " required>
                 <small id="textHelp" class="form-text text-muted">
-                    Terzo Category (20 Char Limit. Letters, numbers & Space only)
+                    (Up to 20 Characters)
                 </small>
             </div>
 
@@ -51,17 +50,16 @@
 <section id="terzo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">Please Verify Categories:<br>
+        <li class="list-group-item active bg-light text-primary">Please Verify List:<br>
             <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
-        <li class="list-group-item">Main Category: <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
+        <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
         </li>
-        <li class="list-group-item">Primo Category: <span class="pl-3 font-weight-bold" id="primo-display-terzo"></span>
+        <li class="list-group-item">Primo : <span class="pl-3 font-weight-bold" id="primo-display-terzo"></span>
         </li>
-        <li class="list-group-item">Secondo Category: <span class="pl-3 font-weight-bold"
-                id="secondo-display-terzo"></span>
+        <li class="list-group-item">Secondo : <span class="pl-3 font-weight-bold" id="secondo-display-terzo"></span>
         </li>
-        <li class="list-group-item">Terzo Category: <span class="pl-3 font-weight-bold" id="terzo-display-terzo"></span>
+        <li class="list-group-item">Terzo : <span class="pl-3 font-weight-bold" id="terzo-display-terzo"></span>
         </li>
     </ul>
 

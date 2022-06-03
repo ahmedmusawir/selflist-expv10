@@ -21,24 +21,30 @@ get_header('empty');
 
         <style>
         #selflist-logo {
-            width: 56% !important;
+            width: 52% !important;
+        }
+
+        @media (max-width: 1199px) {
+            #selflist-logo {
+                width: 55% !important;
+            }
         }
 
         @media (max-width: 991px) {
             #selflist-logo {
-                width: 65% !important;
+                width: 58% !important;
             }
         }
 
         @media (max-width: 768px) {
             #selflist-logo {
-                width: 70% !important;
+                width: 64% !important;
             }
         }
 
         @media (max-width: 500px) {
             #selflist-logo {
-                width: 67% !important;
+                width: 64% !important;
             }
         }
         </style>
@@ -52,7 +58,7 @@ get_header('empty');
         </figure>
         <section class="link-box d-flex justify-content-around mx-auto">
             <a href="/list-insert" class="list-links display-4 d-block">LIST</a>
-            <a href="/category-search-index" class="list-links display-4 d-block">LISTINGS</a>
+            <a href="/category-search-index" class="list-links display-4 d-block">LISTS</a>
         </section>
 
         <style>

@@ -58,11 +58,11 @@ textarea::placeholder {
 
     <?php if (is_user_logged_in()) : ?>
 
-    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">Category</a>
+    <a href="/category-search-index-members/" class="btn btn-outline-dark mb-2">LISTS</a>
 
     <?php else : ?>
 
-    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">Category</a>
+    <a href="/category-search-index/" class="btn btn-outline-dark mb-2">LISTS</a>
 
     <?php endif; ?>
 
@@ -80,7 +80,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="Words">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="">
                 <i class="fas fa-search"></i>
 
             </section>

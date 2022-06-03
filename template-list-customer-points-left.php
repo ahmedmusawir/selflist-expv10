@@ -46,8 +46,13 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
         </div>
         <!-- LEFT PROFILE MENU COLUMN ENDS -->
         <!-- RIGHT PROFILE CONTENT COLUMN -->
+        <style>
+        .number-box {
+            margin-top: .6rem;
+        }
+        </style>
         <div class="col-sm-12 col-md-8">
-            <div class="font-weight-bold">
+            <div class="number-box font-weight-bold">
                 <span class="badge badge-danger py-3 px-4 pt-4">
                     <h1 class="display-5 text-light">
                         <?php echo $user_points; ?>

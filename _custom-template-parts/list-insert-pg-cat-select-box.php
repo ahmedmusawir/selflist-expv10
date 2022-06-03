@@ -1,14 +1,14 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="category-choice-box">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Create New Categories:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Create New List:</label>
 
      <div class="row">
          <!-- MAIN CATEGORY DROPDOWN -->
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or create new category">
+                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or create New">
                      <option value="">Select a Main Caterory</option>
                      <!-- <option value="AL">Tutoring</option>
         <option value="AK">Alaska</option>
@@ -18,7 +18,7 @@
          </div>
          <div class="col-sm-4">
              <a href="#" id="main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
-                 New Category
+                 New
              </a>
          </div>
 
