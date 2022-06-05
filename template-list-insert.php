@@ -172,7 +172,7 @@ textarea::placeholder {
                     }
                     </style>
 
-                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="Words">
+                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="">
                     <i class="fas fa-search"></i>
 
                 </section>
