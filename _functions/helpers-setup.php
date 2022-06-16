@@ -245,7 +245,8 @@ function get_current_template($echo = false)
 
 //change text to leave a reply on comment form
 function freeman_comment_reform ($arg) {
-  $arg['title_reply'] = __('Comment');
+  $arg['title_reply'] = __('');
+//   $arg['title_reply'] = __('Comment');
   return $arg;
   }
   add_filter('comment_form_defaults','freeman_comment_reform');

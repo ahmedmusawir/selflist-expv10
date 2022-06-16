@@ -79,8 +79,8 @@ textarea::placeholder {
 
     <div class="row">
         <!-- LIST INSERT BLOCK -->
-        <section class="col-12 col-sm-12 col-md-12 col-lg-6">
-            <h4 class="text-center font-weight-bold">MY NEW LISTING</h4>
+        <section class="col-12 col-sm-12 col-md-12 col-lg-6 mt-5">
+            <!-- <h4 class="text-center font-weight-bold">MY NEW LISTING</h4> -->
             <article id="create-new-list-box" class="card p-3  animate__animated animate__zoomIn">
 
                 <!-- MAIN CATEGORY SET DISPLAY AFTER INSERTED INTO THE DB -->
@@ -150,10 +150,10 @@ textarea::placeholder {
 
         <!-- CATEGORY SEARCH COLUMN [RIGHT COLUMN STARTS]-->
         <section class="col-12 col-sm-12 col-md-12 col-lg-6">
-            <div id="primary" class="site-main container pt-">
+            <div id="primary" class="site-main container mt-5">
 
                 <!-- <hr> -->
-                <h4 id="insert-search-cat-header" class="text-center">COMPARATIVE LISTINGS</h4>
+                <!-- <h4 id="insert-search-cat-header" class="text-center">COMPARATIVE LISTINGS</h4> -->
 
 
                 <section id="selflist-search-input-box" class="selflist-search-input-box">

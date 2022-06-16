@@ -59,7 +59,7 @@ wp_nav_menu(
         <!-- RIGHT PROFILE CONTENT COLUMN -->
         <div class="col-sm-12 col-md-8">
             <!-- <a href="/list-insert/" class="btn btn-danger float-right">List</a> -->
-            <h3 class="text-uppercase"><small class="font-weight-bold">MANAGE MY LISTINGS</small></h3>
+            <!-- <h3 class="text-uppercase"><small class="font-weight-bold">MANAGE MY LISTINGS</small></h3> -->
             <!-- <h6 class="h6 text-uppercase font-weight-bold">
                 Available Listing Days:
                 <strong class="text-danger">
@@ -92,7 +92,6 @@ $current_user_published_posts = get_posts($arg_published);
             }
             </style>
 
-            <hr>
             <h5 class="font-weight-bold h5">ACTIVE LISTINGS
                 <span
                     class="badge badge-danger badge-pill the-count"><?php echo count($current_user_published_posts); ?></span>
@@ -215,7 +214,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">DELIST</h5>
+                <!-- <h5 class="modal-title text-light" id="exampleModalLabel">DELIST</h5> -->
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -246,7 +245,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">RELIST</h5>
+                <!-- <h5 class="modal-title text-light" id="exampleModalLabel">RELIST</h5> -->
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
@@ -278,7 +277,7 @@ endif;
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">DELETE</h5>
+                <!-- <h5 class="modal-title text-light" id="exampleModalLabel">DELETE</h5> -->
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->

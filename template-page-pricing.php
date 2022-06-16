@@ -77,9 +77,9 @@ if (is_user_logged_in()) {
 }
 </style>
 
-<main id="primary" class="site-main container-fluid">
+<main id="primary" class="site-main container-fluid mt-5">
 
-    <h1 class="text-center font-weight-bold mt-5 mb-3">PRICING</h1>
+    <!-- <h1 class="text-center font-weight-bold mt-5 mb-3">PRICING</h1> -->
 
     <div class="row">
         <!-- DESKTOP VERSION -->

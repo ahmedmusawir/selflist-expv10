@@ -39,14 +39,14 @@
                 <input type="text" class="form-control" id="secondo-input-secondo-cat" name="secondo-input-secondo-cat"
                     aria-describedby="textHelp" placeholder="New Secondo " required>
                 <small id="textHelp" class="form-text text-muted">
-                    (Up to 20 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="secondo-input-terzo-cat" name="secondo-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo ">
                 <small id="textHelp" class="form-text text-muted">
-                    (Up to 20 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
 

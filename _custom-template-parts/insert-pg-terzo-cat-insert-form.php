@@ -32,7 +32,7 @@
                 <input type="text" class="form-control" id="terzo-input-terzo-cat" name="terzo-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo " required>
                 <small id="textHelp" class="form-text text-muted">
-                    (Up to 20 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
 

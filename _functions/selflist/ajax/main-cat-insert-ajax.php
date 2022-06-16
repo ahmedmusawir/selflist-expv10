@@ -11,6 +11,16 @@ add_action('wp_ajax_main_cat_insert_ajax', 'main_cat_insert_ajax');
 function main_cat_insert_ajax()
 {
 
+    // INITIALIZING VARS
+    $main_cat_name = '';
+    $main_cat_id = '';
+    $sub_cat_1 = '';
+    $sub_cat_1_id = '';
+    $sub_cat_2 = '';
+    $sub_cat_2_id = '';
+    $sub_cat_3 = '';
+    $sub_cat_3_id = '';
+    
     $main_cat = $_POST['mainCat'];
     $primo_cat = $_POST['primoCat'];
     $secondo_cat = $_POST['secondoCat'];

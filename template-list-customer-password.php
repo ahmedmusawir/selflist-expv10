@@ -94,7 +94,7 @@ textarea::placeholder {
 
             <main id="primary" class="site-main container">
 
-                <h4 class="font-weight-bold text-uppercase mt-1">Manage My Password</h4>
+                <!-- <h4 class="font-weight-bold text-uppercase mt-1">Manage My Password</h4> -->
                 <hr>
                 <section class="PASSWORD-BOX">
 

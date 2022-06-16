@@ -19,8 +19,8 @@ if (is_user_logged_in()) {
 }
 ?>
 
-<main id="primary" class="site-main container">
-    <h2 class="text-center font-weight-bold mt-3">INVITE</h2>
+<main id="primary" class="site-main container mt-5">
+    <!-- <h2 class="text-center font-weight-bold mt-3">INVITE</h2> -->
     <!-- THE HMU GRAVITY FORM -->
     <?php echo do_shortcode('[gravityform id="6" title="false" description="false"]'); ?>
 </main><!-- #main -->

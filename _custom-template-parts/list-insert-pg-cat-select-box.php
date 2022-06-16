@@ -8,7 +8,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or create New">
+                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or Create New">
                      <option value="">Select a Main Caterory</option>
                      <!-- <option value="AL">Tutoring</option>
         <option value="AK">Alaska</option>
@@ -30,7 +30,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-primo-cats" placeholder="Pick or create new primo">
+                 <select id="select-primo-cats" placeholder="Pick or Create New Primo">
                      <option value="">Select a Primo...</option>
                      <!-- <option value="AL">Math</option>
         <option value="AK">Alaska</option>
@@ -52,7 +52,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-secondo-cats" placeholder="Pick or create new secondo">
+                 <select id="select-secondo-cats" placeholder="Pick or Create New Secondo">
                      <option value="">Select a Secondo...</option>
                      <!-- <option value="AL">Grade 10</option>
         <option value="AK">Alaska</option>
@@ -74,7 +74,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-terzo-cats" placeholder="Pick or create new terzo">
+                 <select id="select-terzo-cats" placeholder="Pick or Create New Terzo">
                      <option value="">Select a Terzo</option>
                      <!-- <option value="AL">Jackson Heights</option>
         <option value="AK">Alaska</option>

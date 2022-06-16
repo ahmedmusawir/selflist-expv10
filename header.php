@@ -83,11 +83,11 @@ $user_email = $current_user->user_email;
                     </style>
                     <section>
                         <?php // if (is_user_logged_in()) : ?>
-                        <a id="logout-btn" class="float-left badge badge-primary"
+                        <a id="logout-btn" class="float-left badge badge-dark"
                             href="<?php echo wp_logout_url(get_permalink()); ?>" style="margin-top: -31px;">
                             Exit
                         </a>
-                        <a id="support-btn" class="float-left badge badge-success"
+                        <a id="support-btn" class="float-left badge badge-dark"
                             href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
                             style="margin-top: -31px; margin-left: 75px">
                             Support

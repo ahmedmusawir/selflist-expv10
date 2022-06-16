@@ -25,7 +25,7 @@
 		===============================================================================-->
 
     <!-- <div style="color: dodgerblue"><strong>Current template:</strong>
-        <?php //get_current_template(true); ?>
+        <?php get_current_template(true); ?>
     </div> -->
 
 
