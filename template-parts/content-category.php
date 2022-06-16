@@ -73,8 +73,12 @@ printf('%s<br>', date("m", strtotime($registered)));
 printf('%s<br>', date("d", strtotime($registered)));
 printf('%s<br>', date("y", strtotime($registered)));
 echo '</span>';
-// DISPLAY LIST ID
-echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
+
+// DISPLAY THE CATEGORY TITLE AGAIN FOR SOME WEIRD REASON
+// the_archive_title( '<h6 class="page-title font-weight-bold text-uppercase">', '</h6>' );
+
+ 
+                
 
 // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
 
@@ -102,12 +106,15 @@ if (!empty($post_terms) && !is_wp_error($post_terms)) {
     // $terms = rtrim( trim( str_replace( '<br />',  $separator, $terms ) ), $separator );
 
     // Display post categories.
-    echo $terms;
+    echo "<h6 class='font-weight-bold' style='font-size: .80rem;'>LIST:  $terms <h6>";
 }
 
 echo '</section>'; //END .post-item-cat-list
 
 // ========================================= END CATEGORY LIST W/ LINKS ========================================
+// DISPLAY LIST ID
+echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
+
 
 if ('post' === get_post_type()):
 ?>
