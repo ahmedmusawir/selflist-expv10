@@ -5,7 +5,7 @@
  */
 
 .page-template-template-list-search-index {
-  border: 1rem dotted red;
+  // border: 1rem dotted red;
   // border: 1rem dotted green;
   .selflist-search-input-box {
     // border: 4px dotted red;
@@ -20,7 +20,7 @@
       color: white;
       padding-left: 1rem;
       caret-color: white;
-      background-color: red;
+      // background-color: red;
       border-color: red;
       &:focus {
         outline: 1px dashed red;

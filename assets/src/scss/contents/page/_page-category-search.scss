@@ -11,19 +11,23 @@
   .selflist-search-input-box {
     // border: 4px dotted green;
     background-color: red;
-    height: 3.5rem !important;
+    height: 3.6rem !important;
+    border-color: red;
 
     .selflist-search-input {
-      height: 3.5rem !important;
+      margin-top: 0.15rem !important;
+      margin-left: 0.15rem !important;
+      height: 3.3rem !important;
       line-height: 3rem !important;
-      width: 87% !important;
+      width: 94% !important;
+      // width: 87% !important;
       font-size: 1.5rem;
       font-weight: 600;
-      color: white;
+      color: red;
       padding-left: 1rem;
-      caret-color: white;
-      background-color: red;
-      border-color: red;
+      // caret-color: white;
+      // background-color: red;
+      // border-color: red;
       &:focus {
         outline: none;
       }
@@ -32,9 +36,45 @@
         color: lighten($color: gray, $amount: 50%);
       }
 
-      @media (max-width: 1200px) {
+      @media (max-width: 1199px) {
         // border: 1rem solid green;
         font-size: 2rem;
+        width: 93% !important;
+        margin-top: 0.149rem !important;
+        margin-left: 0.16rem !important;
+        height: 3.25rem !important;
+      }
+      @media (max-width: 991px) {
+        // border: 1rem solid green;
+        font-size: 2rem;
+        width: 90% !important;
+        margin-top: 0.15rem !important;
+        margin-left: 0.16rem !important;
+        height: 3.25rem !important;
+      }
+      @media (max-width: 767px) {
+        // border: 1rem solid green;
+        font-size: 2rem;
+        width: 87% !important;
+        margin-top: 0.18rem !important;
+        margin-left: 0.19rem !important;
+        height: 3.22rem !important;
+      }
+      @media (max-width: 440px) {
+        // border: 1rem solid green;
+        // font-size: 2rem;
+        width: 85% !important;
+        // margin-top: 0.18rem !important;
+        // margin-left: 0.19rem !important;
+        // height: 3.22rem !important;
+      }
+      @media (max-width: 400px) {
+        // border: 1rem solid green;
+        // font-size: 2rem;
+        width: 85% !important;
+        // margin-top: 0.18rem !important;
+        // margin-left: 0.19rem !important;
+        // height: 3.22rem !important;
       }
     }
     .fas.fa-search {
@@ -43,6 +83,14 @@
       color: white;
       padding-right: 1rem;
       padding-top: 0.75rem;
+      @media (max-width: 522px) {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+      }
+      @media (max-width: 400px) {
+        font-size: 1rem;
+        padding-top: 1.3rem;
+      }
     }
   }
 

@@ -35,21 +35,21 @@
                 <input type="text" class="form-control" id="primo-input-primo-cat" name="primo-input-primo-cat"
                     aria-describedby="textHelp" placeholder="New Primo" required>
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-secondo-cat" name="primo-input-secondo-cat"
                     aria-describedby="textHelp" placeholder="New Secondo">
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-terzo-cat" name="primo-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo">
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
 

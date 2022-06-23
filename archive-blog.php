@@ -60,7 +60,9 @@ if (is_user_logged_in()) {
         </div>
         <div class="col-md-4">
 
-            <?php get_sidebar(); ?>
+            <section class="mt-5">
+                <?php get_sidebar(); ?>
+            </section>
 
         </div>
     </div>

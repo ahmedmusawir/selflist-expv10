@@ -66,34 +66,61 @@
     background-color: red;
     height: 3.5rem !important;
 
+    @media (max-width: 550px) {
+      font-size: 2rem;
+      background-color: white;
+    }
+
     .selflist-search-input {
       height: 3.5rem !important;
       line-height: 3rem !important;
-      width: 87% !important;
+      width: 94% !important;
       font-size: 2.5rem;
       font-weight: 600;
-      color: white;
+      // color: white;
       padding-left: 1rem;
-      caret-color: white;
-      background-color: red;
+      // caret-color: white;
+      // background-color: red;
       border-color: red;
       &:focus {
         // outline: 0.5px solid white;
         outline: none;
       }
-      @media (max-width: 1200px) {
-        // border: 1rem solid green;
+
+      @media (max-width: 1700px) {
+        width: 92% !important;
+      }
+      @media (max-width: 1450px) {
+        width: 91% !important;
+      }
+      @media (max-width: 1300px) {
+        width: 90% !important;
         font-size: 2rem;
+      }
+      @media (max-width: 1150px) {
+        width: 89% !important;
+      }
+      @media (max-width: 1050px) {
+        width: 88% !important;
+      }
+      @media (max-width: 991px) {
+        width: 92% !important;
+      }
+      @media (max-width: 767px) {
+        width: 89% !important;
+      }
+      @media (max-width: 550px) {
+        width: 100% !important;
       }
     }
     .fas.fa-search {
-      font-size: 2rem;
+      font-size: 1rem;
       float: right;
       color: white;
-      padding-right: 1rem;
-      padding-top: 0.75rem;
+      padding-right: 1.3rem;
+      padding-top: 1.3rem;
 
-      @media (max-width: 857px) {
+      @media (max-width: 550px) {
         display: none;
       }
     }

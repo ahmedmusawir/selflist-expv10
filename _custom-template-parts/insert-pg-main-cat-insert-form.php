@@ -17,28 +17,28 @@
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
                     aria-describedby="textHelp" placeholder="New" required>
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 30 Characters)
+                    (Up to 30 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-primo-cat" name="main-input-primo-cat"
                     aria-describedby="textHelp" placeholder="New Primo">
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-secondo-cat" name="main-input-secondo-cat"
                     aria-describedby="textHelp" placeholder="New Secondo">
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-terzo-cat" name="main-input-terzo-cat"
                     aria-describedby="textHelp" placeholder="New Terzo">
                 <small id="textHelp" class="form-text text-muted">
-                    (up to 25 Characters)
+                    (Up to 25 Characters)
                 </small>
             </div>
 
