@@ -30,6 +30,8 @@
         font-weight: 600;
         color: black;
         padding-left: 1rem;
+        padding-bottom: 0.29rem;
+
         // caret-color: white;
         // background-color: red;
         border-color: red;
@@ -38,9 +40,10 @@
           // outline: 1px dashed red;
         }
         &::placeholder {
-          font-size: 0.9rem !important;
-          color: lighten($color: gray, $amount: 50%);
-          line-height: 5rem !important;
+          font-size: 1.1rem !important;
+          color: lighten($color: gray, $amount: 20%);
+          // color: lighten($color: gray, $amount: 50%);
+          // line-height: 5rem !important;
           // color: lighten($color: gray, $amount: 15%);
         }
 

@@ -14,6 +14,10 @@
     height: 3.6rem !important;
     border-color: red;
 
+    @media (max-width: 522px) {
+      background-color: white;
+    }
+
     .selflist-search-input {
       margin-top: 0.15rem !important;
       margin-left: 0.15rem !important;
@@ -25,6 +29,8 @@
       font-weight: 600;
       color: red;
       padding-left: 1rem;
+      padding-bottom: 0.25rem;
+
       // caret-color: white;
       // background-color: red;
       // border-color: red;
@@ -32,8 +38,9 @@
         outline: none;
       }
       &::placeholder {
-        font-size: 0.9rem !important;
-        color: lighten($color: gray, $amount: 50%);
+        font-size: 1.3rem !important;
+        color: lighten($color: red, $amount: 30%);
+        // line-height: 3.3rem !important;
       }
 
       @media (max-width: 1199px) {
@@ -60,10 +67,18 @@
         margin-left: 0.19rem !important;
         height: 3.22rem !important;
       }
+      @media (max-width: 522px) {
+        border: 2px solid red;
+        // font-size: 2rem;
+        width: 100% !important;
+        // margin-top: 0.18rem !important;
+        // margin-left: 0.19rem !important;
+        // height: 3.22rem !important;
+      }
       @media (max-width: 440px) {
         // border: 1rem solid green;
         // font-size: 2rem;
-        width: 85% !important;
+        // width: 85% !important;
         // margin-top: 0.18rem !important;
         // margin-left: 0.19rem !important;
         // height: 3.22rem !important;
@@ -71,7 +86,7 @@
       @media (max-width: 400px) {
         // border: 1rem solid green;
         // font-size: 2rem;
-        width: 85% !important;
+        // width: 85% !important;
         // margin-top: 0.18rem !important;
         // margin-left: 0.19rem !important;
         // height: 3.22rem !important;
@@ -84,13 +99,14 @@
       padding-right: 1rem;
       padding-top: 0.75rem;
       @media (max-width: 522px) {
-        font-size: 1.5rem;
-        padding-top: 1rem;
+        // font-size: 1.5rem;
+        // padding-top: 1rem;
+        display: none;
       }
-      @media (max-width: 400px) {
-        font-size: 1rem;
-        padding-top: 1.3rem;
-      }
+      // @media (max-width: 400px) {
+      //   font-size: 1rem;
+      //   padding-top: 1.3rem;
+      // }
     }
   }
 
