@@ -19,9 +19,9 @@
       height: 3rem !important;
       margin-bottom: 2rem;
 
-      @media (max-width: 767px) {
-        background-color: white;
-      }
+      // @media (max-width: 767px) {
+      //   background-color: white;
+      // }
 
       .selflist-search-input {
         height: 3rem !important;
@@ -49,11 +49,31 @@
 
         @media (max-width: 767px) {
           // border: 1rem solid green;
-          font-size: 2rem;
-          width: 100% !important;
-          margin-top: 0.18rem !important;
-          margin-left: 0.19rem !important;
-          height: 3.22rem !important;
+          width: 92% !important;
+          margin-top: 0.05rem !important;
+          margin-left: 0.05rem !important;
+          height: 2.95rem !important;
+        }
+
+        @media (max-width: 578px) {
+          width: 92% !important;
+          margin-top: 0.02rem !important;
+          margin-left: 0.02rem !important;
+          height: 2.97rem !important;
+        }
+
+        @media (max-width: 480px) {
+          width: 89% !important;
+          margin-top: 0rem !important;
+          // margin-left: 0.02rem !important;
+          height: 2.99rem !important;
+        }
+
+        @media (max-width: 400px) {
+          width: 88% !important;
+          // margin-top: 0.02rem !important;
+          // margin-left: 0.02rem !important;
+          // height: 2.97rem !important;
         }
       }
       .fas.fa-search {
