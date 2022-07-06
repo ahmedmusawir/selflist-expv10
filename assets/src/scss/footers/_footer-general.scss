@@ -5,6 +5,12 @@
  */
 
 .site-footer {
+  .site-info,
+  .term-and-conditions {
+    @media (max-width: 400px) {
+      font-size: 0.8rem !important;
+    }
+  }
   .search-form {
     label {
       display: block;

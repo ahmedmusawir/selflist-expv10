@@ -86,7 +86,7 @@ input[type="checkbox"]:checked:before {
             printf('%s<br>', date("y", strtotime($registered)));
             echo '</span>';
             // DISPLAY LIST ID
-            echo '<p class="font-weight-bold" style="margin-bottom: -.25rem; font-size: .8rem">LIST #' . $post_id . "</p>";
+            echo '<p class="font-weight-bold" style="margin-bottom: -.25rem; font-size: .8rem">LISTING #' . $post_id . "</p>";
 
             /**
              *

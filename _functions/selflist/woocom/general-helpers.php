@@ -1,4 +1,23 @@
 <?php
+// To change Proceed to Checkout button text at the Cart page
+function woocommerce_button_proceed_to_checkout() { ?>
+<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward">
+    <?php esc_html_e( 'Proceed', 'woocommerce' ); ?>
+</a>
+<?php
+}
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Buy Now', 'woocommerce' ); 
+}
+
+// To change add to cart text on product archives(Collection) page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+function woocommerce_custom_product_add_to_cart_text() {
+    return __( 'Buy', 'woocommerce' );
+}
 
 /**
  * CHECKOUT PAGE LABEL CHANGE

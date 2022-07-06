@@ -1,64 +1,72 @@
 /**
  * SLEFLIST HERDERS
  */
-// LOGOUT BUTTON
+// NEW LOGOUT OR EXIT BUTTON
 #logout-btn {
-  font-size: 0.7rem !important;
-  position: relative;
-  z-index: 1000;
+  @media (max-width: 390px) {
+    float: left !important;
+    margin-left: 3rem;
+    margin-top: -32px !important;
+  }
 }
-#support-btn {
-  font-size: 0.7rem !important;
-  margin-left: 3rem;
-  position: relative;
-  z-index: 1000;
-}
+// LOGOUT BUTTON
+// #logout-btn {
+//   font-size: 0.7rem !important;
+//   position: relative;
+//   z-index: 1000;
+// }
+// #support-btn {
+//   font-size: 0.7rem !important;
+//   margin-left: 3rem;
+//   position: relative;
+//   z-index: 1000;
+// }
 
-@media (max-width: 578px) {
-  #logout-btn,
-  #support-btn {
-    margin-top: 0.01rem !important;
-    float: right !important;
-  }
-  #support-btn {
-    margin-left: 0rem;
-    margin-right: 0.5rem;
-  }
-  #logout-btn {
-    margin-right: 8px !important;
-  }
-}
+// @media (max-width: 578px) {
+//   #logout-btn,
+//   #support-btn {
+//     margin-top: 0.01rem !important;
+//     float: right !important;
+//   }
+//   #support-btn {
+//     margin-left: 0rem;
+//     margin-right: 0.5rem;
+//   }
+//   #logout-btn {
+//     margin-right: 8px !important;
+//   }
+// }
 
-@media (max-width: 460px) {
-  #logout-btn,
-  #support-btn {
-    margin-top: 0px !important;
-    float: right !important;
-  }
-  #support-btn {
-    margin-left: 0rem;
-    margin-right: 0.5rem;
-  }
-  #logout-btn {
-    margin-right: 0.2rem !important;
-  }
-}
+// @media (max-width: 460px) {
+//   #logout-btn,
+//   #support-btn {
+//     margin-top: 0px !important;
+//     float: right !important;
+//   }
+//   #support-btn {
+//     margin-left: 0rem;
+//     margin-right: 0.5rem;
+//   }
+//   #logout-btn {
+//     margin-right: 0.2rem !important;
+//   }
+// }
 
-@media (max-width: 373px) {
-  #logout-btn,
-  #support-btn {
-    margin-top: 0px !important;
-    // margin-top: -32px !important;
-    float: right !important;
-  }
-  #support-btn {
-    margin-left: 0rem;
-    margin-right: 0.5rem !important;
-  }
-  #logout-btn {
-    margin-right: 0.2rem !important;
-  }
-}
+// @media (max-width: 373px) {
+//   #logout-btn,
+//   #support-btn {
+//     margin-top: 0px !important;
+//     // margin-top: -32px !important;
+//     float: right !important;
+//   }
+//   #support-btn {
+//     margin-left: 0rem;
+//     margin-right: 0.5rem !important;
+//   }
+//   #logout-btn {
+//     margin-right: 0.2rem !important;
+//   }
+// }
 
 // HEADER HOME
 #header-home {

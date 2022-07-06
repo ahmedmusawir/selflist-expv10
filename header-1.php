@@ -76,19 +76,29 @@ $user_email = $current_user->user_email;
           ));
           ?>
                     <!-- EXIT BUTTON -->
-                    <style>
-                    #logout-btn {
-                        /* border: 1rem dotted yellow; */
-                        margin-top: -33px;
-                        font-size: .8rem;
-                    }
-                    </style>
-                    <a id="logout-btn" class="float-right" href="<?php echo wp_logout_url(get_permalink()); ?>">
+                    <a id="logout-btn" class="float-left" href="<?php echo wp_logout_url(get_permalink()); ?>">
                         Exit
                     </a>
                     <!-- EXIT BUTTON END -->
-
-
+                    <!-- <style>
+                    a#logout-btn,
+                    a#support-btn {
+                        width: 70px;
+                    }
+                    </style> -->
+                    <section>
+                        <?php // if (is_user_logged_in()) : ?>
+                        <!-- <a id="logout-btn" class="float-left badge badge-dark"
+                            href="<?php echo wp_logout_url(get_permalink()); ?>" style="margin-top: -31px;">
+                            Exit
+                        </a> -->
+                        <!-- <a id="support-btn" class="float-left badge badge-dark"
+                            href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
+                            style="margin-top: -31px; margin-left: 75px">
+                            Support
+                        </a> -->
+                        <?php // endif;?>
+                    </section>
                 </div>
             </div>
 

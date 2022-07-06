@@ -93,8 +93,11 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                 <div class="outputToDateTime"></div>
                 <input type="text" id="list-to-date-time-input">
                 <section class="message-display-box p-2">
-                    <h6><small class="font-weight-bold text-uppercase">Listing Ends on: </small> <span
-                            class="list-end-date text-danger">_______</span></h6>
+                    <h6>
+                        <!-- <small class="font-weight-bold text-uppercase">Listing Ends on: </small>  -->
+
+                        <span class="list-end-date text-danger">_______</span>
+                    </h6>
                 </section>
                 <section class="payment-display-box text-center p-4">
                     <!-- <h6 class="text-uppercase"><small class="font-weight-bold">MY LISTING WILL BE ACTIVE FOR:
@@ -137,7 +140,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
-                <h5 class="modal-title text-light" id="exampleModalLabel">LIST</h5>
+                <!-- <h5 class="modal-title text-light" id="exampleModalLabel">LIST</h5> -->
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->

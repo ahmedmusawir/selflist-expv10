@@ -92,7 +92,7 @@ $current_user_published_posts = get_posts($arg_published);
             }
             </style>
 
-            <h5 class="font-weight-bold h5">ACTIVE LISTINGS
+            <h5 class="font-weight-bold h5">ACTIVE
                 <span
                     class="badge badge-danger badge-pill the-count"><?php echo count($current_user_published_posts); ?></span>
             </h5>
@@ -107,10 +107,10 @@ $current_user_published_posts = get_posts($arg_published);
 echo '<hr>';
 // DISPLAY LIST
 foreach ($current_user_published_posts as $list) {
-    echo '<h6><span class="font-weight-bold">Listing ID: </span>' . $list->ID . '</h6>';
-    echo '<h6><span class="font-weight-bold">Listing Publish Date: </span>' .
+    echo '<h6><span class="font-weight-bold"># </span>' . $list->ID . '</h6>';
+    echo '<h6><span class="font-weight-bold">Publish Date: </span>' .
     date('M d, Y', strtotime($list->post_date)) . '</h6>';
-    echo '<h6><span class="font-weight-bold">Listing Content: </span>' . $list->post_content . '</h6>';
+    echo '<h6><span class="font-weight-bold">Words: </span>' . $list->post_content . '</h6>';
     // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';
 
     // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
@@ -145,7 +145,7 @@ $list = new WP_Query($args_pending);
       ?>
 
 
-            <h5 class="font-weight-bold h5">NON-ACTIVE LISTINGS <span
+            <h5 class="font-weight-bold h5">NON-ACTIVE <span
                     class="badge badge-danger badge-pill the-count"><?php echo $list->found_posts; ?></span>
             </h5>
             <?php
@@ -160,12 +160,12 @@ if ($list->have_posts()):
 
         $list_status = get_query_var('post_status');
 
-        echo '<h6><span class="font-weight-bold text-danger">Listing Status: </span>' . $list->query_vars['post_status'] . '</h6>';
+        echo '<h6><span class="font-weight-bold text-danger">Status: </span>' . $list->query_vars['post_status'] . '</h6>';
 
-        echo '<h6><span class="font-weight-bold">Listing ID: </span>' . get_the_id() . '</h6>';
-        echo '<h6><span class="font-weight-bold">Listing Publish Date: </span>' .
+        echo '<h6><span class="font-weight-bold"># </span>' . get_the_id() . '</h6>';
+        echo '<h6><span class="font-weight-bold">Publish Date: </span>' .
         date('M d, Y', strtotime(get_the_date())) . '</h6>';
-        echo '<h6><span class="font-weight-bold">Listing Content: </span>' . get_the_content() . '</h6>';
+        echo '<h6><span class="font-weight-bold">Words: </span>' . get_the_content() . '</h6>';
         // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';
 
         // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
@@ -206,6 +206,12 @@ endif;
 </main><!-- #main -->
 
 <!-- THE DELSIT MODAL -->
+<style>
+#DELIST-close-btn,
+#DELIST-action-btn {
+    width: 200px !important;
+}
+</style>
 
 <!-- Modal -->
 <div class="modal fade text-center" id="the-DELIST-modal" tabindex="-1" role="dialog"
@@ -220,7 +226,7 @@ endif;
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>Listing ID: <span id="DELIST-list-id"></span></h4>
+                <h4>#<span id="DELIST-list-id"></span></h4>
                 <!-- <h4>Your List Will Be Deactivated!</h4> -->
             </div>
             <div class="modal-footer justify-content-center">
@@ -236,7 +242,14 @@ endif;
 </div>
 
 <!-- END THE DELSIT MODAL -->
+
 <!-- THE RELSIT MODAL -->
+<style>
+#RELIST-close-btn,
+#RELIST-action-btn {
+    width: 200px !important;
+}
+</style>
 
 <!-- Modal -->
 <div class="modal fade text-center" id="the-RELIST-modal" tabindex="-1" role="dialog"
@@ -251,7 +264,7 @@ endif;
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>Listing ID: <span id="RELIST-list-id"></span></h4>
+                <h4>#<span id="RELIST-list-id"></span></h4>
                 <!-- <h4>Your List Will Be Activated!</h4> -->
                 <!-- <h5>You have to pay by Points ...</h5> -->
             </div>
@@ -268,7 +281,14 @@ endif;
 </div>
 
 <!-- END THE RELSIT MODAL -->
+
 <!-- THE DELETE MODAL -->
+<style>
+#DELETE-close-btn,
+#DELETE-action-btn {
+    width: 200px !important;
+}
+</style>
 
 <!-- Modal -->
 <div class="modal fade text-center" id="the-DELETE-modal" tabindex="-1" role="dialog"
@@ -283,7 +303,7 @@ endif;
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>Listing ID: <span id="DELETE-list-id"></span></h4>
+                <h4>#<span id="DELETE-list-id"></span></h4>
                 <!-- <h5>Your List Will Be Deleted Permanently!</h5> -->
             </div>
             <div class="modal-footer justify-content-center">

@@ -19,13 +19,15 @@
       padding: 0 !important;
     }
 
-    @media (max-width: 578px) {
+    // @media (max-width: 578px) {
+    @media (max-width: 390px) {
       height: 70px;
     }
 
     .main-nav {
       display: flex;
       align-items: center !important;
+      margin-right: 2.5rem;
       // border: 2px dotted red;
       // padding-top: 1rem;
     }
