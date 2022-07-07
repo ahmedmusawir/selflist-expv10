@@ -13,18 +13,18 @@
 
         <form action="" name="terzo-cat-insert-form" id="terzo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Terzo</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New Terzo</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="terzo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">This is the Main </small>
+                <small id="textHelp" class="form-text text-muted">New </small>
                 <div class="form-group mt-3">
                     <h4 id="terzo-primo-cat" class="text-danger"> -- Math</h4>
-                    <small id="textHelp" class="form-text text-muted">This is the Primo </small>
+                    <small id="textHelp" class="form-text text-muted">Primo </small>
                 </div>
                 <div class="form-group mt-3">
                     <h4 id="terzo-secondo-cat" class="text-danger"> -- -- Grade 10</h4>
-                    <small id="textHelp" class="form-text text-muted">This is the Secondo </small>
+                    <small id="textHelp" class="form-text text-muted">Secondo </small>
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
                 </small>
             </div>
 
-            <button id="terzo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
+            <button id="terzo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
             <button id="terzo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 
@@ -50,7 +50,8 @@
 <section id="terzo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">Please Verify List:<br>
+        <li class="list-group-item active bg-light text-primary">
+            <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
             <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
         <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
@@ -63,7 +64,7 @@
         </li>
     </ul>
 
-    <button id="terzo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create</button>
+    <button id="terzo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
     <button id="terzo-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button>
 
     <div class="my-3">

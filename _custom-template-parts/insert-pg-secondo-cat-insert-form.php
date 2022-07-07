@@ -24,14 +24,14 @@
     <div class="form-box">
 
         <form action="" name="secondo-cat-insert-form" id="secondo-cat-insert-form" class="form">
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Secondo</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New Secondo</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="secondo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">This is the Main </small>
+                <small id="textHelp" class="form-text text-muted">New </small>
                 <div class="form-group mt-4">
                     <h4 id="secondo-primo-cat" class="text-danger"> -- Math</h4>
-                    <small id="textHelp" class="form-text text-muted">This is the Primo </small>
+                    <small id="textHelp" class="form-text text-muted">Primo </small>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 </small>
             </div>
 
-            <button id="secondo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
+            <button id="secondo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
             <button id="secondo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 
@@ -65,7 +65,8 @@
 
     <ul class="list-group">
         <!-- THE HEADER ANNOUNCEMENT -->
-        <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br>
+        <li class="list-group-item active bg-light text-primary">
+            <!-- <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br> -->
             <!-- <small>(You cannot edit entries once they are created)</small> -->
         </li>
         <!-- THE  LIST -->
@@ -79,7 +80,7 @@
         </li>
     </ul>
 
-    <button id="secondo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create</button>
+    <button id="secondo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
     <button id="secondo-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button>
 
     <div class="my-3">

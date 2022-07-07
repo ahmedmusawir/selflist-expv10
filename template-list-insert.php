@@ -160,19 +160,20 @@ textarea::placeholder {
                     <style>
                     .selflist-search-input::placeholder {
 
-                        color: white !important;
+                        color: rgba(255, 0, 0, 0.4) !important;
                         /* line-height: 5rem !important; */
-                        margin-top: -1rem !important;
+                        /* margin-top: -1rem !important; */
                     }
 
                     .selflist-search-input::-webkit-input-placeholder {
-                        font-size: 16px !important;
+                        font-size: 18px !important;
                         color: #AAA;
-                        transform: translate3d(0, -9px, 0)
+                        transform: translate3d(0, -5px, 0)
+                            /* transform: translate3d(0, -9px, 0) */
                     }
                     </style>
 
-                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="">
+                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="LISTS">
                     <i class="fas fa-search"></i>
 
                 </section>

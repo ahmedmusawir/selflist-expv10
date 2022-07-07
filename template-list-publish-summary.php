@@ -30,15 +30,15 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                     <?php echo $current_user_id; ?>
                 </span>
             </strong> -->
-            AVAILABLE LISTING DAYS:
+            <!-- AVAILABLE LISTING DAYS:
             <strong class="text-danger">
                 <span id="payment-summary-avail-points">
                     <?php echo $user_points; ?>
                 </span>
-            </strong>
+            </strong> -->
         </small>
     </h6>
-    <h6 class="text-uppercase font-weight-bold">Listing #<span class="published-post-id"></span></h6>
+    <h6 class="text-uppercase font-weight-bold">#<span class="published-post-id"></span></h6>
     <!-- <p class="text-uppercase font-weight-bold">
         <small>Listing Publish Status:
             <strong id="list-publish-status">_____________</strong>
@@ -48,7 +48,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
         </small>
     </p> -->
     <h6 class="text-uppercase font-weight-bold">
-        MY LISTING IS ACTIVE FOR: <span id="published-for-days" class="text-danger">___________</span> Days.
+        ACTIVE FOR: <span id="published-for-days" class="text-danger">___________</span> Days
     </h6>
 </section>
 <div class="navigation-box container">

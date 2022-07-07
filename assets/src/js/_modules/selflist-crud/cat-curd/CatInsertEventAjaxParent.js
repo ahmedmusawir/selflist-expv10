@@ -16,7 +16,7 @@ class CatInsertEventAjaxParent {
     // AJAX SUCCESS MESSAGE
     this.ajaxSuccessMessage = `
     <div class='alert alert-success rounded-0' role='alert'>
-      The List has been created successfully! 
+      New is made. 
     </div>
     `;
   }

@@ -25,11 +25,11 @@
 
         <form action="" name="primo-cat-insert-form" id="primo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Create New Primo</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New Primo</label>
 
             <div class="form-group card bg-light p-3">
                 <h4 id="primo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">This is the Main</small>
+                <small id="textHelp" class="form-text text-muted">New</small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-primo-cat" name="primo-input-primo-cat"
@@ -53,7 +53,7 @@
                 </small>
             </div>
 
-            <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Create</button>
+            <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
             <button id="primo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
 
@@ -67,7 +67,8 @@
 <section id="primo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">Please Verify List:<br>
+        <li class="list-group-item active bg-light text-primary">
+            <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
             <!-- <small>(You cannot edit categories once they are created)</small> -->
         </li>
         <li class="list-group-item">Main: <span class="pl-3 font-weight-bold" id="main-display-primo"></span>
@@ -80,7 +81,7 @@
         </li>
     </ul>
 
-    <button id="primo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Create</button>
+    <button id="primo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
     <button id="primo-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button>
 
     <div class="my-3">

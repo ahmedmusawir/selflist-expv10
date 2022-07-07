@@ -1,14 +1,14 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="category-choice-box">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Create New List:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Make List:</label>
 
      <div class="row">
          <!-- MAIN CATEGORY DROPDOWN -->
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or Create New">
+                 <select id="select-main-cats" class="select-main-cats" placeholder="Pick or Make New">
                      <option value="">Select a Main Caterory</option>
                      <!-- <option value="AL">Tutoring</option>
         <option value="AK">Alaska</option>
@@ -30,7 +30,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-primo-cats" placeholder="Pick or Create New Primo">
+                 <select id="select-primo-cats" placeholder="Pick or Make New Primo">
                      <option value="">Select a Primo...</option>
                      <!-- <option value="AL">Math</option>
         <option value="AK">Alaska</option>
@@ -52,7 +52,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-secondo-cats" placeholder="Pick or Create New Secondo">
+                 <select id="select-secondo-cats" placeholder="Pick or Make New Secondo">
                      <option value="">Select a Secondo...</option>
                      <!-- <option value="AL">Grade 10</option>
         <option value="AK">Alaska</option>
@@ -74,7 +74,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-terzo-cats" placeholder="Pick or Create New Terzo">
+                 <select id="select-terzo-cats" placeholder="Pick or Make New Terzo">
                      <option value="">Select a Terzo</option>
                      <!-- <option value="AL">Jackson Heights</option>
         <option value="AK">Alaska</option>
