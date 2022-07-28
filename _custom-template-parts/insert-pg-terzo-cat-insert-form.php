@@ -17,7 +17,7 @@
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="terzo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">New </small>
+                <small id="textHelp" class="form-text text-muted">Grande </small>
                 <div class="form-group mt-3">
                     <h4 id="terzo-primo-cat" class="text-danger"> -- Math</h4>
                     <small id="textHelp" class="form-text text-muted">Primo </small>
@@ -50,10 +50,10 @@
 <section id="terzo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">
-            <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
-            <!-- <small>(You cannot edit categories once they are created)</small> -->
-        </li>
+        <!-- <li class="list-group-item active bg-light text-primary"> -->
+        <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
+        <!-- <small>(You cannot edit categories once they are created)</small> -->
+        <!-- </li> -->
         <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
         </li>
         <li class="list-group-item">Primo : <span class="pl-3 font-weight-bold" id="primo-display-terzo"></span>

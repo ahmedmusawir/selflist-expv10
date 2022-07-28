@@ -34,7 +34,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Category not found! Please create new Main Category');
+            alert('List not found! Please create new Grande');
           }
         },
       });
@@ -47,7 +47,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Category not found! Please create new Primo Category');
+            alert('List not found! Please create new Primo');
           }
         },
       });
@@ -60,7 +60,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Category not found! Please create new Secondo Category');
+            alert('List not found! Please create new Secondo');
           }
         },
       });
@@ -73,7 +73,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Category not found! Please create new Terzo Category');
+            alert('List not found! Please create new Terzo');
           }
         },
       });
@@ -96,6 +96,11 @@ class CatSelectDataParent {
     if ($('#select-all-cities').length) {
       this.selectAllCities = $('#select-all-cities').selectize({
         sortField: 'text',
+        onType: function (text) {
+          if (!this.currentResults.items.length) {
+            alert('Market not found. Pick or make New Market.');
+          }
+        },
       });
 
       // ADDING ITEMS DYNAMICALLY & SETTING UP THE CONTROL ELEMENT

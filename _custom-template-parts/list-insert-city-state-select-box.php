@@ -17,7 +17,7 @@
      </div>
      <!-- END THE STATE DROPDOWN ROW -->
 
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Pick or Make New Market:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Market:</label>
 
      <!-- THE CITY DROPDOWN -->
      <div class="row">
@@ -25,7 +25,7 @@
          <div class="col-sm-8">
              <article class="main-cat-box">
                  <select id="select-all-cities" placeholder="Pick or Make New Market">
-                     <option value="">Pick or Make new market...</option>
+                     <option value="">Make new market...</option>
                  </select>
              </article>
          </div>

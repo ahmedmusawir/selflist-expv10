@@ -15,7 +15,7 @@
 
             <label class="font-weight-bold" for="exampleFormControlTextarea1">
                 <!-- Insert Your City Name -->
-                Make New Market
+                New Market
             </label>
 
             <div class="form-group card pt-2 pl-2 bg-light">

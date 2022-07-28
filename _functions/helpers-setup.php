@@ -100,8 +100,8 @@ function print_taxonomy_ranks($terms = '')
     // echo "State: $order, City: $family";
     echo '
     <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-      <small class="font-weight-bold">Situs:
-        <span class="text-info">' . $order . ',</span> Market: <span class="text-info">' . $family . '</span>
+      <small class="font-weight-bold">
+        <span class="text-info">' . $order . ', </span><span class="text-info">' . $family . '</span>
       </small>
     </p>';
 }

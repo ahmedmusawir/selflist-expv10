@@ -9,7 +9,7 @@ class CityInsertAjaxEvents {
     // AJAX SUCCESS MESSAGE
     this.ajaxSuccessMessage = `
     <div class='alert alert-success rounded-0' role='alert'>
-      Success! 
+      New Market Made 
     </div>
     `;
   }

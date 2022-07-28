@@ -15,7 +15,7 @@
             <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New List</label>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
-                    aria-describedby="textHelp" placeholder="New" required>
+                    aria-describedby="textHelp" placeholder="New Grande" required>
                 <small id="textHelp" class="form-text text-muted">
                     (Up to 30 Characters)
                 </small>
@@ -56,10 +56,10 @@
 <section id="main-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">
-            <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
-            <!-- <small>(You cannot edit categories once they are created)</small> -->
-        </li>
+        <!-- <li class="list-group-item active bg-light text-primary"> -->
+        <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
+        <!-- <small>(You cannot edit categories once they are created)</small> -->
+        <!-- </li> -->
         <li class="list-group-item">New: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
         <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-input"></span></li>
         <li class="list-group-item">Secondo: <span class="pl-3 font-weight-bold" id="secondo-input"></span>

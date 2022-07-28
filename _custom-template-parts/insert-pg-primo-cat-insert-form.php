@@ -29,7 +29,7 @@
 
             <div class="form-group card bg-light p-3">
                 <h4 id="primo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">New</small>
+                <small id="textHelp" class="form-text text-muted">Grande</small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="primo-input-primo-cat" name="primo-input-primo-cat"
@@ -67,10 +67,10 @@
 <section id="primo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <li class="list-group-item active bg-light text-primary">
-            <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
-            <!-- <small>(You cannot edit categories once they are created)</small> -->
-        </li>
+        <!-- <li class="list-group-item active bg-light text-primary"> -->
+        <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
+        <!-- <small>(You cannot edit categories once they are created)</small> -->
+        <!-- </li> -->
         <li class="list-group-item">Main: <span class="pl-3 font-weight-bold" id="main-display-primo"></span>
         </li>
         <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-display-primo"></span>

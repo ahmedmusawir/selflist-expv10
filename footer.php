@@ -20,14 +20,14 @@ $user_email = $current_user->user_email;
 
 <footer id="colophon" class="site-footer navbar fixed-bottom navbar-light bg-light">
     <div class="site-info">
-        &copy; <?php echo date("Y"); ?> SelfLIST.
+        &copy; <?php echo date("Y"); ?> SelfLIST
 
         <?php 
         if (is_user_logged_in()) {
         ?>
         <a href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
             style="margin-left: 5px">
-            Support
+            SUPPORT
         </a>
 
         <?php
@@ -36,7 +36,7 @@ $user_email = $current_user->user_email;
 
     </div><!-- .site-info -->
     <div class="term-and-conditions">
-        <a href="/terms-and-conditions/" class="terms-link">Terms & Conditions</a>
+        <a href="/terms-and-conditions/" class="terms-link">TERMS & CONDITIONS</a>
     </div>
 
     <!--==============================================================================

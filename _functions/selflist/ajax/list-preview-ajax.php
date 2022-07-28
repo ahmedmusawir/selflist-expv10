@@ -69,9 +69,6 @@ input[type="checkbox"]:checked:before {
 
                 <?php
         echo '<section class="post-item-cat-list">';
-            // SHOW STATE & CITY IN A PARENT CHILD ORDER
-            // Coming from _functions/helpers-setup.php
-            print_taxonomy_ranks(get_the_terms(get_the_ID(), 'states'));
 
             /**
              * DISPLAY USER REGISTRATION DATE
@@ -85,9 +82,7 @@ input[type="checkbox"]:checked:before {
             printf('%s<br>', date("d", strtotime($registered)));
             printf('%s<br>', date("y", strtotime($registered)));
             echo '</span>';
-            // DISPLAY LIST ID
-            echo '<p class="font-weight-bold" style="margin-bottom: -.25rem; font-size: .8rem">LISTING #' . $post_id . "</p>";
-
+            
             /**
              *
              * CATEGORY LIST WITH PARENT CHILD RELATIONSHIP
@@ -100,6 +95,13 @@ input[type="checkbox"]:checked:before {
             $cats = get_the_category($post_id);
             // following funciton is coming from /_functions/selflist/taxonomy/selflist-cat-list-wo-links.php   
             print_taxonomy_ranks_for_listing_preview($cats);
+
+            // SHOW STATE & CITY IN A PARENT CHILD ORDER
+            // Coming from _functions/helpers-setup.php
+            print_taxonomy_ranks(get_the_terms(get_the_ID(), 'states'));
+
+            // DISPLAY LIST ID
+            echo '<p class="font-weight-bold" style="margin-bottom: -.25rem; font-size: .8rem">#' . $post_id . "</p>";
 
 
             ?>

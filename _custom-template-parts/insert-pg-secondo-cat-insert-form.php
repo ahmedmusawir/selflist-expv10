@@ -28,7 +28,7 @@
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="secondo-main-cat" class="text-danger">Tutoring</h4>
-                <small id="textHelp" class="form-text text-muted">New </small>
+                <small id="textHelp" class="form-text text-muted">Grande </small>
                 <div class="form-group mt-4">
                     <h4 id="secondo-primo-cat" class="text-danger"> -- Math</h4>
                     <small id="textHelp" class="form-text text-muted">Primo </small>
@@ -65,10 +65,10 @@
 
     <ul class="list-group">
         <!-- THE HEADER ANNOUNCEMENT -->
-        <li class="list-group-item active bg-light text-primary">
-            <!-- <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br> -->
-            <!-- <small>(You cannot edit entries once they are created)</small> -->
-        </li>
+        <!-- <li class="list-group-item active bg-light text-primary"> -->
+        <!-- <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br> -->
+        <!-- <small>(You cannot edit entries once they are created)</small> -->
+        <!-- </li> -->
         <!-- THE  LIST -->
         <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-secondo"></span>
         </li>
