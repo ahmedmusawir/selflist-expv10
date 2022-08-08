@@ -5,7 +5,7 @@
  */
 add_filter('get_the_archive_title', function ($title) {
     if (is_category()) {
-        $title = single_cat_title('LIST: ', false);
+        $title = single_cat_title('', false);
     } elseif (is_tag()) {
         $title = single_tag_title('', false);
     } elseif (is_author()) {
@@ -99,10 +99,10 @@ function print_taxonomy_ranks($terms = '')
     // output
     // echo "State: $order, City: $family";
     echo '
-    <p class="text-dark text-uppercase" style="font-size: .8rem; margin-bottom: 0;">
-      <small class="font-weight-bold">
+    <p class="text-dark text-uppercase font-weight-bold" style="font-size: .75rem; margin-bottom: 0;">
+     <!-- <small class="font-weight-bold"> -->
         <span class="text-info">' . $order . ', </span><span class="text-info">' . $family . '</span>
-      </small>
+     <!-- </small> -->
     </p>';
 }
 // =========================================================================================

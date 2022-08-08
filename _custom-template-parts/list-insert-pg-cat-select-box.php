@@ -18,7 +18,7 @@
          </div>
          <div class="col-sm-4">
              <a href="#" id="main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
-                 New Grade
+                 New Grande
              </a>
          </div>
 

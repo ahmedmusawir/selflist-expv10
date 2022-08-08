@@ -16,7 +16,7 @@ class CatInsertEventAjaxParent {
     // AJAX SUCCESS MESSAGE
     this.ajaxSuccessMessage = `
     <div class='alert alert-success rounded-0' role='alert'>
-      New is made
+      Success!
     </div>
     `;
   }
@@ -128,9 +128,10 @@ class CatInsertEventAjaxParent {
     // DISPLAY DATA IN THE MAIN CAT DISPLAY UI BOX
     // Display Main Cat after Cat Insert Success
     if (catData.main_cat) {
-      $('#main-cat-display').text(catData.main_cat);
+      const grandeMessage = `${catData.main_cat} [Grande]`;
+      $('#main-cat-display').text(grandeMessage);
     } else {
-      const mainCatMissingMessage = '[No Main Made]';
+      const mainCatMissingMessage = '[No Grande]';
       $('#main-cat-display').text(mainCatMissingMessage);
     }
     // Display Primo Cat after Cat Insert Success
@@ -138,7 +139,7 @@ class CatInsertEventAjaxParent {
       const primoMessage = `${catData.primo_cat} [Primo]`;
       $('#primo-cat-display').text(primoMessage);
     } else {
-      const primoCatMissingMessage = '[No Primo Made]';
+      const primoCatMissingMessage = '[No Primo]';
       $('#primo-cat-display').text(primoCatMissingMessage);
     }
     // Display Secondo Cat after Cat Insert Success
@@ -146,7 +147,7 @@ class CatInsertEventAjaxParent {
       const secondoMessage = `${catData.secondo_cat} [Secondo]`;
       $('#secondo-cat-display').text(secondoMessage);
     } else {
-      const secondoCatMissingMessage = '[No Secondo Made]';
+      const secondoCatMissingMessage = '[No Secondo]';
       $('#secondo-cat-display').text(secondoCatMissingMessage);
     }
     // Display Terzo Cat after Cat Insert Success
@@ -154,7 +155,7 @@ class CatInsertEventAjaxParent {
       const terzoMessage = `${catData.terzo_cat} [Terzo]`;
       $('#terzo-cat-display').text(terzoMessage);
     } else {
-      const terzoCatMissingMessage = '[No Terzo Made]';
+      const terzoCatMissingMessage = '[No Terzo]';
       $('#terzo-cat-display').text(terzoCatMissingMessage);
     }
     // REMOVE VALIDATION BOX

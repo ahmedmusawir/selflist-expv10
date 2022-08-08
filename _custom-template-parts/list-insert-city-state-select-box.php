@@ -24,7 +24,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-all-cities" placeholder="Pick or Make New Market">
+                 <select id="select-all-cities" placeholder="Market">
                      <option value="">Make new market...</option>
                  </select>
              </article>
@@ -46,7 +46,7 @@
  <ul id="city-display-ui-box" class="card  bg-light p-3 animate__animated animate__zoomIn d-none">
 
      <span id="city-insert-success"></span>
-     <h5 class="text-dark"><small class="text-danger">Situs & New Market:</small></h5>
+     <!-- <h5 class="text-dark"><small class="text-danger">Situs & New Market:</small></h5> -->
      <li id="state-display-box" class="text-dark font-weight-bold ml-1" style="list-style: none;">GEORGIA</li>
      <li id="city-display-box" class="text-dark font-weight-bold ml-1" style="list-style: none;">Atlanta</li>
 
