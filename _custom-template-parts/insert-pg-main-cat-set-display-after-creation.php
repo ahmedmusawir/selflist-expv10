@@ -4,6 +4,24 @@
  */
 ?>
 
+<style>
+#cat-display-ui-box {
+    list-style: none;
+}
+
+#cat-display-ui-box ul {
+    list-style: none;
+}
+
+#cat-display-ui-box ul ul {
+    list-style: none;
+}
+
+#cat-display-ui-box ul ul ul {
+    list-style: none;
+}
+</style>
+
 <ul id="cat-display-ui-box" class="card  bg-light p-5 animate__animated animate__zoomIn d-none">
     <!-- <h5 class="font-weight-bold text-dark">New</h5> -->
     <li id="main-cat-display" class="text-dark font-weight-bold ml-1" style="list-style: none;">Tutoring</li>

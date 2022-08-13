@@ -13,7 +13,7 @@
 
         <form action="" name="terzo-cat-insert-form" id="terzo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New Terzo</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="terzo-main-cat" class="text-danger">Tutoring</h4>
@@ -54,7 +54,7 @@
         <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
         <!-- <small>(You cannot edit categories once they are created)</small> -->
         <!-- </li> -->
-        <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
+        <li class="list-group-item">Grande : <span class="pl-3 font-weight-bold" id="main-display-terzo"></span>
         </li>
         <li class="list-group-item">Primo : <span class="pl-3 font-weight-bold" id="primo-display-terzo"></span>
         </li>

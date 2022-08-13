@@ -34,7 +34,8 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('List not found! Please create new Grande');
+            alert('Grande not listed, please list new Grande');
+            // alert('List not found! Please create new Grande');
           }
         },
       });
@@ -47,7 +48,8 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('List not found! Please create new Primo');
+            alert('Primo not listed, please list new Primo');
+            // alert('List not found! Please create new Primo');
           }
         },
       });
@@ -60,7 +62,8 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('List not found! Please create new Secondo');
+            alert('Secondo not listed, please list new Secondo');
+            // alert('List not found! Please create new Secondo');
           }
         },
       });
@@ -73,7 +76,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('List not found! Please create new Terzo');
+            alert('Terzo not listed, please list new Terzo');
           }
         },
       });

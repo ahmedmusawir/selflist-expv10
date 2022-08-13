@@ -12,7 +12,7 @@
 
         <form action="" name="main-cat-insert-form" id="main-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New List</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
                     aria-describedby="textHelp" placeholder="New Grande" required>
@@ -60,7 +60,7 @@
         <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
         <!-- <small>(You cannot edit categories once they are created)</small> -->
         <!-- </li> -->
-        <li class="list-group-item">New: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
+        <li class="list-group-item">Grande: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
         <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-input"></span></li>
         <li class="list-group-item">Secondo: <span class="pl-3 font-weight-bold" id="secondo-input"></span>
         </li>

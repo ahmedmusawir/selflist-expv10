@@ -24,7 +24,7 @@
     <div class="form-box">
 
         <form action="" name="secondo-cat-insert-form" id="secondo-cat-insert-form" class="form">
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">Make New Secondo</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="secondo-main-cat" class="text-danger">Tutoring</h4>
@@ -70,7 +70,7 @@
         <!-- <small>(You cannot edit entries once they are created)</small> -->
         <!-- </li> -->
         <!-- THE  LIST -->
-        <li class="list-group-item">Main : <span class="pl-3 font-weight-bold" id="main-display-secondo"></span>
+        <li class="list-group-item">Grande : <span class="pl-3 font-weight-bold" id="main-display-secondo"></span>
         </li>
         <li class="list-group-item">Primo : <span class="pl-3 font-weight-bold" id="primo-display-secondo"></span>
         </li>
