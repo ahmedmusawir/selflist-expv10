@@ -12,16 +12,17 @@
     // border: 4px dotted green;
     background-color: red;
     height: 3.6rem !important;
-    border-color: red;
+    border-radius: 8px;
+    // border-color: red;
 
     // @media (max-width: 522px) {
     //   background-color: white;
     // }
 
     .selflist-search-input {
-      margin-top: 0.1rem !important;
-      margin-left: 0.05rem !important;
-      height: 3.4rem !important;
+      margin-top: 0rem !important;
+      margin-left: 0rem !important;
+      height: 3.6rem !important;
       line-height: 3rem !important;
       width: 94% !important;
       // width: 87% !important;
@@ -30,11 +31,8 @@
       color: red;
       padding-left: 1rem;
       padding-bottom: 0.25rem;
-      // border-color: red;
-
-      // caret-color: white;
-      // background-color: red;
-      // border-color: red;
+      border: 1px solid red;
+      border-radius: 8px;
       &:focus {
         outline: none;
       }
@@ -48,44 +46,44 @@
         // border: 1rem solid green;
         font-size: 2rem;
         width: 93% !important;
-        margin-top: 0.05rem !important;
-        margin-left: 0.05rem !important;
-        height: 3.5rem !important;
+        // margin-top: 0.05rem !important;
+        // margin-left: 0.05rem !important;
+        // height: 3.5rem !important;
       }
       @media (max-width: 991px) {
         // border: 1rem solid green;
         width: 90% !important;
-        margin-top: 0.05rem !important;
-        margin-left: 0.05rem !important;
-        height: 3.5rem !important;
+        // margin-top: 0.05rem !important;
+        // margin-left: 0.05rem !important;
+        // height: 3.5rem !important;
       }
       @media (max-width: 767px) {
         width: 87% !important;
-        margin-top: 0rem !important;
-        margin-left: 0rem !important;
-        height: 3.61rem !important;
-        border: 1px solid red;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.61rem !important;
+        // border: 1px solid red;
       }
       @media (max-width: 522px) {
         width: 87% !important;
-        margin-top: 0rem !important;
-        margin-left: 0rem !important;
-        height: 3.6rem !important;
-        border: 1px solid red;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
       }
       @media (max-width: 440px) {
         width: 85% !important;
-        margin-top: 0rem !important;
-        margin-left: 0rem !important;
-        height: 3.6rem !important;
-        border: 1px solid red;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
       }
       @media (max-width: 400px) {
         width: 83% !important;
-        margin-top: 0rem !important;
-        margin-left: 0rem !important;
-        height: 3.6rem !important;
-        border: 1px solid red;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
       }
     }
     .fas.fa-search {

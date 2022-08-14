@@ -137,29 +137,13 @@ class SelflistCatSearchIndxDb {
           const primoCatsWithList = primoCats.filter(
             (primo) => primo.primoCount != 0
           );
-          // console.info('PRIMO CATS W LIST', primoCatsWithList);
-          // LAYOUT BUTFIX
-          // This part added so that the layout is not broken when there is on subcategory added
-          if (primoCatsWithList.length == 0) {
-            const newCatObj = {
-              parentId: 0,
-              primoCount: 0,
-              primoId: 0,
-              primoLink: '#',
-              primoName: 'No Primo Added',
-              primoSlug: 'none',
-            };
-            primoCatsWithList.push(newCatObj);
-          }
-
           catetoryHtmlItem += `
           <div class="card-body text-danger">
-          <ul class="primo">`;
+            <ul class="primo">`;
 
           // LOOPING THRU ALL PRIMO CATS UNDER A MAIN CAT
           primoCatsWithList.map((primo) => {
-            console.info('PRIMO NAME', primo.primoName);
-
+            // console.info(primo.primoName);
             catetoryHtmlItem += `
               <li class="primo-item">
                 <a href="${primo.primoLink}" class="btn btn-outline-danger btn-sm">&nbsp;

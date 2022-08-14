@@ -31,8 +31,9 @@
         font-weight: 600;
         color: black;
         padding-left: 1rem;
-        padding-bottom: 0.29rem;
+        padding-bottom: 0rem;
         border-radius: 5px;
+        border: 1px solid red;
 
         // caret-color: white;
         // background-color: red;
@@ -52,17 +53,17 @@
         @media (max-width: 767px) {
           // border: 1rem solid green;
           width: 92% !important;
-          margin-top: 0.05rem !important;
-          margin-left: 0.05rem !important;
-          height: 2.95rem !important;
+          // margin-top: 0.05rem !important;
+          // margin-left: 0.05rem !important;
+          // height: 2.95rem !important;
         }
 
         @media (max-width: 578px) {
-          width: 92% !important;
-          margin-top: 0rem !important;
-          margin-left: 0rem !important;
-          height: 3rem !important;
-          border: 1px solid red;
+          // width: 92% !important;
+          // margin-top: 0rem !important;
+          // margin-left: 0rem !important;
+          // height: 3rem !important;
+          // border: 1px solid red;
         }
 
         @media (max-width: 480px) {
