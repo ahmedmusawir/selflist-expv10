@@ -104,6 +104,7 @@ function cy_login_logo()
     background-size: 323px 60px;
     background-repeat: no-repeat;
     padding-bottom: 30px;
+    /* padding-top: 5rem; */
 }
 
 #login_error {

@@ -47,8 +47,8 @@ function selflist_login_redirect($redirect_to, $request, $user)
             $redirect_to = "/wp-admin";
         } elseif (in_array('subscriber', $user->roles)) {
             //all other members
-            // $redirect_to = "/list-customer-home";
-            $redirect_to = "/category-search-index-members";
+            $redirect_to = "/list-customer-home";
+            // $redirect_to = "/category-search-index-members";
         } else {
             //all other members
             $redirect_to = "/wp-admin";

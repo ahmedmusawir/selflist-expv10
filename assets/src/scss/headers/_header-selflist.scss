@@ -3,76 +3,33 @@
  */
 // NEW LOGOUT OR EXIT BUTTON
 #logout-btn {
-  @media (max-width: 390px) {
+  // border: 2px dotted yellow;
+
+  @media (max-width: 429px) {
+    // border: 2px dotted yellow;
+    position: relative;
+    z-index: 1000;
     float: left !important;
-    margin-left: 3rem;
-    margin-top: -32px !important;
+    margin-left: 1.4rem !important;
+    margin-top: 0px !important;
+    font-size: 0.8rem !important;
+    // margin-top: -32px !important;
   }
+  @media (max-width: 391px) {
+    margin-top: -25px !important;
+    margin-left: 3rem !important;
+  }
+  // @media (max-width: 375px) {
+  //   margin-top: -25px !important;
+  //   margin-left: 3rem !important;
+  // }
 }
-// LOGOUT BUTTON
-// #logout-btn {
-//   font-size: 0.7rem !important;
-//   position: relative;
-//   z-index: 1000;
-// }
-// #support-btn {
-//   font-size: 0.7rem !important;
-//   margin-left: 3rem;
-//   position: relative;
-//   z-index: 1000;
-// }
-
-// @media (max-width: 578px) {
-//   #logout-btn,
-//   #support-btn {
-//     margin-top: 0.01rem !important;
-//     float: right !important;
-//   }
-//   #support-btn {
-//     margin-left: 0rem;
-//     margin-right: 0.5rem;
-//   }
-//   #logout-btn {
-//     margin-right: 8px !important;
-//   }
-// }
-
-// @media (max-width: 460px) {
-//   #logout-btn,
-//   #support-btn {
-//     margin-top: 0px !important;
-//     float: right !important;
-//   }
-//   #support-btn {
-//     margin-left: 0rem;
-//     margin-right: 0.5rem;
-//   }
-//   #logout-btn {
-//     margin-right: 0.2rem !important;
-//   }
-// }
-
-// @media (max-width: 373px) {
-//   #logout-btn,
-//   #support-btn {
-//     margin-top: 0px !important;
-//     // margin-top: -32px !important;
-//     float: right !important;
-//   }
-//   #support-btn {
-//     margin-left: 0rem;
-//     margin-right: 0.5rem !important;
-//   }
-//   #logout-btn {
-//     margin-right: 0.2rem !important;
-//   }
-// }
 
 // HEADER HOME
 #header-home {
   margin-top: 8rem;
   // border: 3px dotted yellow;
-  @media (max-width: 450px) {
+  @media (max-width: 429px) {
     margin-top: 3rem;
   }
 

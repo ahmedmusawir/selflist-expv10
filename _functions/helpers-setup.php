@@ -1,4 +1,23 @@
 <?php
+// THIS DID NOT WORK
+// add_filter( 'gform_field_validation', 'mytheme_fix_custom_validation', 10, 4 );
+
+/**
+ * Fixes Gravity Forms Custom validation message.
+ *
+ * @param array  $result  The result array.
+ * @param string $value   The value of the field.
+ * @param array  $form    The Gravity Form array.
+ * @param object $field   The form field object.
+ *
+ * @return array  The result array.
+ */
+function mytheme_fix_custom_validation( $result, $value, $form, $field ) {
+    if ( ! $result['is_valid'] && ! empty( $field->errorMessage ) ) {
+        $result['message'] = $field->errorMessage;
+    }
+    return $result;
+}
 
 /** 
  * REPLACE THE WORD CATETORY FROM THE CATEGORY PAGE
