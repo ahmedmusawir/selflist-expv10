@@ -49,7 +49,7 @@ class CatInsertUiParent extends CatSelectDataParent {
 
   displayPrimoCatInserForm = (currentMainId) => {
     if (!currentMainId) {
-      alert('Please Choose a Main Category');
+      alert('List New Grande');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY PRIMO INSERT FORM
@@ -68,7 +68,7 @@ class CatInsertUiParent extends CatSelectDataParent {
 
   displaySecondoCatInsertFormBox = (currentMainId, currentPrimoId) => {
     if (!currentMainId || !currentPrimoId) {
-      alert('Please Choose a Main Category and a Primo Category!');
+      alert('List Grande & Primo');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY SECONDO INSERT FORM
@@ -92,7 +92,7 @@ class CatInsertUiParent extends CatSelectDataParent {
     currentSecondoId
   ) => {
     if (!currentMainId || !currentPrimoId || !currentSecondoId) {
-      alert('Please Choose a Main, a Primo & a Secondo Category!');
+      alert('List Grande, Primo & Secondo');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY TERZO INSERT FORM
@@ -103,9 +103,8 @@ class CatInsertUiParent extends CatSelectDataParent {
       const currentMainText = currentMainItem[0].innerText;
       const currentPrimoItem = this.selectizePrimo.getItem(currentPrimoId);
       const currentPrimoText = currentPrimoItem[0].innerText;
-      const currentSecondoItem = this.selectizeSecondo.getItem(
-        currentSecondoId
-      );
+      const currentSecondoItem =
+        this.selectizeSecondo.getItem(currentSecondoId);
       const currentSecondoText = currentSecondoItem[0].innerText;
 
       // ADDING VALUE TO MAIN CATEGORY TEXT IN THE PRIMO INSERT FORM

@@ -9,13 +9,13 @@ $user_registered = $current_user->user_registered
 
     <div class="form-group mt-5">
         <!-- <label class="font-weight-bold" for="lister-description">Description:</label> -->
-        <label class="font-weight-bold" for="exampleFormControlTextarea1">Words:</label>
+        <label class="font-weight-bold" for="exampleFormControlTextarea1">Words</label>
 
         <textarea class="form-control" id="lister-description" name="lister-description" rows="3"
             placeholder="Up to 140 Characters" maxlength="140"></textarea>
     </div>
     <!-- NAME -->
-    <label class="font-weight-bold" for="exampleFormControlTextarea1">Auto Links:</label>
+    <label class="font-weight-bold" for="exampleFormControlTextarea1">Links</label>
 
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-name">Contact:</label> -->
@@ -135,7 +135,7 @@ $user_registered = $current_user->user_registered
     <!-- LISTING SINCE -->
 
     <div class="form-group">
-        <label class="font-weight-bold" for="lister-name">Listing Since:</label>
+        <label class="font-weight-bold" for="lister-name">Since</label>
         <div class="row pl-0 pt-1">
             <div class="col-4">
                 <?php echo '<span id="date-box" class="bg-danger text-light font-weight-bold float-left py-2 px-4"
@@ -155,7 +155,7 @@ $user_registered = $current_user->user_registered
     </div>
     <!-- TERMS AND CONDS -->
     <div class="form-group">
-        <label class="font-weight-bold" for="lister-terms">Terms & Conditions:</label>
+        <label class="font-weight-bold" for="lister-terms">Terms & Conditions</label>
         <div class="card bg-light pl-3 pt-3">
             <p class="text-danger font-weight-bold">
                 <input type="checkbox" name="lister-terms" id="lister-terms"><span class="terms-text ml-2">Accept</span>

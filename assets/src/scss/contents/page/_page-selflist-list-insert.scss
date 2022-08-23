@@ -65,6 +65,7 @@
     // border: 4px dotted red;
     background-color: red;
     height: 3.5rem !important;
+    border-radius: 8px;
 
     .selflist-search-input {
       height: 3.5rem !important;
@@ -76,6 +77,7 @@
       padding-left: 1rem;
       // caret-color: white;
       // background-color: red;
+      border-radius: 8px;
       border-color: red;
       &:focus {
         // outline: 0.5px solid white;
@@ -137,6 +139,13 @@
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
+
+    //The following is a genius solution to fix the Search Layout broken bug. Keeping the content
+    // but turning the opacity to zero, just layout remains intact but content become invisible
+    #THIS-IS-NOT-VISIBLE {
+      border: 1rem dotted blue;
+      opacity: 0;
+    }
 
     .card-moose {
       width: 48% !important;

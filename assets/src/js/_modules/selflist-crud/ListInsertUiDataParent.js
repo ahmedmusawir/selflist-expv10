@@ -87,20 +87,22 @@ class ListInsertUiDataParent extends CatSelectDataParent {
           // INSERTING DATA TO WP DB
           this.insertListHandler();
         } else {
-          alert('Please choose a City ...');
+          alert('List A Market');
+          // alert('Please choose a City ...');
           // SCROLL TO TOP
           window.scrollTo(0, 0);
           this.selectAllCityCtrl.focus();
         }
       } else {
-        alert('Please choose a State ...');
+        alert('List Situs');
+        // alert('Please choose a State ...');
         // SCROLL TO TOP
         window.scrollTo(0, 0);
         this.selectAllStateCtrl.focus();
         // this.selectAllStateCtrl.trigger('focus');
       }
     } else {
-      alert('Please choose a Main Category ...');
+      alert('List Grande');
       // SCROLL TO TOP
       window.scrollTo(0, 0);
       this.selectizeMain.focus();

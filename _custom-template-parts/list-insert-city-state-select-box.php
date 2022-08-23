@@ -1,7 +1,7 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="state-city-choice-box" class="mt-5 animate__animated animate__zoomIn">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Situs:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Situs</label>
 
      <div class="row">
          <!-- THE STATE DROPDOWN -->
@@ -17,7 +17,7 @@
      </div>
      <!-- END THE STATE DROPDOWN ROW -->
 
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">Market:</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Market</label>
 
      <!-- THE CITY DROPDOWN -->
      <div class="row">

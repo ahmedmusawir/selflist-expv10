@@ -89,9 +89,19 @@ textarea::placeholder {
 
             </section>
 
+            <style>
+            /* .ERROR-MESSAGE {
+                position: fixed;
+                z-index: -1;
+                color: red;
+                padding: 5rem;
+                border: 1rem dotted brown;
+            } */
+            </style>
+
             <?php if ( have_posts() ) : ?>
 
-            <header class="page-header">
+            <header id="search-result-header" class="page-header">
 
                 <?php
                 the_archive_title( '<h3 class="page-title">', '<span class="badge badge-pill badge-dark ml-2">' . $current_post_count . 
@@ -105,6 +115,9 @@ textarea::placeholder {
 
             </header><!-- .page-header -->
 
+            <!-- NEWLY CREATED ELEMENT JUST FOR THE 'WORDS NOT FOUND' ERROR MESSAGE -->
+            <section id="NOT-FUCKING-FOUND"></section>
+
             <?php
 		/* Start the Loop */
 		while ( have_posts() ) :
@@ -112,7 +125,7 @@ textarea::placeholder {
      
       // This one is for the nice cascading effect
       echo '<article id="list-index-container" class="animate__animated animate__zoomIn">';
-      
+    //   echo '<p class="ERROR-MESSAGE d-none">NO NOTHING FOUND</p>';
       /**
        * Include the Post-Type-specific template for the content.
 			 * If you want to override this in a child theme, then include a file

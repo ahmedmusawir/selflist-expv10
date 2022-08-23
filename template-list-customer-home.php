@@ -392,7 +392,7 @@ textarea::placeholder {
                         <div class="row mb-3">
                             <div class="col-6 col-sm-3">
                                 <h6 class="h6 text-uppercase font-weight-bold">
-                                    Listing Since:
+                                    Since:
                                 </h6>
                             </div>
                             <style>

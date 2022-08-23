@@ -107,7 +107,15 @@
   // CATEGORY SEARCH RESULT BOX
   #category-search-result,
   #category-search-json-result {
+    // border: 1rem dotted blue;
     margin-top: 2rem;
+
+    //The following is a genius solution to fix the Search Layout broken bug. Keeping the content
+    // but turning the opacity to zero, just layout remains intact but content become invisible
+    #THIS-IS-NOT-VISIBLE {
+      border: 1rem dotted blue;
+      opacity: 0;
+    }
     // transition: all 2.5s ease;
     // -webkit-transition: all 500ms ease;
     // -moz-transition: all 500ms ease;

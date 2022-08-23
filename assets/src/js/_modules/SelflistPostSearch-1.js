@@ -42,48 +42,23 @@ class SelflistPostSearch {
 
     // COLLECTING DATA CARDS
     const cards = $('.post-item');
-    const cardCount = $('.post-item').length;
-    // console.log('Card Count', cardCount);
-
-    let closeCount = 0;
-    //NEWLY CREATED ELEMENT JUST FOR THE WORDS NOT FOUND ERROR MESSAGE
-    const listResultContainer = $('#NOT-FUCKING-FOUND');
 
     cards.each(function (i, elm) {
+      // console.log(elm);
       const postContent = $(elm).find('#post-content').text().toLowerCase();
-
       // console.log(test);
       if (postContent.indexOf(inputText) != -1) {
         $(elm).removeClass('d-none');
         $(elm).removeClass('animate__zoomOut');
         $(elm).addClass('animate__zoomIn');
-
-        // const elmCount = $(elm).hasClass('d-none');
-        // console.log('Elm count: ', elmCount);
       } else {
         $(elm).removeClass('animate__zoomIn');
         $(elm).addClass('animate__zoomOut');
-        // console.log(notFound);
+        // $(elm).addClass('d-none');
 
         setTimeout(() => {
           $(elm).addClass('d-none');
-          // CHECKING FOR POST ITEM WITH D-NONE CLASS AND COUNTING
-          if ($(elm).hasClass('post-item') && $(elm).hasClass('d-none')) {
-            closeCount++;
-          }
-
-          if (cardCount === closeCount) {
-            // THIS WILL ADD THE NOT FOUND ERROR
-            listResultContainer.html(
-              '<h5 class="font-weight-bold">Words Not Found</h5>'
-            );
-          }
         }, 500);
-      }
-
-      // THIS IS TO REMOVE THE NOT FOUND ERROR MESSAGE
-      if (cardCount !== closeCount) {
-        listResultContainer.html('');
       }
     });
   }

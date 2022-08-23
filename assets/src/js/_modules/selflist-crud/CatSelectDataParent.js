@@ -34,7 +34,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Grande not listed, please list new Grande');
+            alert('MAKE NEW GRANDE');
             // alert('List not found! Please create new Grande');
           }
         },
@@ -48,7 +48,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Primo not listed, please list new Primo');
+            alert('MAKE NEW PRIMO');
             // alert('List not found! Please create new Primo');
           }
         },
@@ -62,7 +62,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Secondo not listed, please list new Secondo');
+            alert('MAKE NEW SECONDO');
             // alert('List not found! Please create new Secondo');
           }
         },
@@ -76,7 +76,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Terzo not listed, please list new Terzo');
+            alert('MAKE NEW TERZO');
           }
         },
       });
@@ -90,6 +90,11 @@ class CatSelectDataParent {
     if ($('#select-all-states').length) {
       this.selectAllStates = $('#select-all-states').selectize({
         sortField: 'text',
+        onType: function (text) {
+          if (!this.currentResults.items.length) {
+            alert('Situs Not Listed');
+          }
+        },
       });
 
       // ADDING ITEMS DYNAMICALLY & SETTING UP THE CONTROL ELEMENT
@@ -101,7 +106,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Market not found. Pick or make New Market.');
+            alert('List New Market');
           }
         },
       });

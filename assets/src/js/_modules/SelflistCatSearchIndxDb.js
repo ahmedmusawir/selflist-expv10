@@ -147,7 +147,9 @@ class SelflistCatSearchIndxDb {
               primoId: 0,
               primoLink: '#',
               primoName: 'No Primo Added',
-              primoSlug: 'none',
+              primoSlug: 'THIS-IS-NOT-VISIBLE', // This is being hardcoded to be an ID at the bottom
+              // So that it can be used to style the block all white
+              // making everything invisible when there is no Primo
             };
             primoCatsWithList.push(newCatObj);
           }
@@ -158,10 +160,10 @@ class SelflistCatSearchIndxDb {
 
           // LOOPING THRU ALL PRIMO CATS UNDER A MAIN CAT
           primoCatsWithList.map((primo) => {
-            console.info('PRIMO NAME', primo.primoName);
+            // console.info('PRIMO NAME', primo.primoName);
 
             catetoryHtmlItem += `
-              <li class="primo-item">
+              <li class="primo-item" id="${primo.primoSlug}">
                 <a href="${primo.primoLink}" class="btn btn-outline-danger btn-sm">&nbsp;
                   ${primo.primoName}
                   <span class="badge badge-pill badge-dark">${primo.primoCount}</span>
@@ -243,7 +245,8 @@ class SelflistCatSearchIndxDb {
       this.searchResultBox.append(catetoryHtmlItem);
     } else {
       this.searchResultBox.append(
-        '<h4 class="d-block">No Result Found ... </h4>'
+        '<a href="/list-insert/" class="font-weight-bold">Not yet listed. Create your NEW LIST here</a>'
+        // '<h4 class="d-block">No Result Found ... </h4>'
       );
     }
     this.spinnerVisible = false;
