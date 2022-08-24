@@ -96,6 +96,16 @@ function change_lost_password_message() {
 function cy_login_logo()
 {?>
 <style type="text/css">
+/* .login *:focus {
+    border: 1rem dotted red;
+    outline: none !important;
+    outline: 0 !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    outline-color: coral;
+    outline-style: dotted;
+} */
+
 #login h1 a,
 .login h1 a {
     background-image: url('/wp-content/uploads/SelfListLogo-login.png');
@@ -104,8 +114,22 @@ function cy_login_logo()
     background-size: 323px 60px;
     background-repeat: no-repeat;
     padding-bottom: 30px;
-    /* padding-top: 5rem; */
 }
+
+#login h1:focus-visible {
+    outline: none !important;
+}
+
+#login a:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    /* WP Bug: they didn't use outline on focus, instead used box-shadow. I will kill that
+    asshole who did this when I find him */
+}
+
+
+
+
 
 #login_error {
     display: none;

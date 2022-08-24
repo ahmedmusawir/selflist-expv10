@@ -34,7 +34,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('MAKE NEW GRANDE');
+            alert('Make NEW GRANDE');
             // alert('List not found! Please create new Grande');
           }
         },
@@ -47,9 +47,11 @@ class CatSelectDataParent {
       this.selectPrimoCats = $('#select-primo-cats').selectize({
         sortField: 'text',
         onType: function (text) {
-          if (!this.currentResults.items.length) {
-            alert('MAKE NEW PRIMO');
-            // alert('List not found! Please create new Primo');
+          // console.log($('#select-main-cats').text());
+          if ($('#select-main-cats').text() === '') {
+            alert('List GRANDE');
+          } else if (!this.currentResults.items.length) {
+            alert('Make NEW PRIMO');
           }
         },
       });
@@ -61,9 +63,10 @@ class CatSelectDataParent {
       this.selectSecondoCats = $('#select-secondo-cats').selectize({
         sortField: 'text',
         onType: function (text) {
-          if (!this.currentResults.items.length) {
-            alert('MAKE NEW SECONDO');
-            // alert('List not found! Please create new Secondo');
+          if ($('#select-primo-cats').text() === '') {
+            alert('List Grande & Primo');
+          } else if (!this.currentResults.items.length) {
+            alert('Make NEW SECONDO');
           }
         },
       });
@@ -75,8 +78,10 @@ class CatSelectDataParent {
       this.selectTerzoCats = $('#select-terzo-cats').selectize({
         sortField: 'text',
         onType: function (text) {
-          if (!this.currentResults.items.length) {
-            alert('MAKE NEW TERZO');
+          if ($('#select-secondo-cats').text() === '') {
+            alert('List Grande, Primo & Secondo');
+          } else if (!this.currentResults.items.length) {
+            alert('Make NEW TERZO');
           }
         },
       });
@@ -92,7 +97,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('Situs Not Listed');
+            alert('List Situs');
           }
         },
       });
@@ -105,8 +110,10 @@ class CatSelectDataParent {
       this.selectAllCities = $('#select-all-cities').selectize({
         sortField: 'text',
         onType: function (text) {
-          if (!this.currentResults.items.length) {
-            alert('List New Market');
+          if ($('#select-all-states').text() === '') {
+            alert('List Situs');
+          } else if (!this.currentResults.items.length) {
+            alert('List NEW MARKET');
           }
         },
       });
