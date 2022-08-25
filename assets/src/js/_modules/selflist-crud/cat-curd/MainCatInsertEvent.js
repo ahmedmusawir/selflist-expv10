@@ -10,8 +10,8 @@ class MainCatInsertEvent extends CatInsertEventAjaxParent {
     this.submitMainCatBtn = $('#main-cat-insert-submit-btn');
     // This is the User Validation popup box
     this.mainCatUserValidationBox = $('#main-cat-user-validation-box');
-    // This is the main list insert form container
-
+    // This is the main category insert form container
+    this.mainCatInsertFormBox = $('#main-cat-insert-box');
     // SETTING EVENTS
     this.setEvents();
   }

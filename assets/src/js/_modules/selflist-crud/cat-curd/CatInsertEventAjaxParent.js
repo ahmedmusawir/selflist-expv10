@@ -162,23 +162,52 @@ class CatInsertEventAjaxParent {
       // const terzoCatMissingMessage = '[No Terzo]';
       $('#terzo-cat-display').text(terzoCatMissingMessage);
     }
-    // REMOVE VALIDATION BOX
-    // Main Category Validation Box Check
-    if (this.mainCatUserValidationBox) {
-      this.mainCatUserValidationBox.addClass('d-none');
+    // REMOVE VALIDATION BOX BEFORE BUT AFTER VALIDATION BOXES GOT REMOVED AT VOYCHECK'S REQUEST
+
+    // GRANDE: POST INSERT FORM REMOVAL FROM UI
+    if (
+      this.mainCatInsertFormBox &&
+      !this.mainCatInsertFormBox.hasClass('d-none')
+    ) {
+      this.mainCatInsertFormBox.addClass('d-none');
     }
-    // Primo Category Validation Box Check
-    if (this.primoCatUserValidationBox) {
-      this.primoCatUserValidationBox.addClass('d-none');
+    // if (this.mainCatUserValidationBox) {
+    //   this.mainCatUserValidationBox.addClass('d-none');
+    // }
+
+    // PRIMO: POST INSERT FORM REMOVAL FROM UI
+    if (
+      this.primoCatInsertFormBox &&
+      !this.primoCatInsertFormBox.hasClass('d-none')
+    ) {
+      this.primoCatInsertFormBox.addClass('d-none');
     }
-    // Secondo Category Validation Box check
-    if (this.secondoCatUserValidationBox) {
-      this.secondoCatUserValidationBox.addClass('d-none');
+
+    // if (this.primoCatUserValidationBox) {
+    //   this.primoCatUserValidationBox.addClass('d-none');
+    // }
+
+    // SECONDO: POST INSERT FORM REMOVAL FROM UI
+    if (
+      this.secondoCatInsertFormBox &&
+      !this.secondoCatInsertFormBox.hasClass('d-none')
+    ) {
+      this.secondoCatInsertFormBox.addClass('d-none');
     }
-    // Terzo Cetory Validation Box check
-    if (this.terzoCatUserValidationBox) {
-      this.terzoCatUserValidationBox.addClass('d-none');
+    // if (this.secondoCatUserValidationBox) {
+    //   this.secondoCatUserValidationBox.addClass('d-none');
+    // }
+
+    // TERZO: POST INSERT FORM REMOVAL FROM UI
+    if (
+      this.terzoCatInsertFormBox &&
+      !this.terzoCatInsertFormBox.hasClass('d-none')
+    ) {
+      this.terzoCatInsertFormBox.addClass('d-none');
     }
+    // if (this.terzoCatUserValidationBox) {
+    //   this.terzoCatUserValidationBox.addClass('d-none');
+    // }
     // DISPLAY THE DISPLAY BOX
     this.listInsertFormBox.removeClass('d-none');
     this.createdCategoriesDisplayBox.removeClass('d-none');

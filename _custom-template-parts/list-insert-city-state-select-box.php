@@ -8,7 +8,7 @@
 
          <div class="col-sm-12">
              <article class="main-cat-box">
-                 <select id="select-all-states" class="select-all-states" placeholder="Situs">
+                 <select id="select-all-states" class="select-all-states" placeholder="List Situs">
                      <option value="">Select a Situs</option>
                      <?php make_state_country_dropdown(); ?>
                  </select>
@@ -24,14 +24,14 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-all-cities" placeholder="Market">
-                     <option value="">Make new market...</option>
+                 <select id="select-all-cities" placeholder="List New Market">
+                     <option value="">Make New Market...</option>
                  </select>
              </article>
          </div>
          <div class="col-sm-4">
              <a id="city-new-btn" href="#" class="btn btn-secondary btn-sm btn-block">
-                 New Market
+                 List Situs
              </a>
          </div>
 

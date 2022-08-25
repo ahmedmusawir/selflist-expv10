@@ -8,7 +8,7 @@
 add_filter( 'comment_form_defaults', function( $fields ) {
     $fields['must_log_in'] = sprintf( 
         __( '<p class="must-log-in">
-                 <a href="%s">Register</a> to list a comment.</p>' 
+                 <a href="%s">Register</a> to list a comment</p>' 
         ),
         wp_registration_url(),
         wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )   

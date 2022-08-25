@@ -42,15 +42,9 @@
                 </small>
             </div>
 
-            <!-- <button id="main-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button> -->
-            <button id="main-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
-
+            <button id="main-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
             <button id="main-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
-            <div class="my-3">
-                <span id="ajax-failed-message-1"></span>
-            </div>
-
 
         </form>
 
@@ -59,25 +53,25 @@
 </section>
 
 <!-- MAIN CAT USER VALIDATION BOX -->
-<!-- <section id="main-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none"> -->
+<section id="main-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
-<!-- <ul class="list-group"> -->
-<!-- <li class="list-group-item active bg-light text-primary"> -->
-<!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
-<!-- <small>(You cannot edit categories once they are created)</small> -->
-<!-- </li> -->
-<!-- <li class="list-group-item">Grande: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
+    <ul class="list-group">
+        <!-- <li class="list-group-item active bg-light text-primary"> -->
+        <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
+        <!-- <small>(You cannot edit categories once they are created)</small> -->
+        <!-- </li> -->
+        <li class="list-group-item">Grande: <span class="pl-3 font-weight-bold" id="main-input"></span></li>
         <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-input"></span></li>
         <li class="list-group-item">Secondo: <span class="pl-3 font-weight-bold" id="secondo-input"></span>
         </li>
-        <li class="list-group-item">Terzo: <span class="pl-3 font-weight-bold" id="terzo-input"></span></li> -->
-<!-- </ul> -->
-<!-- 
+        <li class="list-group-item">Terzo: <span class="pl-3 font-weight-bold" id="terzo-input"></span></li>
+    </ul>
+
     <button id="main-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
-    <button id="main-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button> -->
+    <button id="main-cat-insert-cancel-btn" type="button" class="btn btn-secondary btn-block">Cancel</button>
 
-<!-- <div class="my-3">
+    <div class="my-3">
         <span id="ajax-failed-message-1"></span>
-    </div> -->
+    </div>
 
-<!-- </section> -->
+</section>

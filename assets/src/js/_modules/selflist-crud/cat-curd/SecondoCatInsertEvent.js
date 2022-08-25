@@ -10,7 +10,8 @@ class SecondoCatInsertEvent extends CatInsertEventAjaxParent {
     this.submitSecondoCatBtn = $('#secondo-cat-insert-submit-btn');
     // This is the User Validation popup box
     this.secondoCatUserValidationBox = $('#secondo-cat-user-validation-box');
-    // This is the main list insert form container
+    // This is the secondo category insert form container
+    this.secondoCatInsertFormBox = $('#secondo-cat-insert-box');
 
     // SETTING EVENTS
     this.setEvents();

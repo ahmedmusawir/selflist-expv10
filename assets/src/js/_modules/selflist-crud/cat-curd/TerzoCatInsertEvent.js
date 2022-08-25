@@ -10,7 +10,8 @@ class TerzoCatInsertEvent extends CatInsertEventAjaxParent {
     this.submitTerzoCatBtn = $('#terzo-cat-insert-submit-btn');
     // This is the User Validation popup box
     this.terzoCatUserValidationBox = $('#terzo-cat-user-validation-box');
-    // This is the main list insert form container
+    // This is the terzo category insert form container
+    this.terzoCatInsertFormBox = $('#terzo-cat-insert-box');
 
     // SETTING EVENTS
     this.setEvents();

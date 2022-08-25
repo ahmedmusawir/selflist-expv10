@@ -75,7 +75,7 @@ class SelflistPostSearch {
           if (cardCount === closeCount) {
             // THIS WILL ADD THE NOT FOUND ERROR
             listResultContainer.html(
-              '<h5 class="font-weight-bold">Words Not Found</h5>'
+              '<h5 class="font-weight-bold"><a href="/list-insert/">List Grande</h5>'
             );
           }
         }, 500);

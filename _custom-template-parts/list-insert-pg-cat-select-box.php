@@ -8,7 +8,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-main-cats" class="select-main-cats" placeholder="Grande">
+                 <select id="select-main-cats" class="select-main-cats" placeholder="Make New Grande">
                      <option value="">Select a Grande</option>
                      <!-- <option value="AL">Tutoring</option>
         <option value="AK">Alaska</option>
@@ -18,7 +18,7 @@
          </div>
          <div class="col-sm-4">
              <a href="#" id="main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
-                 New Grande
+                 List Grande
              </a>
          </div>
 
@@ -30,7 +30,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-primo-cats" placeholder="Primo">
+                 <select id="select-primo-cats" placeholder="Make New Primo">
                      <option value="">Select a Primo...</option>
                      <!-- <option value="AL">Math</option>
         <option value="AK">Alaska</option>
@@ -40,7 +40,7 @@
          </div>
          <div class="col-sm-4">
              <a id="primo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 New Primo
+                 List Primo
              </a>
          </div>
 
@@ -52,7 +52,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-secondo-cats" placeholder="Secondo">
+                 <select id="select-secondo-cats" placeholder="Make New Secondo">
                      <option value="">Select a Secondo...</option>
                      <!-- <option value="AL">Grade 10</option>
         <option value="AK">Alaska</option>
@@ -62,7 +62,7 @@
          </div>
          <div class="col-sm-4">
              <a id="secondo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 New Secondo
+                 List Secondo
              </a>
          </div>
 
@@ -74,7 +74,7 @@
 
          <div class="col-sm-8">
              <article class="main-cat-box">
-                 <select id="select-terzo-cats" placeholder="Terzo">
+                 <select id="select-terzo-cats" placeholder="Make New Terzo">
                      <option value="">Select a Terzo</option>
                      <!-- <option value="AL">Jackson Heights</option>
         <option value="AK">Alaska</option>
@@ -84,7 +84,7 @@
          </div>
          <div class="col-sm-4">
              <a id="terzo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 New Terzo
+                 List Terzo
              </a>
          </div>
 

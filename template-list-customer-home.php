@@ -389,26 +389,30 @@ textarea::placeholder {
                         </div>
 
                         <!-- REGISTERED DATE -->
-                        <div class="row mb-3">
-                            <div class="col-6 col-sm-3">
-                                <h6 class="h6 text-uppercase font-weight-bold">
-                                    Since:
+                        <div class="">
+                            <!-- <div class="col-6 col-sm-3"> -->
+                            <div class="">
+                                <!-- <h6 class="h6 text-uppercase font-weight-bold"> -->
+                                <h6 class="h6 font-weight-bold">
+                                    Since
                                 </h6>
                             </div>
                             <style>
                             #date-box {
-                                margin-left: -2rem;
-                                margin-top: -.15rem;
+                                margin-left: 0rem;
+                                margin-top: .5rem;
+                                margin-bottom: 1rem;
                             }
 
-                            @media (max-width: 575px) {
+                            /* @media (max-width: 575px) {
                                 #date-box {
                                     margin-left: 0rem;
                                     margin-top: -.15rem;
                                 }
-                            }
+                            } */
                             </style>
-                            <div class="col-6 col-sm-9">
+                            <!-- <div class="col-6 col-sm-9"> -->
+                            <div class="">
                                 <?php echo '<span id="date-box" class="bg-danger text-light font-weight-bold float-left py-2 px-4"
                     style="font-size: .8rem;">';
                     printf('%s<br>', date("m", strtotime($user_registered)));

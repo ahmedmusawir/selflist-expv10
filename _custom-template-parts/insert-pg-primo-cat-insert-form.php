@@ -53,9 +53,13 @@
                 </small>
             </div>
 
-            <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
+            <!-- <button id="primo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button> -->
+            <button id="primo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
             <button id="primo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
+            <div class="my-3">
+                <span id="ajax-failed-message-2"></span>
+            </div>
 
         </form>
 
@@ -64,13 +68,13 @@
 </section>
 
 <!-- PRIMO CAT USER VALIDATION BOX -->
-<section id="primo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
+<!-- <section id="primo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <!-- <li class="list-group-item active bg-light text-primary"> -->
-        <!-- <li class="list-group-item active bg-light text-primary">Please Verify List:<br> -->
-        <!-- <small>(You cannot edit categories once they are created)</small> -->
-        <!-- </li> -->
+        <li class="list-group-item active bg-light text-primary">
+        <li class="list-group-item active bg-light text-primary">Please Verify List:<br>
+            <small>(You cannot edit categories once they are created)</small>
+        </li>
         <li class="list-group-item">Grande: <span class="pl-3 font-weight-bold" id="main-display-primo"></span>
         </li>
         <li class="list-group-item">Primo: <span class="pl-3 font-weight-bold" id="primo-display-primo"></span>
@@ -88,4 +92,4 @@
         <span id="ajax-failed-message-2"></span>
     </div>
 
-</section>
+</section> -->

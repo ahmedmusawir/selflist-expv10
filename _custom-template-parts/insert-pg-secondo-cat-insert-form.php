@@ -50,9 +50,14 @@
                 </small>
             </div>
 
-            <button id="secondo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button>
+            <!-- <button id="secondo-cat-user-validation-btn" type="submit" class="btn btn-primary btn-block">Make</button> -->
+            <button id="secondo-cat-insert-submit-btn" type="button" class="btn btn-primary btn-block">Make</button>
             <button id="secondo-cat-validation-cancel-btn" type="button"
                 class="btn btn-secondary btn-block">Cancel</button>
+
+            <div class="my-3">
+                <span id="ajax-failed-message-3"></span>
+            </div>
 
         </form>
 
@@ -61,15 +66,15 @@
 </section>
 
 <!-- PRIMO CAT USER VALIDATION BOX -->
-<section id="secondo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
+<!-- <section id="secondo-cat-user-validation-box" class="card p-5 animate__animated animate__zoomIn d-none">
 
     <ul class="list-group">
-        <!-- THE HEADER ANNOUNCEMENT -->
-        <!-- <li class="list-group-item active bg-light text-primary"> -->
-        <!-- <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br> -->
-        <!-- <small>(You cannot edit entries once they are created)</small> -->
-        <!-- </li> -->
-        <!-- THE  LIST -->
+        THE HEADER ANNOUNCEMENT
+        <li class="list-group-item active bg-light text-primary">
+        <li class="list-group-item active bg-light text-primary">Please Verify Your List:<br>
+            <small>(You cannot edit entries once they are created)</small>
+        </li>
+        THE  LIST
         <li class="list-group-item">Grande : <span class="pl-3 font-weight-bold" id="main-display-secondo"></span>
         </li>
         <li class="list-group-item">Primo : <span class="pl-3 font-weight-bold" id="primo-display-secondo"></span>
@@ -87,4 +92,4 @@
         <span id="ajax-failed-message-3"></span>
     </div>
 
-</section>
+</section> -->

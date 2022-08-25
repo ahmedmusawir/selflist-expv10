@@ -84,7 +84,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="WORDS">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="">
                 <i class="fas fa-search"></i>
 
             </section>

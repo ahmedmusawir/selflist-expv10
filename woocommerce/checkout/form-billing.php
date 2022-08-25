@@ -31,9 +31,9 @@ defined('ABSPATH') || exit;
 
     <?php endif;?>
 
-    <div class="card card-body bg-light">
+    <!-- <div class="card card-body bg-light">
         <h5>Lister</h5>
-    </div>
+    </div> -->
 
     <?php do_action('woocommerce_before_checkout_billing_form', $checkout);?>
 

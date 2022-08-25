@@ -2,7 +2,7 @@
 // To change Proceed to Checkout button text at the Cart page
 function woocommerce_button_proceed_to_checkout() { ?>
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward">
-    <?php esc_html_e( 'Proceed', 'woocommerce' ); ?>
+    <?php esc_html_e( 'Buy', 'woocommerce' ); ?>
 </a>
 <?php
 }

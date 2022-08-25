@@ -10,7 +10,8 @@ class PrimoCatInsertEvent extends CatInsertEventAjaxParent {
     this.submitPrimoCatBtn = $('#primo-cat-insert-submit-btn');
     // This is the User Validation popup box
     this.primoCatUserValidationBox = $('#primo-cat-user-validation-box');
-    // This is the main list insert form container
+    // This is the primo category insert form container
+    this.primoCatInsertFormBox = $('#primo-cat-insert-box');
 
     // SETTING EVENTS
     this.setEvents();
