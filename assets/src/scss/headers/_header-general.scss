@@ -95,6 +95,10 @@
       font-size: 0.8rem;
       padding: 0.25rem 0.5rem;
     }
+    @media (max-width: 364px) {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.45rem;
+    }
   }
 
   // CURRENT PAGE HOVER
