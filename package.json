@@ -86,7 +86,6 @@
   "dependencies": {
     "@popperjs/core": "^2.4.0",
     "arrive": "^2.4.1",
-    "caniuse-lite": "^1.0.30001239",
     "idb-keyval": "^5.0.5",
     "popper": "^1.0.1",
     "popper.js": "^1.16.1",

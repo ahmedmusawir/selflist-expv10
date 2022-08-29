@@ -101,7 +101,7 @@ if ('post' === get_post_type()):
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
-            <div class="back-holder d-block">
+            <div class="back-holder d-none">
                 <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Back</a>
             </div>
             <div class="back-holder d-none">

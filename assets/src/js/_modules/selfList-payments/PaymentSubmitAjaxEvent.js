@@ -41,8 +41,9 @@ class PaymentSubmitAjaxEvents {
         localStorage.setItem('newListPublishData', JSON.stringify(res));
 
         // REDIRECTING TO LIST PUBLISH SUMMARY PAGE
-        window.location.href = '/list-publish-summary/';
-        // window.location.href = `/?p=${res.post_id}`;
+        // window.location.href = '/list-publish-summary/';
+        // REDIRECTING TO THE BRAND NEW PUBLISHED LIST
+        window.location.href = `/?p=${res.post_id}`;
       })
       .fail(() => {
         console.log('Ajax Failed! In ' + this.ajaxFunction);
