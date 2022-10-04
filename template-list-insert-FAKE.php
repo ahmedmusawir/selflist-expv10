@@ -222,7 +222,7 @@ textarea::placeholder {
         </button> -->
             </div>
             <div class="modal-body">
-                <h4>#<span id="DELIST-list-id"></span></h4>
+                <h4>Signup or Login</h4>
                 <!-- <h4>Your List Will Be Deactivated!</h4> -->
             </div>
             <div class="modal-footer justify-content-center">
