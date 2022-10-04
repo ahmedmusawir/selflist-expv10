@@ -170,3 +170,7 @@ require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-
 require get_theme_file_path('/_functions/selflist/wp-admin/comments-message-update.php');
 // WP ADMIN USER LOGIN REDIRECTS (ADMIN BAR, LOGIN/LOGOUT BTN, REDIRECTION ETC.)
 require get_theme_file_path('/_functions/selflist/wp-admin/user-logins.php');
+// WP ADMIN USER MANUAL LOGOUT OR EXIT BUTTON
+require get_theme_file_path('/_functions/selflist/wp-admin/manual-login-logout.php');
+// PAGE REDICTION AND COOKIE MAKING AJAX ETC.
+require get_theme_file_path('/_functions/selflist/ajax/make-cookie-and-redirect-ajax.php');

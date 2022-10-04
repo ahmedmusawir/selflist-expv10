@@ -31,7 +31,7 @@ class CiteStateInsertUiEvents extends CatSelectDataParent {
     // GETTING THE INNER TEXT OF THE CURRENT SELECTED OPTION
 
     if (!currentStateId) {
-      alert('Please Choose A State...');
+      alert('List SITUS');
     } else {
       const selectedState = this.selectAllStateCtrl.getItem(currentStateId);
       const selectedStateText = selectedState[0].innerText;

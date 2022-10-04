@@ -76,16 +76,13 @@ $user_email = $current_user->user_email;
           ));
           ?>
                     <!-- EXIT BUTTON -->
-                    <style>
-                    #logout-btn {
-                        /* border: 1rem dotted yellow; */
-                        margin-top: -33px;
-                        font-size: .8rem;
-                    }
-                    </style>
-                    <a id="logout-btn" class="float-right" href="<?php echo wp_logout_url(get_permalink()); ?>">
+
+                    <!-- <a id="logout-btn" class="float-right" href="<?php echo wp_logout_url(get_permalink()); ?>">
                         Exit
-                    </a>
+                    </a> -->
+                    <!-- <li id="menu-item-1487 logout-btn"
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1487"><a
+                            href="#">EXIT</a></li> -->
                     <!-- EXIT BUTTON END -->
 
 

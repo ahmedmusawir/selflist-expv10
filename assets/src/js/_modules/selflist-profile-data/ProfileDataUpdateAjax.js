@@ -72,6 +72,8 @@ class ProfileDataUpdateAjax {
       .done((res) => {
         console.info(res);
         console.log('Awesome! ... Ajax Success');
+        // REMOVEING FAKE LIST PAGE DATA
+        sessionStorage.removeItem('fakeListPageUserData');
         // ADDING DATA INTO INDEXED DB
         set('info', res)
           .then(() => {

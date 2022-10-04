@@ -50,6 +50,30 @@ $user_email = $current_user->user_email;
 
     <!-- ====  End of THIS IS FOR DEBUGGING. PLZ DISABLE WHEN READY TO PUBLISH  ==== -->
 
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE ================================ -->
+    <?php
+   // CHECKING FOR COOKIE
+   $cookie_name = 'origin_page';
+
+   // CHECKING FOR FAKE LIST PAGE COOKIE, USER IS LOGGED OUT AND HOME PAGE 
+   if (!isset($_COOKIE[$cookie_name]) && !is_user_logged_in() && is_page('CATEGORY SEARCH INDEX', 'category-search-index')) {
+   ?>
+
+    <script>
+    const fakeListData = JSON.parse(sessionStorage.getItem('fakeListPageUserData'))
+    // console.log('SCRIPT RAN FOOTER', fakeListData);
+    // console.log('DESTROYING SESSION STORAGE DATA FOR fakeListPageUserData');
+    if (fakeListData) {
+        sessionStorage.removeItem('fakeListPageUserData');
+    }
+    </script>
+
+    <?php
+   }
+  ?>
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE ================================ -->
+
+
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -17,7 +17,7 @@
              </article>
          </div>
          <div class="col-sm-4">
-             <a href="#" id="main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
+             <a href="#" id="fake-main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
                  NEW GRANDE
              </a>
          </div>
@@ -39,7 +39,7 @@
              </article>
          </div>
          <div class="col-sm-4">
-             <a id="primo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
+             <a id="fake-primo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
                  NEW PRIMO
              </a>
          </div>
@@ -61,7 +61,7 @@
              </article>
          </div>
          <div class="col-sm-4">
-             <a id="secondo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
+             <a id="fake-secondo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
                  NEW SECONDO
              </a>
          </div>
@@ -83,7 +83,7 @@
              </article>
          </div>
          <div class="col-sm-4">
-             <a id="terzo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
+             <a id="fake-terzo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
                  NEW TERZO
              </a>
          </div>

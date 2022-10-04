@@ -2,24 +2,21 @@
  * SLEFLIST HERDERS
  */
 // NEW LOGOUT OR EXIT BUTTON
-#logout-btn {
-  // border: 2px dotted yellow;
+// #logout-btn {
 
-  @media (max-width: 429px) {
-    // border: 2px dotted yellow;
-    position: relative;
-    z-index: 1000;
-    float: left !important;
-    margin-left: 0rem !important;
-    margin-top: 0rem !important;
-    font-size: 0.8rem !important;
-    // margin-top: -32px !important;
-  }
-  @media (max-width: 413px) {
-    margin-top: -24px !important;
-    margin-left: 3rem !important;
-  }
-}
+//   @media (max-width: 429px) {
+//     position: relative;
+//     z-index: 1000;
+//     float: left !important;
+//     margin-left: 0rem !important;
+//     margin-top: 0rem !important;
+//     font-size: 0.8rem !important;
+//   }
+//   @media (max-width: 413px) {
+//     margin-top: -24px !important;
+//     margin-left: 3rem !important;
+//   }
+// }
 
 // HEADER HOME
 #header-home {

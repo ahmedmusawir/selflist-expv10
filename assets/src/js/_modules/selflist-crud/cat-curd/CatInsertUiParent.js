@@ -49,7 +49,7 @@ class CatInsertUiParent extends CatSelectDataParent {
 
   displayPrimoCatInserForm = (currentMainId) => {
     if (!currentMainId) {
-      alert('List New Grande');
+      alert('List GRANDE');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY PRIMO INSERT FORM
@@ -68,7 +68,7 @@ class CatInsertUiParent extends CatSelectDataParent {
 
   displaySecondoCatInsertFormBox = (currentMainId, currentPrimoId) => {
     if (!currentMainId || !currentPrimoId) {
-      alert('List Grande & Primo');
+      alert('List GRANDE & PRIMO');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY SECONDO INSERT FORM
@@ -92,7 +92,7 @@ class CatInsertUiParent extends CatSelectDataParent {
     currentSecondoId
   ) => {
     if (!currentMainId || !currentPrimoId || !currentSecondoId) {
-      alert('List Grande, Primo & Secondo');
+      alert('List GRANDE, PRIMO & SECONDO');
       this.listInsertFormBox.removeClass('d-none');
     } else {
       // DISPLAY TERZO INSERT FORM

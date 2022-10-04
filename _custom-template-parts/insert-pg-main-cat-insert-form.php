@@ -15,28 +15,28 @@
             <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
-                    aria-describedby="textHelp" placeholder="New Grande" required>
+                    aria-describedby="textHelp" placeholder="GRANDE" required>
                 <small id="textHelp" class="form-text text-muted">
                     (Up to 30 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-primo-cat" name="main-input-primo-cat"
-                    aria-describedby="textHelp" placeholder="New Primo">
+                    aria-describedby="textHelp" placeholder="PRIMO">
                 <small id="textHelp" class="form-text text-muted">
                     (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-secondo-cat" name="main-input-secondo-cat"
-                    aria-describedby="textHelp" placeholder="New Secondo">
+                    aria-describedby="textHelp" placeholder="SECONDO">
                 <small id="textHelp" class="form-text text-muted">
                     (Up to 25 Characters)
                 </small>
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-terzo-cat" name="main-input-terzo-cat"
-                    aria-describedby="textHelp" placeholder="New Terzo">
+                    aria-describedby="textHelp" placeholder="TERZO">
                 <small id="textHelp" class="form-text text-muted">
                     (Up to 25 Characters)
                 </small>

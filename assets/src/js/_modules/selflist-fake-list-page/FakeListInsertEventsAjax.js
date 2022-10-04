@@ -1,19 +1,19 @@
 import $ from 'jquery';
 // import { selectize } from 'selectize';
-import ListInsertValidationEvents from './ListInsertValidationEvents';
+import FakeListInsertValidationEvents from './FakeListInsertValidationEvents';
 
 /**
  This is a child class of ListInsertUiEvents and uses the selectize library. This one
  Inserts the the List Insert Form data into the WP DB via the REST API. This inserts selectize data, normal form data and ACF data into the WP DB
  */
 
-class ListInsertEventsAjax extends ListInsertValidationEvents {
+class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
   constructor() {
     super();
     // this.init();
     // COLLECTING AJAX INFO
     this.ajaxUrl = selflistData.ajax_url;
-    this.ajaxFunction = 'list_insert_ajax';
+    this.ajaxFunction = 'make_cookie_and_redirect_ajax';
     // COLLECTING ELEMENTS
     this.listInsertButton = $('#list-insert-submit-btn');
     this.catDisplayUiBox = $('#cat-display-ui-box');
@@ -25,7 +25,7 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
   }
 
   init = () => {
-    console.log('ListInsertEventsAjax - Insert Post');
+    console.log('FakeListInsertEventsAjax - Insert Post');
   };
 
   setEvents = () => {
@@ -42,9 +42,13 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
 
     // Categories List
     const mainCatId = this.currentMainId;
+    const mainCatName = this.currentMainCatName;
     const primoCatId = this.currentPrimoId;
+    const primoCatName = this.currentPrimoCatName;
     const secondoCatId = this.currentSecondoId;
+    const secondoCatName = this.currentSecondoCatName;
     const terzoCatId = this.currentTerzoId;
+    const terzoCatName = this.currentTerzoCatName;
 
     // Contact Info Vars
     const name = this.contactName;
@@ -56,7 +60,9 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
 
     // State & City Taxonomy IDs
     const stateId = this.cityId;
+    const stateName = this.contactState;
     const cityId = this.stateId;
+    const cityName = this.contactCity;
 
     // Social Media URLs
     const facebook = this.socialFacebook;
@@ -67,17 +73,17 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
     const youtube = this.socialYoutube;
 
     // UNIT TESTNG Debugging Output
-    console.log(`DESCRIPTION: ${description}`);
-    console.log(`NAME: ${name}`);
-    console.log(`PHONE: ${phone}`);
-    console.log(`EMAIL: ${email}`);
-    console.log(`WEBSITE: ${site}`);
-    console.log(`FACEBOOK: ${facebook}`);
-    console.log(`YELP: ${yelp}`);
-    console.log(`INSTAGRAM: ${instagram}`);
-    console.log(`LINKEDIN: ${linkedin}`);
-    console.log(`TWITTER: ${twitter}`);
-    console.log(`YOUTUBE: ${youtube}`);
+    // console.log(`DESCRIPTION: ${description}`);
+    // console.log(`NAME: ${name}`);
+    // console.log(`PHONE: ${phone}`);
+    // console.log(`EMAIL: ${email}`);
+    // console.log(`WEBSITE: ${site}`);
+    // console.log(`FACEBOOK: ${facebook}`);
+    // console.log(`YELP: ${yelp}`);
+    // console.log(`INSTAGRAM: ${instagram}`);
+    // console.log(`LINKEDIN: ${linkedin}`);
+    // console.log(`TWITTER: ${twitter}`);
+    // console.log(`YOUTUBE: ${youtube}`);
 
     // PREPARING FORM DATA FOR REST API
     let newPostData = {
@@ -85,11 +91,17 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
       content: description,
       status: 'pending',
       mainCatId,
+      mainCatName,
       primoCatId,
+      primoCatName,
       secondoCatId,
+      secondoCatName,
       terzoCatId,
+      terzoCatName,
       stateId,
+      stateName,
       cityId,
+      cityName,
       name, // ACF Item
       phone, // ACF Item
       email, // ACF Item
@@ -101,6 +113,10 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
       twitter, // ACF Item
       youtube, // ACF Item
     };
+
+    // ADDING FAKE LIST PAGE USER DATA INTO SESSION STORAGE TO FILL UP
+    // LIST PAGE AFTER SIGNUP
+    sessionStorage.setItem('fakeListPageUserData', JSON.stringify(newPostData));
 
     // UNIT TESTING debugging info
     // console.log('newPostData: ', newPostData);
@@ -120,14 +136,12 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
         console.info(res);
         console.log('Awesome! ... Ajax Success');
         // REMOVING CAT DATA FROM THE LOCAL STORAGE FOR CLEANUP
-        localStorage.removeItem('catData');
+        // localStorage.removeItem('catData');
         // ADDING INSERTED DATA INTO LOCALSTORAGE FOR PREVIEW PAGE
-        localStorage.setItem('newListData', JSON.stringify(res));
+        // localStorage.setItem('newListData', JSON.stringify(res));
+
         // REMOVING RELIST DATA FROM SESSION STORAGE
-        sessionStorage.removeItem('relistData');
-        // REMOVEING FAKE LIST PAGE DATA
-        sessionStorage.removeItem('fakeListPageUserData');
-        // STOPPING THE LOADING SPINNER
+        // sessionStorage.removeItem('relistData');
         this.loadingSpinner.addClass('d-none');
       })
       .fail((res) => {
@@ -136,7 +150,7 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
       })
       .always(() => {
         // REDIRECT TO PREVIEW PAGE
-        window.location.href = '/list-preview/';
+        window.location.href = '/list-signup/';
         // console.log('Ajax Dynamic Loaction Filter Complete');
       });
 
@@ -145,10 +159,10 @@ class ListInsertEventsAjax extends ListInsertValidationEvents {
     this.selectizePrimo.clear();
     this.selectizeSecondo.clear();
     this.selectizeTerzo.clear();
-    $('#lister-name').val('');
+    // $('#lister-name').val('');
     $('#lister-address').val('');
-    $('#lister-description').val();
+    $('#lister-description').val('');
   };
 }
 
-export default ListInsertEventsAjax;
+export default FakeListInsertEventsAjax;
