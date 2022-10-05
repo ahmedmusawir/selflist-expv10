@@ -27,7 +27,6 @@ class FakeBtnActionListInsertPage {
   };
 
   clickHandler = () => {
-    // console.log('clicked up FAKE ...');
     this.fakeListBtnModal.modal({
       // backdrop: 'static',
       // keyboard: false,

@@ -217,21 +217,21 @@ textarea::placeholder {
         <div class="modal-content">
             <div class="modal-header justify-content-center bg-dark">
                 <!-- <h5 class="modal-title text-light" id="exampleModalLabel">DELIST</h5> -->
-                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button> -->
+                <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <h4>Signup or Login</h4>
                 <!-- <h4>Your List Will Be Deactivated!</h4> -->
             </div>
             <div class="modal-footer justify-content-center">
-                <button id="DELIST-close-btn" type="button" class="btn btn-secondary" data-dismiss="modal">
-                    Cancel
-                </button>
-                <button id="DELIST-action-btn" type="button" class="btn btn-primary">
-                    Delist
-                </button>
+                <a href="#" id="fake-list-insert-popup-signup-btn" class="btn btn-secondary">
+                    Signup
+                </a>
+                <a href="#" id="fake-list-insert-popup-login-btn" class="btn btn-primary">
+                    Login
+                </a>
             </div>
         </div>
     </div>

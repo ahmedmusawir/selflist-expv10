@@ -70,6 +70,8 @@ import FakeListInsertEventsAjax from './_modules/selflist-fake-list-page/FakeLis
 import FakeListInsertUiDataParent from './_modules/selflist-fake-list-page/FakeListInsertUiDataParent';
 import FakeListInsertValidationEvents from './_modules/selflist-fake-list-page/FakeListInsertValidationEvents';
 import FakeBtnActionListInsertPage from './_modules/selflist-fake-list-page/FakeBtnActionListInsertPage';
+import FakeListInsertPopupSignupButtonAjax from './_modules/selflist-fake-list-page/FakeListInsertPopupSignupButtonAjax';
+import FakeListPopupLogin from './_modules/selflist-fake-list-page/FakeListPopupLogin';
 
 class App {
   constructor() {
@@ -185,6 +187,8 @@ class App {
     new FakeListInsertUiDataParent();
     new FakeListInsertValidationEvents();
     new FakeBtnActionListInsertPage();
+    new FakeListInsertPopupSignupButtonAjax();
+    new FakeListPopupLogin();
   }
 }
 

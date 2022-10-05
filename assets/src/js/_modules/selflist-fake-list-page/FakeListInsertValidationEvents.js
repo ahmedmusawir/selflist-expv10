@@ -209,12 +209,6 @@ class FakeListInsertValidationEvents extends FakeListInsertUiDataParent {
           !this.socialTwitter
         ) {
           alert('You must have at least one Social Link');
-        } else if (!this.cityInsertFormBox.hasClass('d-none')) {
-          alert('Please insert a City or hit cancel!');
-          // SCROLL TO TOP
-          window.scrollTo(0, 0);
-          this.cityInsertInput.trigger('focus');
-          // this.cityInsertInput.focus();
         } else if (this.listerTerms.prop('checked') !== true) {
           alert('Please Accept Terms & Conditions!');
           // SCROLL TO TOP

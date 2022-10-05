@@ -2,12 +2,7 @@ import $ from 'jquery';
 // import { selectize } from 'selectize';
 import FakeListInsertValidationEvents from './FakeListInsertValidationEvents';
 
-/**
- This is a child class of ListInsertUiEvents and uses the selectize library. This one
- Inserts the the List Insert Form data into the WP DB via the REST API. This inserts selectize data, normal form data and ACF data into the WP DB
- */
-
-class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
+class FakeListInsertPopupLoginButtonAjax extends FakeListInsertValidationEvents {
   constructor() {
     super();
     // this.init();
@@ -15,7 +10,7 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
     this.ajaxUrl = selflistData.ajax_url;
     this.ajaxFunction = 'make_cookie_and_redirect_ajax';
     // COLLECTING ELEMENTS
-    this.listInsertButton = $('#list-insert-submit-btn');
+    this.listInsertButton = $('#fake-list-insert-popup-login-btn');
     this.catDisplayUiBox = $('#cat-display-ui-box');
     this.catSelectBox = $('#category-choice-box');
     // SETTING SPINNER
@@ -25,7 +20,7 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
   }
 
   init = () => {
-    console.log('FakeListInsertEventsAjax - Insert Post');
+    console.log('FakeListInsertPopupLoginButtonAjax - Insert Post');
   };
 
   setEvents = () => {
@@ -33,7 +28,7 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
   };
 
   insertListHandler = () => {
-    // console.log('List Submit Clicked');
+    console.log('List Submit Clicked');
 
     // COLLECTING FORM DATA
     this.getCategoryData();
@@ -150,7 +145,7 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
       })
       .always(() => {
         // REDIRECT TO PREVIEW PAGE
-        window.location.href = '/list-signup/';
+        // window.location.href = '/wp-login.php/';
         // console.log('Ajax Dynamic Loaction Filter Complete');
       });
 
@@ -164,4 +159,4 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
   };
 }
 
-export default FakeListInsertEventsAjax;
+export default FakeListInsertPopupLoginButtonAjax;
