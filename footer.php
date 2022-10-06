@@ -50,7 +50,7 @@ $user_email = $current_user->user_email;
 
     <!-- ====  End of THIS IS FOR DEBUGGING. PLZ DISABLE WHEN READY TO PUBLISH  ==== -->
 
-    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE ================================ -->
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE HOME PAGE ================================ -->
     <?php
    // CHECKING FOR COOKIE
    $cookie_name = 'origin_page';
@@ -71,7 +71,29 @@ $user_email = $current_user->user_email;
     <?php
    }
   ?>
-    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE ================================ -->
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE HOME PAGE ================================ -->
+
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE MEMBER PROFILE PAGE ================================ -->
+    <?php
+   // CHECKING FOR COOKIE
+   $cookie_name = 'origin_page';
+
+   // CHECKING FOR FAKE LIST PAGE COOKIE, USER IS LOGGED IN AND MEMBER PROFILE PAGE 
+   if (!isset($_COOKIE[$cookie_name]) && is_user_logged_in() && is_page('LIST CUSTOMER HOME', 'list-customer-home')
+   ) {
+   ?>
+
+    <script>
+    const fakeListData = JSON.parse(sessionStorage.getItem('fakeListPageUserData'))
+    if (fakeListData) {
+        sessionStorage.removeItem('fakeListPageUserData');
+    }
+    </script>
+
+    <?php
+   }
+  ?>
+    <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE MEMBER PROFILE PAGE ================================ -->
 
 
 </footer><!-- #colophon -->

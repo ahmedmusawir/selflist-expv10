@@ -117,7 +117,7 @@ class ListFormAutoFiller extends CatSelectDataParent {
     // SELECTIZE STATE
     // console.log('FAKE SELECTIZE STATE:', this.selectAllStateCtrl);
 
-    if (this.selectAllStateCtrl) {
+    if (this.selectAllStateCtrl && this.fakeStateId) {
       // SETTING THE VALUES TO TERZO SELECT
       // This time adding options is not necessary cuz the state data is already
       // present since it's hard coded data. But for the others where data is
@@ -134,7 +134,7 @@ class ListFormAutoFiller extends CatSelectDataParent {
     // SELECTIZE CITY
     // console.log('FAKE SELECTIZE CITY:', this.selectAllCityCtrl);
 
-    if (this.selectAllCityCtrl) {
+    if (this.selectAllCityCtrl && this.fakeCityId) {
       // ADD OPTIONS FOR CITY SELECT NEED TO RE-DECLARE CUZ ...
       const selectCityOptions = {
         value: this.fakeCityId,

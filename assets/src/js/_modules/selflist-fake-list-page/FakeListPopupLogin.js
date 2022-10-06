@@ -238,7 +238,6 @@ class FakeListPopupLogin {
 
     // Contact Info Vars
     const name = this.contactName;
-    const listTitle = `This List Posted by: ${name}`;
     const description = this.listDescription;
     const phone = this.contactPhone;
     const email = this.contactEmail;
@@ -260,7 +259,6 @@ class FakeListPopupLogin {
 
     // PREPARING FORM DATA FOR REST API
     let newPostData = {
-      title: listTitle,
       content: description,
       mainCatId,
       mainCatName,
@@ -309,8 +307,7 @@ class FakeListPopupLogin {
       })
       .always(() => {
         // REDIRECT TO PREVIEW PAGE
-        // window.location.href = '/list-signup/';
-        // console.log('Ajax Dynamic Loaction Filter Complete');
+        window.location.href = '/wp-login.php';
       });
   };
 }

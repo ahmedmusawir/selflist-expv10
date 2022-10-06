@@ -69,9 +69,9 @@ import SignupRedirect from './_modules/selflist-signup-redirect/SignupRedirect';
 import FakeListInsertEventsAjax from './_modules/selflist-fake-list-page/FakeListInsertEventsAjax';
 import FakeListInsertUiDataParent from './_modules/selflist-fake-list-page/FakeListInsertUiDataParent';
 import FakeListInsertValidationEvents from './_modules/selflist-fake-list-page/FakeListInsertValidationEvents';
-import FakeBtnActionListInsertPage from './_modules/selflist-fake-list-page/FakeBtnActionListInsertPage';
-import FakeListInsertPopupSignupButtonAjax from './_modules/selflist-fake-list-page/FakeListInsertPopupSignupButtonAjax';
+import FakeListBtnModalPopup from './_modules/selflist-fake-list-page/FakeListBtnModalPopup';
 import FakeListPopupLogin from './_modules/selflist-fake-list-page/FakeListPopupLogin';
+import FakeListPopupSignup from './_modules/selflist-fake-list-page/FakeListPopupSignup';
 
 class App {
   constructor() {
@@ -186,9 +186,9 @@ class App {
     new FakeListInsertEventsAjax();
     new FakeListInsertUiDataParent();
     new FakeListInsertValidationEvents();
-    new FakeBtnActionListInsertPage();
-    new FakeListInsertPopupSignupButtonAjax();
+    new FakeListBtnModalPopup();
     new FakeListPopupLogin();
+    new FakeListPopupSignup();
   }
 }
 
