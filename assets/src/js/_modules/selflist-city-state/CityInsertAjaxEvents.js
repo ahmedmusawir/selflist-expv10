@@ -7,9 +7,14 @@ class CityInsertAjaxEvents {
     this.ajaxUrl = selflistData.ajax_url;
     this.ajaxFunction = 'city_insert_ajax';
     // AJAX SUCCESS MESSAGE
+    // this.ajaxSuccessMessage = `
+    // <div class='alert alert-success rounded-0' role='alert'>
+    //   Market
+    // </div>
+    // `;
     this.ajaxSuccessMessage = `
-    <div class='alert alert-success rounded-0' role='alert'>
-      Market
+    <div class='font-weight-bold my-4' role='alert'>
+      MARKET
     </div>
     `;
   }

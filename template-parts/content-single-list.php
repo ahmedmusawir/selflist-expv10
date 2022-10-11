@@ -13,9 +13,7 @@
 
     <header class="entry-header">
         <?php
-          // SHOW STATE & CITY IN A PARENT CHILD ORDER
-          // Location: _functions/helpers-setup.php
-          print_taxonomy_ranks( get_the_terms( get_the_ID(), 'states' ) );
+         
 /**
  *
  * CATEGORY LIST WITH PARENT CHILD RELATIONSHIP
@@ -34,9 +32,7 @@ printf('%s<br>', date("m", strtotime($registered)));
 printf('%s<br>', date("d", strtotime($registered)));
 printf('%s<br>', date("y", strtotime($registered)));
 echo '</span>';
-// DISPLAY LIST ID
-echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">#' . get_the_ID() . "</p>";
-// echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
+
 
 // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
 
@@ -70,11 +66,13 @@ if (!empty($post_terms) && !is_wp_error($post_terms)) {
 echo '</section>'; //END .post-item-cat-list
 
 // ========================================= END CATEGORY LIST W/ LINKS ========================================
-// if ( is_singular() ) :
-//     the_title( '<h4 class="entry-title font-weight-bold">', '</h4>' );
-// else :
-//     the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
-// endif;
+ // SHOW STATE & CITY IN A PARENT CHILD ORDER
+          // Location: _functions/helpers-setup.php
+          print_taxonomy_ranks( get_the_terms( get_the_ID(), 'states' ) );
+
+// DISPLAY LIST ID
+echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">#' . get_the_ID() . "</p>";
+// echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";          
 
 if ('post' === get_post_type()):
 ?>

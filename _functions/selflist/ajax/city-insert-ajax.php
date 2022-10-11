@@ -3,7 +3,7 @@
  * INSERT NEW CITY TAXONOMY WITH AJAX
  */
 
-add_action('wp_ajax_nopriv_city_insert_ajax', 'city_insert_ajax');
+// add_action('wp_ajax_nopriv_city_insert_ajax', 'city_insert_ajax');
 add_action('wp_ajax_city_insert_ajax', 'city_insert_ajax');
 
 function city_insert_ajax()

@@ -110,7 +110,8 @@ foreach ($current_user_published_posts as $list) {
     echo '<h6><span class="font-weight-bold"># </span>' . $list->ID . '</h6>';
     echo '<h6><span class="font-weight-bold"></span>' .
     // echo '<h6><span class="font-weight-bold">Publish Date: </span>' .
-    date('M d, Y', strtotime($list->post_date)) . '</h6>';
+    date('m.d.y', strtotime($list->post_date)) . '</h6>';
+    // date('M d, Y', strtotime($list->post_date)) . '</h6>';
     echo '<h6><span class="font-weight-bold"></span>' . $list->post_content . '</h6>';
     // echo '<h6><span class="font-weight-bold">Words: </span>' . $list->post_content . '</h6>';
     // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';
@@ -167,7 +168,8 @@ if ($list->have_posts()):
         echo '<h6><span class="font-weight-bold"># </span>' . get_the_id() . '</h6>';
         echo '<h6><span class="font-weight-bold"></span>' .
         // echo '<h6><span class="font-weight-bold">Publish Date: </span>' .
-        date('M d, Y', strtotime(get_the_date())) . '</h6>';
+        date('m.d.y', strtotime(get_the_date())) . '</h6>';
+        // date('M d, Y', strtotime(get_the_date())) . '</h6>';
         echo '<h6><span class="font-weight-bold"></span>' . get_the_content() . '</h6>';
         // echo '<h6><span class="font-weight-bold">Words: </span>' . get_the_content() . '</h6>';
         // echo '<h6><span class="font-weight-bold">List Status: </span>' . $list->post_status . '</h6>';

@@ -7,10 +7,14 @@
 <style>
 #cat-display-ui-box {
     list-style: none;
+    margin-left: 1rem !important;
+    padding-inline-start: 0px !important;
+
 }
 
 #cat-display-ui-box ul {
     list-style: none;
+    margin-left: 0 !important;
 }
 
 #cat-display-ui-box ul ul {
@@ -22,9 +26,9 @@
 }
 </style>
 
-<ul id="cat-display-ui-box" class="card  bg-light p-5 animate__animated animate__zoomIn d-none">
+<ul id="cat-display-ui-box" class="animate__animated animate__zoomIn d-none">
     <!-- <h5 class="font-weight-bold text-dark">New</h5> -->
-    <li id="main-cat-display" class="text-dark font-weight-bold ml-1" style="list-style: none;">Tutoring</li>
+    <li id="main-cat-display" class="text-dark font-weight-bold" style="list-style: none;">Tutoring</li>
     <ul>
         <li id="primo-cat-display" class="text-danger font-weight-bold">Math</li>
         <ul>

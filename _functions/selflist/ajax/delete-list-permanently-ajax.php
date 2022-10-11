@@ -3,7 +3,7 @@
  * DELSIT - LIST STATUS UPDATE TO PENDING WITH AJAX
  */
 
-add_action('wp_ajax_nopriv_delete_list_permanently_ajax', 'delete_list_permanently_ajax');
+// add_action('wp_ajax_nopriv_delete_list_permanently_ajax', 'delete_list_permanently_ajax');
 add_action('wp_ajax_delete_list_permanently_ajax', 'delete_list_permanently_ajax');
 
  function delete_list_permanently_ajax() {

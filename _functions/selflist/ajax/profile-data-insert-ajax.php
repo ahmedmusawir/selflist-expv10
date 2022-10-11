@@ -3,7 +3,7 @@
  * INSERT MEMBER PROFILE ADDITIONAL DATA WITH AJAX
  */
 
-add_action('wp_ajax_nopriv_profile_data_insert_ajax', 'profile_data_insert_ajax');
+// add_action('wp_ajax_nopriv_profile_data_insert_ajax', 'profile_data_insert_ajax');
 add_action('wp_ajax_profile_data_insert_ajax', 'profile_data_insert_ajax');
 
  function profile_data_insert_ajax() {

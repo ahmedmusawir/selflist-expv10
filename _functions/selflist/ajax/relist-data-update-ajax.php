@@ -3,7 +3,7 @@
  * RELSIT - LIST RECREATION WITH AJAX
  */
 
-add_action('wp_ajax_nopriv_relist_data_update_ajax', 'relist_data_update_ajax');
+// add_action('wp_ajax_nopriv_relist_data_update_ajax', 'relist_data_update_ajax');
 add_action('wp_ajax_relist_data_update_ajax', 'relist_data_update_ajax');
 
  function relist_data_update_ajax() {

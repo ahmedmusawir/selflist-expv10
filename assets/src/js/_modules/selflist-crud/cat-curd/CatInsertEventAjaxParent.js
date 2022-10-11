@@ -14,9 +14,14 @@ class CatInsertEventAjaxParent {
     this.ajaxUrl = selflistData.ajax_url;
     this.ajaxFunction = '';
     // AJAX SUCCESS MESSAGE
+    // this.ajaxSuccessMessage = `
+    // <div class='alert alert-success rounded-0' role='alert'>
+    //   List
+    // </div>
+    // `;
     this.ajaxSuccessMessage = `
-    <div class='alert alert-success rounded-0' role='alert'>
-      List
+    <div class='font-weight-bold mb-4'>
+      LIST
     </div>
     `;
   }

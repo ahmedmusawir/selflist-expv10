@@ -19,7 +19,9 @@ body.login div#login h1 {
 body.login div#login h1 a {
 }
 body.login div#login form#loginform {
-  border-color: $cg-primary !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  // border-color: $cg-primary !important;
   label {
     display: none;
   }
@@ -57,8 +59,8 @@ body.login div#login form#loginform p.submit input#wp-submit {
   border-color: $cg-primary;
 }
 body.login div#login p#nav {
-  border-color: #e7e7e7;
-  background-color: #e7e7e7;
+  // border-color: #e7e7e7;
+  // background-color: #e7e7e7;
   padding: 1rem 2rem;
   border-radius: 30px;
 }

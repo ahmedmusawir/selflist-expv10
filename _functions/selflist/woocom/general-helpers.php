@@ -20,6 +20,24 @@ function woocommerce_custom_product_add_to_cart_text() {
 }
 
 /**
+ * CHECKOUT PAGE LABEL CHANGE : DEFAULT ADDRESS
+ */
+add_filter( 'woocommerce_default_address_fields' , 'custom_override_checkout_address_fields', 9999 );
+
+function custom_override_checkout_address_fields( $fields ) {
+
+    $fields['first_name']['label'] = 'First';
+    $fields['last_name']['label'] = 'Last';
+    $fields['address_1']['label'] = 'Address';
+    $fields['address_1']['placeholder'] = 'Number & Street';
+    $fields['address_2']['placeholder'] = 'Apartment';
+
+    return $fields;
+
+}
+
+
+/**
  * CHECKOUT PAGE LABEL CHANGE
  */
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
@@ -55,6 +73,18 @@ add_filter( 'gettext', function( $translated_text ) {
     }
     return $translated_text;
 } );
+
+/**
+ * CHANGE PROCEED TO PAYPAL TO BUY ON THE CHECKOUT PAGE
+ */
+// Alter WooCommerce Checkout Text
+add_filter( 'gettext', function( $translated_text ) {
+    if ( 'Proceed to PayPal' === $translated_text ) {
+        $translated_text = 'Buy';
+    }
+    return $translated_text;
+} );
+
 
 /**
  * HERE GOES ALL THE SMALL HELPER FUNCTIONS FOR WOOCOM

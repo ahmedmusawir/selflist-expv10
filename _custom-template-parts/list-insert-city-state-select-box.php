@@ -43,12 +43,22 @@
  <!-- AFTER CITY INSERT UI -->
 
 
- <ul id="city-display-ui-box" class="card  bg-light p-3 animate__animated animate__zoomIn d-none">
+ <!-- <ul id="city-display-ui-box" class="card  bg-light p-3 animate__animated animate__zoomIn d-none"> -->
+ <style>
+#city-display-ui-box {
+    padding-inline-start: 0px !important;
+}
+
+#city-display-ui-box li {
+    margin-left: 1rem;
+}
+ </style>
+ <ul id="city-display-ui-box" class="animate__animated animate__zoomIn d-none">
 
      <span id="city-insert-success"></span>
      <!-- <h5 class="text-dark"><small class="text-danger">Situs & New Market:</small></h5> -->
-     <li id="state-display-box" class="text-dark font-weight-bold ml-1" style="list-style: none;">GEORGIA</li>
-     <li id="city-display-box" class="text-dark font-weight-bold ml-1" style="list-style: none;">Atlanta</li>
+     <li id="state-display-box" class="text-dark font-weight-bold ml-3" style="list-style: none;">GEORGIA</li>
+     <li id="city-display-box" class="text-dark font-weight-bold ml-3" style="list-style: none;">Atlanta</li>
 
  </ul>
  <!-- END THE STATE DROPDOWN ROW -->

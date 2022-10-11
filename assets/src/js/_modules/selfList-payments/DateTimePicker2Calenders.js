@@ -44,7 +44,8 @@ class DateTimePicker2Calendars {
         },
         timepicker: false,
         datepicker: true,
-        format: 'M d, Y',
+        format: 'M',
+        // format: 'M d, Y',
         maxDate: this.yesterday,
         yearStart: 2021,
         // inline: true,
@@ -52,6 +53,7 @@ class DateTimePicker2Calendars {
       .on('change', () => {
         const selected = this.dateTimePickerInput.val();
         this.dateTimePickerBox.html(selected);
+        // alert(selected);
       });
   };
 
@@ -67,7 +69,8 @@ class DateTimePicker2Calendars {
       },
       timepicker: false,
       datepicker: true,
-      format: 'M d, Y',
+      format: 'm . d . y',
+      // format: 'M d, Y',
       maxDate: this.yesterday,
       yearStart: 2021,
       inline: true,
@@ -84,7 +87,8 @@ class DateTimePicker2Calendars {
       },
       timepicker: false,
       datepicker: true,
-      format: 'M d, Y',
+      format: 'm . d . y',
+      // format: 'M d, Y',
       maxDate: this.yesterday,
       yearStart: 2021,
       inline: true,
@@ -100,6 +104,7 @@ class DateTimePicker2Calendars {
     }
     if (this.selectedStart && this.selectedEnd) {
       this.outputToDate.html(this.selectedEnd);
+      alert(this.selectedEnd);
     }
 
     this.displayTimeDifference();

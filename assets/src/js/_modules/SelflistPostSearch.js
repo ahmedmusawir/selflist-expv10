@@ -4,6 +4,7 @@ class SelflistPostSearch {
   constructor() {
     // COLLECTING SEARCH INPUT
     this.searchInput = $('#post-search-input');
+
     // this.listResultContainer = $('#search-result-header');
     this.typingTimer;
 
@@ -51,6 +52,7 @@ class SelflistPostSearch {
 
     cards.each(function (i, elm) {
       const postContent = $(elm).find('#post-content').text().toLowerCase();
+      const inviteButton = $('#start-hmu-btn');
 
       // console.log(test);
       if (postContent.indexOf(inputText) != -1) {
@@ -77,6 +79,11 @@ class SelflistPostSearch {
             listResultContainer.html(
               '<h5 class="font-weight-bold"><a href="/list-insert/">List Grande</h5>'
             );
+            // THIS WILL REMOVE THE INVITE BUTTON
+            inviteButton.addClass('d-none');
+          } else {
+            // THIS WILL BRING BACK THE INVITE BUTTON
+            inviteButton.removeClass('d-none');
           }
         }, 500);
       }

@@ -4,7 +4,7 @@
  */
 
 // FOR NON LOGGED IN USERS
-add_action('wp_ajax_nopriv_secondo_cat_insert_ajax', 'secondo_cat_insert_ajax');
+// add_action('wp_ajax_nopriv_secondo_cat_insert_ajax', 'secondo_cat_insert_ajax');
 // FOR LOGGED IN USERS
 add_action('wp_ajax_secondo_cat_insert_ajax', 'secondo_cat_insert_ajax');
 

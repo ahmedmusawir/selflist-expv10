@@ -74,7 +74,6 @@ $user_email = $current_user->user_email;
     <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE HOME PAGE ================================ -->
 
     <!-- =================================== CLEAR LOCAL STORAGE BY COOKIE MEMBER PROFILE PAGE ================================ -->
-    <!-- =================================== DISABLING THIS FEATURE FOR NOW ================================ -->
     <?php
    // CHECKING FOR COOKIE
    $cookie_name = 'origin_page';
@@ -87,7 +86,7 @@ $user_email = $current_user->user_email;
     <script>
     // const fakeListData = JSON.parse(sessionStorage.getItem('fakeListPageUserData'))
     // if (fakeListData) {
-    // sessionStorage.removeItem('fakeListPageUserData');
+    //     sessionStorage.removeItem('fakeListPageUserData');
     // }
     </script>
 
