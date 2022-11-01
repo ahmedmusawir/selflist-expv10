@@ -107,7 +107,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user_id);
                     <!-- <p class="text-uppercase"><small class="font-weight-bold">My Payment Amount (1 day x .25C):
               &nbsp;$</small><span class="list-payment-amount text-danger font-weight-bold">_______</span>
           </p> -->
-                    <p class="d-none text-uppercase"><small class="font-weight-bold">My Payment Points (1 day x 1
+                    <p class="text-uppercase d-none"><small class="font-weight-bold">My Payment Points (1 day x 1
                             point):
                             &nbsp;</small><span class="list-payment-points text-danger font-weight-bold">_______</span>
                         <small class="font-weight-bold">Points</small>

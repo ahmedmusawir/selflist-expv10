@@ -57,17 +57,13 @@ class PaymentSummaryDateTimePicker {
         $(this).find('.xdsoft_date').toggleClass('xdsoft_disabled');
       },
       onChangeDateTime: (dp, $input) => {
-        // console.log('input.val', $input.val());
         this.selectedEnd = $input.val();
         this.displayDateTime();
       },
       timepicker: false,
       datepicker: true,
-      // format: 'm.d.y',
-      // This format change is not acceptable in Safari & iOS
-      // Apple browsers cannot convert this date format into numbers (NaN is generated)
-      // Thus, number of days cannot be calculated
-      format: 'M d, Y',
+      format: 'm.d.y',
+      // format: 'M d, Y',
       maxDate: this.yesterday,
       yearStart: 2021,
       inline: true,
@@ -75,16 +71,7 @@ class PaymentSummaryDateTimePicker {
   };
 
   displayDateTime = () => {
-    // Safari & iOS Bugfix
-    // So, I have to reformat the date for display format mm.dd.yy
-    const d = new Date(this.selectedEnd);
-    let year = new Intl.DateTimeFormat('en', { year: '2-digit' }).format(d);
-    let month = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(d);
-    let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
-    // console.log(`${month}.${day}.${year}`);
-    this.outputToDate.html(`${month}.${day}.${year}`);
-    // this.outputToDate.html(this.selectedEnd); // This didn't work
-
+    this.outputToDate.html(this.selectedEnd);
     // TIME CALCULATION & DISPLAY
     this.displayTimeDifference();
   };
@@ -96,10 +83,10 @@ class PaymentSummaryDateTimePicker {
     // Following is resetting the time to 0 so that it matches with the selected time from the calandar
     const startDate = newToday.setHours(0, 0, 0, 0);
     const endDate = new Date(this.selectedEnd);
-    console.log('Start Date: ', startDate);
+    // console.log('Start Date: ', startDate);
     // console.log('End Date: ', endDate);
     const timeDifference = endDate.getTime() - startDate;
-    // console.log('Time Diff: ', timeDifference);
+    console.log('Time Diff: ', timeDifference);
     // TIME CONSTANTS
     const milliSecondsInOneSecond = 1000;
     const secondsInOneHour = 3600;
@@ -109,7 +96,7 @@ class PaymentSummaryDateTimePicker {
       timeDifference /
         (milliSecondsInOneSecond * secondsInOneHour * hoursInOneDay) +
       1;
-    // console.log('Day Diff: ', dayDifference);
+    console.log('Day Diff: ', dayDifference);
     const paymentAmount = dayDifference * 0.25;
 
     // DISPLAY PUBLISH SETTINGS & PAYMENT AMOUNT
