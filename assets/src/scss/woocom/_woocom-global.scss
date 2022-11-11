@@ -3,6 +3,12 @@
  * WooCom Global General Styles
  *
  */
+// REMOVING : FROM THE CART ITEM LABELS ON MOBILE
+.woocommerce table.shop_table_responsive tr td::before,
+.woocommerce-page table.shop_table_responsive tr td::before {
+  content: attr(data-title) ' ';
+  // border: 5px dotted dodgerblue;
+}
 // (MY ACCOUNT) LOST PASSWORD PAGE
 // After WooCom installation WP Lost Password page is taken over
 // by WooCom Lost Pasword page

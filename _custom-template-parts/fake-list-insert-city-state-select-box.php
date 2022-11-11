@@ -30,8 +30,13 @@
              </article>
          </div>
          <div class="col-sm-4">
-             <a id="fake-city-new-btn" href="#" class="btn btn-secondary btn-sm btn-block">
-                 NEW SITUS
+             <style>
+             #fake-city-new-btn {
+                 width: 100% !important;
+             }
+             </style>
+             <a id="fake-city-new-btn" href="#" class="btn btn-secondary btn-sm">
+                 NEW MARKET
              </a>
          </div>
 

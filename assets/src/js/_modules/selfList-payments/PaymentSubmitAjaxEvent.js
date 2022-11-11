@@ -43,7 +43,7 @@ class PaymentSubmitAjaxEvents {
         // REDIRECTING TO LIST PUBLISH SUMMARY PAGE
         // window.location.href = '/list-publish-summary/';
         // REDIRECTING TO THE BRAND NEW PUBLISHED LIST
-        window.location.href = `/?p=${res.post_id}`;
+        window.location.href = `/?p=${res.post_id}&CLASS=d-none`;
       })
       .fail(() => {
         console.log('Ajax Failed! In ' + this.ajaxFunction);

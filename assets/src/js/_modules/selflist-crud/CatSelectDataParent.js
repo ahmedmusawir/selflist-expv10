@@ -49,7 +49,7 @@ class CatSelectDataParent {
         onType: function (text) {
           // console.log($('#select-main-cats').text());
           if ($('#select-main-cats').text() === '') {
-            alert('List GRANDE');
+            alert('List Grande');
           } else if (!this.currentResults.items.length) {
             alert('Make NEW PRIMO');
           }

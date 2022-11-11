@@ -221,16 +221,21 @@ textarea::placeholder {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <!-- <div class="modal-body">
                 <h4>Signup or Login</h4>
-                <!-- <h4>Your List Will Be Deactivated!</h4> -->
-            </div>
+            </div> -->
+            <style>
+            .btn.btn-secondary,
+            .btn.btn-primary {
+                width: 100px
+            }
+            </style>
             <div class="modal-footer justify-content-center">
                 <a href="#" id="fake-list-insert-popup-signup-btn" class="btn btn-secondary">
-                    Signup
+                    JOIN
                 </a>
                 <a href="#" id="fake-list-insert-popup-login-btn" class="btn btn-primary">
-                    Login
+                    ENTER
                 </a>
             </div>
         </div>

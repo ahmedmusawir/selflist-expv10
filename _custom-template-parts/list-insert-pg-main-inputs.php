@@ -34,7 +34,7 @@ $user_registered = $current_user->user_registered
     <div class="form-group">
         <!-- <label class="font-weight-bold" for="lister-email">Email:</label> -->
         <input type="email" class="form-control" id="lister-email" name="lister-email" aria-describedby="textHelp"
-            placeholder="Email Address">
+            placeholder="Email">
         <!-- <small id="textHelp" class="form-text text-muted">Ex: john@doe.com</small> -->
     </div>
     <!-- WEBSITE -->

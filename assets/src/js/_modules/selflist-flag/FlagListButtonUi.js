@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { get, set } from 'idb-keyval';
-import Bootstrap from 'bootstrap';
+// import Bootstrap from 'bootstrap';
 
 class FlagListButtonUi {
   constructor() {

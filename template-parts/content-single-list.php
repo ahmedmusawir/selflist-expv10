@@ -7,6 +7,18 @@
  * @package cyberize-app-dev
  */
 
+  /*
+  * HANDLING URL PARAMETER TO REMOVE BACK BTN CONDITIONALLY
+  */
+ // Test if the query exists at the URL
+ if (get_query_var('CLASS')) {
+
+  // If so echo the value
+    // echo get_query_var('CLASS');
+  $D_NONE = get_query_var('CLASS');
+
+ }
+
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class('post-item animate__animated');?>>
@@ -100,7 +112,7 @@ if ('post' === get_post_type()):
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
-            <div class="back-holder">
+            <div class="back-holder <?php echo $D_NONE; ?>">
                 <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Back</a>
             </div>
             <div class="back-holder d-none">

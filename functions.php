@@ -174,3 +174,11 @@ require get_theme_file_path('/_functions/selflist/wp-admin/user-logins.php');
 require get_theme_file_path('/_functions/selflist/wp-admin/manual-login-logout.php');
 // PAGE REDICTION AND COOKIE MAKING AJAX ETC.
 require get_theme_file_path('/_functions/selflist/ajax/make-cookie-and-redirect-ajax.php');
+
+// ADDING NEW QUERY VAR 'CLASS' TO REMOVE BACK BUTTON FROM SINGLE LIST PAGE AFTER LIST PUBLISH
+add_action('init', 'add_CLASS_val');
+function add_CLASS_val()
+{
+ global $wp;
+ $wp->add_query_var('CLASS');
+}

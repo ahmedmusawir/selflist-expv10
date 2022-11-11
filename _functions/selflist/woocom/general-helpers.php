@@ -31,9 +31,9 @@ function custom_override_checkout_address_fields( $fields ) {
     $fields['address_1']['label'] = 'Address';
     $fields['address_1']['placeholder'] = 'Number & Street';
     $fields['address_2']['placeholder'] = 'Apartment';
-
+    
     return $fields;
-
+    
 }
 
 
@@ -42,7 +42,8 @@ function custom_override_checkout_address_fields( $fields ) {
  */
 add_filter('woocommerce_checkout_fields', 'custom_override_checkout_fields');
 function custom_override_checkout_fields($fields)
- {
+{
+    $fields['billing']['billing_company']['label'] = 'Company';
     $fields['billing']['billing_country']['label'] = 'Country';
     // THE FOLLOWING DIDN'T WORK FOR LABEL BUT PLACEHOLDER WORKED
     // $fields['billing']['billing_city']['label'] = 'City';
