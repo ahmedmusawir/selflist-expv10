@@ -16,6 +16,7 @@ if (is_user_logged_in()) {
 ?>
 
 <main id="primary" class="site-main container">
+    <h3 class="text-center pb-4">SHARE</h3>
     <div class="row">
         <div class="col-md-12">
             <?php

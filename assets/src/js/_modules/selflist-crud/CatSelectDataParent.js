@@ -97,7 +97,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if (!this.currentResults.items.length) {
-            alert('List Situs');
+            alert('List Location');
           }
         },
       });
@@ -111,7 +111,7 @@ class CatSelectDataParent {
         sortField: 'text',
         onType: function (text) {
           if ($('#select-all-states').text() === '') {
-            alert('List Situs');
+            alert('List LOCATION');
           } else if (!this.currentResults.items.length) {
             alert('List NEW MARKET');
           }

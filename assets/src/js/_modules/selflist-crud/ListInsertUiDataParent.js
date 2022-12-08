@@ -94,7 +94,7 @@ class ListInsertUiDataParent extends CatSelectDataParent {
           this.selectAllCityCtrl.focus();
         }
       } else {
-        alert('List Situs');
+        alert('List Location');
         // alert('Please choose a State ...');
         // SCROLL TO TOP
         window.scrollTo(0, 0);

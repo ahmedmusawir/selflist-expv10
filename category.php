@@ -53,12 +53,12 @@ textarea::placeholder {
 }
 
 .filter-btns {
-    width: 10rem;
+    width: 15rem;
 }
 </style>
 <main id="primary" class="site-main container">
 
-    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2 filter-btns">Situs & Market</button>
+    <button id="filter-by-state-city-btn" class="btn btn-outline-danger mb-2 filter-btns">Location & Market</button>
 
     <?php if (is_user_logged_in()) : ?>
 
@@ -215,7 +215,10 @@ textarea::placeholder {
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
                         required autocomplete="off" placeholder="This FLAG will also be shared with the lister.">
                     </textarea>
-                    <small class="float-right mb-3">Up to 140 Characters</small>
+                    <small class="float-right mb-3"><span style="font-size: 1.2rem">&#x2264;</span> 140
+                        Characters</small>
+                    <!-- <small class="float-right mb-3">Up to 140 Characters</small> -->
+
                     <button id="flag-ajax-submit-btn" type="submit"
                         class="btn btn-primary btn-block flag-ajax-submit-btn">
                         Flag It Now!

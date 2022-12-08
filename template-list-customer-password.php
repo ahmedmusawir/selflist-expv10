@@ -105,7 +105,8 @@ textarea::placeholder {
                             <input type="password" class="form-control" id="lister-password" name="lister-password"
                                 aria-describedby="textHelp" placeholder="Password"
                                 value="<?php echo $current_user->user_pass ?>">
-                            <small id="textHelp" class="form-text text-muted">8 Characters or more</small>
+                            <small id="textHelp" class="form-text text-muted"><span
+                                    style="font-size: 1rem">&#x2265;</span> 8 Characters</small>
                         </div>
 
                         <!-- PASSWORD CONFIRMATION -->

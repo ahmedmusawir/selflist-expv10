@@ -188,11 +188,11 @@ if ('post' === get_post_type()):
                 </a>
             </div>
 
-            <div class="flex-icon-item">
+            <!-- <div class="flex-icon-item">
                 <a href="/list-chat/" target="_blank">
                     <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
                 </a>
-            </div>
+            </div> -->
             <!-- <div class="flex-icon-item mr-3">
                 <div class="form-group">
                     <div class="input-group mb-2">

@@ -14,7 +14,7 @@ class CityInsertAjaxEvents {
     // `;
     this.ajaxSuccessMessage = `
     <div class='font-weight-bold my-4' role='alert'>
-      SITUS & MARKET
+      Location & Market
     </div>
     `;
   }

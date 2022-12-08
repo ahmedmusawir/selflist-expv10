@@ -182,3 +182,42 @@ function add_CLASS_val()
  global $wp;
  $wp->add_query_var('CLASS');
 }
+
+// GRAVITY STRENGTH INDICATOR TEXT REMOVAL
+add_filter('gettext', 'translate_text'); 
+add_filter('ngettext', 'translate_text');
+
+function translate_text($translated) { 
+    $translated = str_ireplace('Strength indicator', '', $translated); 
+    $translated = str_ireplace('Very Weak', '', $translated); 
+    $translated = str_ireplace('Weak', '', $translated); 
+    $translated = str_ireplace('OK', '', $translated); 
+    $translated = str_ireplace('Medium', '', $translated); 
+    $translated = str_ireplace('Strong', '', $translated); 
+
+
+    return $translated; 
+}
+
+// ADDING NEW QUERY VARS FOR THE FAKE LIST PREVIEW PAGE 
+add_action('init', 'add_fake_list_preview_values');
+function add_fake_list_preview_values()
+{
+ global $wp;
+ $wp->add_query_var('GRANDE');
+ $wp->add_query_var('PRIMO');
+ $wp->add_query_var('SECONDO');
+ $wp->add_query_var('TERZO');
+ $wp->add_query_var('STATE');
+ $wp->add_query_var('CITY');
+ $wp->add_query_var('CONTENT');
+ $wp->add_query_var('PHONE');
+ $wp->add_query_var('WEBSITE');
+ $wp->add_query_var('EMAIL');
+ $wp->add_query_var('FB');
+ $wp->add_query_var('YELP');
+ $wp->add_query_var('INSTA');
+ $wp->add_query_var('LINKEDIN');
+ $wp->add_query_var('TWITTER');
+ $wp->add_query_var('YOUTUBE');
+}

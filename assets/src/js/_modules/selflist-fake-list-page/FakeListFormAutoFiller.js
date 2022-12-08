@@ -1,12 +1,17 @@
 import $ from 'jquery';
-import { get, set } from 'idb-keyval';
-import CatSelectDataParent from './CatSelectDataParent';
+import CatSelectDataParent from '../selflist-crud/CatSelectDataParent';
 
-class ListFormAutoFiller extends CatSelectDataParent {
+class FakeListFormAutoFiller extends CatSelectDataParent {
   constructor() {
     super();
-    // This code fills the List Insert Form with data from indexedDb (info) that was filled up when the Profile page was loaded after a successful login. REF: [ProfileDataToIndexDb.js]
     this.init();
+    // COLLECTING ELEMENTS
+    this.button = $('#univ-load-more-btn');
+    this.fillListInsertForm();
+  }
+
+  init = () => {
+    console.log('Fake List Form Autofiller ...');
     // FAKE LIST PAGE VARS
     this.fakeMainCatId;
     this.fakeMainCatText;
@@ -36,33 +41,6 @@ class ListFormAutoFiller extends CatSelectDataParent {
     this.socialLinkedin = $('#lister-linkedin');
     this.socialYoutube = $('#lister-youtube');
     this.socialTwitter = $('#lister-twitter');
-    // GETTING PROFILE DATA FROM INDEXED DB
-    this.memberProfileInfo;
-    this.getProfileData();
-  }
-
-  init = () => {
-    // console.log('List Auto Filler...');
-  };
-
-  getProfileData = () => {
-    // Making sure that the Data load only happens when the following
-    // Form element is present and nowhere else
-    if (this.listInsertMainForm.length) {
-      get('info')
-        .then((data) => {
-          // console.log('rawData: ', data);
-          this.memberProfileInfo = data;
-          // FILLING THE INSERT FORM
-          this.fillListInsertForm();
-        })
-        .catch((err) => {
-          console.error(
-            'Failed to get Profile Data from indexedDb: [ListFormAutoFiller.js]',
-            err
-          );
-        });
-    }
   };
 
   fillCatsStateCity = () => {
@@ -190,22 +168,8 @@ class ListFormAutoFiller extends CatSelectDataParent {
       this.socialLinkedin.val(fakeListPageUserData.linkedin);
       this.socialTwitter.val(fakeListPageUserData.twitter);
       this.socialYoutube.val(fakeListPageUserData.youtube);
-    } else {
-      // console.log('Form Filler: ', this.memberProfileInfo.name);
-      // ADD CONTACT DATA TO THE LIST INSERT SCREEN
-      this.contactName.val(this.memberProfileInfo.name);
-      this.contactPhone.val(this.memberProfileInfo.phone);
-      this.contactEmail.val(this.memberProfileInfo.email);
-      this.contactWebsite.val(this.memberProfileInfo.site);
-      // ADD SOCIAL DATA TO THE LIST INSERT SCREEN
-      this.socialFacebook.val(this.memberProfileInfo.facebook);
-      this.socialYelp.val(this.memberProfileInfo.yelp);
-      this.socialInstagram.val(this.memberProfileInfo.instagram);
-      this.socialLinkedin.val(this.memberProfileInfo.linkedin);
-      this.socialYoutube.val(this.memberProfileInfo.youtube);
-      this.socialTwitter.val(this.memberProfileInfo.twitter);
     }
   };
 }
 
-export default ListFormAutoFiller;
+export default FakeListFormAutoFiller;

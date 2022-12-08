@@ -38,8 +38,8 @@ class FakeListInsertUiDataParent extends CatSelectDataParent {
     this.contactPhone;
     this.contactEmail;
     this.contactWebsite;
-    this.contactState;
-    this.contactCity;
+    // this.contactState;
+    // this.contactCity;
     this.socialFacebook;
     this.socialYelp;
     this.socialYoutube;
@@ -94,7 +94,7 @@ class FakeListInsertUiDataParent extends CatSelectDataParent {
           this.selectAllCityCtrl.focus();
         }
       } else {
-        alert('List Situs');
+        alert('List Location');
         // alert('Please choose a State ...');
         // SCROLL TO TOP
         window.scrollTo(0, 0);

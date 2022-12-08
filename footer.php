@@ -17,6 +17,18 @@ $user_email = $current_user->user_email;
 
 ?>
 
+<style>
+.site-info,
+.support-link,
+.term-and-conditions {
+    font-size: .9rem;
+}
+
+.site-info {
+    color: black;
+}
+</style>
+
 
 <footer id="colophon" class="site-footer navbar fixed-bottom navbar-light bg-light">
     <div class="site-info">
@@ -25,7 +37,8 @@ $user_email = $current_user->user_email;
         <?php 
         if (is_user_logged_in()) {
         ?>
-        <a href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
+        <a class="support-link"
+            href="/selflist-support/?FIRST_NAME=<?php echo $user_firstname; ?>&LAST_NAME=<?php echo $user_lastname; ?>&MEMBER_EMAIL=<?php echo $user_email; ?>&MEMBER_ID=<?php echo $user_id; ?>"
             style="margin-left: 5px">
             SUPPORT
         </a>

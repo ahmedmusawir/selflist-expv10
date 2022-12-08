@@ -12,7 +12,7 @@ function list_preview_ajax()
     $post_id = $_POST['post_id'];
 
     // PAGE TITLE
-    echo '<h3 class="text-center">PREVIEW<h3>';
+    echo '<h3 class="text-center pt-3">PREVIEW<h3>';
     // echo '<h6 class="text-center">(Links are functional on active listing)</h6>';
     // echo '<h6 class="text-center">(List Status: Pending)</h6>';
 
@@ -208,11 +208,11 @@ input[type="checkbox"]:checked:before {
                         </a>
                     </div>
 
-                    <div class="flex-icon-item">
+                    <!-- <div class="flex-icon-item">
                         <a href="/list-chat/" target="_blank">
                             <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
                         </a>
-                    </div>
+                    </div> -->
                     <!-- <div class="flex-icon-item mr-3">
                         <div class="form-group" id="flag-btn">
                             <div class="input-group mb-2 mt-1">
@@ -279,6 +279,7 @@ input[type="checkbox"]:checked:before {
         </article><!-- #post-ENDS -->
     </main>
 </section>
+
 <script>
 jQuery(function($) {
     $('#list-hmu-checkbox').on('click', function() {

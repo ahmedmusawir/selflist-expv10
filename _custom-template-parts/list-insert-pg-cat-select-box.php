@@ -1,7 +1,8 @@
  <!-- * LIST INSERT PAGE - CATEGORY SELECTIZE INPUT FORM -->
 
  <section id="category-choice-box">
-     <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
+     <label class="font-weight-bold" for="exampleFormControlTextarea1">Categories</label>
+     <!-- <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label> -->
 
      <div class="row">
          <!-- MAIN CATEGORY DROPDOWN -->
