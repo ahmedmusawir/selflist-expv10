@@ -15,24 +15,30 @@
 // get_header();
 get_header('loggedout');
 
+// CURRENT DATE
+$CURRENT_DATE = date('m.d.Y', time());
+$date = date('m/d/Y h:i:s a', time());
+
 /*
   * HANDLING URL PARAMETER 
   */
+//  echo '<pre>';
+//  print_r($wp->query_vars);
+//  echo '</pre>';
+
+
  // Test if the query exists at the URL
  if (get_query_var('GRANDE')) {
 
-  // If so echo the value
-    // echo get_query_var('GRANDE');
+  // echo get_query_var('GRANDE');
   $GRANDE = get_query_var('GRANDE');
 
  }
-
  if (get_query_var('PRIMO')) {
 
   $PRIMO = get_query_var('PRIMO');
 
  }
-
  if (get_query_var('SECONDO')) {
 
   $SECONDO = get_query_var('SECONDO');
@@ -41,6 +47,73 @@ get_header('loggedout');
  if (get_query_var('TERZO')) {
 
   $TERZO = get_query_var('TERZO');
+
+ }
+ if (get_query_var('STATE')) {
+
+  $STATE = get_query_var('STATE');
+
+ }
+ if (get_query_var('CITY')) {
+
+  $CITY = get_query_var('CITY');
+
+ }
+ if (get_query_var('CONTENT')) {
+
+  $CONTENT = get_query_var('CONTENT');
+//   echo get_query_var('CONTENT');
+
+ }
+ if (get_query_var('PHONE')) {
+
+  $PHONE = get_query_var('PHONE');
+//   echo get_query_var('PHONE');
+
+ }
+ if (get_query_var('WEBSITE')) {
+
+  $WEBSITE = get_query_var('WEBSITE');
+//   echo get_query_var('WEBSITE');
+
+
+ }
+ if (get_query_var('EMAIL')) {
+
+  $EMAIL = get_query_var('EMAIL');
+//   echo get_query_var('EMAIL');
+  
+}
+ if (get_query_var('FB')) {
+
+  $FB = get_query_var('FB');
+//   echo get_query_var('FB');
+
+
+ }
+ if (get_query_var('YELP')) {
+
+  $YELP = get_query_var('YELP');
+
+ }
+ if (get_query_var('INSTA')) {
+
+  $INSTA = get_query_var('INSTA');
+
+ }
+ if (get_query_var('LINKEDIN')) {
+
+  $LINKEDIN = get_query_var('LINKEDIN');
+
+ }
+ if (get_query_var('TWITTER')) {
+
+  $TWITTER = get_query_var('TWITTER');
+
+ }
+ if (get_query_var('YOUTUBE')) {
+
+  $YOUTUBE = get_query_var('YOUTUBE');
 
  }
 
@@ -94,9 +167,9 @@ get_header('loggedout');
                             <span class="bg-danger text-light font-weight-bold float-right py-2 px-4"
                                 style="font-size: .8rem;">
                                 <?php 
-                                printf('%s<br>', date("m", strtotime($registered)));
-                                printf('%s<br>', date("d", strtotime($registered)));
-                                printf('%s<br>', date("y", strtotime($registered)));
+                                printf('%s<br>', date("m", strtotime($date)));
+                                printf('%s<br>', date("d", strtotime($date)));
+                                printf('%s<br>', date("y", strtotime($date)));
                                 echo '</span>';
                                 ?>
 
@@ -120,7 +193,8 @@ get_header('loggedout');
                                 <p class="text-dark text-uppercase font-weight-bold"
                                     style="font-size: .75rem; margin-bottom: 0;">
                                     <!-- <small class="font-weight-bold"> -->
-                                    <span class="text-info">ALASKA, </span><span class="text-info">Anchorage</span>
+                                    <span class="text-info"><?php echo $STATE ?>,</span>&nbsp; <span
+                                        class="text-info"><?php echo $CITY ?></span>
                                     <!-- </small> -->
                                 </p>
                                 <!-- END LOCATION -->
@@ -130,70 +204,68 @@ get_header('loggedout');
                                 <!-- END LIST ID -->
 
                                 <div class="entry-meta">
-                                    <span class="posted-on"> <time class="entry-date published updated"
-                                            datetime="2022-12-07T03:34:08+00:00">12.7.22</time></span>
+                                    <span class="posted-on"> <time
+                                            class="entry-date published updated"><?php echo $CURRENT_DATE; ?></time></span>
                                 </div><!-- .entry-meta -->
                     </header><!-- .entry-header -->
 
 
                     <div id="post-content" class="entry-content">
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                            invidunt ut labore et dolore magna aliquyam erat, sed
+                            <?php echo $CONTENT; ?>
                         </p>
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer">
 
                         <section class="flex-icon-five">
-
-                            <?php if (get_field('your_facebook')): ?>
+                            <?php if ($FB): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_facebook') ?>" target="_blank">
+                                <a href="<?php echo $FB; ?>" target="_blank">
                                     <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png"
                                         alt="Facebook Link">
                                 </a>
                             </div>
                             <?php endif;?>
 
-                            <?php if (get_field('your_twitter')): ?>
+                            <?php if ($TWITTER): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_twitter') ?>" target="_blank">
+                                <a href="<?php echo $TWITTER; ?>" target="_blank">
                                     <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png"
                                         alt="Twitter Link">
                                 </a>
                             </div>
                             <?php endif;?>
 
-                            <?php if (get_field('your_yelp')): ?>
+                            <?php if ($YELP): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_yelp') ?>" target="_blank">
+                                <a href="<?php echo $YELP; ?>" target="_blank">
                                     <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
                                 </a>
                             </div>
                             <?php endif;?>
 
-                            <?php if (get_field('your_instagram')): ?>
+                            <?php if ($INSTA): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_instagram') ?>" target="_blank">
+                                <a href="<?php echo $INSTA ?>" target="_blank">
                                     <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png"
                                         alt="Instagram Link">
                                 </a>
                             </div>
                             <?php endif;?>
 
-                            <?php if (get_field('your_linkedin')): ?>
+                            <?php if ($LINKEDIN): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_linkedin') ?>" target="_blank">
+                                <a href="<?php echo $LINKEDIN ?>" target="_blank">
                                     <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png"
                                         alt="Linkedin Link">
                                 </a>
                             </div>
                             <?php endif;?>
 
-                            <?php if (get_field('your_youtube')): ?>
+                            <?php if ($YOUTUBE): ?>
                             <div class="flex-icon-item">
-                                <a href="<?php the_field('your_youtube') ?>" target="_blank">
+                                <a href="<?php echo $YOUTUBE ?>" target="_blank">
                                     <img title="Your Youtube Page" src="/wp-content/uploads/Youtube-Icon.png"
                                         alt="youtube Link">
                                 </a>
@@ -205,21 +277,21 @@ get_header('loggedout');
                         <section class="flex-icon-five">
 
                             <div class="flex-icon-item">
-                                <a href="tel:<?php the_field('your_phone') ?>">
-                                    <img title="Phone: <?php the_field('your_phone') ?>"
-                                        src="/wp-content/uploads/Cell-icon.png" alt="Phone Number">
+                                <a href="tel:<?php echo $PHONE; ?>">
+                                    <img title="Phone: <?php echo $PHONE; ?>" src="/wp-content/uploads/Cell-icon.png"
+                                        alt="Phone Number">
                                 </a>
                             </div>
                             <div class="flex-icon-item">
                                 <!-- <a href="mailto:webmaster@example.com"> -->
-                                <a href="mailto:<?php echo get_field('your_email'); ?>" target="_blank">
-                                    <img title="<?php echo get_field('your_email'); ?>"
-                                        src="/wp-content/uploads/Email-icon.png" alt="Email Address">
+                                <a href="mailto:<?php echo $EMAIL; ?>" target="_blank">
+                                    <img title="Email: <?php echo $EMAIL; ?>" src="/wp-content/uploads/Email-icon.png"
+                                        alt="Email Address">
                                 </a>
                             </div>
                             <div class="flex-icon-item">
-                                <a href="<?php echo get_field('your_site'); ?>" target="_blank">
-                                    <img title="<?php echo get_field('your_site'); ?>"
+                                <a href="<?php echo $WEBSITE; ?>" target="_blank">
+                                    <img title="Site: <?php echo $WEBSITE; ?>"
                                         src="/wp-content/uploads/Website-icon.png" alt="Website Link">
                                 </a>
                             </div>
@@ -318,4 +390,5 @@ get_header('loggedout');
         </script>
 
         <?php
-get_footer();
+ 
+ get_footer();

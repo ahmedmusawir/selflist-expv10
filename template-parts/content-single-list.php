@@ -19,6 +19,11 @@
 
  }
 
+//  echo '<pre>';
+//  print_r($wp->query_vars);
+//  echo '</pre>';
+
+
 ?>
 
 <article id="post-<?php the_ID();?>" <?php post_class('post-item animate__animated');?>>

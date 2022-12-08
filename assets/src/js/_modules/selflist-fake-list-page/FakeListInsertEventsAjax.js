@@ -150,7 +150,7 @@ class FakeListInsertEventsAjax extends FakeListInsertValidationEvents {
       })
       .always(() => {
         // REDIRECT TO PREVIEW PAGE
-        window.location.href = `/list-preview-fake/?GRANDE=${mainCatName}&PRIMO=${primoCatName}&SECONDO=${secondoCatName}&TERZO=${terzoCatName}`;
+        window.location.href = `/list-preview-fake/?GRANDE=${mainCatName}&PRIMO=${primoCatName}&SECONDO=${secondoCatName}&TERZO=${terzoCatName}&STATE=${stateName}&CITY=${cityName}&CONTENT=${description}&PHONE=${phone}&WEBSITE=${site}&EMAIL=${email}&FB=${facebook}&YELP=${yelp}&INSTA=${instagram}&LINKEDIN=${linkedin}&TWITTER=${twitter}&YOUTUBE=${youtube}`;
         // console.log('Ajax Dynamic Loaction Filter Complete');
       });
 

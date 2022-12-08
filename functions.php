@@ -221,3 +221,9 @@ function add_fake_list_preview_values()
  $wp->add_query_var('TWITTER');
  $wp->add_query_var('YOUTUBE');
 }
+
+// function add_vars() {
+//     global $wp;
+//     $wp->add_query_var('moose');
+// }
+// add_action('init', 'add_vars');

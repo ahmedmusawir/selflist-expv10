@@ -13,6 +13,7 @@
  */
 
 get_header('loggedout');
+
 ?>
 
 <div id="primary" class="site-main container pt-5">
