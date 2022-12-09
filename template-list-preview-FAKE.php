@@ -178,13 +178,28 @@ $date = date('m/d/Y h:i:s a', time());
                                 <!-- CATEGORY LIST -->
                                 <p class="text-dark text-uppercase" style="font-size: 1rem; margin-bottom: 0;">
                                     <small class="font-weight-bold text-danger">
-                                        <span class="text-danger"><?php echo $GRANDE ?></span>&nbsp;&nbsp;<i
-                                            class="fas fa-arrow-right text-dark"></i>&nbsp;<span
-                                            class="text-danger"><?php echo $PRIMO ?></span>
-                                        &nbsp;&nbsp;<i class="fas fa-arrow-right text-dark"></i>&nbsp;<span
-                                            class="text-danger"><?php echo $SECONDO ?></span>
-                                        &nbsp;&nbsp;<i class="fas fa-arrow-right text-dark"></i>&nbsp;<span
-                                            class="text-danger"><?php echo $TERZO ?></span>
+                                        <span class="text-danger"><?php echo $GRANDE ?></span>&nbsp;
+                                        <?php if ($PRIMO != undefined): ?>
+
+                                        <i class="fas fa-arrow-right text-dark"></i>&nbsp;
+                                        <span class="text-danger"><?php echo $PRIMO ?></span>&nbsp;
+
+                                        <?php endif;?>
+                                        <?php if ($SECONDO != undefined): ?>
+
+                                        <i class="fas fa-arrow-right text-dark"></i>&nbsp;
+                                        <span class="text-danger"><?php echo $SECONDO ?></span>&nbsp;
+
+                                        <?php endif;?>
+
+                                        <?php if ($TERZO != undefined): ?>
+
+                                        <i class="fas fa-arrow-right text-dark"></i>&nbsp;
+                                        <span class="text-danger"><?php echo $TERZO ?></span>
+
+                                        <?php endif;?>
+
+
                                     </small>
                                 </p>
                                 <!-- END CATEGORY LIST -->
