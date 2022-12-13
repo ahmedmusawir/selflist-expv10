@@ -8,7 +8,7 @@
 
          <div class="col-sm-12">
              <article class="main-cat-box">
-                 <select id="select-all-states" class="select-all-states" placeholder="Situs">
+                 <select id="select-all-states" class="select-all-states" placeholder="Location">
                      <option value="">Select a Situs</option>
                      <?php make_state_country_dropdown(); ?>
                  </select>
