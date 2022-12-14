@@ -96,7 +96,6 @@ require get_template_directory() . '/_functions/selflist/wp-admin/wp-logon-scree
 // SELFLIST CUSTOM USER ROLES & PERMISSIONS
 // require get_theme_file_path('/_functions/selflist/selflist-user-roles.php');
 
-
 // SELFLIST SUB CATEGORIES LISTING FUNCTION
 require get_theme_file_path('/_functions/selflist/selflist-get-category-list.php');
 
@@ -131,7 +130,6 @@ require get_theme_file_path('/_functions/selflist/woocom/general-helpers.php');
 require get_theme_file_path('/_functions/selflist/gravity/add-signup-customer-points.php');
 require get_theme_file_path('/_functions/selflist/gravity/hmu-multi-email-send.php');
 
-
 // THIS UPDATES THE CATEGORY JSON FILE MANUALLY
 // require get_theme_file_path('/_functions/selflist/taxonomy/selflist-auto-update-cat-json.php');
 
@@ -154,7 +152,7 @@ require get_theme_file_path('/_functions/selflist/ajax/delete-list-permanently-a
 require get_theme_file_path('/_functions/selflist/ajax/profile-data-insert-ajax.php');
 require get_theme_file_path('/_functions/selflist/ajax/profile_pass_update_ajax.php');
 
-// FLAG RELATED 
+// FLAG RELATED
 require get_theme_file_path('/_functions/selflist/cpt/flag-post-type.php');
 require get_theme_file_path('/_functions/selflist/cpt/blog-post-type.php');
 require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
@@ -162,7 +160,7 @@ require get_theme_file_path('/_functions/selflist/ajax/list-flag-ajax.php');
 // SETTING UP CRON TEST
 // require get_theme_file_path('/_functions/selflist/wp-cron/wp-cron-test.php');
 require get_theme_file_path('/_functions/selflist/wp-cron/selflist-auto-point-add-monthly.php');
-// WP ADMIN LEFT MENU RELATED 
+// WP ADMIN LEFT MENU RELATED
 require get_theme_file_path('/_functions/selflist/wp-admin/menu-change-post-to-list.php');
 // WP ADMIN NOTIFICATION AFTER POST PUBLISH
 require get_theme_file_path('/_functions/selflist/wp-admin/send-notification-at-list-publish.php');
@@ -179,51 +177,64 @@ require get_theme_file_path('/_functions/selflist/ajax/make-cookie-and-redirect-
 add_action('init', 'add_CLASS_val');
 function add_CLASS_val()
 {
- global $wp;
- $wp->add_query_var('CLASS');
+    global $wp;
+    $wp->add_query_var('CLASS');
 }
 
 // GRAVITY STRENGTH INDICATOR TEXT REMOVAL
-add_filter('gettext', 'translate_text'); 
+add_filter('gettext', 'translate_text');
 add_filter('ngettext', 'translate_text');
 
-function translate_text($translated) { 
-    $translated = str_ireplace('Strength indicator', '', $translated); 
-    $translated = str_ireplace('Very Weak', '', $translated); 
-    $translated = str_ireplace('Weak', '', $translated); 
-    $translated = str_ireplace('OK', '', $translated); 
-    $translated = str_ireplace('Medium', '', $translated); 
-    $translated = str_ireplace('Strong', '', $translated); 
+function translate_text($translated)
+{
+    $translated = str_ireplace('Strength indicator', '', $translated);
+    $translated = str_ireplace('Very Weak', '', $translated);
+    $translated = str_ireplace('Weak', '', $translated);
+    $translated = str_ireplace('OK', '', $translated);
+    $translated = str_ireplace('Medium', '', $translated);
+    $translated = str_ireplace('Strong', '', $translated);
 
-
-    return $translated; 
+    return $translated;
 }
 
-// ADDING NEW QUERY VARS FOR THE FAKE LIST PREVIEW PAGE 
+// ADDING NEW QUERY VARS FOR THE FAKE LIST PREVIEW PAGE
 add_action('init', 'add_fake_list_preview_values');
 function add_fake_list_preview_values()
 {
- global $wp;
- $wp->add_query_var('GRANDE');
- $wp->add_query_var('PRIMO');
- $wp->add_query_var('SECONDO');
- $wp->add_query_var('TERZO');
- $wp->add_query_var('STATE');
- $wp->add_query_var('CITY');
- $wp->add_query_var('CONTENT');
- $wp->add_query_var('PHONE');
- $wp->add_query_var('WEBSITE');
- $wp->add_query_var('EMAIL');
- $wp->add_query_var('FB');
- $wp->add_query_var('YELP');
- $wp->add_query_var('INSTA');
- $wp->add_query_var('LINKEDIN');
- $wp->add_query_var('TWITTER');
- $wp->add_query_var('YOUTUBE');
+    global $wp;
+    $wp->add_query_var('GRANDE');
+    $wp->add_query_var('PRIMO');
+    $wp->add_query_var('SECONDO');
+    $wp->add_query_var('TERZO');
+    $wp->add_query_var('STATE');
+    $wp->add_query_var('CITY');
+    $wp->add_query_var('CONTENT');
+    $wp->add_query_var('PHONE');
+    $wp->add_query_var('WEBSITE');
+    $wp->add_query_var('EMAIL');
+    $wp->add_query_var('FB');
+    $wp->add_query_var('YELP');
+    $wp->add_query_var('INSTA');
+    $wp->add_query_var('LINKEDIN');
+    $wp->add_query_var('TWITTER');
+    $wp->add_query_var('YOUTUBE');
 }
 
-// function add_vars() {
-//     global $wp;
-//     $wp->add_query_var('moose');
-// }
-// add_action('init', 'add_vars');
+/**
+ * CUSTOMIZING AUTHOR ARCHIVE TITLE
+ */
+
+add_filter('get_the_archive_title', function ($title) {
+
+    if (is_author()) {
+
+        $fname = get_the_author_meta('first_name');
+        $lname = get_the_author_meta('last_name');
+
+        $title = $fname . ' ' . $lname;
+
+    }
+
+    return $title;
+
+});

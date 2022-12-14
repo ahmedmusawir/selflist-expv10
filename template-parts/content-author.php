@@ -141,10 +141,7 @@ if ('post' === get_post_type()):
             <p class="list-author float-left">
                 <!-- Chat: -->
                 <span class="text-danger">
-                    <?php //the_author_posts_link(); ?>
-                    <a href="<?php echo get_author_posts_url($udata->ID); ?>">
-                        <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
-                    </a>
+                    <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
             <a class="btn btn-outline-danger btn-sm float-right mt-1" href="<?php echo get_permalink(); ?>">SHARE</a>
