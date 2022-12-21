@@ -6,7 +6,9 @@
 // REMOVING : FROM THE CART ITEM LABELS ON MOBILE
 .woocommerce table.shop_table_responsive tr td::before,
 .woocommerce-page table.shop_table_responsive tr td::before {
-  content: attr(data-title) ' ';
+  @media (max-width: 768px) {
+    content: attr(data-title) ' ';
+  }
   // border: 5px dotted dodgerblue;
 }
 // (MY ACCOUNT) LOST PASSWORD PAGE

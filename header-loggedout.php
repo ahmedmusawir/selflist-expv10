@@ -96,4 +96,4 @@
             </figure>
 
         </header><!-- #masthead -->
-        <hr class="bg-danger">
+        <!-- <hr class="bg-danger"> -->

@@ -23,14 +23,14 @@
       margin-top: 0rem !important;
       margin-left: 0rem !important;
       height: 3.6rem !important;
-      line-height: 3rem !important;
+      line-height: 3.6rem !important;
       width: 94% !important;
       // width: 87% !important;
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 400;
       color: red;
       padding-left: 1rem;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.35rem;
       border: 1px solid red;
       border-radius: 8px;
       &:focus {
@@ -39,7 +39,8 @@
       &::placeholder {
         font-size: 1.3rem !important;
         color: lighten($color: red, $amount: 30%);
-        // line-height: 3.3rem !important;
+        // line-height: 6rem !important; DOESN'T WORK
+        // padding-bottom: 1rem !important; DOESN'T WORK
       }
 
       @media (max-width: 1199px) {

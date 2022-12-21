@@ -113,4 +113,4 @@ $user_email = $current_user->user_email;
             </figure>
 
         </header><!-- #masthead -->
-        <hr class="bg-danger">
+        <!-- <hr class="bg-danger"> -->

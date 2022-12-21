@@ -28,10 +28,10 @@
         height: 3rem !important;
         width: 94% !important;
         font-size: 1.5rem;
-        font-weight: 600;
-        color: black;
+        font-weight: 400;
+        color: red;
         padding-left: 1rem;
-        padding-bottom: 0rem;
+        padding-bottom: 0.2rem;
         border-radius: 5px;
         border: 1px solid red;
 
@@ -44,7 +44,7 @@
         }
         &::placeholder {
           font-size: 1.1rem !important;
-          color: lighten($color: gray, $amount: 20%);
+          color: lighten($color: red, $amount: 30%);
           // color: lighten($color: gray, $amount: 50%);
           // line-height: 5rem !important;
           // color: lighten($color: gray, $amount: 15%);
