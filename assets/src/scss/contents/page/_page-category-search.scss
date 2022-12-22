@@ -30,7 +30,7 @@
       font-weight: 400;
       color: red;
       padding-left: 1rem;
-      padding-bottom: 0.35rem;
+      padding-bottom: 0rem;
       border: 1px solid red;
       border-radius: 8px;
       &:focus {
@@ -47,6 +47,7 @@
         // border: 1rem solid green;
         font-size: 2rem;
         width: 93% !important;
+        padding-bottom: 0.4rem;
         // margin-top: 0.05rem !important;
         // margin-left: 0.05rem !important;
         // height: 3.5rem !important;
