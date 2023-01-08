@@ -12,7 +12,7 @@
 
         <form action="" name="main-cat-insert-form" id="main-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Categories</label>
             <div class="form-group">
                 <input type="text" class="form-control" id="main-input-main-cat" name="main-input-main-cat"
                     aria-describedby="textHelp" placeholder="GRANDE" required>

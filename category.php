@@ -53,7 +53,7 @@ textarea::placeholder {
 }
 
 .filter-btns {
-    width: 15rem;
+    width: 12.3rem;
 }
 </style>
 <main id="primary" class="site-main container">
@@ -84,7 +84,7 @@ textarea::placeholder {
 
             <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="KEYWORDS">
+                <input type="text" id="post-search-input" class="selflist-search-input" placeholder="SEARCH KEYWORDS">
                 <i class="fas fa-search"></i>
 
             </section>

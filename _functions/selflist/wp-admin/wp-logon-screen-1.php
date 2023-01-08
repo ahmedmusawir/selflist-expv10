@@ -109,26 +109,17 @@ function cy_login_logo()
 #login h1 a,
 .login h1 a {
     background-image: url('/wp-content/uploads/2020/07/SelfListLogo.png');
+    /* background-image: url('/wp-content/uploads/SelfListLogo-login.png'); */
 
+    /* height: 43px; */
     width: 75%;
+    /* width: 240px; */
+    /* width: 323px; */
     background-size: 75%;
+    /* background-size: 240px 43px; */
+    /* background-size: 323px 60px; */
     background-repeat: no-repeat;
     padding-bottom: 30px;
-}
-
-@media (min-width: 1000px) {
-
-    #login h1 a,
-    .login h1 a {
-        background-image: url('/wp-content/uploads/2020/07/SelfListLogo.png');
-
-        width: 85%;
-        background-size: 85%;
-        background-repeat: no-repeat;
-        padding-bottom: 30px;
-        /* border: 1rem dotted red; */
-    }
-
 }
 
 #login h1:focus-visible {

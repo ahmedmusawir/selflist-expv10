@@ -24,7 +24,7 @@
     <div class="form-box">
 
         <form action="" name="secondo-cat-insert-form" id="secondo-cat-insert-form" class="form">
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Categories</label>
 
             <div class="form-group card p-3 bg-light">
                 <h4 id="secondo-main-cat" class="text-danger">Tutoring</h4>

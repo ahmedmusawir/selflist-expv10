@@ -21,7 +21,7 @@ get_header();
 
     <section id="selflist-search-input-box" class="selflist-search-input-box">
 
-        <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="CATEGORIES">
+        <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="SEARCH CATEGORIES">
         <i class="fas fa-search"></i>
 
     </section>

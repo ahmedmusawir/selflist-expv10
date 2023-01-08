@@ -173,7 +173,8 @@ textarea::placeholder {
                     }
                     </style>
 
-                    <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="">
+                    <input type="text" id="cat-search-input-json" class="selflist-search-input"
+                        placeholder="SEARCH COMPARABLE CATEGORIES & LISTINGS">
                     <i class="fas fa-search"></i>
 
                 </section>

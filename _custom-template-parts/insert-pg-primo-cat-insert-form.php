@@ -25,7 +25,7 @@
 
         <form action="" name="primo-cat-insert-form" id="primo-cat-insert-form" class="form">
 
-            <label class="font-weight-bold" for="exampleFormControlTextarea1">List</label>
+            <label class="font-weight-bold" for="exampleFormControlTextarea1">Categories</label>
 
             <div class="form-group card bg-light p-3">
                 <h4 id="primo-main-cat" class="text-danger">Tutoring</h4>

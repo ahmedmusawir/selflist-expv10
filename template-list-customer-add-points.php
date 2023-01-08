@@ -30,7 +30,7 @@ $user_points = get_field('selflist_points', 'user_' . $current_user->ID);
 
 ?>
 
-<main id="primary" class="site-main container customer-profile-page">
+<main id="primary" class="site-main container customer-profile-page mt-5">
 
     <div class="row">
         <!-- LEFT PROFILE MENU COLUMN -->
