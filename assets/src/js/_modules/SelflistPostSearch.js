@@ -77,7 +77,8 @@ class SelflistPostSearch {
           if (cardCount === closeCount) {
             // THIS WILL ADD THE NOT FOUND ERROR
             listResultContainer.html(
-              '<h5 class="font-weight-bold"><a href="/list-insert/">List</h5>'
+              '<h5 class="font-weight-bold">No keyword match. Keep searching.</h5>'
+              // '<h5 class="font-weight-bold"><a href="/list-insert/">List</h5>'
             );
             // THIS WILL REMOVE THE INVITE BUTTON
             inviteButton.addClass('d-none');

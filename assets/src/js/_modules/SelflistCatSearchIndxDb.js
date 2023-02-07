@@ -245,7 +245,8 @@ class SelflistCatSearchIndxDb {
       this.searchResultBox.append(catetoryHtmlItem);
     } else {
       this.searchResultBox.append(
-        '<a href="/list-insert/" class="font-weight-bold">List NEW GRANDE</a>'
+        '<a class="font-weight-bold text-danger">No category match. Keep searching.</a>'
+        // '<a href="/list-insert/" class="font-weight-bold">List NEW GRANDE</a>'
         // '<h4 class="d-block">No Result Found ... </h4>'
       );
     }

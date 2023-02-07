@@ -32,7 +32,7 @@
          </div>
          <div class="col-sm-4">
              <a id="city-new-btn" href="#" class="btn btn-secondary btn-sm btn-block">
-                 NEW MARKET
+                 ADD NEW MARKET
              </a>
          </div>
 

@@ -27,7 +27,7 @@
                 <input type="text" class="form-control" id="city-input-element" name="city-input-element"
                     aria-describedby="textHelp" placeholder="New Market" required>
                 <small id="textHelp" class="form-text text-muted">
-                    (Up to 25 Characters)
+                    (&#8804; 25 Characters)
                 </small>
             </div>
             <span id="ajax-failed-message-city"></span>

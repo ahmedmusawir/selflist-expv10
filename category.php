@@ -211,13 +211,11 @@ textarea::placeholder {
                 </style>
 
                 <form id="flag-insert-form" class="form">
-                    <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
-                        required autocomplete="off" placeholder="This FLAG will also be shared with the lister.">
+                        required autocomplete="off" placeholder="This FLAG will also be shared with the lister">
                     </textarea>
                     <small class="float-right mb-3"><span style="font-size: 1.2rem">&#x2264;</span> 140
                         Characters</small>
-                    <!-- <small class="float-right mb-3">Up to 140 Characters</small> -->
 
                     <button id="flag-ajax-submit-btn" type="submit"
                         class="btn btn-primary btn-block flag-ajax-submit-btn">
@@ -261,15 +259,31 @@ textarea::placeholder {
                     display: none !important;
                 }
                 </style>
-
+                <!-- 
                 <form id="flag-insert-form" class="form">
-                    <!-- <label for="flag-textara">Insert your reason for flagging this list:</label> -->
+                    <label for="flag-textara">Insert your reason for flagging this list:</label>
                     <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea-ajax" cols="30"
                         rows="10" required autocomplete="off"
-                        placeholder="This FLAG will also be shared with the lister.">
+                        placeholder="This FLAG will also be shared with the lister">
                     </textarea>
-                    <small class="float-right mb-3">Up to 140 Characters</small>
+                    <small class="float-right mb-3"><span style="font-size: 1.2rem">&#x2264;</span> 140
+                        Characters</small>
                     <button id="flag-ajax-submit-btn-ajax" type="button"
+                        class="btn btn-primary btn-block flag-ajax-submit-btn">
+                        Flag It Now!
+                    </button>
+                    <button id="flag-close-btn" type="button" class="btn btn-secondary btn-block" data-dismiss="modal">
+                        I Changed My Mind
+                    </button>
+                </form> -->
+                <form id="flag-insert-form" class="form">
+                    <textarea class="form-control mb-3 p-3" name="flag-textarea" id="flag-textarea" cols="30" rows="10"
+                        required autocomplete="off" placeholder="This FLAG will also be shared with the lister">
+                    </textarea>
+                    <small class="float-right mb-3"><span style="font-size: 1.2rem">&#x2264;</span> 140
+                        Characters</small>
+
+                    <button id="flag-ajax-submit-btn" type="submit"
                         class="btn btn-primary btn-block flag-ajax-submit-btn">
                         Flag It Now!
                     </button>

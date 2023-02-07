@@ -148,11 +148,22 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
 
     <!-- AUTHOR NAME BOX -->
     <div class="list-author-box">
-        <p class="list-author float-left">
+        <!-- OLD CHAT -->
+        <!-- <p class="list-author float-left">
             Chat:
             <span class="text-danger">
                 <?php //echo $udata->display_name; ?>
                 <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
+            </span>
+        </p> -->
+        <!-- NEW AUTHOR ARCHIVE LINK -->
+        <p class="list-author float-left">
+            <!-- Chat: -->
+            <span class="text-danger">
+                <?php //the_author_posts_link(); ?>
+                <a href="<?php echo get_author_posts_url($udata->ID); ?>">
+                    <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
+                </a>
             </span>
         </p>
         <a class="btn btn-outline-danger btn-sm float-right mt-1" href="<?php echo get_permalink(); ?>">SHARE</a>
@@ -274,7 +285,8 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
                     <img title="Chat Page" src="/wp-content/uploads/Instant-Messaging-icon.png" alt="Chat Link">
                 </a>
             </div> -->
-            <div class="flex-icon-item mr-3">
+            <!-- OLD FLAG -->
+            <!-- <div class="flex-icon-item mr-3">
                 <div class="form-group">
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -289,9 +301,43 @@ add_action('wp_ajax_city_state_filter_ajax', 'city_state_filter_ajax');
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <!-- NEW FLAG -->
+            <div class="flex-icon-item">
+                <style>
+                .btn-outline-primary.flag-form-btn {
+                    padding-top: .25rem !important;
+                    padding-bottom: .10rem !important;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                .btn-outline-primary.flag-form-btn:hover {
+                    background: white;
+                }
+
+                .btn-outline-primary.flag-form-btn.disabled {
+                    background: #e3e3e3;
+                    /* border: 1rem dotted red; */
+                }
+
+                .list-hmu-checkbox {
+                    margin-left: 1.8rem;
+                }
+
+                i.fab {
+                    font-size: 1rem;
+                }
+                </style>
+
+                <button class="btn btn-outline-primary btn-sm flag-form-btn" data-key="flag-<?php echo get_the_ID(); ?>"
+                    data-list-id="<?php echo $post->ID; ?>" data-flag-email="<?php echo get_field('your_email'); ?>">
+                    <i class="fab fa-font-awesome-flag text-primary"></i>
+                </button>
+
             </div>
-            <div class="flex-icon-item ml-3">
-                <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox ml-5" autocomplete="off"
+            <div class="flex-icon-item">
+                <input type="checkbox" name="list-hmu-checkbox" class="list-hmu-checkbox" autocomplete="off"
                     data-hmu="<?php echo get_field('your_email'); ?>" style="background: black;">
                 <span class="checkmark"></span>
                 <!-- <small class="" style="margin-left: 2.5rem;">&nbsp;&nbsp;RA</small> -->

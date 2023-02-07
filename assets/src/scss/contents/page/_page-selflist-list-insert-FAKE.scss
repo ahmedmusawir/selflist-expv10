@@ -11,6 +11,7 @@
 
     @media (min-width: 800px) {
       font-size: 1rem;
+      // border: 1rem dotted blue;
     }
   }
 
@@ -108,15 +109,24 @@
       }
       @media (max-width: 550px) {
         width: 88% !important;
+        &::placeholder {
+          font-size: 0.8rem !important;
+        }
       }
       @media (max-width: 470px) {
         width: 86% !important;
       }
       @media (max-width: 450px) {
         width: 84.5% !important;
+        &::placeholder {
+          font-size: 0.7rem !important;
+        }
       }
       @media (max-width: 400px) {
         width: 83% !important;
+        &::placeholder {
+          font-size: 0.6rem !important;
+        }
       }
     }
     .fas.fa-search {

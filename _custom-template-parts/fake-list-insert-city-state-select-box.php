@@ -36,7 +36,7 @@
              }
              </style>
              <a id="fake-city-new-btn" href="#" class="btn btn-secondary btn-sm">
-                 NEW MARKET
+                 Add New Market
              </a>
          </div>
 

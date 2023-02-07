@@ -21,7 +21,7 @@ class CatInsertEventAjaxParent {
     // `;
     this.ajaxSuccessMessage = `
     <div class="font-weight-bold mb-4">
-      List
+      Categories
     </div>
     `;
   }

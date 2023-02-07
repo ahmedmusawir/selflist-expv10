@@ -19,7 +19,7 @@
          </div>
          <div class="col-sm-4">
              <a href="#" id="main-cat-new-btn" class="btn btn-dark btn-sm btn-block">
-                 NEW GRANDE
+                 ADD NEW GRANDE
              </a>
          </div>
 
@@ -41,7 +41,7 @@
          </div>
          <div class="col-sm-4">
              <a id="primo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 NEW PRIMO
+                 ADD NEW PRIMO
              </a>
          </div>
 
@@ -63,7 +63,7 @@
          </div>
          <div class="col-sm-4">
              <a id="secondo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 NEW SECONDO
+                 ADD NEW SECONDO
              </a>
          </div>
 
@@ -85,7 +85,7 @@
          </div>
          <div class="col-sm-4">
              <a id="terzo-cat-new-btn" href="#" class="btn btn-danger btn-sm btn-block">
-                 NEW TERZO
+                 ADD NEW TERZO
              </a>
          </div>
 
