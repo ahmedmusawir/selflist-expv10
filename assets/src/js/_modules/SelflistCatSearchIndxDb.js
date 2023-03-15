@@ -12,6 +12,7 @@ class SelflistCatSearchIndxDb {
     this.keyExists = false;
     this.search = $('#cat-search-input-json');
     this.searchResultBox = $('#category-search-json-result');
+    this.spinnerBlock = $('.spinner-block');
     // SITE ROOT URL FROM WP LOCALIZE SCRIPT
     this.siteRoot = selflistData.root_url;
     // COLLECTION DATA
@@ -30,6 +31,7 @@ class SelflistCatSearchIndxDb {
 
   init = () => {
     // console.log('Search from Indx DB ...');
+    // this.spinnerVisible = false;
   };
 
   checkData = async () => {
@@ -92,10 +94,9 @@ class SelflistCatSearchIndxDb {
       // CLEARING PREVIOUS TIME OUT FOR KEY PRESS
       clearTimeout(this.typingTimer);
       // LOADING SPINNER
+
       if (!this.spinnerVisible) {
-        this.searchResultBox.html(
-          '<div><span class="loading-spinner"></span></div>'
-        );
+        this.spinnerBlock.html('<span class="loading-spinner"></span>');
         this.spinnerVisible = true;
       }
       // SETTING TIME OUT FOR KEY PRESS
@@ -235,10 +236,13 @@ class SelflistCatSearchIndxDb {
         }
       });
       this.displaySearchResults(catetoryHtmlItem);
+      this.spinnerBlock.html('');
+
       // console.log(catetoryHtmlItem);
     } else {
       this.spinnerVisible = false;
       this.searchResultBox.html('');
+      this.spinnerBlock.html('');
     }
   };
 
@@ -247,7 +251,7 @@ class SelflistCatSearchIndxDb {
       this.searchResultBox.append(catetoryHtmlItem);
     } else {
       this.searchResultBox.append(
-        '<a class="font-weight-bold text-danger">No category match. Keep searching.</a>'
+        '<a class="font-weight-bold text-danger mb-5">No category match. Keep searching.</a>'
         // '<a href="/list-insert/" class="font-weight-bold">List NEW GRANDE</a>'
         // '<h4 class="d-block">No Result Found ... </h4>'
       );

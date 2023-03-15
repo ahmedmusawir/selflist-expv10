@@ -26,7 +26,11 @@ get_header();
 
     </section>
 
-    <!-- <p class="">( Example: Tutoring )</p> -->
+    <div class="text-center d-flex justify-content-center">
+        <div class="spinner-block">
+            <!-- SPINNER GOES HERE -->
+        </div>
+    </div>
 
     <div id="category-search-json-result" class="card-columns">
         <!-- SEARCH RESULTS GO HERE... -->

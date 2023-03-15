@@ -1,7 +1,9 @@
 // PRODUCTION CODE HERE
 import ReactDOM from 'react-dom';
 import React from 'react';
-import ReactAppTheme from './_modules/react/ReactAppTheme';
+import HomePageBlock from './_modules/react/HomePageBlock';
+
+// import ReactAppTheme from './_modules/react/ReactAppTheme';
 
 // LIST OR CATEGORY SEARCH RELATED
 import SelflistPostSearch from './_modules/SelflistPostSearch';
@@ -89,7 +91,8 @@ class App {
       'SELFLIST-HOME-PAGE-DETAIL-BLOCK'
     );
     if (appThemeOne) {
-      ReactDOM.render(<ReactAppTheme />, appThemeOne);
+      ReactDOM.render(<HomePageBlock />, appThemeOne);
+      // ReactDOM.render(<ReactAppTheme />, appThemeOne);
     }
 
     /**
