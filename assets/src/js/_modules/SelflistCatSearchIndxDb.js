@@ -93,7 +93,9 @@ class SelflistCatSearchIndxDb {
       clearTimeout(this.typingTimer);
       // LOADING SPINNER
       if (!this.spinnerVisible) {
-        this.searchResultBox.html('<div class="loading-spinner"></div>');
+        this.searchResultBox.html(
+          '<div><span class="loading-spinner"></span></div>'
+        );
         this.spinnerVisible = true;
       }
       // SETTING TIME OUT FOR KEY PRESS

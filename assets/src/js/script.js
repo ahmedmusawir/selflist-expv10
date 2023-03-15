@@ -1,8 +1,11 @@
 // PRODUCTION CODE HERE
+import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactAppTheme from './_modules/react/ReactAppTheme';
 
 // LIST OR CATEGORY SEARCH RELATED
 import SelflistPostSearch from './_modules/SelflistPostSearch';
-import SelflistCatSearchJson from './_modules/SelflistCatSearchJson';
+// import SelflistCatSearchJson from './_modules/SelflistCatSearchJson';
 import SelflistCatSearchIndxDb from './_modules/SelflistCatSearchIndxDb';
 // LIST INSERT RELATED
 import CatSelectDataParent from './_modules/selflist-crud/CatSelectDataParent';
@@ -77,6 +80,17 @@ import FakeListFormAutoFiller from './_modules/selflist-fake-list-page/FakeListF
 class App {
   constructor() {
     console.info('ES6 Script Initialized!');
+
+    /**
+     * REACT ON SELFLIST FRONTEND
+     */
+    // LUNCHING REACT APP THEME ONE
+    const appThemeOne = document.getElementById(
+      'SELFLIST-HOME-PAGE-DETAIL-BLOCK'
+    );
+    if (appThemeOne) {
+      ReactDOM.render(<ReactAppTheme />, appThemeOne);
+    }
 
     /**
      * LIST OR CATEGORY SEARCH RELATED CLASSES

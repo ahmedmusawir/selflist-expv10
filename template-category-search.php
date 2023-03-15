@@ -28,13 +28,15 @@ get_header('loggedout');
     </section>
 
     <!-- <p class="">( Example: Tutoring )</p> -->
-
-
-
     <div id="category-search-json-result" class="card-columns">
 
+        <!-- SEARCH RESULTS GO HERE ... -->
 
     </div> <!-- #main -->
+
+    <div id="SELFLIST-HOME-PAGE-DETAIL-BLOCK">
+        <!-- THIS IS WHERE THE HOME PAGE DETAILS REACT APP GOES -->
+    </div>
 
     <?php
 get_footer();
