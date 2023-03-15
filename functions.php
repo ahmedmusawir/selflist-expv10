@@ -176,6 +176,9 @@ require get_theme_file_path('/_functions/selflist/ajax/make-cookie-and-redirect-
 // HOME PAGE REACT DATA BLOCK
 require get_theme_file_path('/_functions/selflist/ajax/get-home-data-ajax.php');
 
+// HOME PAGE ACF OPTIONS PAGE - SELFLIST GENERAL SETTINGS
+require get_theme_file_path('/_functions/selflist/wp-admin/home-acf-options-page.php');
+
 
 // ADDING NEW QUERY VAR 'CLASS' TO REMOVE BACK BUTTON FROM SINGLE LIST PAGE AFTER LIST PUBLISH
 add_action('init', 'add_CLASS_val');
