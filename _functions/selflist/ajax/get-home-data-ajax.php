@@ -14,9 +14,10 @@ function get_home_data_ajax()
     $button_3_link = get_option('options_button_3_url');
 
     // HOME PAGE ROW 2 DATA
-    $slider_image_1 = get_option('options_slider_image_1');
-    $slider_image_2 = get_option('options_slider_image_2');
-    $slider_image_3 = get_option('options_slider_image_3');
+    $slider_block_title = get_option('options_slider_block_title');
+    $slider_image_1 = get_field('slider_image_1', 'options');
+    $slider_image_2 = get_field('slider_image_2', 'options');
+    $slider_image_3 = get_field('slider_image_3', 'options');
     $listing_1_link = get_option('options_listing_1_link');
     $listing_2_link = get_option('options_listing_2_link');
     $listing_3_link = get_option('options_listing_3_link');
@@ -36,6 +37,7 @@ function get_home_data_ajax()
         'button_1_link' => $button_1_link,
         'button_2_link' => $button_2_link,
         'button_3_link' => $button_3_link,
+        'slider_block_title' => $slider_block_title,
         'slider_image_1' => $slider_image_1,
         'slider_image_2' => $slider_image_2,
         'slider_image_3' => $slider_image_3,

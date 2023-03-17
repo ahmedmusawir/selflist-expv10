@@ -1,0 +1,252 @@
+/**
+ *
+ * STYLE: Page Category Search
+ *
+ */
+
+.page-template-template-category-search,
+.page-template-template-category-search-json,
+.page-template-template-category-search-members {
+  // SEARCH INPUT BOX
+  .selflist-search-input-box {
+    // border: 4px dotted green;
+    background-color: red;
+    height: 3.6rem !important;
+    border-radius: 8px;
+
+    .selflist-search-input {
+      margin-top: 0rem !important;
+      margin-left: 0rem !important;
+      height: 3.6rem !important;
+      line-height: 3.6rem !important;
+      width: 94% !important;
+      // width: 87% !important;
+      font-size: 1rem;
+      font-weight: 400;
+      color: red;
+      padding-left: 1rem;
+      padding-bottom: 0rem;
+      border: 1px solid red;
+      border-radius: 8px;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-size: 1.3rem !important;
+        color: lighten($color: red, $amount: 30%);
+      }
+
+      @media (max-width: 1199px) {
+        // border: 1rem solid green;
+        font-size: 2rem;
+        width: 93% !important;
+        padding-bottom: 0.4rem;
+        // margin-top: 0.05rem !important;
+        // margin-left: 0.05rem !important;
+        // height: 3.5rem !important;
+      }
+      @media (max-width: 991px) {
+        // border: 1rem solid green;
+        width: 90% !important;
+        // margin-top: 0.05rem !important;
+        // margin-left: 0.05rem !important;
+        // height: 3.5rem !important;
+      }
+      @media (max-width: 767px) {
+        width: 87% !important;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.61rem !important;
+        // border: 1px solid red;
+      }
+      @media (max-width: 522px) {
+        width: 87% !important;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
+      }
+      @media (max-width: 440px) {
+        width: 85% !important;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
+      }
+      @media (max-width: 400px) {
+        width: 83% !important;
+        // margin-top: 0rem !important;
+        // margin-left: 0rem !important;
+        // height: 3.6rem !important;
+        // border: 1px solid red;
+      }
+    }
+    .fas.fa-search {
+      font-size: 2rem;
+      float: right;
+      color: white;
+      padding-right: 1rem;
+      padding-top: 0.75rem;
+      @media (max-width: 522px) {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        // display: none;
+      }
+      // @media (max-width: 400px) {
+      //   font-size: 1rem;
+      //   padding-top: 1.3rem;
+      // }
+    }
+  }
+
+  // CATEGORY SEARCH RESULT BOX
+  #category-search-result,
+  #category-search-json-result {
+    // border: 1rem dotted blue;
+    margin-top: 2rem;
+
+    //The following is a genius solution to fix the Search Layout broken bug. Keeping the content
+    // but turning the opacity to zero, just layout remains intact but content become invisible
+    #THIS-IS-NOT-VISIBLE {
+      border: 1rem dotted blue;
+      opacity: 0;
+    }
+
+    // THE CARD CATEGORY ITEM
+    .card.card-moose {
+      // border: 1rem dotted dodgerblue;
+      width: 100%;
+    }
+
+    ul {
+      // border: 1rem dotted dodgerblue;
+      // transition: all 0.5s ease;
+      list-style: none;
+      li {
+        // border: 4px dotted dodgerblue;
+        margin-bottom: 0.25rem;
+
+        a {
+          font-size: 0.75rem;
+          text-transform: lowercase !important;
+          .badge.badge-pill {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+    .primo {
+      // border: 4px dotted blue;
+      padding-inline-start: 0px !important;
+
+      .primo-item {
+        margin-top: 1rem;
+        background: lighten($cg-primary, 48%);
+        // background: linear-gradient(
+        //   45deg,
+        //   transparent,
+        //   lighten($cg-primary, 45%)
+        // );
+        // background: linear-gradient(45deg, transparent, #e7e7e7);
+      }
+    }
+    .secondo {
+      // border: 4px dotted dodgerblue;
+      padding-inline-start: 20px !important;
+    }
+    .terzo {
+      // border: 4px dotted lime;
+      padding-inline-start: 40px !important;
+    }
+  }
+
+  // HOME PAGE (CAT SEARCH PAGE) REACT BLOCK
+  .home-react-content {
+    padding: 2rem 0rem;
+    // border: 4px dotted dodgerblue;
+
+    .top-btn-row {
+      .btn.btn-danger {
+        font-size: 2rem !important;
+        font-weight: 600 !important;
+      }
+    }
+
+    .second-slider-row {
+      padding-bottom: 2rem;
+
+      .slider-title {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .carousel {
+        // border: 4px dotted dodgerblue;
+        .carousel-control-next {
+          // background: lighten($color: #000000, $amount: 50%) !important;
+          background: linear-gradient(to right, #ffffff, gray);
+          .carousel-control-next-icon {
+            // border: 1rem dotted red;
+            color: black !important;
+          }
+          .visually-hidden {
+            display: none;
+          }
+        }
+        .carousel-control-prev {
+          // background: lighten($color: #000000, $amount: 50%) !important;
+          // background: linear-gradient(to right, gray, #ffffff);
+          .carousel-control-prev-icon {
+            // border: 5px solid red !important;
+            padding: 1.2rem !important;
+            background-color: black !important;
+          }
+          .visually-hidden {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .third-video-row {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      .video-title {
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .bullet-points-row {
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+
+    .bullet-content {
+      .bullet-point {
+        list-style: none !important;
+      }
+    }
+  }
+
+  .latest-post-row {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    .widget-title,
+    .widgettitle {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  // HOME PAGE (CAT SEARCH PAGE) NON-REACT BLOCK
+}

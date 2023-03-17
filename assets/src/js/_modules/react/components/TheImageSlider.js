@@ -1,47 +1,36 @@
 import React, { useCallback } from 'react';
-import SimpleImageSlider from 'react-simple-image-slider';
+import Carousel from 'react-bootstrap/Carousel';
 
-const TheImageSlider = () => {
-  const images = [
-    {
-      url: 'http://selflist-v9.local/wp-content/uploads/2020/08/vintage-harley-desktop-background-wallpaper-640x360-1.jpg',
-    },
-    {
-      url: 'http://selflist-v9.local/wp-content/uploads/2020/08/tattoo-artist-widescreen-wallpapers-640x360-1.jpg',
-    },
-    {
-      url: 'http://selflist-v9.local/wp-content/uploads/2020/08/tattoo-machine-phone-wallpaper-640x360-1.png',
-    },
-  ];
-
-  const onClick = useCallback((idx, event) => {
-    console.log(`[App onClick] ${idx} ${event.currentTarget}`);
-    if (idx === 0) {
-      window.location.href = '/373-2/';
-    }
-    if (idx === 1) {
-      window.location.href = '/361-2/';
-    }
-    if (idx === 2) {
-      window.location.href = '/377-2/';
-    }
-  }, []);
+const TheImageSlider = ({
+  sliderImg1,
+  sliderImg2,
+  sliderImg3,
+  listingLink1,
+  listingLink2,
+  listingLink3,
+}) => {
+  const redirectImg1 = () => {
+    window.location.href = listingLink1;
+  };
+  const redirectImg2 = () => {
+    window.location.href = listingLink2;
+  };
+  const redirectImg3 = () => {
+    window.location.href = listingLink3;
+  };
 
   return (
-    <div className='d-flex justify-content-center'>
-      <SimpleImageSlider
-        width={896}
-        height={504}
-        images={images}
-        showBullets={true}
-        showNavs={true}
-        onClick={onClick}
-        autoPlay={true}
-        autoPlayDelay={5}
-        navStyle={2}
-        bgColor={'#000000'}
-      />
-    </div>
+    <Carousel variant='dark'>
+      <Carousel.Item onClick={redirectImg1}>
+        <img className='d-block w-100' src={sliderImg1} alt='First slide' />
+      </Carousel.Item>
+      <Carousel.Item onClick={redirectImg2}>
+        <img className='d-block w-100' src={sliderImg2} alt='Second slide' />
+      </Carousel.Item>
+      <Carousel.Item onClick={redirectImg3}>
+        <img className='d-block w-100' src={sliderImg3} alt='Third slide' />
+      </Carousel.Item>
+    </Carousel>
   );
 };
 
