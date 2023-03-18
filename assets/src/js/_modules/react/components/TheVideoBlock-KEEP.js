@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
 const TheVideoBlock = ({
@@ -9,6 +9,27 @@ const TheVideoBlock = ({
   youtubeId2,
   youtubeId3,
 }) => {
+  useEffect(() => {
+    const buttons = document.querySelectorAll('.lty-playbtn');
+
+    if (!buttons) return;
+
+    function createObserver() {
+      let observer;
+
+      let options = {
+        rootMargin: '-50%',
+        threshold: 1,
+      };
+
+      buttons.forEach((button) => {
+        observer = new IntersectionObserver(() => button.click(), options);
+        observer.observe(button);
+      });
+    }
+    return createObserver();
+  }, []);
+
   return (
     <>
       <div className='col-sm-4 col-md-4 col-lg-4'>

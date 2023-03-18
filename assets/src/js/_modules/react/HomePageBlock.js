@@ -84,7 +84,14 @@ function HomePageBlock() {
             <hr className='bg-danger' />
             {/* THIRD VIDEO BLOCK STARTS */}
             <div className='row third-video-row text-center'>
-              <TheVideoBlock />
+              <TheVideoBlock
+                videoTitle1={homeData.video_title_1}
+                videoTitle2={homeData.video_title_2}
+                videoTitle3={homeData.video_title_3}
+                youtubeId1={homeData.youtube_video_id_1}
+                youtubeId2={homeData.youtube_video_id_2}
+                youtubeId3={homeData.youtube_video_id_3}
+              />
             </div>
           </>
         )}

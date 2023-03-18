@@ -41,6 +41,7 @@ get_header('loggedout');
         <!-- THIS IS WHERE THE HOME PAGE DETAILS REACT APP GOES -->
     </div>
 
+    <!-- BULLET POINTS BLOCK - TEXT ONLY -->
     <section class="row bullet-points-row">
         <div class="col-sm-4 col-md-4 col-lg-4">
             <article class="bullet-content">
@@ -80,7 +81,10 @@ get_header('loggedout');
         </div>
 
     </section>
+
     <hr class="bg-danger">
+
+    <!-- LAST ROW W/ RECENT POSTS & POPULAR CATEGORIES -->
     <section class="row latest-post-row">
         <div class="col-sm-6 col-md-6 col-lg-6">
             <?php
@@ -109,6 +113,8 @@ wp_list_categories(
         </div>
     </section>
     <hr class="bg-danger">
+
+    <!-- END ALL ROWS -->
 
 </div>
 <?php

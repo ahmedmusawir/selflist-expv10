@@ -10,13 +10,16 @@ const TheImageSlider = ({
   listingLink3,
 }) => {
   const redirectImg1 = () => {
-    window.location.href = listingLink1;
+    // window.location.href = listingLink1;
+    window.open(listingLink1, '_blank');
   };
   const redirectImg2 = () => {
-    window.location.href = listingLink2;
+    // window.location.href = listingLink2;
+    window.open(listingLink2, '_blank');
   };
   const redirectImg3 = () => {
-    window.location.href = listingLink3;
+    // window.location.href = listingLink3;
+    window.open(listingLink3, '_blank');
   };
 
   return (
