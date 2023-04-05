@@ -28,7 +28,7 @@ const TestimonialSlider = ({
         <div className='w-100 border p-5 bg-danger text-center'>
           <div
             className='quote text-center display-3'
-            style={{ color: '#e3e3e3' }}
+            style={{ color: '#e3e3e3', opacity: '.5' }}
           >
             <i className='fas fa-quote-left'></i>
           </div>
@@ -40,12 +40,38 @@ const TestimonialSlider = ({
           </p>
         </div>
       </Carousel.Item>
-      {/* <Carousel.Item onClick={redirectImg2}>
-        <img className='d-block w-100' src={sliderImg2} alt='Second slide' />
+      <Carousel.Item onClick={redirectImg1}>
+        <div className='w-100 border p-5 bg-danger text-center'>
+          <div
+            className='quote text-center display-3'
+            style={{ color: '#e3e3e3', opacity: '.5' }}
+          >
+            <i className='fas fa-quote-left'></i>
+          </div>
+          <p className='text-white p-sm-3 w-75 mx-auto'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            laborum deleniti quasi non alias magni sunt. Reprehenderit, ipsam
+            quod corrupti sint hic labore autem, similique, ipsum nisi doloribus
+            quam fugit?
+          </p>
+        </div>
       </Carousel.Item>
-      <Carousel.Item onClick={redirectImg3}>
-        <img className='d-block w-100' src={sliderImg3} alt='Third slide' />
-      </Carousel.Item> */}
+      <Carousel.Item onClick={redirectImg1}>
+        <div className='w-100 border p-5 bg-danger text-center'>
+          <div
+            className='quote text-center display-3'
+            style={{ color: '#e3e3e3', opacity: '.5' }}
+          >
+            <i className='fas fa-quote-left'></i>
+          </div>
+          <p className='text-white p-sm-3 w-75 mx-auto'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+            laborum deleniti quasi non alias magni sunt. Reprehenderit, ipsam
+            quod corrupti sint hic labore autem, similique, ipsum nisi doloribus
+            quam fugit?
+          </p>
+        </div>
+      </Carousel.Item>
     </Carousel>
   );
 };
