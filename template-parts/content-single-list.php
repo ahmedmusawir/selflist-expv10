@@ -7,22 +7,29 @@
  * @package cyberize-app-dev
  */
 
-  /*
-  * HANDLING URL PARAMETER TO REMOVE BACK BTN CONDITIONALLY
-  */
- // Test if the query exists at the URL
- if (get_query_var('CLASS')) {
+/*
+ * HANDLING URL PARAMETER TO REMOVE BACK BTN CONDITIONALLY
+ */
+// Test if the query exists at the URL
+if (get_query_var('CLASS')) {
 
-  // If so echo the value
+    // If so echo the value
     // echo get_query_var('CLASS');
-  $D_NONE = get_query_var('CLASS');
+    $D_NONE = get_query_var('CLASS');
 
- }
+}
+
+if (get_query_var('HOME_CLASS')) {
+
+    // If so echo the value
+    // echo get_query_var('HOME_CLASS');
+    $HOME_D_NONE = get_query_var('HOME_CLASS');
+
+}
 
 //  echo '<pre>';
 //  print_r($wp->query_vars);
 //  echo '</pre>';
-
 
 ?>
 
@@ -30,7 +37,7 @@
 
     <header class="entry-header">
         <?php
-         
+
 /**
  *
  * CATEGORY LIST WITH PARENT CHILD RELATIONSHIP
@@ -49,7 +56,6 @@ printf('%s<br>', date("m", strtotime($registered)));
 printf('%s<br>', date("d", strtotime($registered)));
 printf('%s<br>', date("y", strtotime($registered)));
 echo '</span>';
-
 
 // ========================================= DISPLAY CATEGORY LIST W/ LINKS ========================================
 
@@ -83,21 +89,21 @@ if (!empty($post_terms) && !is_wp_error($post_terms)) {
 echo '</section>'; //END .post-item-cat-list
 
 // ========================================= END CATEGORY LIST W/ LINKS ========================================
- // SHOW STATE & CITY IN A PARENT CHILD ORDER
-          // Location: _functions/helpers-setup.php
-          print_taxonomy_ranks( get_the_terms( get_the_ID(), 'states' ) );
+// SHOW STATE & CITY IN A PARENT CHILD ORDER
+// Location: _functions/helpers-setup.php
+print_taxonomy_ranks(get_the_terms(get_the_ID(), 'states'));
 
 // DISPLAY LIST ID
 echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">#' . get_the_ID() . "</p>";
-// echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";          
+// echo '<p class="font-weight-bold" style="margin-bottom: -.5rem; font-size: .8rem">LISTING #' . get_the_ID() . "</p>";
 
 if ('post' === get_post_type()):
 ?>
         <div class="entry-meta">
             <?php
-            cyberize_app_dev_posted_on();
-            // cyberize_app_dev_posted_by();
-            ?>
+cyberize_app_dev_posted_on();
+// cyberize_app_dev_posted_by();
+?>
         </div><!-- .entry-meta -->
         <?php endif;?>
     </header><!-- .entry-header -->
@@ -106,8 +112,8 @@ if ('post' === get_post_type()):
 
     <div id="post-content" class="entry-content">
         <?php
-        the_content();
-        ?>
+the_content();
+?>
         <!-- AUTHOR NAME BOX -->
         <div class="list-author-box">
             <p class="list-author float-left">
@@ -117,7 +123,7 @@ if ('post' === get_post_type()):
                     <?php echo $udata->user_firstname . ' ' . $udata->user_lastname; ?>
                 </span>
             </p>
-            <div class="back-holder <?php echo $D_NONE; ?>">
+            <div class="back-holder <?php echo $D_NONE; ?> <?php echo $HOME_D_NONE ?>">
                 <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Back</a>
             </div>
             <div class="back-holder d-none">
@@ -131,7 +137,7 @@ if ('post' === get_post_type()):
 
             <?php if (get_field('your_facebook')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_facebook') ?>" target="_blank">
+                <a href="<?php the_field('your_facebook')?>" target="_blank">
                     <img title="Your Facebook Page" src="/wp-content/uploads/fb-icon.png" alt="Facebook Link">
                 </a>
             </div>
@@ -139,7 +145,7 @@ if ('post' === get_post_type()):
 
             <?php if (get_field('your_twitter')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_twitter') ?>" target="_blank">
+                <a href="<?php the_field('your_twitter')?>" target="_blank">
                     <img title="Your Twitter Page" src="/wp-content/uploads/Twitter-Icon.png" alt="Twitter Link">
                 </a>
             </div>
@@ -147,7 +153,7 @@ if ('post' === get_post_type()):
 
             <?php if (get_field('your_yelp')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_yelp') ?>" target="_blank">
+                <a href="<?php the_field('your_yelp')?>" target="_blank">
                     <img title="Your Yelp Page" src="/wp-content/uploads/Yelp-icon.png" alt="Yelp Link">
                 </a>
             </div>
@@ -155,7 +161,7 @@ if ('post' === get_post_type()):
 
             <?php if (get_field('your_instagram')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_instagram') ?>" target="_blank">
+                <a href="<?php the_field('your_instagram')?>" target="_blank">
                     <img title="Your Instagram Page" src="/wp-content/uploads/Instagram-icon.png" alt="Instagram Link">
                 </a>
             </div>
@@ -163,7 +169,7 @@ if ('post' === get_post_type()):
 
             <?php if (get_field('your_linkedin')): ?>
             <div class="flex-icon-item">
-                <a href="<?php the_field('your_linkedin') ?>" target="_blank">
+                <a href="<?php the_field('your_linkedin')?>" target="_blank">
                     <img title="Your Linkedin Page" src="/wp-content/uploads/Linkedin-Icon.png" alt="Linkedin Link">
                 </a>
             </div>
@@ -174,8 +180,8 @@ if ('post' === get_post_type()):
         <section class="flex-icon-five">
 
             <div class="flex-icon-item">
-                <a href="tel:<?php the_field('your_phone') ?>">
-                    <img title="Phone: <?php the_field('your_phone') ?>" src="/wp-content/uploads/Cell-icon.png"
+                <a href="tel:<?php the_field('your_phone')?>">
+                    <img title="Phone: <?php the_field('your_phone')?>" src="/wp-content/uploads/Cell-icon.png"
                         alt="Phone Number">
                 </a>
             </div>

@@ -18,6 +18,8 @@ get_header('loggedout');
 
 <div id="primary" class="site-main container pt-5">
 
+    <h2 class="text-center pb-4 text-dark font-weight-bold">List What You Want, Find What You Need</h2>
+
     <section id="selflist-search-input-box" class="selflist-search-input-box">
 
         <input type="text" id="cat-search-input-json" class="selflist-search-input" placeholder="SEARCH CATEGORIES">
@@ -41,8 +43,8 @@ get_header('loggedout');
         <!-- THIS IS WHERE THE HOME PAGE DETAILS REACT APP GOES -->
     </div>
 
-    <!-- BULLET POINTS BLOCK - TEXT ONLY -->
-    <section class="row bullet-points-row">
+    <!-- BULLET POINTS BLOCK - TEXT ONLY -- THIS SECTION HAS BEEN MOVED INSIDE REACT HOME BLOCK-->
+    <section class="row bullet-points-row d-none">
         <div class="col-sm-4 col-md-4 col-lg-4">
             <article class="bullet-content">
                 <li class="bullet-point"><i class="far fa-dot-circle"></i> Complete transparency</li>
@@ -82,7 +84,7 @@ get_header('loggedout');
 
     </section>
 
-    <hr class="bg-danger">
+    <!-- <hr class="bg-danger"> -->
 
     <!-- LAST ROW W/ RECENT POSTS & POPULAR CATEGORIES -->
     <section class="row latest-post-row">

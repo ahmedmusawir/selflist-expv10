@@ -17,7 +17,7 @@ get_header();
 
 <div id="primary" class="site-main container pt-5">
 
-    <!-- <p class="text-center">Start searching now ...</p> -->
+    <h2 class="text-center pb-4 text-dark font-weight-bold">List What You Want, Find What You Need</h2>
 
     <section id="selflist-search-input-box" class="selflist-search-input-box">
 
@@ -41,8 +41,8 @@ get_header();
     </div>
 
 
-    <!-- BULLET POINTS BLOCK - TEXT ONLY -->
-    <section class="row bullet-points-row">
+    <!-- BULLET POINTS BLOCK - TEXT ONLY -- THIS SECTION MOVED TO REACT HOME BLOCK-->
+    <section class="row bullet-points-row d-none">
         <div class="col-sm-4 col-md-4 col-lg-4">
             <article class="bullet-content">
                 <li class="bullet-point"><i class="far fa-dot-circle"></i> Complete transparency</li>
@@ -82,7 +82,7 @@ get_header();
 
     </section>
 
-    <hr class="bg-danger">
+    <!-- <hr class="bg-danger"> -->
 
     <!-- LAST ROW W/ RECENT POSTS & POPULAR CATEGORIES -->
     <section class="row latest-post-row">

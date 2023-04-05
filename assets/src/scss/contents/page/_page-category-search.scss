@@ -185,7 +185,60 @@
         padding-bottom: 1.5rem;
         font-size: 1.3rem;
         font-weight: bold;
-        text-transform: uppercase;
+        text-transform: capitalize !important;
+        color: black;
+      }
+
+      .carousel {
+        // border: 4px dotted dodgerblue;
+        .carousel-control-next {
+          .carousel-control-next-icon {
+            border: 5px solid black !important;
+            padding: 0.75rem !important;
+            background-color: black !important;
+          }
+          .visually-hidden {
+            display: none;
+          }
+        }
+        .carousel-control-prev {
+          .carousel-control-prev-icon {
+            border: 5px solid black !important;
+            padding: 0.75rem !important;
+            background-color: black !important;
+          }
+          .visually-hidden {
+            display: none;
+          }
+        }
+        .carousel-indicators {
+          margin-top: 3rem !important;
+          margin-bottom: -1.5rem !important;
+
+          button {
+            height: 1rem;
+            border-radius: 50% !important;
+            border-color: red !important;
+            margin-right: 0.5rem;
+            background-color: white !important;
+          }
+          button.active {
+            background-color: red !important;
+          }
+        }
+      }
+    }
+
+    .testimonial-slider-row {
+      padding-bottom: 2rem;
+
+      .slider-title {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-transform: capitalize !important;
+        color: black;
       }
 
       .carousel {
@@ -240,6 +293,14 @@
 
         @media (max-width: 575px) {
           margin: 2rem 0rem !important;
+        }
+      }
+
+      .bullet-content {
+        padding-top: 2rem;
+        text-align: left !important;
+        .bullet-point {
+          list-style: none !important;
         }
       }
     }

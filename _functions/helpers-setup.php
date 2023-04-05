@@ -1,4 +1,16 @@
 <?php
+// CHANGE THE RECENT POST WIDGET TITLE
+function my_widget_title($title, $instance, $id_base)
+{
+    if ('recent-posts' == $id_base) {
+        return __('Recent Listings');
+    } else {
+        return $title;
+    }
+}
+
+add_filter('widget_title', 'my_widget_title', 10, 3);
+
 // THIS DID NOT WORK
 // add_filter( 'gform_field_validation', 'mytheme_fix_custom_validation', 10, 4 );
 
@@ -12,14 +24,15 @@
  *
  * @return array  The result array.
  */
-function mytheme_fix_custom_validation( $result, $value, $form, $field ) {
-    if ( ! $result['is_valid'] && ! empty( $field->errorMessage ) ) {
+function mytheme_fix_custom_validation($result, $value, $form, $field)
+{
+    if (!$result['is_valid'] && !empty($field->errorMessage)) {
         $result['message'] = $field->errorMessage;
     }
     return $result;
 }
 
-/** 
+/**
  * REPLACE THE WORD CATETORY FROM THE CATEGORY PAGE
  */
 add_filter('get_the_archive_title', function ($title) {
@@ -41,16 +54,15 @@ add_filter('get_the_archive_title', function ($title) {
  * REDIRECT TO ORIGINAL LOGIN PAGE AFTER PASSWORD RESET USING WOOCOM ACTION HOOK
  * ONCE YOU INSTALL WOOCOM IN WP, THE after_password_reset WP HOOK NO LONGER WORKS
  */
-function woocommerce_new_pass_redirect( $user ) {
-   wc_add_notice( __( 'Your password has been changed successfully! Please login to continue.', 'woocommerce' ), 'success' );
-   wp_redirect( wp_login_url() );
-   exit;
+function woocommerce_new_pass_redirect($user)
+{
+    wc_add_notice(__('Your password has been changed successfully! Please login to continue.', 'woocommerce'), 'success');
+    wp_redirect(wp_login_url());
+    exit;
 }
-add_action( 'woocommerce_customer_reset_password', 'woocommerce_new_pass_redirect' );
+add_action('woocommerce_customer_reset_password', 'woocommerce_new_pass_redirect');
 
 // =========================================================================================
-
-
 
 // =========================================================================================
 
@@ -155,15 +167,14 @@ function print_taxonomy_ranks($terms = '')
 
 // =========================================================================================
 
-
 // Replaces the excerpt "more" text by a link
-function new_excerpt_more($more) {
-       global $post;
-    return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> <i class="fas fa-arrow-circle-right"></i></a>';
+function new_excerpt_more($more)
+{
+    global $post;
+    return ' ... <a class="moretag" href="' . get_permalink($post->ID) . '"> <i class="fas fa-arrow-circle-right"></i></a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 // =========================================================================================
-
 
 // Remove Comments from Jetpack Carousel
 // function tweakjp_rm_comments_att( $open, $post_id ) {
@@ -176,11 +187,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 // add_filter( 'comments_open', 'tweakjp_rm_comments_att', 10 , 2 );
 // =========================================================================================
 
-
 // Enable shortcodes in text widgets
 add_filter('widget_text', 'do_shortcode');
 // =========================================================================================
-
 
 // Update CSS within in Admin
 function admin_style()
@@ -196,7 +205,6 @@ function custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 // =========================================================================================
-
 
 /**
  *
@@ -255,7 +263,6 @@ function get_current_template($echo = false)
 }
 // =========================================================================================
 
-
 /**
  *
  * Changing Comments Headline (Leave a Reply to Leave a comment)
@@ -263,15 +270,15 @@ function get_current_template($echo = false)
  */
 
 //change text to leave a reply on comment form
-function freeman_comment_reform ($arg) {
-  $arg['title_reply'] = __('');
+function freeman_comment_reform($arg)
+{
+    $arg['title_reply'] = __('');
 //   $arg['title_reply'] = __('Comment');
-  return $arg;
-  }
-  add_filter('comment_form_defaults','freeman_comment_reform');
+    return $arg;
+}
+add_filter('comment_form_defaults', 'freeman_comment_reform');
 
 // =========================================================================================
-
 
 /**
  * Remove Archive Name from Archive Title
@@ -291,7 +298,6 @@ function freeman_comment_reform ($arg) {
 // });
 // =========================================================================================
 
-
 /**
  * REMOVE THE WORD ARCHIVE FROM PAGE TITLE
  */
@@ -300,7 +306,6 @@ function freeman_comment_reform ($arg) {
 // });
 
 // =========================================================================================
-
 
 /*======================================
 =            ACF Google Map            =
@@ -315,7 +320,6 @@ add_action('acf/init', 'my_acf_init');
 
 /*=====  End of ACF Google Map  ======*/
 // =========================================================================================
-
 
 /*=====================================
 =  Remove Gravity Form Labels        =
@@ -352,7 +356,6 @@ add_filter('rest_prepare_post', 'prepare_rest', 10, 3);
 
 /*=====  End of PREPARE REST API  ======*/
 // =========================================================================================
-
 
 /*=============================================
 =            ACF OPTIONS PAGE CODE            =

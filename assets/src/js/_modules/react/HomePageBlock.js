@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TheImageSlider from './components/TheImageSlider';
+import TestimonialSlider from './components/TestimonialSlider';
 import TheVideoBlock from './components/TheVideoBlock';
 import { getHomeAjaxData } from './utils/ajaxCalls';
 import { ColorRing } from 'react-loader-spinner';
@@ -41,6 +42,7 @@ function HomePageBlock() {
             <div className='row top-btn-row text-center'>
               <div className='col-sm-4 col-md-4 col-lg-4'>
                 <a
+                  // href={`${homeData.button_1_link}?HOME_CLASS='d-none'`}
                   href={homeData.button_1_link}
                   className='btn btn-danger btn-lg btn-block'
                   target={'_blank'}
@@ -51,6 +53,7 @@ function HomePageBlock() {
               <div className='col-sm-4 col-md-4 col-lg-4'>
                 <a
                   href={homeData.button_2_link}
+                  // href={`${homeData.button_2_link}?HOME_CLASS='d-none'`}
                   className='btn btn-danger btn-lg btn-block'
                   target={'_blank'}
                 >
@@ -60,6 +63,7 @@ function HomePageBlock() {
               <div className='col-sm-4 col-md-4 col-lg-4'>
                 <a
                   href={homeData.button_3_link}
+                  // href={`${homeData.button_3_link}?HOME_CLASS='d-none'`}
                   className='btn btn-danger btn-lg btn-block'
                   target={'_blank'}
                 >
@@ -76,12 +80,35 @@ function HomePageBlock() {
                 sliderImg1={homeData.slider_image_1}
                 sliderImg2={homeData.slider_image_2}
                 sliderImg3={homeData.slider_image_3}
-                listingLink1={homeData.listing_1_link}
-                listingLink2={homeData.listing_2_link}
-                listingLink3={homeData.listing_3_link}
+                listingLink1={`${homeData.listing_1_link}?HOME_CLASS=d-none`}
+                listingLink2={`${homeData.listing_2_link}?HOME_CLASS=d-none`}
+                listingLink3={`${homeData.listing_3_link}?HOME_CLASS=d-none`}
               />
             </div>
             <hr className='bg-danger' />
+
+            {/* ADDED TESTIMONIAL SLIDER BLOCK STARTS */}
+            <div className='testimonial-slider-row text-center'>
+              {/* <h3 className='slider-title'>{homeData.slider_block_title}</h3> */}
+              <h3 className='slider-title'>"Future Testimonials"</h3>
+              <p
+                className='testimonial-subtitle'
+                style={{ marginTop: '-1.5rem' }}
+              >
+                (...that haven't happened yet... but who knows??)
+              </p>
+
+              <TestimonialSlider
+                sliderImg1={homeData.slider_image_1}
+                sliderImg2={homeData.slider_image_2}
+                sliderImg3={homeData.slider_image_3}
+                listingLink1={`${homeData.listing_1_link}?HOME_CLASS=d-none`}
+                listingLink2={`${homeData.listing_2_link}?HOME_CLASS=d-none`}
+                listingLink3={`${homeData.listing_3_link}?HOME_CLASS=d-none`}
+              />
+            </div>
+            <hr className='bg-danger' />
+
             {/* THIRD VIDEO BLOCK STARTS */}
             <div className='row third-video-row text-center'>
               <TheVideoBlock
