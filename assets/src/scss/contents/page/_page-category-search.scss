@@ -298,6 +298,9 @@
 
       .bullet-content {
         padding-top: 2rem;
+        @media (max-width: 575px) {
+          padding-top: 0;
+        }
         text-align: left !important;
         .bullet-point {
           list-style: none !important;
@@ -306,16 +309,16 @@
     }
   }
 
-  .bullet-points-row {
-    padding-top: 1.5rem;
-    padding-bottom: 2.5rem;
+  // .bullet-points-row {
+  //   padding-top: 1.5rem;
+  //   padding-bottom: 2.5rem;
 
-    .bullet-content {
-      .bullet-point {
-        list-style: none !important;
-      }
-    }
-  }
+  //   .bullet-content {
+  //     .bullet-point {
+  //       list-style: none !important;
+  //     }
+  //   }
+  // }
 
   .latest-post-row {
     padding-top: 1.5rem;

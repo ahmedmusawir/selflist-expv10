@@ -10,7 +10,7 @@ export const getHomeAjaxData = (ajaxUrl, ajaxFunction, setHomeData) => {
     },
   })
     .done((res) => {
-      //   console.log('AJAX OUTPUT: SELFLIST HOME', res);
+      // console.log('AJAX OUTPUT: SELFLIST HOME', res);
       setHomeData(res.data);
       console.log('Ajax with WP Ajax PHP function Success!');
     })

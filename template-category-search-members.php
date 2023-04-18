@@ -17,7 +17,9 @@ get_header();
 
 <div id="primary" class="site-main container pt-5">
 
-    <h2 class="text-center pb-4 text-dark font-weight-bold">List What You Want, Find What You Need</h2>
+    <h2 class="text-center pb-4 text-dark font-weight-bold"><em><span class="text-danger">
+                List What You Want,
+            </span>Find What You Need </em></h2>
 
     <section id="selflist-search-input-box" class="selflist-search-input-box">
 

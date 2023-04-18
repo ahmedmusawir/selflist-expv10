@@ -1,5 +1,6 @@
 import React from 'react';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import { formatSelfList } from '../utils/formatSelfList';
 
 const TheVideoBlock = ({
   videoTitle1,
@@ -9,12 +10,20 @@ const TheVideoBlock = ({
   youtubeId2,
   youtubeId3,
 }) => {
+  const formattedTitle1 = formatSelfList(videoTitle1);
+  const formattedTitle2 = formatSelfList(videoTitle2);
+  const formattedTitle3 = formatSelfList(videoTitle3);
+
+  // console.log('title1', formattedTitle1);
+  // console.log('title1', formattedTitle2);
+  // console.log('title1', formattedTitle3);
+
   return (
     <>
       <div className='col-sm-4 col-md-4 col-lg-4'>
         <LiteYouTubeEmbed id={youtubeId1} title='Why SelfLIST' />
-        <h4 className='video-title'>{videoTitle1}</h4>
-        <article className='bullet-content'>
+        <h4 className='video-title'>{formattedTitle1}</h4>
+        <article className='bullet-content mb-5'>
           <li className='bullet-point'>
             <i className='far fa-dot-circle'></i> Complete transparency
           </li>
@@ -45,8 +54,8 @@ const TheVideoBlock = ({
           playlist={false}
           adNetwork={true}
         />
-        <h4 className='video-title'>{videoTitle2}</h4>
-        <article className='bullet-content'>
+        <h4 className='video-title'>{formattedTitle2}</h4>
+        <article className='bullet-content mb-5'>
           <li className='bullet-point'>
             <i className='far fa-dot-circle'></i> Create an account
           </li>
@@ -74,7 +83,7 @@ const TheVideoBlock = ({
       </div>
       <div className='col-sm-4 col-md-4 col-lg-4'>
         <LiteYouTubeEmbed id={youtubeId3} title='How to create an Account' />
-        <h4 className='video-title'>{videoTitle3}</h4>
+        <h4 className='video-title'>{formattedTitle3}</h4>
         <article className='bullet-content'>
           <li className='bullet-point'>
             <i className='far fa-dot-circle'></i> Click to sign on

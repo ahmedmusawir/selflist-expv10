@@ -17,7 +17,7 @@ function HomePageBlock() {
     console.log('Running React App Theme on Selflist');
   };
 
-  console.log('Home Data State:', homeData);
+  // console.log('Home Data State:', homeData);
 
   return (
     <>
@@ -99,12 +99,14 @@ function HomePageBlock() {
               </p>
 
               <TestimonialSlider
-                sliderImg1={homeData.slider_image_1}
-                sliderImg2={homeData.slider_image_2}
-                sliderImg3={homeData.slider_image_3}
-                listingLink1={`${homeData.listing_1_link}?HOME_CLASS=d-none`}
-                listingLink2={`${homeData.listing_2_link}?HOME_CLASS=d-none`}
-                listingLink3={`${homeData.listing_3_link}?HOME_CLASS=d-none`}
+                customer1={homeData.customer_1}
+                customer2={homeData.customer_2}
+                customer3={homeData.customer_3}
+                customer4={homeData.customer_4}
+                comment1={homeData.comment_1}
+                comment2={homeData.comment_2}
+                comment3={homeData.comment_3}
+                comment4={homeData.comment_4}
               />
             </div>
             <hr className='bg-danger' />

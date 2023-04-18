@@ -126,9 +126,22 @@ the_content();
             <div class="back-holder <?php echo $D_NONE; ?> <?php echo $HOME_D_NONE ?>">
                 <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Back</a>
             </div>
-            <div class="back-holder d-none">
-                <a class='btn btn-outline-danger btn-sm m-2 float-right' href="javascript:history.back()">Search</a>
+
+            <!-- FOR NON-LOGGED USERS COMING FROM HOME PAGE -->
+            <?php if ($HOME_D_NONE && !is_user_logged_in()): ?>
+            <div class="back-holder">
+                <a class='btn btn-outline-danger btn-sm m-2 float-right' href="/">Back</a>
             </div>
+            <?php endif;?>
+
+            <!-- FOR LOGGED USERS COMING FROM CAT SEARCH PAGE (which is home for non-loggedin) -->
+            <?php if ($HOME_D_NONE && is_user_logged_in()): ?>
+            <div class="back-holder">
+                <a class='btn btn-outline-danger btn-sm m-2 float-right' href="/list-customer-home/">Back</a>
+            </div>
+            <?php endif;?>
+
+
         </div>
     </div><!-- .entry-content -->
     <footer class="entry-footer pb-3">
